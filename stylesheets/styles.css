@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #fff;
   padding:50px;
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -9,7 +9,28 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
+} */
+
+body {
+  background-color: #fff;
+  padding: 50px;
+  font-size: 14px;
+  line-height: 1.6;
+
+  /* NEW: serif stack (English + Chinese) */
+  font-family: "Source Serif 4", "Noto Serif TC", "Times New Roman", Times, serif;
+
+  color: #595959;
+  font-weight: 400;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Serif 4", "Noto Serif TC", "Times New Roman", Times, serif;
+  color: #222;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
