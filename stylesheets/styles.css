@@ -269,8 +269,8 @@ footer {
 
 /* 修正序號與標題文字的間距 */
 .pub-num {
-  flex: 0 0 2.5em !important;      /* 增加固定寬度，給 [11] 空間 */
-  min-width: 2.5em !important;     /* 確保寬度固定 */
+  flex: 0 0 2.3em !important;      /* 增加固定寬度，給 [11] 空間 */
+  min-width: 2.3em !important;     /* 確保寬度固定 */
   text-align: right !important;
   margin-right: 0.8em !important;   /* 👈 這是推開序號與標題的關鍵 */
   color: #777 !important;
