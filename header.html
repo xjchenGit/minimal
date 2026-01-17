@@ -16,7 +16,55 @@
     }
 
     /* 移動端自適應：螢幕寬度小於 768px 時觸發 */
+    /* 當螢幕寬度小於 768px 時，套用 Wei-Ning Hsu 風格 */
     @media (max-width: 768px) {
+        #sidebar {
+            width: 100% !important;
+            height: auto !important;
+            position: relative !important;
+            padding: 15px 20px !important; /* 減少上下間距，變扁平 */
+            border-right: none !important;
+            border-bottom: 1px solid #eee !important; /* 加一條細線分隔內容 */
+            background: #fff;
+        }
+    
+        #sidebar-content {
+            display: flex !important; /* 使用彈性佈局讓元件橫排 */
+            align-items: center !important; /* 垂直置中 */
+            justify-content: flex-start !important; /* 從左側開始排 */
+            padding: 0 !important;
+            text-align: left !important;
+        }
+    
+        /* 隱藏大頭照與地點，達成極簡化 */
+        #sidebar-content img, 
+        #sidebar-content div:nth-child(3),
+        .social-icons {
+            display: none !important;
+        }
+    
+        /* 調整姓名樣式，讓它變小並跟導航連動 */
+        #sidebar-content h2 {
+            font-size: 18px !important;
+            margin: 0 30px 0 0 !important; /* 右邊留空隙給選單 */
+            white-space: nowrap;
+        }
+    
+        /* 讓導航菜單橫向排列，且不換行 */
+        #sidebar-content nav {
+            display: flex !important;
+            gap: 20px !important;
+            margin: 0 !important;
+        }
+    
+        #sidebar-content nav a {
+            display: inline-block !important;
+            font-size: 16px !important;
+            line-height: 1 !important;
+            color: #666;
+        }
+    }
+    /* @media (max-width: 768px) {
         #sidebar {
             width: 100% !important;
             height: auto !important;
@@ -52,7 +100,7 @@
         .social-icons {
             justify-content: center !important;
         }
-    }
+    } */
 </style>
 
 <div id="sidebar-content">
