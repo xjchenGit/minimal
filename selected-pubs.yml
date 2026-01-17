@@ -36,7 +36,7 @@
 - number: 8
   title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_full: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen*</u>, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "ROCLING 2025 - 🏆 Best Paper Award"
+  venue: "ROCLING 2025 🏆 Best Paper Award"
   links:
     - name: "ACL Anthology"
       url: "https://aclanthology.org/2025.rocling-main.6/"
@@ -46,7 +46,7 @@
 - number: 7
   title: "Towards Generalized Source Tracing for Codec-Based Deepfake Speech"
   authors_full: "<u>Xuanjun Chen*</u>, I-Ming Lin*, Lin Zhang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "IEEE ASRU 2025 - 🏆 Best Student Paper Nominee"
+  venue: "IEEE ASRU 2025 🏆 Best Student Paper Nominee"
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2506.07294"
