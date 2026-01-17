@@ -69,219 +69,81 @@
       <header id="sidebar"></header>
 
       <section>
-        <!-- <h2>Publications -->
-          <!-- <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small> -->
-        <!-- </h2>
-        
-        <h3 style="margin-top: 26px; border-left: 3px solid #3a7bd5; padding-left: 10px;">🎙️ Testing. </h3>
-        <div class="pub-list">
-          <p align="justify">
-            The website is developing.
-          </p>
-        </div> -->
-                <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+    <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
 
-		  <h3 style="
-			    margin-top: 26px;
-			    margin-bottom: 15px;
-			    font-size: 15px;
-			    font-weight: 600;
-			    color: #444;
-			    border-left: 3px solid #3a7bd5;
-			    padding-left: 10px;">
-			    🎙️ Audio Large Language Models
-			</h3>
-		<div class="pub-list">
-			<p align="justify">
-			    	[5] Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, et al., <b>"DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"</b> in arXiv 2025. 
-				<br>
-					<a href="https://arxiv.org/abs/2507.02768">arXiv</a> / 
-				<a href="https://github.com/kehanlu/DeSTA2.5-Audio">Code</a>
-			</p>
-			  
-			<p align="justify">	   
-			    	[4] Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u>Xuanjun Chen</u>, et al., <b>"Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks,"</b> in ICLR 2025.
-				<br>
-				<a href="https://openreview.net/forum?id=s7lzZpAW7T">OpenReview</a> / 
-				<a href="https://arxiv.org/abs/2411.05361v1">arXiv</a> / 
-				<a href="https://github.com/dynamic-superb/dynamic-superb">Code</a>
-			</p>
+    <h3 class="category-title">🎙️ Audio Large Language Models</h3>
+    <div id="audio-llm-container" class="pub-container"></div>
+
+    <h3 class="category-title">🔍 Retrieval Augmented Generation</h3>
+    <div id="rag-container" class="pub-container"></div>
+
+    <h3 class="category-title">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+    <div id="deepfake-container" class="pub-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+
+    <script>
+	        // 為了美觀，先定義分類標題樣式（也可以寫在 style 標籤裡）
+	        const categoryStyle = "margin-top: 26px; margin-bottom: 15px; font-size: 15px; font-weight: 600; color: #444; border-left: 3px solid #3a7bd5; padding-left: 10px;";
+	        document.querySelectorAll('.category-title').forEach(el => el.style = categoryStyle);
 	
-			<p align="justify">
-			    	[3] Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander H. Liu, and Hung-yi Lee. <b>"Towards audio language modeling-an overview,"</b> Overview Report, Feb. 2024.
-				<br>
-					<a href="https://arxiv.org/abs/2402.13236">arXiv</a> /
-	                <a href="https://github.com/ga642381/speech-trident">Awesome List</a>
-		    	</p>
-			    
-		        <p align="justify">
-			    	[2] Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee. <b>"Codec-SUPERB: An In-Depth Analysis of Sound Codec Models,"</b> in Findings of ACL 2024. 
-				<br>
-					<a href="https://aclanthology.org/2024.findings-acl.616/">ACL Anthology</a> /
-					<a href="https://arxiv.org/abs/2402.13071">arXiv</a> /
-					<a href="https://codecsuperb.com/">Leaderboard</a> /
-					<a href="https://github.com/voidful/Codec-SUPERB">Code</a> /
-					<a href="https://huggingface.co/Codec-SUPERB">Huggingface</a>
-		    	</p>
+	        function escapeHtml(str) {
+	            return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+	        }
 	
-		        <p align="justify">
-			    	[1] Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee. <b>"Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models,"</b> in IEEE SLT 2024.
-				<br>
-				<a href="https://ieeexplore.ieee.org/abstract/document/10832364">IEEE Xplore</a> /
-				<a href="https://arxiv.org/abs/2409.14085">arXiv</a>
-			</p>
-		</div>
-
-		  <h3 style="
-			    margin-top: 26px;
-			    margin-bottom: 15px;
-			    font-size: 15px;
-			    font-weight: 600;
-			    color: #444;
-			    border-left: 3px solid #3a7bd5;
-			    padding-left: 10px;">
-			    🔍 Retrieval Augmented Generation
-		</h3>
-
-		<p align="justify">
-		    	[2] Wei-Chieh Chou*, <u>Xuanjun Chen*</u>, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang, <b>"Efficient Retrieval-Augmented Generation via Grounded Planning." </b> Working in Progress. 
-			<br>
-				<!-- <a href="">arXiv</a> -->
-		</p>
-				
-		<p align="justify">
-		    	[1] Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen*</u>, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang, <b>"A Preliminary Study of RAG for Taiwanese Historical Archives"</b> in ROCLING 2025 (🏆 Best Paper Award). 
-			<br>
-				<a href="https://aclanthology.org/2025.rocling-main.6/">ACL Anthology</a> / 	
-				<a href="https://arxiv.org/abs/2511.07445">arXiv</a>
-		</p>
-
-		  <h3 style="
-			    margin-top: 26px;
-			    margin-bottom: 15px;
-			    font-size: 15px;
-			    font-weight: 600;
-			    color: #444;
-			    border-left: 3px solid #3a7bd5;
-			    padding-left: 10px;">
-			    🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability
-		</h3>
-
-		<p align="justify">	   
-		    	[11] <u>Xuanjun Chen*</u>, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee, <b>"CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset,"</b> Preprint, 2025.
-			<br>
-			<a href="https://arxiv.org/pdf/2501.08238v2">arXiv</a> / 
-			<a href="https://responsiblegenai.github.io/CodecFake-Plus-Dataset/">Project Page</a> / 
-			<a href="https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset">Hugging Face</a> / 
-			<a href="https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset">Code</a>
-		</p>
-		  
-		<p align="justify">
-		    	[10] <u>Xuanjun Chen*</u>, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang. <b>"Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling,"</b> in arxiv 2025. 
-			<br>
-			<a href="https://arxiv.org/abs/2508.02000">arXiv</a>
-		</p>
-
-		<p align="justify">
-		    	[9] <u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang, <b>"How Does Instrumental Music Help SingFake Detection?"</b> in ICASSP 2026. 
-			<br>
-				<a href="https://arxiv.org/abs/2509.14675">arXiv</a>
-		</p>
-	      
-	  	<p align="justify">
-		    	[8] <u>Xuanjun Chen*</u>, I-Ming Lin*, Lin Zhang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang. <b>"Towards Generalized Source Tracing for Codec-Based Deepfake Speech,"</b> in IEEE ASRU 2025 (🏆 Best Student Paper nominee). 
-			<br>
-		      	<a href="https://arxiv.org/abs/2506.07294">arXiv</a> / 
-			<a href="https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing">Code</a>
-		</p>
-	      
-		<p align="justify">
-		    	[7] <u>Xuanjun Chen*</u>, I-Ming Lin*, Lin Zhang, Jiawei Du, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang. <b>"Codec-Based Deepfake Source Tracing via Neural Audio Codec Taxonomy,"</b> in INTERSPEECH 2025. 
-			<br>
-			<a href="https://www.isca-archive.org/interspeech_2025/chen25j_interspeech.pdf">ISCA Archive</a> / 
-			<a href="https://arxiv.org/pdf/2505.12994">arXiv</a> / 
-			<a href="https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing">Code</a>
-		</p>
-	      
-		<!-- <p align="justify">	   
-		    	[10] Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <b>Xuanjun Chen</b>, et al., <b>"Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks,"</b> in ICLR 2025.
-			<br>
-			<a href="https://arxiv.org/abs/2411.05361v1">arXiv</a> / 
-			<a href="https://github.com/dynamic-superb/dynamic-superb">Code</a>
-	    	</p> -->
-
-		<!-- <p align="justify">	   
-		    	[10] Wenze Ren, Haibin Wu, Yi-Cheng Lin, <b>Xuanjun Chen</b>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao, <b>"Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement,"</b> in ICASSP 2025.
-			<br>
-			<a href="https://ieeexplore.ieee.org/abstract/document/10890412">IEEE Xplore</a> /
-			<a href="https://arxiv.org/abs/2409.10376">arXiv</a>
-	    	</p> -->
-
-		<!-- <p align="justify">	   
-		    	[11] Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, Yi-Cheng Lin, Yu-Xiang Lin, Wei-Chih Chen, Ho Lam Chung, Chun-Yi Kuan, Wei-Ping Huang, Ke-Han Lu, Tzu-Quan Lin, Hsiu-Hsuan Wang, En-Pei Hu, Chan-Jan Hsu, Liang-Hsuan Tseng, I-Hsiang Chiu, Ulin Sanga, <b>Xuanjun Chen</b>, Po-chun Hsu, Shu-wen Yang, Hung-yi Lee, <b>"Building a Taiwanese Mandarin Spoken Language Model: A First Attempt,"</b> Tech Report, Nov. 2024.
-			<br>
-			<a href="https://arxiv.org/abs/2411.07111">arXiv</a>
-	    	</p> -->
-
-		    
-		<p align="justify">
-		    	[6] <u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee. <b>"Singing Voice Graph Modeling for SingFake Detection,"</b> in INTERSPEECH 2024 (Oral). 
-			<br>
-			<a href="https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf">ISCA Archive</a> /
-			<a href="https://arxiv.org/pdf/2406.03111">arXiv</a> /
-			<a href="https://github.com/xjchenGit/SingGraph.git">Code</a> /
-			<a href="https://svddchallenge.org/challenges/special_session_ieee_slt.html">Lightning Talk</a>
-	    	</p>
-	    	<p align="justify">
-		    	[5] <u>Xuanjun Chen*</u>, Jiawei Du*, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee. <b>"Neural Codec-based Adversarial Sample Detection for Speaker Verification,"</b> in INTERSPEECH 2024.
-			<br>
-			<a href="https://www.isca-archive.org/interspeech_2024/chen24p_interspeech.pdf">ISCA Archive</a> /
-			<a href="https://arxiv.org/abs/2406.04582">arXiv</a> /
-			<a href="https://github.com/hbwu-ntu/spot-adv-by-vocoder.git">Code</a> /
-			<a href="">Poster</a>
-	    	</p>
-
-		<p align="justify">
-		    	[4] Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang. <b>"DFADD: The Diffusion and Flow-Matching based Audio Deepfake Dataset,"</b> in IEEE SLT 2024. 
- 			<br>
-			<a href="https://ieeexplore.ieee.org/document/10832250">IEEE Xplore</a> /
-			<a href="https://www.arxiv.org/abs/2409.08731">arXiv</a> /
-			<a href="https://github.com/isjwdu/DFADD">Code</a> /
-			<a href="https://huggingface.co/datasets/isjwdu/DFADD">Huggingface</a>
-	    	</p>
-		<!-- <p align="justify">
-		    	[2] Hsuan-Yu Lin, <b>Xuanjun Chen</b>, Jyh-Shing Roger Jang. <b>"Singer separation for karaoke content generation,"</b> in IEEE O-COCOSDA 2024.
-			<br>
-			<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10800383">IEEE Xplore</a> /
-			<a href="https://arxiv.org/abs/2110.06707">arXiv</a> /
-                        <a href="https://gulaerchen.github.io/">Project</a>
-	    	</p> -->
-			<p align="justify">	   
-		    	[3] <u>Xuanjun Chen</u>, Haibin Wu, Chung-Che Wang, Hung-yi Lee, and Jyh-Shing Roger Jang, <b>"Multimodal Transformer Distillation for Audio-Visual Synchronization,"</b> in ICASSP 2024.
-				<br>
-				<a href="https://ieeexplore.ieee.org/abstract/document/10446372">IEEE Xplore</a> /
-				<a href="https://arxiv.org/abs/2210.15563">arXiv</a> /
-				<a href="https://github.com/xjchenGit/MTDVocaLiST">Code</a> /
-				<a href="docs/MTDVocaLiST_poster.pdf">Poster</a>
-	    	</p>	
-		  
-		  <p align="justify">	   
-		    	[2] <u>Xuanjun Chen*</u>, Haibin Wu*, Helen Meng, Hung-yi Lee, and Jyh-Shing Roger Jang, <b>"Push-Pull: Characterizing the Adversarial Robustness for Audio-Visual Active Speaker Detection,"</b> in IEEE SLT 2022, Jan 2023. 
-			<br>
-			<a href="https://ieeexplore.ieee.org/abstract/document/10022646">IEEE Xplore</a> /
-			<a href="https://arxiv.org/abs/2210.00753">arXiv</a> /
-			<a href="https://xjchengit.github.io/Push-Pull/index.html">Demos</a> /
-			<a href="docs/2022SLT_Poster_Push_Pull.pdf">Poster</a> /
-			<a href="https://www.youtube.com/watch?v=-Yy4TbcPovU">Video</a>
-	    	</p>
-		    
-		<p align="justify">	   
-		    	[1] <u>Xuanjun Chen*</u>, Yen-Lun Liao*, Chung-Che Wang, and Jyh-Shing Roger Jang, <b>"Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification,"</b> in ISCA SPSC 2022. 
-			<br>
-			<a href="https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html">ISCA Archive</a> /
-			<a href="https://arxiv.org/abs/2203.17031"">arXiv</a>
-		</p>
-        </section>
+	        function renderPub(p, index) {
+	            const authors = p.authors_short || p.authors_full || "";
+	            const title = p.title ? escapeHtml(p.title) : "";
+	            const venue = p.venue ? escapeHtml(p.venue) : "";
+	            const award = p.award ? ` <span class="pub-award" style="color: #d9534f; font-weight: 600;">${p.award}</span>` : "";
+	            const note = p.note ? ` <span class="pub-note">(${escapeHtml(p.note)})</span>` : "";
+	            
+	            const linksHtml = (p.links || [])
+	                .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #3a7bd5;">${escapeHtml(l.name)}</a>`)
+	                .join(" / ");
+	
+	            return `
+	                <div class="pub-item" style="display: flex; margin-bottom: 20px; font-family: 'Source Serif 4', serif;">
+	                    <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${index}]</div>
+	                    <div class="pub-text" style="text-align: justify;">
+	                        <b class="pub-title">${title}</b>${note}<br>
+	                        <span class="pub-authors" style="display: block; margin: 2px 0;">${authors}</span>
+	                        <span class="pub-venue"><i>${venue}</i></span>${award}<br>
+	                        <span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>
+	                    </div>
+	                </div>`;
+	        }
+	
+	        fetch("publications.yml")
+	            .then(res => res.text())
+	            .then(text => {
+	                const pubs = jsyaml.load(text) || [];
+	                
+	                // 定義分類與對應容器 ID
+	                const categories = {
+	                    'audio-llm': { id: 'audio-llm-container', count: 0 },
+	                    'rag': { id: 'rag-container', count: 0 },
+	                    'deepfake': { id: 'deepfake-container', count: 0 }
+	                };
+	
+	                // 按類別過濾並渲染
+	                // 這裡假設 YAML 順序已經排好（如 [11], [10]...），若要自動編號可以微調
+	                Object.keys(categories).forEach(catKey => {
+	                    const filtered = pubs.filter(p => p.category === catKey);
+	                    // 根據你的需求，編號可能是倒序顯示
+	                    const html = filtered.map((p, i) => {
+	                        // 這裡的編號使用 YAML 中的順序或是手動計算
+	                        // 範例：保持跟原 HTML 一樣的編號（從大到小）
+	                        const displayNum = filtered.length - i; 
+	                        return renderPub(p, displayNum);
+	                    }).join("");
+	                    
+	                    document.getElementById(categories[catKey].id).innerHTML = html;
+	                });
+	            })
+	            .catch(err => console.error('Failed to load publications:', err));
+	    </script>
+	</section>
 		<!-- <footer class="site-footer">
             <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
         </footer> -->
