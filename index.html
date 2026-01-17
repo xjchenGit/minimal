@@ -169,9 +169,9 @@
 					return `<li class="pub-item">
 						      <span class="pub-num">[${num}]</span>
 						      <div class="pub-text">
-						        <b class="pub-title">${title}</b>${note}<br>
-						        ${authors ? `<span class="pub-authors">${authors}</span><br>` : ""}
-						        ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}<br>` : ""}
+						        <b class="pub-title">${title}</b>${note}
+						        ${authors ? `<span class="pub-authors">${authors}</span>` : ""}
+						        ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}` : ""}
 						        ${linksHtml ? `<span class="pub-links">${linksHtml}</span>` : ""}
 						      </div>
 						    </li>`;
