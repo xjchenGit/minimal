@@ -31,7 +31,10 @@
         header {
           width: 100% !important;
           height: auto !important;
-          position: relative !important;
+          position: sticky !important; /* 建議改回 sticky 讓導航跟隨 */
+          top: 0;
+          z-index: 1000; /* 確保下拉選單在最上層 */
+          background: #fff;
           padding: 10px 0 !important;
           border-right: none !important;
           border-bottom: 1px solid #eee !important; /* 改成底部分隔線 */
