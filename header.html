@@ -66,16 +66,13 @@
         #sidebar-content {
             display: flex !important;
             flex-direction: column !important;
-            padding: 10px 20px !important; /* 與下方 section 對齊的內距 */
+            padding: 10px 20px !important;
+            height: auto !important; /* 確保高度縮回內容大小 */
         }
 
+        /* 在 header.html 的 @media (max-width: 768px) 內部加入 */
         .sidebar-footer {
-            order: 10; /* 強制排在最後 */
-            margin-top: 30px;
-            text-align: center;
-            width: 100%;
-            border-top: 1px solid #eee;
-            padding: 20px 0;
+            display: none !important; /* 手機版隱藏側邊欄地圖，避免撐開高度 */
         }
 
         /* 導航置頂：橫排、底線、間距 */
@@ -163,6 +160,7 @@
             }
 </style>
 
+
 <div id="sidebar-content">
     <nav id="nav-menu">
         <a id="nav-about" href="index.html">About</a>
@@ -181,7 +179,7 @@
             </div>
         </div>
         <div class="follow-container">
-            <button id="follow-btn">Follow</button>
+            <button id="follow-btn" onclick="toggleSocial()">Follow</button>
             <div id="social-list" class="social-dropdown">
                 <a href="mailto:D12942018@ntu.edu.tw"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -202,6 +200,7 @@
         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
     </div>
 </div>
+
 
 <script>
     // 導航高亮邏輯
