@@ -1,30 +1,80 @@
 <style>
-    /* 桌面版預設樣式 */
-    #sidebar-content { text-align: left; padding: 0 20px; }
-    #sidebar-content nav a { text-decoration: none; color: #888; font-weight: 500; display: block; font-size: 17px; line-height: 2.4; font-family: 'Source Serif 4', serif; }
-    
-    /* 桌面版隱藏 Follow 按鈕，顯示普通圖示 */
-    .follow-container { display: none; }
-    .social-icons { display: flex; gap: 12px; margin-top: 10px; }
+    /* ========== 桌面版樣式 (螢幕 > 768px) ========== */
+    #sidebar-content { 
+        text-align: left; 
+        padding: 0 20px; 
+    }
 
-    /* --- 手機版 RWD：仿 Wei-Ning Hsu 風格 --- */
+    /* 讓桌面版的個人資訊恢復垂直排列 */
+    .profile-main {
+        display: block; /* 移除手機版的 flex 橫排 */
+    }
+
+    #main-avatar {
+        display: block;
+        width: 120px !important; /* 桌面版大頭貼恢復大小 */
+        height: 120px !important;
+        border-radius: 50%;
+        margin-bottom: 25px !important;
+    }
+
+    #user-name {
+        margin: 0 0 8px 0 !important;
+        font-size: 24px !important;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    #user-info {
+        color: #666;
+        line-height: 1.4;
+        margin-bottom: 20px !important;
+        font-size: 15px !important;
+    }
+
+    /* 桌面版導航選單：垂直排列 */
+    #nav-menu {
+        display: block !important;
+        margin-bottom: 30px !important;
+        border-bottom: none !important; /* 移除手機版的底線 */
+        padding-bottom: 0 !important;
+    }
+
+    #nav-menu a {
+        text-decoration: none;
+        color: #888;
+        font-weight: 500;
+        display: block !important; /* 垂直排列 */
+        font-size: 17px;
+        line-height: 2.4;
+        font-family: 'Source Serif 4', serif;
+    }
+
+    /* 桌面版顯示原始圖示，隱藏 Follow 按鈕 */
+    .follow-container { display: none !important; }
+    .social-icons { display: flex; gap: 12px; margin-top: 10px; }
+    .social-icons a { color: #444; font-size: 18px; text-decoration: none; }
+
+
+    /* ========== 手機版 RWD (螢幕 <= 768px) ========== */
     @media (max-width: 768px) {
         #sidebar-content {
             display: flex !important;
-            flex-direction: column !important; 
-            padding: 15px !important;
-            gap: 10px !important;
+            flex-direction: column !important;
+            padding: 10px 20px !important; /* 與下方 section 對齊的內距 */
         }
 
-        /* 導航置頂並靠右 */
+        /* 導航置頂：橫排、底線、間距 */
         #nav-menu {
-            order: -1; /* 強制排到最前面 */
+            order: -1; 
             display: flex !important;
             justify-content: flex-end !important;
             gap: 20px !important;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 12px;
-            margin: 0 0 20px 0 !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+            padding-bottom: 12px !important;
+            margin: 0 -20px 20px -20px !important; /* 線條延伸到邊緣 */
+            padding-left: 20px !important;
+            padding-right: 20px !important;
         }
 
         #nav-menu a {
@@ -33,45 +83,34 @@
             line-height: 1 !important;
         }
 
-        /* 個人資訊橫排容器 */
+        /* 個人資訊：橫排、小頭像 */
         .profile-main {
             display: flex !important;
             align-items: center !important;
-            width: 100%;
         }
 
         #main-avatar {
             width: 45px !important;
             height: 45px !important;
             margin: 0 12px 0 0 !important;
-            border-radius: 50%;
-        }
-
-        .profile-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         #user-name {
             font-size: 18px !important;
             margin: 0 !important;
-            font-weight: 700;
         }
 
         #user-info {
             font-size: 12px !important;
-            color: #666;
-            line-height: 1.3;
-            margin: 2px 0 0 0 !important;
+            margin-bottom: 0 !important;
         }
 
-        /* 手機版隱藏原始圖示，顯示 Follow 按鈕 */
+        /* 手機版：隱藏原始圖示，顯示 Follow 按鈕 */
         .social-icons { display: none !important; }
         .follow-container { 
             display: block !important; 
             margin-left: auto; 
-            position: relative; 
+            position: relative;
         }
 
         #follow-btn {
@@ -79,39 +118,9 @@
             border: 1px solid #ddd;
             background: #fff;
             border-radius: 4px;
-            cursor: pointer;
             font-size: 13px;
-            font-weight: 500;
         }
 
-        /* 下拉選單樣式 */
-        .social-dropdown {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            background: white;
-            border: 1px solid #eee;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            z-index: 1000;
-            width: 140px;
-            border-radius: 4px;
-            margin-top: 5px;
-        }
-
-        .social-dropdown a {
-            display: flex !important;
-            align-items: center;
-            padding: 10px 12px;
-            font-size: 13px !important;
-            color: #444 !important;
-            text-decoration: none !important;
-            border-bottom: 1px solid #fafafa;
-            line-height: 1 !important;
-            font-weight: 400 !important;
-        }
-        
-        .social-dropdown a i { margin-right: 8px; width: 16px; text-align: center; }
         .social-dropdown.show { display: block !important; }
     }
 </style>
