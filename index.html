@@ -152,20 +152,7 @@
 				  const linksHtml = (p.links || [])
 				    .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
 				    .join(" / ");
-				
-				  // return `
-				  //   <li class="pub-item">
-				  //     <div class="pub-main">
-				  //       <span class="pub-num">[${num}] </span>
-				  //       <span class="pub-text">
-				  //         <b class="pub-title">${title}</b>${note}<br>
-				  //         ${authors ? `<span class="pub-authors">${authors}</span><br>` : ""}
-				  //         ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}<br>` : ""}
-				  //         ${linksHtml ? `<span class="pub-links">${linksHtml}</span>` : ""}
-				  //       </span>
-				  //     </div>
-				  //   </li>
-				  // `;
+
 					return `<li class="pub-item">
 						      <span class="pub-num">[${num}] </span>
 						      <div class="pub-text">
