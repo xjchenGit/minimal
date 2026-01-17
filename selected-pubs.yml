@@ -1,7 +1,7 @@
 - number: 11
   title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, et al."
-  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, …, <u>Xuanjun Chen</u>, et al."
+  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, …, <u>Xuanjun Chen</u>, et al."
   venue: "arXiv 2025"
   links:
     - name: "arXiv"
@@ -12,7 +12,7 @@
 - number: 10
   title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
   authors_full: "<u>Xuanjun Chen*</u>, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
-  authors_short: "<u>Xuanjun Chen*</u>, Jiawei Du*, …, Hung-yi Lee"
+  authors_short: "<u>Xuanjun Chen*</u>, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, …, Hung-yi Lee"
   venue: "Preprint, 2025"
   links:
     - name: "arXiv"
@@ -27,7 +27,7 @@
 - number: 9
   title: "How Does Instrumental Music Help SingFake Detection?"
   authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, et al."
-  authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, …, Haibin Wu, et al."
+  authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, et al."
   venue: "ICASSP 2026"
   links:
     - name: "arXiv"
@@ -58,7 +58,7 @@
 - number: 6
   title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks"
   authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u>Xuanjun Chen</u>, et al."
-  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, …, <u>Xuanjun Chen</u>, et al."
+  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, …, <u>Xuanjun Chen</u>, et al."
   venue: "ICLR 2025"
   links:
     - name: "OpenReview"
@@ -124,7 +124,7 @@
 - number: 1
   title: "Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models"
   authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
-  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, …, Hung-yi Lee"
+  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, …, Hung-yi Lee"
   venue: "IEEE SLT 2024"
   links:
     - name: "IEEE Xplore"
