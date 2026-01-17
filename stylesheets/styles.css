@@ -272,7 +272,6 @@ footer {
   min-width: 3.2em !important;     /* 確保寬度固定 */
   text-align: right !important;
   margin-right: 1.0em !important;   /* 👈 這是推開序號與標題的關鍵 */
-  font-weight: 600 !important;
   color: #333 !important;
   white-space: nowrap !important;
 }
