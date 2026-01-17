@@ -25,11 +25,13 @@
     
       /* --- 新增手機版 RWD 控制 --- */
       @media (max-width: 768px) {
-        .wrapper { 
-          flex-direction: column; /* 讓內容往下排，不要被側欄擋住 */
-          width: 100% !important;
-          padding: 0 !important;
+        .wrapper {
+              display: flex;
+              flex-direction: column;
+              width: 100% !important;
+              padding: 0 !important;
         }
+        
         header {
           width: 100% !important;
           height: auto !important;
@@ -50,16 +52,20 @@
         }
         
         section {
-          width: 100% !important;
-          padding: 20px !important; /* 手機版間距縮小 */
-          box-sizing: border-box !important;
-          display: flex; 
-          flex-direction: column;
+            width: 100% !important;
+            padding: 20px !important; /* 手機版間距縮小 */
+            box-sizing: border-box !important;
+            display: flex; 
+            flex-direction: column;
         }
-        .site-footer {
-            margin-top: auto; /* 將 footer 推到最下面 */
-            padding-top: 40px;
-            text-align: left;
+        /* 地圖：在移動端強制排在最下面 */
+        footer.site-footer {
+            order: 99; /* 確保在 section 內部排到最後 */
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            width: 100%;
         }
       }
     </style>
