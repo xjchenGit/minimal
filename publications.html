@@ -68,60 +68,46 @@
     <div class="wrapper">
       <header id="sidebar"></header>
 
-      <section>
-    <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
-
-    <h3 class="category-title">🎙️ Audio Large Language Models</h3>
-    <div id="audio-llm-container" class="pub-container"></div>
-
-    <h3 class="category-title">🔍 Retrieval Augmented Generation</h3>
-    <div id="rag-container" class="pub-container"></div>
-
-    <h3 class="category-title">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
-    <div id="deepfake-container" class="pub-container"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-
     <section>
-  <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+		  <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+		
+		  <h3 class="category-header">🎙️ Audio Large Language Models</h3>
+		  <div id="audio-llm-container" class="pub-list-dynamic"></div>
+		
+		  <h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
+		  <div id="rag-container" class="pub-list-dynamic"></div>
+		
+		  <h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+		  <div id="deepfake-container" class="pub-list-dynamic"></div>
+		
+		  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 
-  <h3 class="category-header">🎙️ Audio Large Language Models</h3>
-  <div id="audio-llm-container" class="pub-list-dynamic"></div>
-
-  <h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
-  <div id="rag-container" class="pub-list-dynamic"></div>
-
-  <h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
-  <div id="deepfake-container" class="pub-list-dynamic"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-
-  <style>
-    .category-header {
-      margin-top: 26px;
-      margin-bottom: 15px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #444;
-      border-left: 3px solid #3a7bd5;
-      padding-left: 10px;
-    }
-    .pub-item-row {
-      display: flex;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-    .pub-num-col {
-      min-width: 35px;
-      font-weight: 600;
-      color: #333;
-    }
-    .pub-award {
-      font-weight: 600;
-      color: #000;
-      margin-left: 5px;
-    }
-  </style>
+	  <style>
+	    .category-header {
+	      margin-top: 26px;
+	      margin-bottom: 15px;
+	      font-size: 15px;
+	      font-weight: 600;
+	      color: #444;
+	      border-left: 3px solid #3a7bd5;
+	      padding-left: 10px;
+	    }
+	    .pub-item-row {
+	      display: flex;
+	      margin-bottom: 20px;
+	      text-align: justify;
+	    }
+	    .pub-num-col {
+	      min-width: 35px;
+	      font-weight: 600;
+	      color: #333;
+	    }
+	    .pub-award {
+	      font-weight: 600;
+	      color: #000;
+	      margin-left: 5px;
+	    }
+	  </style>
 
   <script>
 	    function escapeHtml(str) {
