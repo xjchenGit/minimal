@@ -251,20 +251,32 @@ footer {
 }
 
 .pub-item{
-  margin-bottom: 14px;
+  padding-left: 2.8em;     /* 給序號預留空間 */
+  text-indent: -2.8em;     /* 讓序號掛出去 */
 }
 
-.pub-main{
+/* .pub-main{
   display: flex;
   gap: 10px;          /* [1] 和文字的距離 */
   align-items: flex-start;
+} */
+
+.pub-main{
+  display: block;          /* 不用兩欄 flex */
 }
 
-.pub-num{
+
+/* .pub-num{
   flex: 0 0 auto;
   width: 42px;        /* ✅ 控制序號欄寬（可調 38~52） */
   text-align: right;  /* 讓 [1] 對齊右側，好看 */
   white-space: nowrap;
+} */
+.pub-num{
+  display: inline-block;
+  width: 2.8em;
+  text-align: right;
+  margin-right: .4em;
 }
 
 .pub-text{
