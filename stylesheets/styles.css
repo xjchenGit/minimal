@@ -236,6 +236,51 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Publications */
+.pub-ul{
+  list-style: none;   /* ✅ 不要 1. 2. 3. */
+  padding-left: 0;
+  margin: 0;
+}
+
+.pub-item{
+  margin-bottom: 14px;
+}
+
+.pub-main{
+  display: flex;
+  gap: 10px;          /* [1] 和文字的距離 */
+  align-items: flex-start;
+}
+
+.pub-num{
+  flex: 0 0 auto;
+  width: 42px;        /* ✅ 控制序號欄寬（可調 38~52） */
+  text-align: right;  /* 讓 [1] 對齊右側，好看 */
+  white-space: nowrap;
+}
+
+.pub-text{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ✅ 兩端對齊：只對文字段落，避免 links 被拉爆 */
+.pub-title,
+.pub-authors,
+.pub-venue{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+}
+
+.pub-links{
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
