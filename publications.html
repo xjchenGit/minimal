@@ -64,7 +64,7 @@
         </section>
     </div>
 
-    <script>
+    <!-- <script>
       fetch('header.html')
         .then(response => response.text())
         .then(data => {
@@ -88,6 +88,47 @@
           }
         })
         .catch(err => console.error('Error loading header:', err));
-    </script>
+    </script> -->
+
+    <script>
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('sidebar').innerHTML = data;
+            
+            // --- 1. 設定此頁面導覽列的高亮狀態 ---
+            const pubLink = document.getElementById('nav-pub');
+            const aboutLink = document.getElementById('nav-about');
+            if (pubLink && aboutLink) {
+              pubLink.style.textDecoration = "underline";
+              pubLink.style.textUnderlineOffset = "6px";
+              pubLink.style.color = "#000";
+              pubLink.style.fontWeight = "600";
+            }
+      
+            // --- 2. 綁定 Follow 按鈕點擊事件 (修正點不出東西的問題) ---
+            const followBtn = document.getElementById('follow-btn');
+            const socialList = document.getElementById('social-list');
+      
+            if (followBtn && socialList) {
+              followBtn.addEventListener('click', function(e) {
+                e.stopPropagation(); // 防止事件冒泡到 window
+                socialList.classList.toggle('show');
+                console.log("Follow button clicked!"); // 測試用，可在瀏覽器 F12 檢查
+              });
+            }
+          })
+          .catch(err => console.error('Error loading header:', err));
+      
+        // --- 3. 點擊頁面其他地方關閉選單 ---
+        window.addEventListener('click', function(event) {
+          const socialList = document.getElementById('social-list');
+          if (socialList && socialList.classList.contains('show')) {
+            if (!event.target.matches('#follow-btn')) {
+              socialList.classList.remove('show');
+            }
+          }
+        });
+      </script>
   </body>
 </html>
