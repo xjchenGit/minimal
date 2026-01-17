@@ -80,7 +80,7 @@
 
 - number: 4
   title: "Singing Voice Graph Modeling for SingFake Detection"
-  authors_full: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee"
+  authors_full: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "INTERSPEECH 2024"
   note: "Oral"
   links:
@@ -95,7 +95,7 @@
 
 - number: 3
   title: "Towards audio language modeling-an overview"
-  authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander H. Liu, and Hung-yi Lee"
+  authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander H. Liu, Hung-yi Lee"
   venue: "Overview Report, Feb. 2024"
   links:
     - name: "arXiv"
@@ -106,7 +106,7 @@
 - number: 2
   title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
   authors_full: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
-  authors_short: "Haibin Wu, Ho-Lam Chung, …, <u>Xuanjun Chen</u>, …, Hung-yi Lee"
+  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, …, Hung-yi Lee"
   venue: "Findings of ACL 2024"
   links:
     - name: "ACL Anthology"
