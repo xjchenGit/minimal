@@ -153,16 +153,29 @@
 			            .join(" / ");
 			
 			        // 4. 返回 HTML 結構
+					// return `
+					//     <li class="pub-item" style="display: flex; margin-bottom: 15px;">
+					//         <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
+					//         <div class="pub-text" style="text-align: justify;">
+					//             <b class="pub-title">${title}</b>${note}<br>
+					//             ${authors ? `<span class="pub-authors" style="display: block; color: #555;">${authors}</span>` : ""}
+					//             ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}` : ""}
+					//             ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
+					//         </div>
+					//     </li>`;
 					return `
-					    <li class="pub-item" style="display: flex; margin-bottom: 15px;">
-					        <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
-					        <div class="pub-text" style="text-align: justify;">
-					            <b class="pub-title">${title}</b>${note}<br>
-					            ${authors ? `<span class="pub-authors" style="display: block; color: #555;">${authors}</span>` : ""}
-					            ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}` : ""}
-					            ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
-					        </div>
-					    </li>`;
+					        <li class="pub-item" style="display: flex; margin-bottom: 15px; list-style: none;">
+					            <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
+					            <div class="pub-text" style="text-align: justify;">
+					                <b class="pub-title">${title}</b>${note}<br>
+					                ${authors ? `<span class="pub-authors" style="display: block; color: #555; margin-bottom: 2px;">${authors}</span>` : ""}
+					                <span class="pub-venue-row">
+					                    ${venue ? `<i>${venue}</i>` : ""}${award}
+					                </span>
+					                <br>
+					                ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
+					            </div>
+					        </li>`;
 			    }
 			
 			    fetch("selected-pubs.yml")
