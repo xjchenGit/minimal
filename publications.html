@@ -82,67 +82,99 @@
 
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 
-    <script>
-	        // 為了美觀，先定義分類標題樣式（也可以寫在 style 標籤裡）
-	        const categoryStyle = "margin-top: 26px; margin-bottom: 15px; font-size: 15px; font-weight: 600; color: #444; border-left: 3px solid #3a7bd5; padding-left: 10px;";
-	        document.querySelectorAll('.category-title').forEach(el => el.style = categoryStyle);
+    <section>
+  <h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+
+  <h3 class="category-header">🎙️ Audio Large Language Models</h3>
+  <div id="audio-llm-container" class="pub-list-dynamic"></div>
+
+  <h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
+  <div id="rag-container" class="pub-list-dynamic"></div>
+
+  <h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+  <div id="deepfake-container" class="pub-list-dynamic"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+
+  <style>
+    .category-header {
+      margin-top: 26px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #444;
+      border-left: 3px solid #3a7bd5;
+      padding-left: 10px;
+    }
+    .pub-item-row {
+      display: flex;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    .pub-num-col {
+      min-width: 35px;
+      font-weight: 600;
+      color: #333;
+    }
+    .pub-award {
+      font-weight: 600;
+      color: #000;
+      margin-left: 5px;
+    }
+  </style>
+
+  <script>
+	    function escapeHtml(str) {
+	      return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+	    }
 	
-	        function escapeHtml(str) {
-	            return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
-	        }
+	    function renderPubRow(p, num) {
+	      const title = p.title ? escapeHtml(p.title) : "";
+	      const authors = p.authors_short || "";
+	      const venue = p.venue ? escapeHtml(p.venue) : "";
+	      const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
+	      const linksHtml = (p.links || [])
+	        .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
+	        .join(" / ");
 	
-	        function renderPub(p, index) {
-	            const authors = p.authors_short || p.authors_full || "";
-	            const title = p.title ? escapeHtml(p.title) : "";
-	            const venue = p.venue ? escapeHtml(p.venue) : "";
-	            const award = p.award ? ` <span class="pub-award" style="color: #d9534f; font-weight: 600;">${p.award}</span>` : "";
-	            const note = p.note ? ` <span class="pub-note">(${escapeHtml(p.note)})</span>` : "";
-	            
-	            const linksHtml = (p.links || [])
-	                .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #3a7bd5;">${escapeHtml(l.name)}</a>`)
-	                .join(" / ");
+	      return `
+	        <div class="pub-item-row">
+	          <div class="pub-num-col">[${num}]</div>
+	          <div class="pub-info-col">
+	            <b>${title}</b><br>
+	            <span style="color: #555;">${authors}</span><br>
+	            <i>${venue}</i>${award}<br>
+	            <span style="font-size: 0.95em;">${linksHtml}</span>
+	          </div>
+	        </div>`;
+	    }
 	
-	            return `
-	                <div class="pub-item" style="display: flex; margin-bottom: 20px; font-family: 'Source Serif 4', serif;">
-	                    <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${index}]</div>
-	                    <div class="pub-text" style="text-align: justify;">
-	                        <b class="pub-title">${title}</b>${note}<br>
-	                        <span class="pub-authors" style="display: block; margin: 2px 0;">${authors}</span>
-	                        <span class="pub-venue"><i>${venue}</i></span>${award}<br>
-	                        <span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>
-	                    </div>
-	                </div>`;
-	        }
+	    fetch("publications.yml")
+	      .then(res => res.text())
+	      .then(text => {
+	        const data = jsyaml.load(text) || [];
+	        
+	        // 分類對應表
+	        const config = [
+	          { key: 'audio-llm', container: 'audio-llm-container' },
+	          { key: 'rag', container: 'rag-container' },
+	          { key: 'deepfake', container: 'deepfake-container' }
+	        ];
 	
-	        fetch("publications.yml")
-	            .then(res => res.text())
-	            .then(text => {
-	                const pubs = jsyaml.load(text) || [];
-	                
-	                // 定義分類與對應容器 ID
-	                const categories = {
-	                    'audio-llm': { id: 'audio-llm-container', count: 0 },
-	                    'rag': { id: 'rag-container', count: 0 },
-	                    'deepfake': { id: 'deepfake-container', count: 0 }
-	                };
-	
-	                // 按類別過濾並渲染
-	                // 這裡假設 YAML 順序已經排好（如 [11], [10]...），若要自動編號可以微調
-	                Object.keys(categories).forEach(catKey => {
-	                    const filtered = pubs.filter(p => p.category === catKey);
-	                    // 根據你的需求，編號可能是倒序顯示
-	                    const html = filtered.map((p, i) => {
-	                        // 這裡的編號使用 YAML 中的順序或是手動計算
-	                        // 範例：保持跟原 HTML 一樣的編號（從大到小）
-	                        const displayNum = filtered.length - i; 
-	                        return renderPub(p, displayNum);
-	                    }).join("");
-	                    
-	                    document.getElementById(categories[catKey].id).innerHTML = html;
-	                });
-	            })
-	            .catch(err => console.error('Failed to load publications:', err));
-	    </script>
+	        config.forEach(cat => {
+	          const filtered = data.filter(p => p.category === cat.key);
+	          const html = filtered.map((p, i) => {
+	            // 自動編號：從大到小 (例如 5, 4, 3, 2, 1)
+	            const displayNum = filtered.length - i;
+	            return renderPubRow(p, displayNum);
+	          }).join("");
+	          document.getElementById(cat.container).innerHTML = html;
+	        });
+	      })
+	      .catch(err => {
+	        console.error('Error loading YAML:', err);
+	      });
+	  </script>
 	</section>
 		<!-- <footer class="site-footer">
             <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
