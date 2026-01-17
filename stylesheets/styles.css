@@ -237,10 +237,11 @@ footer {
 }
 
 /* Publications */
-.pub-ul{
-  list-style: none;   /* ✅ 不要 1. 2. 3. */
-  padding-left: 0;
-  margin: 0;
+.pub-list .pub-ul{
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  padding-inline-start: 0 !important;
 }
 
 .pub-ol {
