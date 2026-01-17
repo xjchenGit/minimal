@@ -27,6 +27,8 @@
       @media (max-width: 768px) {
         .wrapper { 
           flex-direction: column; /* 讓內容往下排，不要被側欄擋住 */
+          width: 100% !important;
+          padding: 0 !important;
         }
         header {
           width: 100% !important;
@@ -35,7 +37,7 @@
           top: 0;
           z-index: 1000; /* 確保下拉選單在最上層 */
           background: #fff;
-          padding: 10px 20px !important;
+          padding: 10px 0 !important;
           border-right: none !important;
           border-bottom: 1px solid #eee !important; /* 改成底部分隔線 */
           box-sizing: border-box !important;
@@ -48,7 +50,9 @@
         }
         
         section {
+          width: 100% !important;
           padding: 20px !important; /* 手機版間距縮小 */
+          box-sizing: border-box !important;
         }
       }
     </style>
