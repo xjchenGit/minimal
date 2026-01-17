@@ -7,49 +7,91 @@
     @media (max-width: 768px) {
         #sidebar-content {
             display: flex !important;
-            flex-direction: row !important; /* 強制橫排 */
-            align-items: center !important; /* 垂直置中 */
-            justify-content: flex-start !important; /* 靠左對齊 */
-            padding: 10px 10px !important; /* 縮小內距防止擠壓 */
-            width: 100vw !important; /* 確保寬度等於螢幕寬 */
-            box-sizing: border-box !important;
+            flex-direction: column !important; /* 改為垂直堆疊兩行 */
+            padding: 15px !important;
+            gap: 15px !important;
         }
 
-        /* 1. 頭像：縮小並移除底邊距 */
-        #sidebar-content a img {
-            width: 45px !important; /* 固定尺寸 */
-            height: 45px !important;
-            margin-bottom: 0 !important;
-            margin-right: 10px !important; /* 與名字的間距 */
+        /* 第一行：導航置頂 */
+        #nav-menu {
+            display: flex !important;
+            justify-content: flex-end !important; /* 選單靠右 */
+            gap: 20px !important;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin: 0 !important;
         }
 
-        /* 2. 名字：變小、不換行、移除底邊距 */
-        #sidebar-content h2 {
+        /* 第二行：頭像、名字、按鈕橫排 */
+        .profile-main {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #main-avatar {
+            width: 50px !important;
+            height: 50px !important;
+            margin: 0 12px 0 0 !important;
+        }
+
+        .profile-text {
+            display: flex;
+            flex-direction: column; /* 名字與地點垂直排列 */
+            justify-content: center;
+        }
+
+        #user-name {
             font-size: 18px !important;
             margin: 0 !important;
-            white-space: nowrap;
         }
 
-        /* 3. 隱藏地點資訊與社群圖示 (Wei-Ning 風格通常會隱藏這些以節省空間) */
-        #sidebar-content div:nth-of-type(1), 
-        .social-icons {
-            display: none !important;
+        #user-info {
+            font-size: 12px !important;
+            color: #666;
+            line-height: 1.2;
         }
 
-        /* 4. 導航選單：橫向排列 */
-        #sidebar-content nav {
-            display: flex !important;
-            gap: 15px !important;
-            margin-left: auto !important; /* 將選單推至最右邊 */
+        /* Follow 按鈕與下拉選單 */
+        .follow-container {
+            margin-left: auto; /* 推到最右邊 */
+            position: relative;
         }
 
-        #sidebar-content nav a {
-            display: inline-block !important;
-            font-size: 15px !important;
-            line-height: 1 !important;
-            margin: 0 !important;
+        #follow-btn {
+            padding: 5px 12px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
         }
+
+        .social-dropdown {
+            display: none; /* 預設隱藏 */
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: white;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 100;
+            width: 130px;
+            border-radius: 4px;
+        }
+
+        .social-dropdown a {
+            display: block;
+            padding: 10px;
+            font-size: 13px;
+            color: #444;
+            text-decoration: none;
+            border-bottom: 1px solid #fafafa;
+        }
+        
+        .social-dropdown.show { display: block; }
     }
+    
 </style>
 
 <div id="sidebar-content">
@@ -90,6 +132,24 @@
             activeLink.style.fontWeight = "600";
         }
     })();
+    function toggleSocial() {
+        const list = document.getElementById('social-list');
+        list.classList.toggle('show');
+    }
+    
+    // 點擊空白處關閉選單
+    window.onclick = function(event) {
+        if (!event.target.matches('#follow-btn')) {
+            const dropdowns = document.getElementsByClassName("social-dropdown");
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    
 </script>
 
 <!-- <div style="text-align: left; padding: 0 20px;">
