@@ -1,0 +1,30 @@
+- title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
+  authors_short: "Ke-Han Lu, Zhehuai Chen, ..., Xuanjun Chen, et al."
+  venue: "arXiv 2025"
+  category: "audio-llm"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2507.02768"
+    - name: "Code"
+      url: "https://github.com/kehanlu/DeSTA2.5-Audio"
+
+- title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
+  authors_short: "Claire Lin*, Bo-Han Feng*, Xuanjun Chen*, et al."
+  venue: "ROCLING 2025"
+  award: "🏆 Best Paper Award"
+  category: "rag"
+  links:
+    - name: "ACL Anthology"
+      url: "https://aclanthology.org/2025.rocling-main.6/"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2511.07445"
+
+- title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
+  authors_short: "Xuanjun Chen*, Jiawei Du*, ..., Hung-yi Lee"
+  venue: "Preprint, 2025"
+  category: "deepfake"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/pdf/2501.08238v2"
+    - name: "Project Page"
+      url: "https://responsiblegenai.github.io/CodecFake-Plus-Dataset/"
