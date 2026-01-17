@@ -250,10 +250,10 @@ footer {
 }
 
 .pub-item {
-  display: flex !important;    /* 強制開啟 Flex 布局 */
-  align-items: flex-start;
-  margin-bottom: 12px;         /* 增加每篇論文之間的間距 */
-  width: 100%;
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important; /* 調小論文間的空隙 */
+  width: 100% !important;
 }
 
 /* .pub-main{
@@ -266,20 +266,14 @@ footer {
   display: block;          /* 不用兩欄 flex */
 }
 
-
-/* .pub-num{
-  flex: 0 0 auto;
-  width: 42px;        /* ✅ 控制序號欄寬（可調 38~52） */
-  text-align: right;  /* 讓 [1] 對齊右側，好看 */
-  white-space: nowrap;
-} */
+/* 修正序號與標題文字的間距 */
 .pub-num {
-  flex: 0 0 4.5em;            /* 固定序號寬度 */
-  text-align: right;
-  margin-right: 1.5em;
-  font-weight: 600;
-  color: #222;
-  white-space: nowrap;
+  flex: 0 0 4.5em !important;      /* 增加固定寬度，給 [11] 空間 */
+  text-align: right !important;
+  margin-right: 1.5em !important;   /* 👈 這是推開序號與標題的關鍵 */
+  font-weight: 600 !important;
+  color: #222 !important;
+  white-space: nowrap !important;
 }
 
 .pub-text {
