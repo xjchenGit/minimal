@@ -252,7 +252,7 @@ footer {
 .pub-item {
   display: flex !important;    /* 強制開啟 Flex 布局 */
   align-items: flex-start;
-  margin-bottom: 25px;         /* 增加每篇論文之間的間距 */
+  margin-bottom: 18px;         /* 增加每篇論文之間的間距 */
   width: 100%;
 }
 
