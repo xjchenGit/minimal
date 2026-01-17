@@ -243,6 +243,12 @@ footer {
   margin: 0;
 }
 
+.pub-ol {
+  list-style: none !important;   /* ← 關掉 bullet */
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
 .pub-item{
   margin-bottom: 14px;
 }
