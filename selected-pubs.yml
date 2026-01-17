@@ -83,8 +83,7 @@
 - number: 4
   title: "Singing Voice Graph Modeling for SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "INTERSPEECH 2024"
-  note: "Oral"
+  venue: "INTERSPEECH 2024 (Oral)"
   links:
     - name: "ISCA Archive"
       url: "https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf"
