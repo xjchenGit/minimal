@@ -23,17 +23,6 @@
       url: "https://github.com/dynamic-superb/dynamic-superb"
 
 - number: 9
-  title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
-  authors_full: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen*</u>, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "ROCLING 2025"
-  award: "🏆 Best Paper Award"
-  links:
-    - name: "ACL Anthology"
-      url: "https://aclanthology.org/2025.rocling-main.6/"
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2511.07445"
-
-- number: 8
   title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
   authors_full: "<u>Xuanjun Chen*</u>, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   authors_short: "<u>Xuanjun Chen*</u>, Jiawei Du*, …, Hung-yi Lee"
@@ -48,7 +37,7 @@
     - name: "Code"
       url: "https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset"
 
-- number: 7
+- number: 8
   title: "How Does Instrumental Music Help SingFake Detection?"
   authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, et al."
   authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, …, Haibin Wu, et al."
@@ -56,6 +45,17 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2509.14675"
+
+- number: 7
+  title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
+  authors_full: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen*</u>, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "ROCLING 2025"
+  award: "🏆 Best Paper Award"
+  links:
+    - name: "ACL Anthology"
+      url: "https://aclanthology.org/2025.rocling-main.6/"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2511.07445"
 
 - number: 6
   title: "Towards Generalized Source Tracing for Codec-Based Deepfake Speech"
