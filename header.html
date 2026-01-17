@@ -121,8 +121,27 @@
             font-size: 13px;
         }
 
-        .social-dropdown.show { display: block !important; }
-    }
+        .social-dropdown {
+                    display: none; /* 預設隱藏 */
+                    position: absolute; right: 0; top: 110%; 
+                    background: white; border: 1px solid #eee; border-radius: 4px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 9999;
+                    width: 140px; 
+                }
+        
+                /* 強制選單內的連結垂直排列，不橫排 */
+                .social-dropdown a {
+                    display: flex !important; /* 修正：讓圖示和文字水平對齊，但整個 a 垂直堆疊 */
+                    flex-direction: row !important;
+                    padding: 10px 15px !important;
+                    color: #444 !important; font-size: 13px !important;
+                    text-decoration: none !important; border-bottom: 1px solid #f9f9f9;
+                    line-height: 1.2 !important;
+                }
+                .social-dropdown a i { margin-right: 8px; width: 16px; text-align: center; color: #3a7bd5; }
+        
+                .social-dropdown.show { display: block !important; } /* 顯示選單 */
+            }
 </style>
 
 <div id="sidebar-content">
