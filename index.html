@@ -27,6 +27,12 @@
       }
     
       section { flex: 1; padding: 40px 35px; }
+
+		.pub-award {
+		  font-weight: 600;
+		  color: #000;
+		  margin-left: 5px;
+		}
     
       /* --- 新增手機版 RWD 控制 --- */
       @media (max-width: 768px) {
@@ -151,7 +157,7 @@
 			        
 			        // 2. 處理獎項與備註 (參考 publications.html 的處理方式)
 			        // 獎項緊跟在 venue 之後
-			        const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
+			        const award = p.award ? ` <span class="pub-award" style="font-weight: 600; color: #000; margin-left: 5px;">${p.award}</span>` : "";
 			        const note = p.note ? ` <span class="pub-note">(${escapeHtml(p.note)})</span>` : "";
 			
 			        // 3. 處理連結
@@ -160,16 +166,16 @@
 			            .join(" / ");
 			
 			        // 4. 返回 HTML 結構
-			        return `
-			            <li class="pub-item" style="display: flex; margin-bottom: 15px;">
-			                <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
-			                <div class="pub-text" style="text-align: justify;">
-			                    <b class="pub-title">${title}</b>${note}<br>
-			                    ${authors ? `<span class="pub-authors" style="display: block; color: #555;">${authors}</span>` : ""}
-			                    ${venue ? `<span class="pub-venue"><i>${venue}</i>${award}</span>` : ""}
-			                    ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
-			                </div>
-			            </li>`;
+					return `
+					    <li class="pub-item" style="display: flex; margin-bottom: 15px;">
+					        <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
+					        <div class="pub-text" style="text-align: justify;">
+					            <b class="pub-title">${title}</b>${note}<br>
+					            ${authors ? `<span class="pub-authors" style="display: block; color: #555;">${authors}</span>` : ""}
+					            ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}` : ""} <br>
+					            ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
+					        </div>
+					    </li>`;
 			    }
 			
 			    fetch("selected-pubs.yml")
