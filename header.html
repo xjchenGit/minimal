@@ -1,4 +1,101 @@
-<div style="text-align: left; padding: 0 20px;">
+<style>
+    /* 桌面端 (Shang-Yu Su 風格) */
+    #sidebar-content {
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    #sidebar-content nav a {
+        text-decoration: none;
+        color: #888;
+        font-weight: 500;
+        display: block;
+        font-size: 17px;
+        line-height: 2.4;
+        font-family: 'Source Serif 4', serif;
+    }
+
+    /* 移動端自適應：螢幕寬度小於 768px 時觸發 */
+    @media (max-width: 768px) {
+        #sidebar {
+            width: 100% !important;
+            height: auto !important;
+            position: relative !important; /* 不再固定在左側 */
+            border-right: none !important;
+            border-bottom: 1px solid #eee !important; /* 改為底部分割線 */
+            padding: 20px 0 !important;
+            background: #fff;
+        }
+
+        #sidebar-content {
+            text-align: center !important;
+            padding: 0 15px !important;
+        }
+
+        #sidebar-content img {
+            width: 80px !important;
+            height: 80px !important;
+            margin: 0 auto 15px auto !important;
+        }
+
+        #sidebar-content nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px !important;
+        }
+
+        #sidebar-content nav a {
+            display: inline-block !important; /* 橫向排列 */
+        }
+
+        .social-icons {
+            justify-content: center !important;
+        }
+    }
+</style>
+
+<div id="sidebar-content">
+    <a href="index.html">
+        <img src="img/xj.png" width="120" height="120" style="display: block; border-radius: 50%; margin-bottom: 25px;">
+    </a>
+
+    <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">Xuanjun Chen</h2>
+
+    <div style="color: #666; line-height: 1.4; margin-bottom: 20px; font-size: 15px;">
+        Ph.D. Student @ NTU<br>
+        Taipei, Taiwan
+    </div>
+
+    <nav id="nav-menu">
+        <a id="nav-about" href="index.html">About me</a>
+        <a id="nav-pub" href="publications.html">Publications</a>
+    </nav>
+        
+    <div class="social-icons" style="display: flex; gap: 12px; margin-top: 10px;">
+        <a href="mailto:D12942018@ntu.edu.tw"><i class="fas fa-envelope" style="font-size: 18px; color: #444;"></i></a>
+        <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin" style="font-size: 18px; color: #444;"></i></a>
+        <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github" style="font-size: 18px; color: #444;"></i></a>
+        <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap" style="font-size: 18px; color: #444;"></i></a>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const targetId = (currentPage === "publications.html") ? "nav-pub" : "nav-about";
+        const activeLink = document.getElementById(targetId);
+        
+        if (activeLink) {
+            activeLink.style.textDecoration = "underline";
+            activeLink.style.textUnderlineOffset = "6px";
+            activeLink.style.color = "#000";
+            activeLink.style.fontWeight = "600";
+        }
+    })();
+</script>
+
+<!-- <div style="text-align: left; padding: 0 20px;">
     <a href="index.html">
         <img src="img/xj.png" width="120" height="120" style="display: block; border-radius: 50%; margin-bottom: 25px;">
     </a>
@@ -22,4 +119,4 @@
         <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github" style="font-size: 18px; color: #444;"></i></a>
         <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap" style="font-size: 18px; color: #444;"></i></a>
     </div>
-</div>
+</div> -->
