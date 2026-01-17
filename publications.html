@@ -33,17 +33,17 @@
         }
         
         header {
-          width: 100% !important;
-          height: auto !important;
-          position: sticky !important; /* 建議改回 sticky 讓導航跟隨 */
-          top: 0;
-          z-index: 1000; /* 確保下拉選單在最上層 */
-          background: #fff;
-          padding: 10px 0 !important;
-          border-right: none !important;
-          border-bottom: 1px solid #eee !important; /* 改成底部分隔線 */
-          box-sizing: border-box !important;
-          margin-bottom: 0 !important; /* 移除多餘的外距 */
+            width: 100% !important;
+            height: auto !important; /* 確保不佔用 100vh */
+            min-height: 0 !important; /* 移除任何最小高度限制 */
+            position: sticky !important;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            padding: 10px 0 0 0 !important; /* 縮小內距 */
+            border-right: none !important;
+            border-bottom: 1px solid #eee !important;
+            margin-bottom: 0 !important; /* 確保下方不留空 */
         }
         
         #nav-menu {
