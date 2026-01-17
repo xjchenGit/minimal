@@ -5,6 +5,11 @@
         padding: 0 20px; 
     }
 
+    .sidebar-footer {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
     /* 讓桌面版的個人資訊恢復垂直排列 */
     .profile-main {
         display: block; /* 移除手機版的 flex 橫排 */
@@ -62,6 +67,15 @@
             display: flex !important;
             flex-direction: column !important;
             padding: 10px 20px !important; /* 與下方 section 對齊的內距 */
+        }
+
+        .sidebar-footer {
+            order: 10; /* 強制排在最後 */
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #eee;
+            padding: 20px 0;
         }
 
         /* 導航置頂：橫排、底線、間距 */
@@ -184,6 +198,12 @@
         <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+
+    <div id="sidebar-content">
+        <div class="sidebar-footer">
+            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
+        </div>
     </div>
 </div>
 
