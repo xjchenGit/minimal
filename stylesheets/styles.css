@@ -250,9 +250,10 @@ footer {
 }
 
 .pub-item {
-  margin-bottom: 15px; /* 每篇論文之間的間距 */
-  display: flex;       /* 使用 Flex 佈局 */
+  display: flex !important;    /* 強制開啟 Flex 布局 */
   align-items: flex-start;
+  margin-bottom: 25px;         /* 增加每篇論文之間的間距 */
+  width: 100%;
 }
 
 /* .pub-main{
@@ -273,23 +274,31 @@ footer {
   white-space: nowrap;
 } */
 .pub-num {
-  flex: 0 0 3.2em;    /* 固定編號欄位寬度 */
-  text-align: right;  /* 讓 [1] 和 [10] 右對齊 */
-  margin-right: 0.8em; /* 編號與文字的間距 */
-  font-weight: 500;
-  color: #595959;
+  flex: 0 0 3.5em;            /* 固定序號寬度 */
+  text-align: right;
+  margin-right: 1em;          /* 序號與文字的距離 */
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;
 }
 
 .pub-text {
-  flex: 1;            /* 讓文字佔滿剩餘空間 */
+  flex: 1;                    /* 內容佔滿剩餘空間 */
   min-width: 0;
-  text-indent: 0 !important; /* 強制重置縮進，防止干擾 */
+  text-indent: 0 !important;   /* 確保沒有負向縮進干擾 */
+  line-height: 1.5;
 }
 
 /* ✅ 兩端對齊：只對文字段落，避免 links 被拉爆 */
 .pub-title, .pub-authors, .pub-venue {
   display: block;      /* 讓它們各佔一行，或依需求改回 inline */
   text-align: justify;
+}
+
+.pub-title {
+  display: inline;             /* 讓標題與後面的 note 連接 */
+  font-weight: 600;
+  color: #222;
 }
 
 .pub-links{
