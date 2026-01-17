@@ -7,18 +7,20 @@
     @media (max-width: 768px) {
         #sidebar-content {
             display: flex !important;
-            flex-direction: row !important; /* 橫向排列 */
-            align-items: center !important;
-            justify-content: flex-start !important;
-            padding: 10px 15px !important;
-            gap: 12px !important; /* 元件間距 */
+            flex-direction: row !important; /* 強制橫排 */
+            align-items: center !important; /* 垂直置中 */
+            justify-content: flex-start !important; /* 靠左對齊 */
+            padding: 10px 10px !important; /* 縮小內距防止擠壓 */
+            width: 100vw !important; /* 確保寬度等於螢幕寬 */
+            box-sizing: border-box !important;
         }
 
         /* 1. 頭像：縮小並移除底邊距 */
         #sidebar-content a img {
-            width: 40px !important;
-            height: 40px !important;
+            width: 45px !important; /* 固定尺寸 */
+            height: 45px !important;
             margin-bottom: 0 !important;
+            margin-right: 10px !important; /* 與名字的間距 */
         }
 
         /* 2. 名字：變小、不換行、移除底邊距 */
