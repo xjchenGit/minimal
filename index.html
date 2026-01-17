@@ -390,74 +390,73 @@
 			  </li>
 			</ul>
 		  
-		  <h2>Selected Services</h2>
-			<ul>
-			  <li>
-			    2025: <b>Co-Organizer</b>, 
-			    <a href="https://codecfake.github.io/RespSA-GenAI/">Responsible Speech & Audio Generative AI</a>, 
-			    Special Session at IEEE ASRU 2025
-			  </li>
-			
-			  <li>
-			    2024: <b>Technical Committee</b>, 
-			    <a href="https://codecsuperb.github.io/">Codec-SUPERB Challenge</a>, 
-			    Special Session at IEEE SLT 2024
-			  </li>
-			
-			  <li>
-			    2023–Now: <b>Reviewer</b>: 
-			    AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI
-			  </li>
-			</ul>
-
-	</section>
-      	<footer>
-		<br>
-		<!-- <p style="text-align: center;"><small>Science, the Endless Frontier.</small></p> -->
-		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
-	</footer>
+			  <h2>Selected Services</h2>
+				<ul>
+				  <li>
+				    2025: <b>Co-Organizer</b>, 
+				    <a href="https://codecfake.github.io/RespSA-GenAI/">Responsible Speech & Audio Generative AI</a>, 
+				    Special Session at IEEE ASRU 2025
+				  </li>
+				
+				  <li>
+				    2024: <b>Technical Committee</b>, 
+				    <a href="https://codecsuperb.github.io/">Codec-SUPERB Challenge</a>, 
+				    Special Session at IEEE SLT 2024
+				  </li>
+				
+				  <li>
+				    2023–Now: <b>Reviewer</b>: 
+				    AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI
+				  </li>
+				</ul>
+			<footer>
+				<br>
+				<!-- <p style="text-align: center;"><small>Science, the Endless Frontier.</small></p> -->
+				<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
+			</footer>
+		</section>
 	</div>
-    	<script src="javascripts/scale.fix.js"></script>
-
-	  <script>
-        fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-            
-            // --- 1. 設定此頁面導覽列的高亮狀態 ---
-            const pubLink = document.getElementById('nav-pub');
-            const aboutLink = document.getElementById('nav-about');
-            if (pubLink && aboutLink) {
-              pubLink.style.textDecoration = "underline";
-              pubLink.style.textUnderlineOffset = "6px";
-              pubLink.style.color = "#000";
-              pubLink.style.fontWeight = "600";
-            }
-      
-            // --- 2. 綁定 Follow 按鈕點擊事件 (修正點不出東西的問題) ---
-            const followBtn = document.getElementById('follow-btn');
-            const socialList = document.getElementById('social-list');
-      
-            if (followBtn && socialList) {
-              followBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); // 防止事件冒泡到 window
-                socialList.classList.toggle('show');
-                console.log("Follow button clicked!"); // 測試用，可在瀏覽器 F12 檢查
-              });
-            }
-          })
-          .catch(err => console.error('Error loading header:', err));
-      
-        // --- 3. 點擊頁面其他地方關閉選單 ---
-        window.addEventListener('click', function(event) {
-          const socialList = document.getElementById('social-list');
-          if (socialList && socialList.classList.contains('show')) {
-            if (!event.target.matches('#follow-btn')) {
-              socialList.classList.remove('show');
-            }
+	<script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+          
+          // --- 1. 設定 About me 高亮 ---
+          const aboutLink = document.getElementById('nav-about');
+          const pubLink = document.getElementById('nav-pub');
+          if (aboutLink && pubLink) {
+            // About 頁面，所以 About 高亮
+            aboutLink.style.textDecoration = "underline";
+            aboutLink.style.textUnderlineOffset = "6px";
+            aboutLink.style.color = "#000";
+            aboutLink.style.fontWeight = "600";
+            // Pub 灰掉
+            pubLink.style.textDecoration = "none";
+            pubLink.style.color = "#888";
+            pubLink.style.fontWeight = "500";
           }
-        });
-      </script>
+
+          // --- 2. 綁定 Follow 按鈕事件 ---
+          const followBtn = document.getElementById('follow-btn');
+          const socialList = document.getElementById('social-list');
+          if (followBtn && socialList) {
+            followBtn.addEventListener('click', function(e) {
+              e.stopPropagation();
+              socialList.classList.toggle('show');
+            });
+          }
+        })
+        .catch(err => console.error('Error loading header:', err));
+
+      window.addEventListener('click', function(event) {
+        const socialList = document.getElementById('social-list');
+        if (socialList && socialList.classList.contains('show')) {
+          if (!event.target.matches('#follow-btn')) {
+            socialList.classList.remove('show');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
