@@ -239,14 +239,14 @@ footer {
 /* Publications */
 .pub-list .pub-ul{
   list-style: none !important;
-  padding-left: 1.00 em !important;
+  padding-left: 0.80 em !important;
   margin: 0 !important;
-  padding-inline-start: 1.00 em !important;
+  padding-inline-start: 0.80 em !important;
 }
 
 .pub-ol {
   list-style: none !important;   /* ← 關掉 bullet */
-  padding-left: 0 !important;
+  padding-left: 0.5em !important;
   margin-left: 0 !important;
 }
 
