@@ -131,54 +131,61 @@
 			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 			
 			<script>
-			  function escapeHtml(str) {
-			    // 只 escape title/venue 這種純文字欄位；authors/links 我們本來就允許少量 HTML（例如 <u>）
-			    return String(str)
-			      .replaceAll("&", "&amp;")
-			      .replaceAll("<", "&lt;")
-			      .replaceAll(">", "&gt;")
-			      .replaceAll('"', "&quot;")
-			      .replaceAll("'", "&#039;");
-			  }
-			
-			  function renderPub(p) {
-			    const authors = p.authors_short || p.authors_full || "";
-			    const title = p.title ? escapeHtml(p.title) : "";
-			    const venue = p.venue ? escapeHtml(p.venue) : "";
-			
-			    const linksHtml = (p.links || [])
-			      .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
-			      .join(" / ");
-			
-			    return `
-			      <li class="pub-item">
-			        <div class="pub-title"><b>${title}</b></div>
-			        ${authors ? `<div class="pub-authors">${authors}</div>` : ""}
-			        ${venue ? `<div class="pub-venue"><i>${venue}</i></div>` : ""}
-			        ${linksHtml ? `<div class="pub-links">${linksHtml}</div>` : ""}
-			      </li>
-			    `;
-			  }
-			
-			  fetch("pub.yml")
-			    .then(res => res.text())
-			    .then(text => {
-			      const data = jsyaml.load(text); // 這裡會得到一個 array
-			      const pubs = Array.isArray(data) ? data : [];
-			      const html = `
-			        <div class="pub-list">
-			          <ol class="pub-ol" reversed>
-			            ${pubs.map(renderPub).join("")}
-			          </ol>
-			        </div>
-			      `;
-			      document.getElementById("pub-container").innerHTML = html;
-			    })
-			    .catch(err => {
-			      document.getElementById("pub-container").innerHTML =
-			        `<p style="color:#b00;">Failed to load publications: ${escapeHtml(err)}</p>`;
-			    });
-			</script>
+				function escapeHtml(str) {
+				  return String(str)
+				    .replaceAll("&", "&amp;")
+				    .replaceAll("<", "&lt;")
+				    .replaceAll(">", "&gt;")
+				    .replaceAll('"', "&quot;")
+				    .replaceAll("'", "&#039;");
+				}
+				
+				function renderPub(p, index, total) {
+				  const authors = p.authors_short || p.authors_full || "";
+				  const title = p.title ? escapeHtml(p.title) : "";
+				  const venue = p.venue ? escapeHtml(p.venue) : "";
+				
+				  const linksHtml = (p.links || [])
+				    .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
+				    .join(" / ");
+				
+				  // 計算反序號，例如共有11篇 → 11,10,9...
+				  const num = total - index;
+				
+				  return `
+				    <li class="pub-item">
+				      <div class="pub-title">
+				        <b>[${num}] ${title}</b>
+				      </div>
+				      ${authors ? `<div class="pub-authors">${authors}</div>` : ""}
+				      ${venue ? `<div class="pub-venue"><i>${venue}</i></div>` : ""}
+				      ${linksHtml ? `<div class="pub-links">${linksHtml}</div>` : ""}
+				    </li>
+				  `;
+				}
+				
+				fetch("selected-pubs.yml")
+				  .then(res => res.text())
+				  .then(text => {
+				    const data = jsyaml.load(text);
+				    const pubs = Array.isArray(data) ? data : [];
+				
+				    const html = `
+				      <div class="pub-list">
+				        <ol class="pub-ol">
+				          ${pubs.map((p, i) => renderPub(p, i, pubs.length)).join("")}
+				        </ol>
+				      </div>
+				    `;
+				
+				    document.getElementById("pub-container").innerHTML = html;
+				  })
+				  .catch(err => {
+				    document.getElementById("pub-container").innerHTML =
+				      `<p style="color:#b00;">Failed to load publications: ${escapeHtml(err)}</p>`;
+				  });
+				</script>
+
 		  
 		<!-- <div class="pub-list" style="padding-left: 20px;">
 			<p align="justify">
