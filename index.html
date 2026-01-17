@@ -125,7 +125,19 @@
 		  
 		  <h2>Selected Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
 
-
+			<div id="pub-container"></div>
+			
+			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+			
+			<script>
+			fetch('pub.md')
+			  .then(res => res.text())
+			  .then(md => {
+			    document.getElementById('pub-container').innerHTML =
+			      `<div class="pub-list">${marked.parse(md)}</div>`;
+			  });
+			</script>
+		  
 		<div class="pub-list" style="padding-left: 20px;">
 			<p align="justify">
 			    	[11] Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, et al., <b>"DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"</b> in arXiv 2025. 
