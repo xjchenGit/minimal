@@ -35,10 +35,18 @@
           top: 0;
           z-index: 1000; /* 確保下拉選單在最上層 */
           background: #fff;
-          padding: 10px 0 !important;
+          padding: 10px 20px !important;
           border-right: none !important;
           border-bottom: 1px solid #eee !important; /* 改成底部分隔線 */
+          box-sizing: border-box !important;
         }
+        
+        #nav-menu {
+            margin: 0 -20px 20px -20px !important; /* 使用負邊距讓線條向左右延伸 */
+            padding: 0 20px 12px 20px !important; /* 補回內距確保文字不會貼牆 */
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
         section {
           padding: 20px !important; /* 手機版間距縮小 */
         }
