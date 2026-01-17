@@ -273,7 +273,7 @@ footer {
   text-align: right !important;
   margin-right: 1.0em !important;   /* 👈 這是推開序號與標題的關鍵 */
   font-weight: 600 !important;
-  color: #222 !important;
+  color: #333 !important;
   white-space: nowrap !important;
 }
 
@@ -293,7 +293,7 @@ footer {
 .pub-title {
   display: inline;             /* 讓標題與後面的 note 連接 */
   font-weight: 600;
-  color: #222;
+  color: #333;
 }
 
 .pub-links{
