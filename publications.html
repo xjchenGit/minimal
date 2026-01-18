@@ -24,6 +24,11 @@
     
       /* --- 新增手機版 RWD 控制 --- */
       @media (max-width: 768px) {
+		  /* 1. 重要：覆蓋全域 body 的 padding，避免最外層產生大白邊 */
+		body {
+		    padding: 0 !important;
+	    }
+		  
         .wrapper {
               display: flex;
               flex-direction: column;
@@ -54,13 +59,18 @@
         section {
             width: 100% !important;
             padding-top: 20px !important; /* 調整內容與頂部導航的間距 */
-            padding: 20px !important; /* 手機版間距縮小 */
+            padding: 20px 12px !important; /* 手機版間距縮小 */
             box-sizing: border-box !important;
 			border-top: none !important;
 			border-bottom: none !important;
             display: flex; 
             flex-direction: column;
         }
+
+	  	/* 3. 針對 Publication 列表的數字列進行微調，節省空間 */
+		.pub-num-col {
+		    min-width: 30px !important; /* 稍微縮小序號欄位寬度 */
+	  	}
       }
     </style>
   </head>
