@@ -36,11 +36,17 @@
     
       /* --- 新增手機版 RWD 控制 --- */
       @media (max-width: 768px) {
+		body {
+			padding: 0 !important; /* 移除 body 的預設大內距 */
+  		}
+		  
         .wrapper {
-              display: flex;
-              flex-direction: column;
-              width: 100% !important;
-              padding: 0 !important;
+			display: flex;
+            flex-direction: column;
+            width: 100% !important;
+			max-width: 100% !important; /* 確保不被 1400px 限制 */
+			padding: 0 !important;
+			margin: 0 !important;
         }
         
         header {
@@ -66,14 +72,18 @@
         section {
             width: 100% !important;
             padding-top: 20px !important; /* 調整內容與頂部導航的間距 */
-            padding: 20px !important; /* 手機版間距縮小 */
+            padding: 20px 15px !important; /* 手機版間距縮小 */
             box-sizing: border-box !important;
 			border-top: none !important;
 			border-bottom: none !important;
-            display: flex; 
+            display: block; 
             flex-direction: column;
         }
-        /* 地圖：在移動端強制排在最下面 */
+        /* 針對論文列表在手機上的縮排優化 */
+		.pub-num {
+			min-width: 1.8em !important; /* 手機上序號寬度稍微縮小 */
+			margin-right: 0.5em !important;
+		}
       }
     </style>
 	  
