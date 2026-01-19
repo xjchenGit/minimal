@@ -1,0 +1,35 @@
+.pub-item-row { display: flex !important; align-items: flex-start !important; margin-bottom: 15px !important; text-align: justify; }
+.pub-num-col { 
+    flex: 0 0 2.5em !important; 
+    min-width: 2.5em !important; 
+    /* font-weight: 600;  */
+    color: #777; }
+.pub-info-col { flex: 1; min-width: 0; line-height: 1.5; }
+.pub-title { color: #222; font-weight: 600; }
+.pub-authors { display: block; color: #555; margin-top: 2px; }
+.pub-links { font-size: 0.92em; display: block; margin-top: 4px; }
+.pub-award { font-weight: 600; color: #000; margin-left: 5px; }
+.category-header { margin: 40px 0 20px; font-size: 17px; font-weight: 600; border-left: 3px solid #3a7bd5; padding-left: 10px; }
+
+@media (max-width: 768px) {
+    .title-br { display: none; } /* 手機隱藏強制換行 */
+    .pub-item-row { 
+        /* font-size: 13px;  */
+        /* text-align: left;  */
+        display: flex !important;
+        align-items: flex-start !important;
+        margin-bottom: 8px !important;
+        
+        /* 兩端對齊優化 */
+        text-align: justify;
+        text-justify: inter-word; /* 讓空格平均分佈在單詞間，而非字元間 */
+        hyphens: auto;           /* 允許長單詞自動加連字號斷行 (需要 HTML 加上 lang="en") */
+        word-break: break-word;   /* 防止長標題或連結撐破容器 */
+    }
+    .pub-num-col { 
+        flex: 0 0 2.0em !important; 
+        min-width: 1.6em !important; 
+        font-size: 15px;
+        margin-right: 1px;
+    }
+}

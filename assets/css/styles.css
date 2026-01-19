@@ -254,95 +254,6 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-/* Publications */
-.pub-list .pub-ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.pub-ol {
-  list-style: none !important;   /* ← 關掉 bullet */
-  padding-left: 0.5em !important;
-  margin-left: 0 !important;
-}
-
-.pub-item {
-  display: flex !important;
-  align-items: flex-start !important;
-  margin-bottom: 6px !important; /* 調小論文間的空隙 */
-  width: 100% !important;
-}
-
-.pub-main{
-  display: block;          /* 不用兩欄 flex */
-}
-
-/* 修正序號與標題文字的間距 */
-.pub-num {
-  flex: 0 0 0em !important;      /* 增加固定寬度，給 [11] 空間 */
-  min-width: 2.0em !important;     /* 確保寬度固定 */
-  text-align: right !important;
-  margin-right: 0.7em !important;   /* 👈 這是推開序號與標題的關鍵 */
-  color: #777 !important;
-  white-space: nowrap !important;
-}
-
-.pub-text {
-  flex: 1;                    /* 內容佔滿剩餘空間 */
-  min-width: 0;
-  text-indent: 0 !important;   /* 確保沒有負向縮進干擾 */
-  line-height: 1.5;
-}
-
-/* ✅ 兩端對齊：只對文字段落，避免 links 被拉爆 */
-.pub-title, .pub-authors, .pub-venue {
-  display: inline;      /* 讓它們各佔一行，或依需求改回 inline */
-  text-align: justify;
-}
-
-.pub-title {
-  display: inline;             /* 讓標題與後面的 note 連接 */
-  font-weight: 600;
-  color: #333;
-  white-space: pre-line;
-}
-
-.pub-links{
-  text-align: left;
-  overflow-wrap: anywhere;
-}
-
-.category-header {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #444;
-  border-left: 3px solid #3a7bd5;
-  padding-left: 10px;
-}
-
-.pub-item-row {
-  display: flex;
-  margin-bottom: 6px !important; /* 調小論文間的空隙 */
-  /* margin-bottom: 20px; */
-  text-align: justify;
-}
-
-.pub-num-col {
-  min-width: 30px;
-  font-weight: 600;
-  color: #333;
-}
-
-.pub-award {
-  font-weight: 600;
-  color: #000;
-  margin-left: 5px;
-}
-
-
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -379,17 +290,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* 在手機端，讓標題內的強制換行失效 */
-  .pub-title .title-br {
-      display: none;
-  }
-  
-  /* 確保標題在手機端依然維持正常的流動與對齊 */
-  .pub-title {
-      display: inline; 
-      white-space: normal; 
-  }
-
   section ul {
       padding-left: 1.2rem; /* 確保手機端縮排不會太深 */
   }

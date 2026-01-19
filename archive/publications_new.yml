@@ -1,0 +1,27 @@
+- title: "DeSTA2.5-Audio: Toward General-Purpose Large <br>Audio Language Model...DeSTA2.5-Audio: Toward General-Purpose Large <br>Audio Language Model"
+  authors_short: "Ke-Han Lu, ..., <u>Xuanjun Chen</u>, et al."
+  venue: "arXiv 2025"
+  category: "audio-llm"
+  selected: true  # <--- 新增這行
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2507.02768"
+
+- title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark..."
+  authors_short: "Chien-yu Huang, ..., <u>Xuanjun Chen</u>, et al."
+  venue: "ICLR 2025"
+  category: "audio-llm"
+  selected: true  # <--- 新增這行
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2411.05361v1"
+
+# 不需要出現在首頁的就不加 selected 或設為 false
+- title: "Towards audio language modeling-an overview"
+  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, et al."
+  venue: "Overview Report, Feb. 2024"
+  category: "audio-llm"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2402.13236"
+  

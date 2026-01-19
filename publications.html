@@ -5,6 +5,7 @@
 		<title>Publications - Xuanjun Chen</title>
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/header.css">
+		<link rel="stylesheet" href="assets/css/pubs.css">
 		<link rel="stylesheet" href="assets/css/pygment_trac.css">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,12 +31,21 @@
 				<div id="deepfake-container" class="pub-list-dynamic"></div>
 			
 				<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-				<script src="assets/js/pub-page-renderer.js"></script>
+				<script src="assets/js/2mode-pub-renderer.js"></script>
 
 				<script>
-					loadAndRenderPubs("ymls/publications.yml", "audio-llm-container", "audio-llm");
-					loadAndRenderPubs("ymls/publications.yml", "rag-container", "rag");
-					loadAndRenderPubs("ymls/publications.yml", "deepfake-container", "deepfake");
+					// loadAndRenderPubs("ymls/publications_new.yml", "audio-llm-container", "audio-llm");
+					// loadAndRenderPubs("ymls/publications_new.yml", "rag-container", "rag");
+					// loadAndRenderPubs("ymls/publications_new.yml", "deepfake-container", "deepfake");
+					const PATH = "ymls/publications_sel.yml";
+					// 🎙️ Audio LLM 區塊
+					loadAndRenderPubs(PATH, "audio-llm-container", "audio-llm", false, false, true);
+
+					// 🔍 RAG 區塊
+					loadAndRenderPubs(PATH, "rag-container", "rag", false, false, true);
+
+					// 🛡️ Deepfake 區塊
+					loadAndRenderPubs(PATH, "deepfake-container", "deepfake", false, false, true);
 				</script>
 
 				<br>

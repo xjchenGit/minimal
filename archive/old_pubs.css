@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Publication Component Styles
+   ========================================================================== */
+
+/* 論文列表容器設定 */
+.pub-list .pub-ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* 列表樣式調整 */
+  .pub-ol {
+    list-style: none !important;   /* 關閉預設 bullet */
+    padding-left: 0.5em !important;
+    margin-left: 0 !important;
+  }
+  
+  /* 針對首頁 (index.html) 的單篇論文項目 */
+  .pub-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 6px !important; /* 調小論文間的空隙 */
+    width: 100% !important;
+  }
+  
+  /* 針對列表頁 (publications.html) 的單篇論文項目 */
+  .pub-item-row {
+    display: flex;
+    margin-bottom: 6px !important; /* 調小論文間的空隙 */
+    text-align: justify;
+  }
+  
+  /* 序號樣式 (首頁使用) */
+  .pub-num {
+    flex: 0 0 0em !important;
+    min-width: 2.0em !important;     /* 確保 [11] 等兩位數空間固定 */
+    text-align: right !important;
+    margin-right: 0.7em !important;   /* 推開序號與標題的間距 */
+    color: #777 !important;
+    white-space: nowrap !important;
+  }
+  
+  /* 序號樣式 (列表頁使用) */
+  .pub-num-col {
+    min-width: 30px;
+    /* font-weight: 600; */
+    color: #333;
+  }
+  
+  /* 內容區塊設定 */
+  .pub-text, .pub-info-col {
+    flex: 1;
+    min-width: 0;
+    text-indent: 0 !important;
+    line-height: 1.5;
+  }
+  
+  /* 論文標題樣式 */
+  .pub-title {
+    display: inline;             /* 讓標題與後面的 note 連接 */
+    font-weight: 600;
+    color: #333;
+    white-space: pre-line;       /* 支援 YAML 中的手動換行符號 */
+  }
+  
+  /* 作者、地點樣式 (維持兩端對齊) */
+  .pub-authors, .pub-venue {
+    display: inline;
+    text-align: justify;
+  }
+  
+  /* 獲獎標籤樣式 */
+  .pub-award {
+    font-weight: 600;
+    color: #000;
+    margin-left: 5px;
+  }
+  
+  /* 連結樣式 (確保在手機端不會撐破版面) */
+  .pub-links {
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+  
+  /* 分類標題樣式 (左側帶藍色裝飾線) */
+  .category-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #444;
+    border-left: 3px solid #3a7bd5;
+    padding-left: 10px;
+  }
+  
+  /* 手機端 RWD 控制：隱藏標題內的強制換行標籤 <br> */
+  @media (max-width: 768px) {
+    .pub-title .title-br {
+        display: none;
+    }
+    
+    .pub-title {
+        white-space: normal; /* 讓長標題自然折行 */
+    }
+  }

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/header.css">
 		<link rel="stylesheet" href="assets/css/logo.css">
+		<link rel="stylesheet" href="assets/css/pubs.css">
 		<link rel="stylesheet" href="assets/css/pygment_trac.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
@@ -74,11 +75,34 @@
 				
 				<!-- YAML parser -->
 				<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-				<script src="assets/js/pub-renderer.js"></script>
-				<script>
+				<!-- <script src="assets/js/pub-renderer.js"></script> -->
+				<!-- <script>
 					loadAndRenderPubs("ymls/selected-pubs.yml", "pub-container");
+				</script> -->
+				<!-- 參數依序：路徑, 容器ID, 分類(null), isIndex(true), onlySelected(true) -->
+				<script src="assets/js/2mode-pub-renderer.js"></script>
+				<!-- <script>
+					// loadAndRenderPubs("ymls/publications_new.yml", "pub-container", null, true, true);
+					// 第五個參數設為 false (或不傳)
+					loadAndRenderPubs("ymls/publications.yml", "pub-container", "rag", false, false);
+				</script> -->
+				<!-- <script>
+					loadAndRenderPubs("ymls/publications_new.yml", "pub-container", null, true, true);
+					// 第五個參數設為 false (或不傳)
+					// loadAndRenderPubs("ymls/publications.yml", "pub-container", "rag", false, false);
+				</script> -->
+				<script>
+					// 參數說明：路徑, 容器, Category(null), isIndex(true), onlySelected(true), reverseOrder(false)
+					loadAndRenderPubs(
+						"ymls/publications_sel.yml", // 統一使用這份 YAML
+						"pub-container",        // 你的 HTML 容器 ID
+						null,                   // 不限類別，顯示所有 selected 項目
+						true,                   // 是首頁模式 (影響 CSS Class)
+						true,                   // **關鍵：只顯示 selected 項目**
+						false                   // **關鍵：正序排列 (1, 2, 3...)**
+					);
 				</script>
-			
+
 			<h2>Experience</h2>
 				<ul>
 					<li>Sep 2023 - Present: <b>Ph.D. student</b> in Communication Engineering, National Taiwan University</li>
