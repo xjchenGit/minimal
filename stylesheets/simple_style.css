@@ -59,6 +59,21 @@ header {
   border-image: linear-gradient(to bottom, rgba(238,238,238,0) 0%, rgba(238,238,238,1) 15%, rgba(238,238,238,1) 85%, rgba(238,238,238,0) 100%) 1 100%;
 }
 
+#sidebar {
+  width: 235px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-shrink: 0; /* 防止被擠壓 */
+  border-right: 1px solid #eee;
+  /* 如果您想要原本的漸層線，保留這個 */
+  border-image: linear-gradient(to bottom, rgba(238,238,238,0) 0%, rgba(238,238,238,1) 15%, rgba(238,238,238,1) 85%, rgba(238,238,238,0) 100%) 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 section {
   flex: 1;
   padding: 40px 35px;
