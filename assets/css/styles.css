@@ -370,6 +370,19 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  /* 在手機端，讓標題內的強制換行失效 */
+  .pub-title .title-br {
+      display: none;
+  }
+  
+  /* 確保標題在手機端依然維持正常的流動與對齊 */
+  .pub-title {
+      display: inline; 
+      white-space: normal; 
+  }
+}
+
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;

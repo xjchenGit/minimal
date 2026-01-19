@@ -23,9 +23,9 @@ function renderPubItem(p, index) {
 
     // 2. 處理標題：先 escape 再還原特定的 HTML 標籤（如 <br>）
     let title = p.title ? escapeHtml(p.title) : "";
-    title = title.replace(/&lt;br&gt;/g, '<br>') // 支援 YAML 裡的 <br>
-                 .replace(/\\\\/g, '<br>')       // 支援 YAML 裡的 \\
-                 .replace(/\\/g, '<br>');        // 支援 YAML 裡的 \
+    title = title.replace(/&lt;br&gt;/g, '<br class="title-br">') 
+                .replace(/\\\\/g, '<br class="title-br">')       
+                .replace(/\\/g, '<br class="title-br">');
 
     const venue = p.venue ? escapeHtml(p.venue) : "";
     const award = p.award ? ` <span class="pub-award" style="font-weight: 600; color: #000; margin-left: 5px;">${p.award}</span>` : "";
