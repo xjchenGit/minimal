@@ -98,8 +98,10 @@ a:hover small {
 }
 
 .wrapper {
-  width:1060px;
+  display: flex;
+  width:1400px;
   margin:0 auto;
+  position: relative;
 }
 
 blockquote {
@@ -147,7 +149,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:235px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
