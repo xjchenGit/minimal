@@ -99,9 +99,11 @@ a:hover small {
 
 .wrapper {
   display: flex;
-  width:1400px;
+  max-width:1200px;
+  /* width:1400px; */
   margin:0 auto;
   position: relative;
+  align-items: flex-start;
 }
 
 blockquote {
@@ -151,7 +153,9 @@ img {
 header {
   width:235px;
   float:left;
-  position:fixed;
+  position:sticky;
+  top: 50px;
+  flex-shrink: 0;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -215,6 +219,10 @@ header ul a strong {
 }
 
 section {
+  flex: 1;          /* 自動佔滿剩餘空間 */
+  padding-left: 50px; /* 增加與左側 header 的間距 */
+  padding-bottom: 50px;
+  min-width: 0;     /* 防止內容撐破佈局 */
   width:700px;
   float:right;
   padding-bottom:50px;
