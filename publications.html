@@ -94,131 +94,130 @@
 		
 		  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 
-	  <style>
-	    .category-header {
-	      margin-top: 26px;
-	      margin-bottom: 15px;
-	      font-size: 15px;
-	      font-weight: 600;
-	      color: #444;
-	      border-left: 3px solid #3a7bd5;
-	      padding-left: 10px;
-	    }
-	    .pub-item-row {
-	      display: flex;
-	      margin-bottom: 20px;
-	      text-align: justify;
-	    }
-	    .pub-num-col {
-	      min-width: 35px;
-	      font-weight: 600;
-	      color: #333;
-	    }
-	    .pub-award {
-	      font-weight: 600;
-	      color: #000;
-	      margin-left: 5px;
-	    }
-	  </style>
-
-	  <script>
-		    function escapeHtml(str) {
-		      return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+		  <style>
+		    .category-header {
+		      margin-top: 26px;
+		      margin-bottom: 15px;
+		      font-size: 15px;
+		      font-weight: 600;
+		      color: #444;
+		      border-left: 3px solid #3a7bd5;
+		      padding-left: 10px;
 		    }
-		
-		    function renderPubRow(p, num) {
-		      const title = p.title ? escapeHtml(p.title) : "";
-		      const authors = p.authors_short || "";
-		      const venue = p.venue ? escapeHtml(p.venue) : "";
-		      const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
-		      const linksHtml = (p.links || [])
-		        .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
-		        .join(" / ");
-		
-		      return `
-		        <div class="pub-item-row">
-		          <div class="pub-num-col">[${num}]</div>
-		          <div class="pub-info-col">
-		            <b>${title}</b><br>
-		            <span style="color: #555;">${authors}</span><br>
-		            <i>${venue}</i>${award}<br>
-		            <span style="font-size: 0.95em;">${linksHtml}</span>
-		          </div>
-		        </div>`;
+		    .pub-item-row {
+		      display: flex;
+		      margin-bottom: 20px;
+		      text-align: justify;
 		    }
-		
-		    fetch("publications.yml")
-		      .then(res => res.text())
-		      .then(text => {
-		        const data = jsyaml.load(text) || [];
-		        
-		        // 分類對應表
-		        const config = [
-		          { key: 'audio-llm', container: 'audio-llm-container' },
-		          { key: 'rag', container: 'rag-container' },
-		          { key: 'deepfake', container: 'deepfake-container' }
-		        ];
-		
-		        config.forEach(cat => {
-		          const filtered = data.filter(p => p.category === cat.key);
-		          const html = filtered.map((p, i) => {
-		            // 自動編號：從大到小 (例如 5, 4, 3, 2, 1)
-		            const displayNum = filtered.length - i;
-		            return renderPubRow(p, displayNum);
-		          }).join("");
-		          document.getElementById(cat.container).innerHTML = html;
-		        });
-		      })
-		      .catch(err => {
-		        console.error('Error loading YAML:', err);
-		      });
-		  </script>
+		    .pub-num-col {
+		      min-width: 35px;
+		      font-weight: 600;
+		      color: #333;
+		    }
+		    .pub-award {
+		      font-weight: 600;
+		      color: #000;
+		      margin-left: 5px;
+		    }
+		  </style>
+	
+		  <script>
+			    function escapeHtml(str) {
+			      return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+			    }
+			
+			    function renderPubRow(p, num) {
+			      const title = p.title ? escapeHtml(p.title) : "";
+			      const authors = p.authors_short || "";
+			      const venue = p.venue ? escapeHtml(p.venue) : "";
+			      const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
+			      const linksHtml = (p.links || [])
+			        .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
+			        .join(" / ");
+			
+			      return `
+			        <div class="pub-item-row">
+			          <div class="pub-num-col">[${num}]</div>
+			          <div class="pub-info-col">
+			            <b>${title}</b><br>
+			            <span style="color: #555;">${authors}</span><br>
+			            <i>${venue}</i>${award}<br>
+			            <span style="font-size: 0.95em;">${linksHtml}</span>
+			          </div>
+			        </div>`;
+			    }
+			
+			    fetch("publications.yml")
+			      .then(res => res.text())
+			      .then(text => {
+			        const data = jsyaml.load(text) || [];
+			        
+			        // 分類對應表
+			        const config = [
+			          { key: 'audio-llm', container: 'audio-llm-container' },
+			          { key: 'rag', container: 'rag-container' },
+			          { key: 'deepfake', container: 'deepfake-container' }
+			        ];
+			
+			        config.forEach(cat => {
+			          const filtered = data.filter(p => p.category === cat.key);
+			          const html = filtered.map((p, i) => {
+			            // 自動編號：從大到小 (例如 5, 4, 3, 2, 1)
+			            const displayNum = filtered.length - i;
+			            return renderPubRow(p, displayNum);
+			          }).join("");
+			          document.getElementById(cat.container).innerHTML = html;
+			        });
+			      })
+			      .catch(err => {
+			        console.error('Error loading YAML:', err);
+			      });
+			  </script>
 		</section>
 		<!-- <footer class="site-footer">
             <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
         </footer> -->
 
 		<script>
-        fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('sidebar').innerHTML = data;
-            
-            // --- 1. 設定此頁面導覽列的高亮狀態 ---
-            const pubLink = document.getElementById('nav-pub');
-            const aboutLink = document.getElementById('nav-about');
-            if (pubLink && aboutLink) {
-              pubLink.style.textDecoration = "underline";
-              pubLink.style.textUnderlineOffset = "6px";
-              pubLink.style.color = "#000";
-              pubLink.style.fontWeight = "600";
-            }
-      
-            // --- 2. 綁定 Follow 按鈕點擊事件 (修正點不出東西的問題) ---
-            const followBtn = document.getElementById('follow-btn');
-            const socialList = document.getElementById('social-list');
-      
-            if (followBtn && socialList) {
-              followBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); // 防止事件冒泡到 window
-                socialList.classList.toggle('show');
-                console.log("Follow button clicked!"); // 測試用，可在瀏覽器 F12 檢查
-              });
-            }
-          })
-          .catch(err => console.error('Error loading header:', err));
-      
-        // --- 3. 點擊頁面其他地方關閉選單 ---
-        window.addEventListener('click', function(event) {
-          const socialList = document.getElementById('social-list');
-          if (socialList && socialList.classList.contains('show')) {
-            if (!event.target.matches('#follow-btn')) {
-              socialList.classList.remove('show');
-            }
-          }
-        });
+	        fetch('header.html')
+	          .then(response => response.text())
+	          .then(data => {
+	            document.getElementById('sidebar').innerHTML = data;
+	            
+	            // --- 1. 設定此頁面導覽列的高亮狀態 ---
+	            const pubLink = document.getElementById('nav-pub');
+	            const aboutLink = document.getElementById('nav-about');
+	            if (pubLink && aboutLink) {
+	              pubLink.style.textDecoration = "underline";
+	              pubLink.style.textUnderlineOffset = "6px";
+	              pubLink.style.color = "#000";
+	              pubLink.style.fontWeight = "600";
+	            }
+	      
+	            // --- 2. 綁定 Follow 按鈕點擊事件 (修正點不出東西的問題) ---
+	            const followBtn = document.getElementById('follow-btn');
+	            const socialList = document.getElementById('social-list');
+	      
+	            if (followBtn && socialList) {
+	              followBtn.addEventListener('click', function(e) {
+	                e.stopPropagation(); // 防止事件冒泡到 window
+	                socialList.classList.toggle('show');
+	                console.log("Follow button clicked!"); // 測試用，可在瀏覽器 F12 檢查
+	              });
+	            }
+	          })
+	          .catch(err => console.error('Error loading header:', err));
+	      
+	        // --- 3. 點擊頁面其他地方關閉選單 ---
+	        window.addEventListener('click', function(event) {
+	          const socialList = document.getElementById('social-list');
+	          if (socialList && socialList.classList.contains('show')) {
+	            if (!event.target.matches('#follow-btn')) {
+	              socialList.classList.remove('show');
+	            }
+	          }
+	        });
       </script>
     </div>
-    
   </body>
 </html>
