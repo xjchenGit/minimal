@@ -88,18 +88,7 @@
 			        const linksHtml = (p.links || [])
 			            .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
 			            .join(" / ");
-			
-			        // 4. 返回 HTML 結構
-					// return `
-					//     <li class="pub-item" style="display: flex; margin-bottom: 15px;">
-					//         <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
-					//         <div class="pub-text" style="text-align: justify;">
-					//             <b class="pub-title">${title}</b>${note}<br>
-					//             ${authors ? `<span class="pub-authors" style="display: block; color: #555;">${authors}</span>` : ""}
-					//             ${venue ? `<span class="pub-venue"><i>${venue}</i></span>${award}` : ""}
-					//             ${linksHtml ? `<span class="pub-links" style="font-size: 0.9em;">${linksHtml}</span>` : ""}
-					//         </div>
-					//     </li>`;
+
 					return `
 					        <li class="pub-item" style="display: flex; margin-bottom: 15px; list-style: none;">
 					            <div class="pub-num" style="min-width: 35px; font-weight: 600;">[${num}]</div>
@@ -134,42 +123,7 @@
 			                `<p style="color:#b00;">Failed to load publications: ${escapeHtml(err)}</p>`;
 			        });
 			</script>
-
-        <!-- <h2>Selected Honors</h2> -->
-			<!-- <p align="justify">2025: National Science and Technology Council Conference Subsidy </p> -->
-			<!-- <p align="justify">2024-25: (2x) NSTC Student Travel Grant, NSTC Taiwan </p> -->
-
-		<!-- <p align="justify">2025: CTCI Foundation Research Scholarship for Overseas Students</p>
-	  	<p align="justify">2025: ACLCLP Student Travel Grant, ACLCLP Taiwan</p>
-		<p align="justify">2024: Google Student Travel Grant, Google LLC </p>
-		<p align="justify">2024: CTCI Foundation Bursary Award for Overseas Students</p>
-		<p align="justify">2024-25: (2x) NSTC International Academic Conferences Subsidy </p>
-		<p align="justify">2020-25: (5x) Kwong Tung Community Outstanding Student Scholarship </p>
-		<p align="justify">2021: Ranked 3rd/42 teams in LA track of ASVspoof 2021 challenge </p>
-		<p align="justify">2018-20: Certificate of Achievement, Taiwan Tech (Top 5%, 3 semesters)</p>
-	  	<p align="justify">2017: SZIIT Academic Award (3rd Prize), SZIIT</p>
-	    <p align="justify">2016: National Encouragement Scholarship, Ministry of Education</p> -->
-
-		<!-- <p align="justify">2017: National Bronze Awards, 3rd China College Internet Entrep. Comp. </p> -->
-		<!-- <p align="justify">2016-17: National Encouragement Scholarship; 3rd Prize, SZIIT Acad. Award </p> -->
-	      	<!-- <p>2024: National Science and Technology Council (NSTC) Conference Subsidies, NSTC Taiwan </p> -->
-		<!-- <p align="justify">2017: National Bronze and Guangdong Provincial Gold Awards, 3rd China College Internet Entrep. Comp. </p> -->
-		<!-- <p align="justify">2016: National Encouragement Scholarship</p> -->
-		<!-- <p align="justify">2017: 3rd Prize, SZIIT Academic Award</p>
-			<p align="justify">2016: National Encouragement Scholarship</p> -->
-	      <!-- <p align="justify">2016-2017: National Encouragement Scholarship & 3rd Prize, SZIIT Academic Award </p> -->
-
-      	<!-- <h2>Selected Serivces</h2>
-		<!-- <p align="justify">2023-Present: <b>Reviewer/Program Committee</b>, ACL ('24), EMNLP ('24), ICASSP ('23-'25), INTERSPEECH ('25), COLING ('24-'25), MLSP ('24), IALP ('24), ECCV AVGenL ('24)</p> -->
-		<!-- <p align="justify">2023-Now: <b>Admin Assistant,</b> <a href="https://nvcenter.ntu.edu.tw/"> NVIDIA-NTU AI Joint Innovation Center</a>, NTU</p> -->
-	      	<!-- <p align="justify">2025: <b>Co-Organizer,</b> <a href="https://codecfake.github.io/RespSA-GenAI/"> Responsible Speech & Audio Generative AI,</a> Special Session at IEEE ASRU 2025</p> -->
-			<!-- <p align="justify">2024: <b>Technical Committee</b>, <a href="https://codecsuperb.github.io/">Codec-SUPERB Challenge</a>, Special Session at IEEE SLT 2024</p> -->
-		<!-- <p align="justify">2024: <b>Invited Speaker,</b> <a href="https://svddchallenge.org/challenges/special_session_ieee_slt.html">Topic: "Singing Voice Graph Modeling for SingFake Detection,"</a> SVDD Special Session at IEEE SLT 2024</p> -->
-		<!-- <p align="justify">2024-25: <b>Teaching Assistant</b>, <a href="https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php"> Intro. to Generative AI</a> & <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php">Machine Learning</a></p> -->
-      		<!-- <p align="justify">2023-Now: <b>Reviewer:</b> AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI, IALP</p>  -->
-		  <!-- , ECCV AVGenL -->
-		  <!-- <br> -->
-
+		
 		<h2>Experience</h2>
 			<ul>
 				<li>
@@ -220,7 +174,7 @@
 			  </li>
 			</ul>
 		  
-			  <h2>Selected Services</h2>
+		  <h2>Selected Services</h2>
 				<ul>
 				  <li>
 				    2025: <b>Co-Organizer</b>, 
@@ -239,6 +193,41 @@
 				    AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI
 				  </li>
 				</ul>
+        <!-- <h2>Selected Honors</h2> -->
+			<!-- <p align="justify">2025: National Science and Technology Council Conference Subsidy </p> -->
+			<!-- <p align="justify">2024-25: (2x) NSTC Student Travel Grant, NSTC Taiwan </p> -->
+
+		<!-- <p align="justify">2025: CTCI Foundation Research Scholarship for Overseas Students</p>
+	  	<p align="justify">2025: ACLCLP Student Travel Grant, ACLCLP Taiwan</p>
+		<p align="justify">2024: Google Student Travel Grant, Google LLC </p>
+		<p align="justify">2024: CTCI Foundation Bursary Award for Overseas Students</p>
+		<p align="justify">2024-25: (2x) NSTC International Academic Conferences Subsidy </p>
+		<p align="justify">2020-25: (5x) Kwong Tung Community Outstanding Student Scholarship </p>
+		<p align="justify">2021: Ranked 3rd/42 teams in LA track of ASVspoof 2021 challenge </p>
+		<p align="justify">2018-20: Certificate of Achievement, Taiwan Tech (Top 5%, 3 semesters)</p>
+	  	<p align="justify">2017: SZIIT Academic Award (3rd Prize), SZIIT</p>
+	    <p align="justify">2016: National Encouragement Scholarship, Ministry of Education</p> -->
+
+		<!-- <p align="justify">2017: National Bronze Awards, 3rd China College Internet Entrep. Comp. </p> -->
+		<!-- <p align="justify">2016-17: National Encouragement Scholarship; 3rd Prize, SZIIT Acad. Award </p> -->
+	      	<!-- <p>2024: National Science and Technology Council (NSTC) Conference Subsidies, NSTC Taiwan </p> -->
+		<!-- <p align="justify">2017: National Bronze and Guangdong Provincial Gold Awards, 3rd China College Internet Entrep. Comp. </p> -->
+		<!-- <p align="justify">2016: National Encouragement Scholarship</p> -->
+		<!-- <p align="justify">2017: 3rd Prize, SZIIT Academic Award</p>
+			<p align="justify">2016: National Encouragement Scholarship</p> -->
+	      <!-- <p align="justify">2016-2017: National Encouragement Scholarship & 3rd Prize, SZIIT Academic Award </p> -->
+
+      	<!-- <h2>Selected Serivces</h2>
+		<!-- <p align="justify">2023-Present: <b>Reviewer/Program Committee</b>, ACL ('24), EMNLP ('24), ICASSP ('23-'25), INTERSPEECH ('25), COLING ('24-'25), MLSP ('24), IALP ('24), ECCV AVGenL ('24)</p> -->
+		<!-- <p align="justify">2023-Now: <b>Admin Assistant,</b> <a href="https://nvcenter.ntu.edu.tw/"> NVIDIA-NTU AI Joint Innovation Center</a>, NTU</p> -->
+	      	<!-- <p align="justify">2025: <b>Co-Organizer,</b> <a href="https://codecfake.github.io/RespSA-GenAI/"> Responsible Speech & Audio Generative AI,</a> Special Session at IEEE ASRU 2025</p> -->
+			<!-- <p align="justify">2024: <b>Technical Committee</b>, <a href="https://codecsuperb.github.io/">Codec-SUPERB Challenge</a>, Special Session at IEEE SLT 2024</p> -->
+		<!-- <p align="justify">2024: <b>Invited Speaker,</b> <a href="https://svddchallenge.org/challenges/special_session_ieee_slt.html">Topic: "Singing Voice Graph Modeling for SingFake Detection,"</a> SVDD Special Session at IEEE SLT 2024</p> -->
+		<!-- <p align="justify">2024-25: <b>Teaching Assistant</b>, <a href="https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php"> Intro. to Generative AI</a> & <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php">Machine Learning</a></p> -->
+      		<!-- <p align="justify">2023-Now: <b>Reviewer:</b> AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI, IALP</p>  -->
+		  <!-- , ECCV AVGenL -->
+		  <!-- <br> -->
+
 		</section>
 		<!-- <footer>
 			<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
