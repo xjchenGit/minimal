@@ -121,91 +121,64 @@
 	    }
 	  </style>
 
-  <script>
-	    function escapeHtml(str) {
-	      return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
-	    }
-	
-	    function renderPubRow(p, num) {
-	      const title = p.title ? escapeHtml(p.title) : "";
-	      const authors = p.authors_short || "";
-	      const venue = p.venue ? escapeHtml(p.venue) : "";
-	      const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
-	      const linksHtml = (p.links || [])
-	        .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
-	        .join(" / ");
-	
-	      return `
-	        <div class="pub-item-row">
-	          <div class="pub-num-col">[${num}]</div>
-	          <div class="pub-info-col">
-	            <b>${title}</b><br>
-	            <span style="color: #555;">${authors}</span><br>
-	            <i>${venue}</i>${award}<br>
-	            <span style="font-size: 0.95em;">${linksHtml}</span>
-	          </div>
-	        </div>`;
-	    }
-	
-	    fetch("publications.yml")
-	      .then(res => res.text())
-	      .then(text => {
-	        const data = jsyaml.load(text) || [];
-	        
-	        // 分類對應表
-	        const config = [
-	          { key: 'audio-llm', container: 'audio-llm-container' },
-	          { key: 'rag', container: 'rag-container' },
-	          { key: 'deepfake', container: 'deepfake-container' }
-	        ];
-	
-	        config.forEach(cat => {
-	          const filtered = data.filter(p => p.category === cat.key);
-	          const html = filtered.map((p, i) => {
-	            // 自動編號：從大到小 (例如 5, 4, 3, 2, 1)
-	            const displayNum = filtered.length - i;
-	            return renderPubRow(p, displayNum);
-	          }).join("");
-	          document.getElementById(cat.container).innerHTML = html;
-	        });
-	      })
-	      .catch(err => {
-	        console.error('Error loading YAML:', err);
-	      });
-	  </script>
-	</section>
+	  <script>
+		    function escapeHtml(str) {
+		      return String(str).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+		    }
+		
+		    function renderPubRow(p, num) {
+		      const title = p.title ? escapeHtml(p.title) : "";
+		      const authors = p.authors_short || "";
+		      const venue = p.venue ? escapeHtml(p.venue) : "";
+		      const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
+		      const linksHtml = (p.links || [])
+		        .map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`)
+		        .join(" / ");
+		
+		      return `
+		        <div class="pub-item-row">
+		          <div class="pub-num-col">[${num}]</div>
+		          <div class="pub-info-col">
+		            <b>${title}</b><br>
+		            <span style="color: #555;">${authors}</span><br>
+		            <i>${venue}</i>${award}<br>
+		            <span style="font-size: 0.95em;">${linksHtml}</span>
+		          </div>
+		        </div>`;
+		    }
+		
+		    fetch("publications.yml")
+		      .then(res => res.text())
+		      .then(text => {
+		        const data = jsyaml.load(text) || [];
+		        
+		        // 分類對應表
+		        const config = [
+		          { key: 'audio-llm', container: 'audio-llm-container' },
+		          { key: 'rag', container: 'rag-container' },
+		          { key: 'deepfake', container: 'deepfake-container' }
+		        ];
+		
+		        config.forEach(cat => {
+		          const filtered = data.filter(p => p.category === cat.key);
+		          const html = filtered.map((p, i) => {
+		            // 自動編號：從大到小 (例如 5, 4, 3, 2, 1)
+		            const displayNum = filtered.length - i;
+		            return renderPubRow(p, displayNum);
+		          }).join("");
+		          document.getElementById(cat.container).innerHTML = html;
+		        });
+		      })
+		      .catch(err => {
+		        console.error('Error loading YAML:', err);
+		      });
+		  </script>
+		</section>
 		<!-- <footer class="site-footer">
             <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
         </footer> -->
-    </div>
 
-    <!-- <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('sidebar').innerHTML = data;
-          
-          // 3. 設定此頁面導覽列的高亮狀態
-          const pubLink = document.getElementById('nav-pub');
-          const aboutLink = document.getElementById('nav-about');
-          
-          if (pubLink && aboutLink) {
-            // Publications 設為 active
-            pubLink.style.textDecoration = "underline";
-            pubLink.style.textUnderlineOffset = "6px";
-            pubLink.style.color = "#000";
-            pubLink.style.fontWeight = "600";
-            
-            // About me 設為 inactive
-            aboutLink.style.textDecoration = "none";
-            aboutLink.style.color = "#888";
-            aboutLink.style.fontWeight = "500";
-          }
-        })
-        .catch(err => console.error('Error loading header:', err));
-    </script> -->
-
-    <script>
+		<script>
         fetch('header.html')
           .then(response => response.text())
           .then(data => {
@@ -245,5 +218,7 @@
           }
         });
       </script>
+    </div>
+    
   </body>
 </html>
