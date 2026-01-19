@@ -1,0 +1,380 @@
+/* body {
+  background-color: #fff;
+  padding:50px;
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color:#595959;
+  font-weight:400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+  margin:0 0 20px;
+} */
+
+body {
+  background-color: #fff;
+  padding: 50px;
+  font-size: 14px;
+  line-height: 1.6;
+
+  /* NEW: serif stack (English + Chinese) */
+  /* font-family: "Source Serif 4", "Noto Serif TC", "Times New Roman", Times, serif; */
+  font-family:
+    "Source Serif 4",
+    "Noto Serif TC",
+    "Noto Serif CJK TC",
+    "Songti TC",
+    "PMingLiU",
+    "Times New Roman",
+    serif;
+
+  color: #595959;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: "Source Serif 4", "Noto Serif TC", "Times New Roman", Times, serif; */
+  font-family:
+    "Source Serif 4",
+    "Noto Serif TC",
+    "Noto Serif CJK TC",
+    "Songti TC",
+    "PMingLiU",
+    "Times New Roman",
+    serif;
+  color: #222;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
+}
+
+.pub-list p {
+  margin-bottom: 10px;     /* 覆寫原本的 20px */
+  line-height: 1.45;
+}
+
+h1, h2, h3 {
+  line-height:1.1;
+}
+
+h1 {
+  font-size:28px;
+  font-weight: 500;
+}
+
+h2 {
+  margin-top: 35px !important;   /* 增加上方留白 */
+  color:#393939;
+  font-weight: 500;
+}
+
+h3, h4, h5, h6 {
+  color:#494949;
+  font-weight: 500;
+}
+
+a {
+  color:#39c;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#069;
+}
+
+a small {
+  font-size:11px;
+  color:#777;
+  margin-top:-0.3em;
+  display:block;
+}
+
+a:hover small {
+  color:#777;
+}
+
+.wrapper {
+  display: flex;
+  width:1400px;
+  margin:0 auto;
+  position: relative;
+}
+
+blockquote {
+  border-left:1px solid #e5e5e5;
+  margin:0;
+  padding:0 0 0 20px;
+  font-style:italic;
+}
+
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  color:#333;
+}
+
+pre {
+  padding:8px 15px;
+  background: #f8f8f8;
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+dt {
+  color:#444;
+  font-weight:500;
+}
+
+th {
+  color:#444;
+}
+
+img {
+  max-width:100%;
+}
+
+header {
+  width:235px;
+  float:left;
+  position:fixed;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+header ul {
+  list-style:none;
+  height:40px;
+  padding:0;
+  background: #f4f4f4;
+  border-radius:5px;
+  border:1px solid #e0e0e0;
+  width:270px;
+}
+
+header li {
+  width:89px;
+  float:left;
+  border-right:1px solid #e0e0e0;
+  height:40px;
+}
+
+header li:first-child a {
+  border-radius:5px 0 0 5px;
+}
+
+header li:last-child a {
+  border-radius:0 5px 5px 0;
+}
+
+header ul a {
+  line-height:1;
+  font-size:11px;
+  color:#999;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:34px;
+}
+
+header ul a:hover {
+  color:#999;
+}
+
+header ul a:active {
+  background-color:#f0f0f0;
+}
+
+strong {
+  color:#222;
+  font-weight:500;
+}
+
+header ul li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+header ul a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
+}
+
+section {
+  width:700px;
+  float:right;
+  padding-bottom:50px;
+}
+
+small {
+  font-size:11px;
+}
+
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+
+footer {
+  width:270px;
+  float:left;
+  position:fixed;
+  bottom:50px;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+/* Publications */
+.pub-list .pub-ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.pub-ol {
+  list-style: none !important;   /* ← 關掉 bullet */
+  padding-left: 0.5em !important;
+  margin-left: 0 !important;
+}
+
+.pub-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important; /* 調小論文間的空隙 */
+  width: 100% !important;
+}
+
+/* .pub-main{
+  display: flex;
+  gap: 10px;          /* [1] 和文字的距離 */
+  align-items: flex-start;
+} */
+
+.pub-main{
+  display: block;          /* 不用兩欄 flex */
+}
+
+/* 修正序號與標題文字的間距 */
+.pub-num {
+  flex: 0 0 2.2em !important;      /* 增加固定寬度，給 [11] 空間 */
+  min-width: 2.2em !important;     /* 確保寬度固定 */
+  text-align: right !important;
+  margin-right: 0.7em !important;   /* 👈 這是推開序號與標題的關鍵 */
+  color: #777 !important;
+  white-space: nowrap !important;
+}
+
+.pub-text {
+  flex: 1;                    /* 內容佔滿剩餘空間 */
+  min-width: 0;
+  text-indent: 0 !important;   /* 確保沒有負向縮進干擾 */
+  line-height: 1.5;
+}
+
+/* ✅ 兩端對齊：只對文字段落，避免 links 被拉爆 */
+.pub-title, .pub-authors, .pub-venue {
+  display: block;      /* 讓它們各佔一行，或依需求改回 inline */
+  text-align: justify;
+}
+
+.pub-title {
+  display: inline;             /* 讓標題與後面的 note 連接 */
+  font-weight: 600;
+  color: #333;
+}
+
+.pub-links{
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+
+@media print, screen and (max-width: 960px) {
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:320px;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+
+  header ul {
+    width:99%;
+  }
+
+  header li, header ul li + li + li {
+    width:33%;
+  }
+}
+
+@media print {
+  body {
+    padding:0.4in;
+    font-size:12pt;
+    color:#444;
+  }
+}
