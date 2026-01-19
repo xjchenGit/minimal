@@ -1,8 +1,8 @@
 .wrapper {
-  display: flex;
-  max-width: 1400px;
+  /* display: flex; */
+  max-width: 1060px;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
 }
       
 header { 
