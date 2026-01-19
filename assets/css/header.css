@@ -61,6 +61,12 @@
 
 /* ========== 手機版 RWD (螢幕 <= 768px) ========== */
 @media (max-width: 768px) {
+    .wrapper {
+        display: block !important;   /* 取消桌面版的 flex 排版 */
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
     #sidebar-content {
         display: flex !important;
         flex-direction: column !important;
