@@ -1,5 +1,6 @@
 # --- Audio Large Language Models ---
-- title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
+
+- title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u><u>Xuanjun Chen</u></u>, et al."
   venue: "arXiv 2025"
   category: "audio-llm"
@@ -9,7 +10,7 @@
     - name: "Code"
       url: "https://github.com/kehanlu/DeSTA2.5-Audio"
 
-- title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks"
+- title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the <br> Capabilities of Spoken Language Models with 180 Tasks"
   authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u><u>Xuanjun Chen</u></u>, et al."
   venue: "ICLR 2025"
   category: "audio-llm"
@@ -22,7 +23,7 @@
       url: "https://github.com/dynamic-superb/dynamic-superb"
 
 - title: "Towards audio language modeling-an overview"
-  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander H. Liu, and Hung-yi Lee"
+  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, and Hung-yi Lee"
   venue: "Overview Report, Feb. 2024"
   category: "audio-llm"
   links:
@@ -58,6 +59,12 @@
       url: "https://arxiv.org/abs/2409.14085"
 
 # --- Retrieval Augmented Generation ---
+# - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
+#   authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
+#   venue: "Working in Progress"
+#   category: "rag"
+#   links: []
+
 - title: "Efficient Retrieval-Augmented Generation via Grounded Planning"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Working in Progress"

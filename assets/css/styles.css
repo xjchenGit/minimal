@@ -90,7 +90,7 @@ a:hover small {
 
 .wrapper {
   display: flex;
-  max-width:1060px;
+  max-width:1000px;
   /* width:1400px; */
   margin:0 auto;
   position: relative;
@@ -266,20 +266,14 @@ footer {
   width: 100% !important;
 }
 
-/* .pub-main{
-  display: flex;
-  gap: 10px;          /* [1] 和文字的距離 */
-  /* align-items: flex-start;
-}  */
-
 .pub-main{
   display: block;          /* 不用兩欄 flex */
 }
 
 /* 修正序號與標題文字的間距 */
 .pub-num {
-  flex: 0 0 2.2em !important;      /* 增加固定寬度，給 [11] 空間 */
-  min-width: 2.2em !important;     /* 確保寬度固定 */
+  flex: 0 0 0em !important;      /* 增加固定寬度，給 [11] 空間 */
+  min-width: 2.0em !important;     /* 確保寬度固定 */
   text-align: right !important;
   margin-right: 0.7em !important;   /* 👈 這是推開序號與標題的關鍵 */
   color: #777 !important;
@@ -295,7 +289,7 @@ footer {
 
 /* ✅ 兩端對齊：只對文字段落，避免 links 被拉爆 */
 .pub-title, .pub-authors, .pub-venue {
-  display: block;      /* 讓它們各佔一行，或依需求改回 inline */
+  display: inline;      /* 讓它們各佔一行，或依需求改回 inline */
   text-align: justify;
 }
 
@@ -303,6 +297,7 @@ footer {
   display: inline;             /* 讓標題與後面的 note 連接 */
   font-weight: 600;
   color: #333;
+  white-space: pre-line;
 }
 
 .pub-links{
@@ -311,9 +306,9 @@ footer {
 }
 
 .category-header {
-  margin-top: 26px;
-  margin-bottom: 15px;
-  font-size: 15px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 17px;
   font-weight: 600;
   color: #444;
   border-left: 3px solid #3a7bd5;
@@ -328,7 +323,7 @@ footer {
 }
 
 .pub-num-col {
-  min-width: 35px;
+  min-width: 30px;
   font-weight: 600;
   color: #333;
 }
