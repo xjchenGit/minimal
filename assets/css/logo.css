@@ -1,0 +1,85 @@
+.experience-logos {
+    display: flex;
+    justify-content: center; /* 橫向置中 */
+    align-items: center;     /* 垂直置中 */
+    flex-wrap: wrap;        /* 手機端自動換行 */
+    gap: 65px;               /* 圖標之間的間距 */
+    margin: 0px 0;          /* 上下留白 */
+    padding: 0px 0;
+}
+
+.logo-item {
+    width: 40px;             /* 統一容器大小 */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;     /* 確保圖片不變形 */
+    /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08)); 加上輕微陰影 */
+    transition: transform 0.3s ease;
+}
+
+.logo-item img:hover {
+    transform: scale(1.1);    /* 滑鼠懸停縮放效果 */
+}
+
+
+.experience-logos-long {
+    display: flex;
+    justify-content: center; /* 橫向置中 */
+    align-items: center;     /* 垂直置中 */
+    flex-wrap: wrap;        /* 手機端自動換行 */
+    gap: 40px;               /* 圖標之間的間距 */
+    margin: 0px 0;          /* 上下留白 */
+    padding: 0px 0;
+}
+
+/* 長方形 Logo 版本 (例如 Amazon, Meta 文字商標) */
+.logo-item-long {
+    width: 170px;            /* 寬度增加，適合橫向 Logo */
+    height: 45px;            /* 高度維持一致，確保整齊 */
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+/* 確保圖片縮放邏輯一致 */
+.logo-item-long img {
+    max-width: 100%;
+    max-height: 80%;         /* 稍微限制高度，讓長條 Logo 看起來更優雅 */
+    object-fit: contain;
+    /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08)); */
+    transition: transform 0.3s ease;
+}
+
+.logo-item-long img:hover {
+    transform: scale(1.05);  /* 長條型 Logo 縮放比例稍微小一點，避免突兀 */
+}
+
+/* 手機端 RWD 調整 */
+@media (max-width: 768px) {
+    .experience-logos {
+        gap: 50px;           /* 手機間距縮小 */
+        margin: 10px 0;
+    }
+
+    .experience-logos-long {
+        gap: 25px;           /* 手機間距縮小 */
+        margin: 10px 0;
+    }
+
+    .logo-item {
+        width: 50px;         /* 手機圖標縮小 */
+        height: 60px;
+    }
+
+    .logo-item-long {
+        width: 150px;        /* 手機端寬度縮小 */
+        height: 60px;
+    }
+}

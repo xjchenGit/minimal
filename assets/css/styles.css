@@ -319,17 +319,20 @@ footer {
   border-left: 3px solid #3a7bd5;
   padding-left: 10px;
 }
+
 .pub-item-row {
   display: flex;
   margin-bottom: 6px !important; /* 調小論文間的空隙 */
   /* margin-bottom: 20px; */
   text-align: justify;
 }
+
 .pub-num-col {
   min-width: 35px;
   font-weight: 600;
   color: #333;
 }
+
 .pub-award {
   font-weight: 600;
   color: #000;
@@ -355,7 +358,7 @@ footer {
   }
 
   section {
-    border:1px solid #e5e5e5;
+    /* border:1px solid #e5e5e5; */
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
