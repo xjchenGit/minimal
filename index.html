@@ -105,7 +105,7 @@
 							</li>`;
 				}
 			
-				fetch("selected-pubs.yml")
+				fetch("ymls/selected-pubs.yml")
 					.then(res => res.text())
 					.then(text => {
 						const data = jsyaml.load(text);

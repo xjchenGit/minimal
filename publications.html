@@ -147,7 +147,7 @@
 			        </div>`;
 			    }
 			
-			    fetch("publications.yml")
+			    fetch("ymls/publications.yml")
 			      .then(res => res.text())
 			      .then(text => {
 			        const data = jsyaml.load(text) || [];
