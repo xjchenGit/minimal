@@ -11,7 +11,16 @@
 .sidebar-footer {
     margin-top: auto; /* 【關鍵】這會將地圖推到側邊欄的最底部 */
     padding: 20px 0;
-    text-align: center;
+    text-align: left;
+
+    min-height: 150px; 
+    background-color: #f0f0f0; /* 临时灰色背景 */
+    border: 1px dashed #ccc;   /* 虚线框 */
+}
+
+.sidebar-footer #clustrmaps {
+    display: inline-block; /* 確保它是一個行內塊，方便靠左 */
+    margin-left: 0;        /* 確保沒有左邊距 */
 }
 
 /* 讓桌面版的個人資訊恢復垂直排列 */
