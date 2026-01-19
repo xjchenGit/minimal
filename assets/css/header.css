@@ -8,31 +8,6 @@
     border-right: none !important;
 }
 
-.sidebar-footer {
-    margin-top: auto;            /* 核心：将地图推向侧边栏底部 */
-    padding: 20px 0;             /* 保持上下间距 */
-    
-    /* 强力对齐方案 */
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important; /* 核心：强制所有子元素向左对齐 */
-    text-align: left !important;
-    
-    /* 移除之前的预览占位样式 */
-    background-color: transparent !important; 
-    border: none !important;
-    min-height: auto !important;
-}
-
-/* 针对脚本生成的内部链接和图像进行深度强制左对齐 */
-.sidebar-footer #clustrmaps,
-.sidebar-footer a,
-.sidebar-footer img {
-    margin-left: 0 !important;   /* 消除可能的自动左右边距 */
-    margin-right: auto !important;
-    display: inline-block !important;
-}
-
 /* 讓桌面版的個人資訊恢復垂直排列 */
 .profile-main {
     display: block; /* 移除手機版的 flex 橫排 */
