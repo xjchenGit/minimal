@@ -227,6 +227,14 @@ section {
   padding-bottom:50px;
 }
 
+/* 讓 section 內所有的列表文字兩端對齊 */
+section ul li {
+  text-align: justify;
+  text-justify: inter-word; /* 增加單詞間距平滑度 */
+  margin-bottom: 8px;      /* 稍微增加項目間距，閱讀更舒服 */
+  line-height: 1.5;
+}
+
 small {
   font-size:11px;
 }
@@ -380,6 +388,15 @@ footer {
   .pub-title {
       display: inline; 
       white-space: normal; 
+  }
+
+  section ul {
+      padding-left: 1.2rem; /* 確保手機端縮排不會太深 */
+  }
+
+  section ul li {
+      font-size: 13px;      /* 手機端字體微調 */
+      line-height: 1.4;
   }
 }
 
