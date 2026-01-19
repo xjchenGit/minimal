@@ -1,7 +1,8 @@
 # --- Audio Large Language Models ---
 
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
-  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u><u>Xuanjun Chen</u></u>, et al."
+  authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u><u>Xuanjun Chen</u></u>, et al."
+  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, ..., <u><u>Xuanjun Chen</u></u>, et al."
   venue: "arXiv 2025"
   category: "audio-llm"
   selected: true  # <--- 新增這行
@@ -12,7 +13,8 @@
       url: "https://github.com/kehanlu/DeSTA2.5-Audio"
 
 - title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the <br> Capabilities of Spoken Language Models with 180 Tasks"
-  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u><u>Xuanjun Chen</u></u>, et al."
+  authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u><u>Xuanjun Chen</u></u>, et al."
+  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, ..., <u>Xuanjun Chen</u>, et al."
   venue: "ICLR 2025"
   category: "audio-llm"
   selected: true  # <--- 新增這行
