@@ -59,6 +59,10 @@ h2 {
   font-weight: 500;
 }
 
+section h2:first-of-type {
+  margin-top: 0 !important;
+}
+
 h3, h4, h5, h6 {
   color:#494949;
   font-weight: 500;
@@ -101,7 +105,15 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family:Monaco, 
+            Bitstream Vera Sans Mono,
+            Lucida Console,
+            Terminal,
+            Consolas,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Courier New,
+            monospace;
   color:#333;
 }
 
@@ -250,7 +262,7 @@ footer {
 .pub-item {
   display: flex !important;
   align-items: flex-start !important;
-  margin-bottom: 12px !important; /* 調小論文間的空隙 */
+  margin-bottom: 6px !important; /* 調小論文間的空隙 */
   width: 100% !important;
 }
 
@@ -309,7 +321,8 @@ footer {
 }
 .pub-item-row {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 6px !important; /* 調小論文間的空隙 */
+  /* margin-bottom: 20px; */
   text-align: justify;
 }
 .pub-num-col {
