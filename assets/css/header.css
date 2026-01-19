@@ -134,6 +134,14 @@
         background: #fff;
         border-radius: 4px;
         font-size: 13px;
+        font-family: inherit;
+
+        /* 新增以下三行，解決手機端顏色與外觀問題 */
+        color: #444;               /* 明確指定文字顏色，防止手機端變藍 */
+        -webkit-appearance: none;   /* 移除 iOS 預設的按鈕外觀 */
+        appearance: none;           /* 移除標準瀏覽器的預設外觀 */
+        
+        cursor: pointer;           /* 讓電腦端滑鼠移上去有手型圖示 */
     }
 
     .social-dropdown {
