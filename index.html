@@ -200,31 +200,12 @@
 		  <!-- , ECCV AVGenL -->
 		  <!-- <br> -->
 
+		  <script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
+
 		</section>
-		<footer class="sidebar-footer">
+		<!-- <footer>
 			<script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
-			<script>
-				window.addEventListener('load', function() {
-					// 找到 footer
-					const footer = document.querySelector('.sidebar-footer');
-					if (footer) {
-						// 1. 強制容器不准置中
-						footer.style.textAlign = 'left';
-						footer.style.display = 'block';
-		
-						// 2. 遍歷 footer 內所有生成的元素（a, img, div）
-						const items = footer.querySelectorAll('*');
-						items.forEach(el => {
-							el.style.marginLeft = '0';
-							el.style.marginRight = 'auto';
-							el.style.display = 'inline-block';
-							// 針對一些可能存在的 float 屬性進行覆蓋
-							el.style.float = 'none'; 
-						});
-					}
-				});
-			</script>
-		</footer>
+		</footer> -->
 		<script>
 	      fetch('header.html')
 	        .then(response => response.text())
