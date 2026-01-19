@@ -86,7 +86,7 @@ a:hover small {
 
 .wrapper {
   display: flex;
-  max-width:1200px;
+  max-width:1060px;
   /* width:1400px; */
   margin:0 auto;
   position: relative;
@@ -257,8 +257,8 @@ footer {
 /* .pub-main{
   display: flex;
   gap: 10px;          /* [1] 和文字的距離 */
-  align-items: flex-start;
-} */
+  /* align-items: flex-start;
+}  */
 
 .pub-main{
   display: block;          /* 不用兩欄 flex */
@@ -296,6 +296,31 @@ footer {
 .pub-links{
   text-align: left;
   overflow-wrap: anywhere;
+}
+
+.category-header {
+  margin-top: 26px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  border-left: 3px solid #3a7bd5;
+  padding-left: 10px;
+}
+.pub-item-row {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.pub-num-col {
+  min-width: 35px;
+  font-weight: 600;
+  color: #333;
+}
+.pub-award {
+  font-weight: 600;
+  color: #000;
+  margin-left: 5px;
 }
 
 

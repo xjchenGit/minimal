@@ -1,176 +1,3 @@
-<style>
-    /* ========== 桌面版樣式 (螢幕 > 768px) ========== */
-    #sidebar-content { 
-        text-align: left; 
-        padding: 0 20px; 
-        /* 新增：確保內容垂直分佈，地圖會被推到最下面 */
-        display: flex !important;
-        flex-direction: column !important;
-        border-right: none !important;
-    }
-
-    .sidebar-footer {
-        margin-top: auto; /* 【關鍵】這會將地圖推到側邊欄的最底部 */
-        padding: 20px 0;
-        text-align: center;
-    }
-    
-    /* .sidebar-footer {
-        margin-top: 50px;
-        padding: 0 20px;
-    } */
-
-    /* 讓桌面版的個人資訊恢復垂直排列 */
-    .profile-main {
-        display: block; /* 移除手機版的 flex 橫排 */
-    }
-
-    #main-avatar {
-        display: block;
-        width: 120px !important; /* 桌面版大頭貼恢復大小 */
-        height: 120px !important;
-        border-radius: 50%;
-        margin-bottom: 25px !important;
-    }
-
-    #user-name {
-        margin: 0 0 8px 0 !important;
-        font-size: 24px !important;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    #user-info {
-        color: #666;
-        line-height: 1.4;
-        margin-bottom: 20px !important;
-        font-size: 15px !important;
-    }
-
-    /* 桌面版導航選單：垂直排列 */
-    #nav-menu {
-        display: block !important;
-        margin-bottom: 30px !important;
-        border-bottom: none !important; /* 移除手機版的底線 */
-        padding-bottom: 0 !important;
-    }
-
-    #nav-menu a {
-        text-decoration: none;
-        color: #888;
-        font-weight: 500;
-        display: block !important; /* 垂直排列 */
-        font-size: 17px;
-        line-height: 2.4;
-        font-family: 'Source Serif 4', serif;
-    }
-
-    /* 桌面版顯示原始圖示，隱藏 Follow 按鈕 */
-    .follow-container { display: none !important; }
-    .social-icons { display: flex; gap: 12px; margin-top: 10px; }
-    .social-icons a { color: #444; font-size: 18px; text-decoration: none; }
-
-
-    /* ========== 手機版 RWD (螢幕 <= 768px) ========== */
-    @media (max-width: 768px) {
-        #sidebar-content {
-            display: flex !important;
-            flex-direction: column !important;
-            padding: 10px 20px !important;
-            height: auto !important; /* 確保高度縮回內容大小 */
-        }
-
-        /* 在 header.html 的 @media (max-width: 768px) 內部加入 */
-        .sidebar-footer {
-            display: none !important; /* 手機版隱藏側邊欄地圖，避免撐開高度 */
-        }
-
-        /* 導航置頂：橫排、底線、間距 */
-        #nav-menu {
-            order: -1; 
-            display: flex !important;
-            justify-content: flex-end !important;
-            gap: 20px !important;
-            /* border-bottom: 1px solid #f0f0f0 !important; */
-            padding-bottom: 12px !important;
-            margin: 0 -20px 20px -20px !important; /* 線條延伸到邊緣 */
-            padding-left: 20px !important;
-            padding-right: 20px !important;
-        }
-
-        #nav-menu a {
-            display: inline-block !important;
-            font-size: 15px !important;
-            line-height: 1 !important;
-        }
-
-        /* 個人資訊：橫排、小頭像 */
-        .profile-main {
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        #main-avatar {
-            width: 45px !important;
-            height: 45px !important;
-            margin: 0 12px 0 0 !important;
-        }
-
-        #user-name {
-            font-size: 18px !important;
-            margin: 0 !important;
-        }
-
-        #user-info {
-            font-size: 12px !important;
-            margin-bottom: 0 !important;
-        }
-
-        /* 手機版：隱藏原始圖示，顯示 Follow 按鈕 */
-        .social-icons { display: none !important; }
-        .follow-container { 
-            display: block !important; 
-            margin-left: auto; 
-            position: relative;
-        }
-
-        #follow-btn {
-            padding: 4px 12px;
-            border: 1px solid #ddd;
-            background: #fff;
-            border-radius: 4px;
-            font-size: 13px;
-        }
-
-        .social-dropdown {
-                    display: none; /* 預設隱藏 */
-                    position: absolute; right: 0; top: 110%; 
-                    background: white; border: 1px solid #ddd; border-radius: 4px;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 9999;
-                    width: 140px; 
-                }
-        
-                /* 強制選單內的連結垂直排列，不橫排 */
-                .social-dropdown a {
-                    display: flex !important; /* 修正：讓圖示和文字水平對齊，但整個 a 垂直堆疊 */
-                    flex-direction: row !important;
-                    padding: 10px 15px !important;
-                    color: #444 !important; font-size: 13px !important;
-                    text-decoration: none !important; border-bottom: 1px solid #f9f9f9;
-                    line-height: 1.2 !important;
-                }
-                .social-dropdown a i {
-                    margin-right: 8px;
-                    width: 16px;
-                    text-align: center;
-                    color: #777 !important; /* 強制改為灰色，覆蓋掉任何藍色設定 */
-                }
-        
-                .social-dropdown.show { display: block !important; } /* 顯示選單 */
-            }
-</style>
-
-
 <div id="sidebar-content">
     <nav id="nav-menu">
         <a id="nav-about" href="index.html">About</a>
@@ -179,7 +6,7 @@
 
     <div class="profile-main">
         <a href="index.html">
-            <img src="img/xj.png" id="main-avatar" alt="Avatar">
+            <img src="assets/img/xj.png" id="main-avatar" alt="Avatar">
         </a>
         <div class="profile-text">
             <h2 id="user-name">Xuanjun Chen</h2>
@@ -196,7 +23,7 @@
                 <a href="https://x.com/xjchen_ntu" target="_blank"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
                 <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                <a href="docs/xuanjun_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
+                <a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
             </div>
         </div>
     </div>
@@ -207,14 +34,13 @@
                 <a href="https://x.com/xjchen_ntu" target="_blank"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                <a href="docs/xuanjun_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+                <a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
     </div>
 
     <div class="sidebar-footer">
         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&cl=cee3f2&w=200&t=tt&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
     </div>
 </div>
-
 
 <script>
     // 導航高亮邏輯
