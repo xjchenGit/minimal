@@ -6,5 +6,13 @@
         "title_zh": "Hello World: 我的第一篇部落格",
         "excerpt_en": "This is an example blog post to demonstrate the new blogging functionality...",
         "excerpt_zh": "這是一篇範例文章，用來展示新的部落格功能..."
+    },
+    {
+        "id": "2026-01-22-Singfake",
+        "date": "2026-01-22",
+        "title_en": "Unmasking the Digital Voice: My Deep Dive into SingFake Detection",
+        "title_zh": "揭開數位嗓音的面紗：我深入研究 SingFake 檢測",
+        "excerpt_en": "This is an example blog post to demonstrate the new blogging functionality...",
+        "excerpt_zh": "這是一篇範例文章，用來展示新的部落格功能..."
     }
 ]
