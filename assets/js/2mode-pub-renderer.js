@@ -13,7 +13,9 @@ function renderPubItem(p, num) {
 
     const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
     const note = p.note ? ` <span class="pub-note">(${escapeHtml(p.note)})</span>` : "";
-    const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`).join(" / ");
+    const linksHtml = (p.links && p.links.length > 0) 
+        ? `[ ${p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`).join(" | ")} ]` 
+        : "";
 
     // 統一結構：確保 index 和 publications 視覺一致
     return `
@@ -23,7 +25,7 @@ function renderPubItem(p, num) {
                 <b class="pub-title">${title}</b>${note}<br>
                 <span class="pub-authors">${authors}</span>
                 <span class="pub-venue-row"><i>${p.venue}</i>${award}</span>
-                <span class="pub-links">${linksHtml}</span>
+                ${linksHtml ? `<span class="pub-links"> - ${linksHtml}</span>` : ""}
             </div>
         </div>`;
 }

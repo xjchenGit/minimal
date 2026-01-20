@@ -2,6 +2,7 @@
     <nav id="nav-menu">
         <a id="nav-about" href="index.html">About</a>
         <a id="nav-pub" href="publications.html">Publications</a>
+        <a id="nav-blogs" href="blogs.html">Blogs</a>
     </nav>
 
     <div class="profile-main">
@@ -23,10 +24,12 @@
             </button>
             <div id="social-list" class="social-dropdown">
                 <a href="mailto:D12942018@ntu.edu.tw"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
                 <a href="https://x.com/xjchen_ntu" target="_blank"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
                 <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i
+                        class="fas fa-graduation-cap"></i> Scholar</a>
                 <a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
             </div>
         </div>
@@ -37,16 +40,19 @@
         <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://x.com/xjchen_ntu" target="_blank"><i class="fab fa-x-twitter"></i></a>
         <a href="https://github.com/xjchenGit" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank"><i
+                class="fas fa-graduation-cap"></i></a>
         <a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
     </div>
 </div>
 
 <script>
     // 導航高亮邏輯
-    (function() {
+    (function () {
         const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        const targetId = (currentPage === "publications.html") ? "nav-pub" : "nav-about";
+        let targetId = "nav-about";
+        if (currentPage === "publications.html") targetId = "nav-pub";
+        else if (currentPage === "blogs.html") targetId = "nav-blogs";
         const activeLink = document.getElementById(targetId);
         if (activeLink) {
             activeLink.style.textDecoration = "underline";
@@ -64,7 +70,7 @@
     }
 
     // 點擊空白處關閉
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         const list = document.getElementById('social-list');
         if (list && !event.target.matches('#follow-btn')) {
             list.classList.remove('show');

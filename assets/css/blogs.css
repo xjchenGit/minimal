@@ -1,0 +1,60 @@
+/* 1. 頁面佈局與語言切換 */
+.lang-switch { margin-bottom: 20px; text-align: right; }
+.lang-btn { 
+    cursor: pointer; padding: 5px 12px; border: 1px solid #ccc; 
+    background: #fff; font-family: inherit; font-size: 14px; border-radius: 4px;
+    transition: all 0.2s;
+}
+.lang-btn.active { background: #005fa3; color: white; border-color: #005fa3; }
+
+/* 2. 部落格列表模式樣式 */
+.post-item { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.post-date { color: #666; font-size: 0.9em; margin-bottom: 5px; }
+.post-title { font-size: 1.4em; font-weight: 600; text-decoration: none; color: #005fa3; cursor: pointer; }
+.post-title:hover { text-decoration: underline; }
+.post-excerpt { margin-top: 10px; color: #444; line-height: 1.6; }
+
+/* 3. 文章內頁控制項 */
+#post-container { display: none; }
+.back-btn { margin-bottom: 20px; cursor: pointer; color: #666; font-size: 14px; display: inline-block; transition: 0.2s; }
+.back-btn:hover { color: #005fa3; }
+
+/* 4. Markdown 渲染樣式 (Markdown-body) */
+.markdown-body { line-height: 1.7; color: #333; }
+
+/* 針對 MD 內第一行日期樣式 (假設使用 *Date*) */
+.markdown-body em:first-child {
+    display: block;
+    color: #888;
+    margin-bottom: -10px;
+    font-style: italic;
+}
+
+.markdown-body h1, .markdown-body h2 { 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px; 
+    margin-top: 1.5em; 
+}
+
+.markdown-body hr {
+    height: 1px;
+    background-color: #eee;
+    border: none;
+    margin: 20px 0;
+}
+
+.markdown-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+
+.markdown-body code { 
+    background: #f4f4f4; 
+    padding: 2px 5px; 
+    border-radius: 3px; 
+    font-family: monospace; 
+}
+
+.markdown-body blockquote { 
+    border-left: 4px solid #005fa3; 
+    padding-left: 15px; 
+    color: #666; 
+    font-style: italic; 
+}

@@ -11,23 +11,32 @@ function initHeader(currentPage) {
             sidebar.innerHTML = data;
 
             // 1. 處理導航列高亮邏輯
+            // 1. 處理導航列高亮邏輯
             const aboutLink = document.getElementById('nav-about');
+            const blogLink = document.getElementById('nav-blogs');
             const pubLink = document.getElementById('nav-pub');
             
             if (aboutLink && pubLink) {
                 // 重置所有連結樣式
-                [aboutLink, pubLink].forEach(link => {
-                    link.style.textDecoration = "none";
-                    link.style.color = "#888";
-                    link.style.fontWeight = "500";
+                [aboutLink, blogLink, pubLink].forEach(link => {
+                    if (link) {
+                        link.style.textDecoration = "none";
+                        link.style.color = "#888";
+                        link.style.fontWeight = "500";
+                    }
                 });
 
                 // 設定當前 active 頁面樣式
-                const activeLink = (currentPage === 'about') ? aboutLink : pubLink;
-                activeLink.style.textDecoration = "underline";
-                activeLink.style.textUnderlineOffset = "6px";
-                activeLink.style.color = "#000";
-                activeLink.style.fontWeight = "600";
+                let activeLink = aboutLink;
+                if (currentPage === 'publications') activeLink = pubLink;
+                else if (currentPage === 'blogs') activeLink = blogLink;
+
+                if (activeLink) {
+                    activeLink.style.textDecoration = "underline";
+                    activeLink.style.textUnderlineOffset = "6px";
+                    activeLink.style.color = "#000";
+                    activeLink.style.fontWeight = "600";
+                }
             }
 
             // 2. 綁定 Follow 按鈕事件
