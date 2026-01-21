@@ -83,7 +83,7 @@
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_short: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen</u>*, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ROCLING 2025"
-  award: "🏆 Best Paper Award"
+  award: "Best Paper Award"
   category: "rag"
   selected: true  # <--- 新增這行
   links:
@@ -131,7 +131,7 @@
 - title: "Towards Generalized Source Tracing for Codec-Based Deepfake Speech"
   authors_short: "<u>Xuanjun Chen</u>*, I-Ming Lin*, Lin Zhang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE ASRU 2025"
-  award: "🏆 Best Student Paper nominee"
+  award: "Best Student Paper nominee"
   category: "deepfake"
   selected: true  # <--- 新增這行
   links:
