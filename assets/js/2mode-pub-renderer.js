@@ -370,33 +370,77 @@ function foldLinks(container) {
     const linkContainers = container.querySelectorAll('.pub-links');
 
     linkContainers.forEach((el) => {
-        if (el.dataset.processedLinks) return;
-        el.dataset.processedLinks = "true";
+        // 1. Ensure we have the full content stored
+        if (!el.dataset.fullHtml) {
+            // If currently showing a "Show +N" button, we might be in a bad state if we didn't save fullHtml.
+            // But usually this runs on fresh content or correctly cached content.
+            // If clean run:
+            el.dataset.fullHtml = el.innerHTML;
+        }
 
-        const links = el.querySelectorAll('a');
-        if (links.length <= 2) return; // No need to fold if 2 or fewer
+        // 2. Determine True Link Count (from full source)
+        // We parse the hidden full source to count actual links to decide if we even NEED to check.
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = el.dataset.fullHtml;
+        const allLinks = tempDiv.querySelectorAll('a');
 
-        // Store original full HTML
-        const fullHtml = el.innerHTML;
-        el.dataset.fullHtml = fullHtml;
+        if (allLinks.length <= 2) return; // Ignore if very few links
 
-        // Construct short HTML: [ A | B | +N ]
-        const remainingCount = links.length - 2;
-        const toggleStyle = 'cursor: pointer; color: #154c79; font-weight: 600; text-decoration: none; margin-left: 2px;';
-        const plusBtn = `<span class="link-expand-btn" style="${toggleStyle}">+${remainingCount}</span>`;
+        // 3. Measure Wrapping: "Swap and Measure"
+        // Create a clone with FULL content to test "Does this wrap if I show it all?"
+        const clone = document.createElement('span');
+        clone.className = el.className;
+        clone.innerHTML = el.dataset.fullHtml;
+        clone.style.visibility = 'hidden';
 
-        // Reconstruct: [ Link1 | Link2 | +N ]
-        // Note: The original structure includes "[ ... ]" text nodes. 
-        // We replicate the look: " [ Link1 | Link2 | +N ]"
-        const shortHtml = ` [ ${links[0].outerHTML} | ${links[1].outerHTML} | ${plusBtn} ]`;
+        // Insert clone exactly where element is to share layout context
+        el.parentNode.insertBefore(clone, el.nextSibling);
 
-        // Apply short state
-        el.innerHTML = shortHtml;
-        // Store short HTML for reverting
-        el.dataset.shortHtml = shortHtml;
+        // Hide original briefly so clone can take the newly available space
+        const origDisplay = el.style.display;
+        el.style.display = 'none';
 
-        // Add handler
-        bindExpand(el);
+        // Check Rects
+        const rects = clone.getClientRects();
+        let isMultiLine = false;
+        if (rects.length > 0) {
+            const firstTop = rects[0].top;
+            const lastTop = rects[rects.length - 1].top;
+            // If vertical distance > roughly a line height (e.g. 5px tolerance), it wrapped.
+            if (Math.abs(lastTop - firstTop) > 5) {
+                isMultiLine = true;
+            }
+        }
+
+        // Restore DOM
+        el.style.display = origDisplay;
+        clone.remove();
+
+        // 4. Update State
+        if (isMultiLine) {
+            // CASE: Wraps -> Fold it
+
+            // Construct Short HTML if needed
+            if (!el.dataset.shortHtml) {
+                const remainingCount = allLinks.length - 2;
+                const toggleStyle = 'cursor: pointer; color: #154c79; font-weight: 600; text-decoration: none; margin-left: 2px;';
+                const plusBtn = `<span class="link-expand-btn" style="${toggleStyle}">+${remainingCount}</span>`;
+                // Reconstruct using the parsed links from fullHtml
+                el.dataset.shortHtml = ` [ ${allLinks[0].outerHTML} | ${allLinks[1].outerHTML} | ${plusBtn} ]`;
+            }
+
+            // Apply if not already applied
+            if (el.innerHTML !== el.dataset.shortHtml) {
+                el.innerHTML = el.dataset.shortHtml;
+                bindExpand(el);
+            }
+        } else {
+            // CASE: Fits -> Show Full
+            if (el.innerHTML !== el.dataset.fullHtml) {
+                el.innerHTML = el.dataset.fullHtml;
+                // No expand listener needed
+            }
+        }
     });
 }
 
