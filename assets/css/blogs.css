@@ -52,7 +52,7 @@
 
 .post-excerpt {
     margin-top: 10px;
-    color: #444;
+    color: #888;
     line-height: 1.6;
 }
 
@@ -78,15 +78,10 @@
 .markdown-body {
     line-height: 1.7;
     color: #333;
+    text-align: justify;
 }
 
-/* 針對 MD 內第一行日期樣式 (假設使用 *Date*) */
-.markdown-body em:first-child {
-    display: block;
-    color: #888;
-    margin-bottom: -10px;
-    font-style: italic;
-}
+/* 針對 MD 內第一行日期樣式 - 已由 JS 處理，移除 CSS 干擾 */
 
 .markdown-body h1,
 .markdown-body h2 {

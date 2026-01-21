@@ -13,9 +13,38 @@ function renderPubItem(p, num) {
 
     const award = p.award ? ` <span class="pub-award">${p.award}</span>` : "";
     const note = p.note ? ` <span class="pub-note">(${escapeHtml(p.note)})</span>` : "";
-    const linksHtml = (p.links && p.links.length > 0)
-        ? `[ ${p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`).join(" | ")} ]`
+    // 3. BibTeX 處理
+    const bibId = `bib-${num}-${Math.floor(Math.random() * 10000)}`;
+    const bibLink = p.bibtex
+        ? `<a href="javascript:void(0)" onclick="toggleBib('${bibId}')">bib</a>`
         : "";
+
+    // 合併一般連結與 BibTeX 連結
+    let allLinksArr = [];
+    if (bibLink) allLinksArr.push(bibLink); // BibTeX first
+
+    if (p.links && p.links.length > 0) {
+        p.links.forEach(l => {
+            allLinksArr.push(`<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`);
+        });
+    }
+
+    const linksHtml = (allLinksArr.length > 0)
+        ? `[ ${allLinksArr.join(" | ")} ]`
+        : "";
+
+    // BibTeX 區域 (預設隱藏，滑鼠移開後 3 秒自動緩慢隱藏)
+    const bibHtml = p.bibtex ? `
+        <div id="${bibId}" class="pub-bibtex" style="display:none; opacity:1;" 
+             onmouseenter="cancelHideBib('${bibId}')" 
+             onmouseleave="scheduleHideBib('${bibId}')">
+            <pre>${highlightBibtex(p.bibtex)}</pre>
+            <div class="bib-ctrl">
+                <span class="bib-copy-btn" onclick="copyBib('${bibId}')" title="Copy to Clipboard">
+                    <i class="fa fa-copy"></i>
+                </span>
+            </div>
+        </div>` : "";
 
     // 統一結構：確保 index 和 publications 視覺一致
     return `
@@ -29,8 +58,149 @@ function renderPubItem(p, num) {
                     ${linksHtml ? `<span class="pub-links"> ${linksHtml}</span>` : ""}
                     ${award}
                 </div>
+                ${bibHtml}
             </div>
         </div>`;
+}
+
+// Helper to syntax highlight BibTeX
+function highlightBibtex(str) {
+    if (!str) return "";
+    let high = escapeHtml(str);
+
+    // 1. Strings (Values) -> Blue ("...")
+    high = high.replace(/(&quot;.*?&quot;)/g, '<span class="bib-val">$1</span>');
+
+    // 1b. Braced Values -> Blue ({...})
+    // Matches field = { content }, assuming single line per field in standard format
+    // $1: = and whitespace, $2: content, $3: comma/whitespace at end
+    high = high.replace(/(=)(\s*)\{(.*)\}(\s*,?\s*)$/gm, '$1$2<span class="bib-val">{$3}</span>$4');
+
+    // 1c. Numeric Values -> Blue (e.g. year = 2025)
+    high = high.replace(/(=)(\s*)(\d+)(\s*,?\s*)$/gm, '$1$2<span class="bib-val">$3</span>$4');
+
+    // 2. Keys -> Dark Gray (Key =)
+    // Match start of line keyword followed by =
+    high = high.replace(/^(\s*)(\w+)(\s*=)/gm, '$1<span class="bib-key">$2</span><span class="bib-sym">=</span>');
+
+    // 3. Type -> Black Bold (@type)
+    high = high.replace(/(@\w+)/g, '<span class="bib-type">$1</span>');
+
+    // 4. Symbols -> Medium Gray ({ } ,)
+    // Only replace symbols that are NOT inside our generated span tags
+    // Since our spans are <span class="bib-val">...</span>, we can safely replace { or } if we are careful?
+    // Actually, step 1b wraps content in <span class="bib-val">{...}</span>.
+    // So the { and } ARE inside the span.
+    // If we replace { with <span class="bib-sym">{</span>, we break the HTML tag?
+    // No, <span class="bib-val"> has no { in attributes.
+    // Content is {Text}.
+    // If replace { -> span, we get <span class="bib-val"><span class="bib-sym">{</span>Text...
+    // This is Valid HTML (nested spans).
+    // And logically: Outer span is Blue. Inner span is Gray.
+    // CSS: .bib-sym { color: #777; } overrides .bib-val { color: blue; }
+    // So the braces { } will turn Gray, content remains Blue.
+    // This is actually DESIRABLE (delimiters gray, content blue).
+    high = high.replace(/([{},])/g, '<span class="bib-sym">$1</span>');
+
+    return high;
+}
+
+// Global helpers for BibTeX
+const bibTimers = {};
+
+function toggleBib(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        if (el.style.display === 'none') {
+            // Show
+            el.style.display = 'block';
+            // Use setTimeout to allow display block to apply before opacity transition
+            setTimeout(() => el.style.opacity = '1', 10);
+            cancelHideBib(id); // Clear any pending hides
+        } else {
+            // Hide immediately if toggled off manually
+            el.style.display = 'none';
+        }
+    }
+}
+
+function scheduleHideBib(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Clear existing timer if any
+    if (bibTimers[id]) clearTimeout(bibTimers[id]);
+
+    // Wait 3 seconds, then fade out
+    bibTimers[id] = setTimeout(() => {
+        el.style.opacity = '0';
+        // After fade transition (0.5s), hide element
+        setTimeout(() => {
+            // Verify we didn't cancel during fade
+            if (el.style.opacity === '0') {
+                el.style.display = 'none';
+            }
+        }, 500);
+    }, 3000);
+}
+
+function cancelHideBib(id) {
+    if (bibTimers[id]) {
+        clearTimeout(bibTimers[id]);
+        delete bibTimers[id];
+    }
+    const el = document.getElementById(id);
+    if (el) {
+        el.style.opacity = '1';
+    }
+}
+
+function copyBib(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const pre = el.querySelector('pre');
+    const text = pre.innerText;
+
+    const showSuccess = () => {
+        const btnIcon = el.querySelector('.bib-copy-btn i');
+        if (btnIcon) {
+            const originalClass = btnIcon.className;
+            btnIcon.className = 'fa fa-check';
+            setTimeout(() => btnIcon.className = originalClass, 1500);
+        }
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showSuccess).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(text);
+        });
+    } else {
+        fallbackCopy(text);
+    }
+
+    function fallbackCopy(text) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Ensure it's not visible but part of DOM
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "0";
+        document.body.appendChild(textArea);
+
+        textArea.focus();
+        textArea.select();
+
+        try {
+            const successful = document.execCommand('copy');
+            if (successful) showSuccess();
+        } catch (err) {
+            console.error('Fallback copy failed', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
 }
 
 function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex = false, onlySelected = false, reverseOrder = false) {

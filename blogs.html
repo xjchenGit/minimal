@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/blogs.css?v=1">
+    <link rel="stylesheet" href="assets/css/blogs.css?v=3">
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Source+Serif+4:wght@300;400;600;700&display=swap"
         rel="stylesheet">
@@ -37,10 +37,15 @@
             <div id="blog-list"></div>
 
             <div id="post-container" style="display: none;">
-                <div class="back-btn" onclick="closePost()" style="cursor:pointer; margin-bottom:20px;">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span class="lang-en">Back to List</span>
-                    <span class="lang-zh" style="display:none">返回列表</span>
+                <div class="post-meta-row"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div id="post-date" style="color: #888; font-style: italic;"></div>
+                    <div class="back-btn" onclick="closePost()"
+                        style="cursor:pointer; font-weight: normal; margin-bottom: 0;">
+                        <span class="lang-en">Back to List</span>
+                        <span class="lang-zh" style="display:none">返回列表</span>
+                        <span style="margin-left: 5px;">&gt;</span>
+                    </div>
                 </div>
                 <div id="markdown-content" class="markdown-body"></div>
             </div>
@@ -53,7 +58,7 @@
                 // 1. 初始化：讀取 posts.json 並渲染列表
                 async function initBlog() {
                     try {
-                        const response = await fetch('posts/posts.json');
+                        const response = await fetch('posts/posts.json?v=' + new Date().getTime());
                         const posts = await response.json();
                         renderBlogList(posts);
                     } catch (err) {
@@ -97,7 +102,7 @@
                     contentEl.innerHTML = "Loading...";
 
                     try {
-                        const response = await fetch(`posts/${postId}.md`);
+                        const response = await fetch(`posts/${postId}.md?v=` + new Date().getTime());
                         if (!response.ok) throw new Error("File not found");
                         rawMarkdownCache = await response.text();
                         renderMarkdown();
@@ -109,6 +114,8 @@
 
                 function renderMarkdown() {
                     const contentEl = document.getElementById('markdown-content');
+                    const dateEl = document.getElementById('post-date');
+
                     // Split by horizontal rule (---) surrounded by newlines
                     const parts = rawMarkdownCache.split(/\n\s*---\s*\n/);
 
@@ -117,6 +124,16 @@
                         content = parts[0] || "Content not available in English.";
                     } else {
                         content = parts[1] ? parts[1].trim() : parts[0];
+                    }
+
+                    // Extract Date (Assume first line is *Date*)
+                    // Regex looks for leading *...* and removes it from content
+                    const match = content.match(/^\s*\*(.*?)\*\s*/);
+                    if (match) {
+                        dateEl.textContent = match[1]; // Set extracted date
+                        content = content.replace(match[0], ''); // Remove from MD
+                    } else {
+                        dateEl.textContent = "";
                     }
 
                     contentEl.innerHTML = marked.parse(content);
