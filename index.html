@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="assets/css/styles.css?v=5">
 	<link rel="stylesheet" href="assets/css/header.css">
 	<link rel="stylesheet" href="assets/css/logo.css">
-	<link rel="stylesheet" href="assets/css/pubs.css?v=43">
+	<link rel="stylesheet" href="assets/css/pubs.css?v=47">
 	<link rel="stylesheet" href="assets/css/pygment_trac.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -89,17 +89,17 @@
 			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 			<!-- <script src="assets/js/pub-renderer.js"></script> -->
 			<!-- 參數依序：路徑, 容器ID, 分類(null), isIndex(true), onlySelected(true) -->
-			<script src="assets/js/2mode-pub-renderer.js?v=11"></script>
+			<script src="assets/js/2mode-pub-renderer.js?v=12"></script>
 			<script>
 				// 參數說明：路徑, 容器, Category(null), isIndex(true), onlySelected(true), reverseOrder(false)
 				loadAndRenderPubs(
-					"ymls/publications_sel.yml", // 統一使用這份 YAML
+					"ymls/publications.yml", // 統一使用這份 YAML
 					"pub-container",        // 你的 HTML 容器 ID
 					null,                   // 不限類別，顯示所有 selected 項目
 					true,                   // 是首頁模式 (影響 CSS Class)
 					true,                   // **關鍵：只顯示 selected 項目**
 					false,                  // **關鍵：正序排列 (1, 2, 3...)**
-					"ymls/selected_paper_list.yml" // 使用外部排序清單
+					"ymls/selected_paper.yml" // 使用外部排序清單
 				);
 			</script>
 
@@ -114,7 +114,7 @@
 			</ul>
 
 			<h2>Selected Honors</h2>
-			<ul>
+			<ul class="honors-list">
 				<li>2026: <b>NTU Mr. Wen Tzu-Hsiang Memorial Scholarship</b>, one of only 9 recipients in NTU</li>
 				<li>2025: <b>Best Student Paper Nominee</b>, The IEEE Autom. Speech Recognit. and Underst. Workshop</li>
 				<li>2025: <b>Best Paper Award</b>, The 37th Conf. on Comput. Linguist. and Speech Processing</li>

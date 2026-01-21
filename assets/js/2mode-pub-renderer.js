@@ -46,7 +46,9 @@ function renderPubItem(p, num) {
     const bibHtml = p.bibtex ? `
         <div id="${bibId}" class="pub-bibtex" style="display:none; opacity:1;" 
              onmouseenter="cancelHideBib('${bibId}')" 
-             onmouseleave="scheduleHideBib('${bibId}')">
+             onmouseleave="scheduleHideBib('${bibId}')"
+             ontouchstart="cancelHideBib('${bibId}')"
+             ontouchend="scheduleHideBib('${bibId}')">
             <pre>${highlightBibtex(p.bibtex)}</pre>
             <div class="bib-ctrl">
                 <span class="bib-copy-btn" onclick="copyBib('${bibId}')" title="Copy to Clipboard">
@@ -126,6 +128,7 @@ function toggleBib(id) {
             // Use setTimeout to allow display block to apply before opacity transition
             setTimeout(() => el.style.opacity = '1', 10);
             cancelHideBib(id); // Clear any pending hides
+            scheduleHideBib(id); // Auto-hide after 3s if no interaction
         } else {
             // Hide immediately if toggled off manually
             el.style.display = 'none';

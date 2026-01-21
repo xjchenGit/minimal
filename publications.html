@@ -34,13 +34,13 @@
 			<div id="deepfake-container" class="pub-list-dynamic"></div>
 
 			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-			<script src="assets/js/2mode-pub-renderer.js?v=9"></script>
+			<script src="assets/js/2mode-pub-renderer.js?v=12"></script>
 
 			<script>
 				// loadAndRenderPubs("ymls/publications_new.yml", "audio-llm-container", "audio-llm");
 				// loadAndRenderPubs("ymls/publications_new.yml", "rag-container", "rag");
 				// loadAndRenderPubs("ymls/publications_new.yml", "deepfake-container", "deepfake");
-				const PATH = "ymls/publications_sel.yml";
+				const PATH = "ymls/publications.yml";
 				// 🎙️ Audio LLM 區塊
 				loadAndRenderPubs(PATH, "audio-llm-container", "audio-llm", false, false, true);
 

@@ -21,27 +21,25 @@ function initMobileHonors() {
     const items = honorList.querySelectorAll('li');
     if (items.length <= 6) return;
 
-    // Hide items > 6
-    for (let i = 6; i < items.length; i++) {
-        items[i].style.display = 'none';
-        items[i].classList.add('hidden-honor');
-    }
+    // CSS triggers hiding via :nth-child. 
+    // We just rely on that default state, preventing the "flash".
+
+    // Removed the "hide manually" loop here.
 
     // Create "Show more" button
     const hiddenCount = items.length - 6;
-    const btn = document.createElement('li'); // Change to li
+    const btn = document.createElement('li');
+    btn.className = 'honors-toggle-btn'; // Identify button
     btn.innerHTML = `[ <span style="color: #999;">Show ${hiddenCount} more honors</span> ]`;
 
-    // Style as a list item without bullet, left aligned by default
+    // Style button to match links (color #999) and left align
     btn.style.cssText = `color: #999; cursor: pointer; list-style: none; margin-top: 5px; margin-bottom: 25px; font-size: 13px; font-style: normal; text-align: left;`;
 
     // Add click handler
     btn.onclick = function () {
-        const hiddenItems = honorList.querySelectorAll('.hidden-honor');
-        hiddenItems.forEach(item => {
-            item.style.display = 'list-item';
-        });
-        btn.remove(); // Remove button after expanding
+        // Add .expanded class to parent UL -> CSS will reveal items
+        honorList.classList.add('expanded');
+        btn.remove();
     };
 
     // Insert button at the end of the list

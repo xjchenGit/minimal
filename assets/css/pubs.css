@@ -207,3 +207,17 @@
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/* Mobile Honors Folding (CSS-based to prevent flash) */
+/* Moved outside media query based on user feedback needing global folding */
+/* Hide 7th item onwards by default, BUT exclude the toggle button */
+.honors-list:not(.expanded) li:nth-child(n+7):not(.honors-toggle-btn) {
+    display: none;
+}
+
+/* Ensure the button is visible */
+.honors-list li.honors-toggle-btn {
+    display: list-item !important;
+}
