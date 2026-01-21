@@ -30,8 +30,11 @@
 }
 
 .pub-authors u {
-    color: #555;
-    font-weight: 600;
+    color: inherit;
+    /* User requested same color as other authors */
+    /* font-weight: 600; */
+    /* Remove bold as requested */
+    text-decoration: underline;
 }
 
 .pub-links {

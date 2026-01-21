@@ -25,7 +25,7 @@ function renderPubItem(p, num) {
                 <b class="pub-title">${title}</b>${note}<br>
                 <span class="pub-authors">${authors}</span>
                 <span class="pub-venue-row"><i>${p.venue}</i>${award}</span>
-                ${linksHtml ? `<span class="pub-links"> - ${linksHtml}</span>` : ""}
+                ${linksHtml ? `<span class="pub-links"> ${linksHtml}</span>` : ""}
             </div>
         </div>`;
 }
@@ -108,9 +108,9 @@ function truncateAuthors(container) {
             // If target is beyond the kept part, we need to include it
             if (targetIdx >= keepCount) {
                  shortHtml += ', ..., ' + parts[targetIdx];
-            } else {
-                 shortHtml += ', ...';
-            }
+            } 
+            // Else: target is already in the first N authors. 
+            // User requested NO "..." in this case. Just append ", et al." below.
             
             // Add 'et al.'
             shortHtml += ', et al.';
