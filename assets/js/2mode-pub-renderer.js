@@ -59,7 +59,93 @@ function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex
         // }).join("");
 
         container.innerHTML = html;
+        // Invoke immediately and with delay for safety
+        truncateAuthors(container);
+        setTimeout(() => truncateAuthors(container), 200); 
+        setTimeout(() => truncateAuthors(container), 1000);
     }).catch(err => { console.error("YAML Load Error:", err); });
+}
+
+function truncateAuthors(container) {
+    const authorElems = container.querySelectorAll('.pub-authors');
+    
+    authorElems.forEach((el, idx) => {
+        // Skip if already processed
+        if (el.dataset.fullAuthors) return;
+
+        // Check for wrapping. 
+        // Strategy: temporarily switch to inline to check clientRects (lines)
+        const originalDisplay = el.style.display;
+        el.style.display = 'inline';
+        const rects = el.getClientRects();
+        const isWrapped = rects.length > 1;
+        el.style.display = originalDisplay; // Restore
+
+        // Also check overflow as backup but clientRects is best for "lines"
+        const isOverflowing = el.scrollHeight > el.clientHeight + 4; 
+        
+        if (isWrapped || isOverflowing) {
+            const fullHtml = el.innerHTML;
+            el.dataset.fullAuthors = fullHtml;
+            
+            // Split by comma. Be careful about nested tags. 
+            // Assuming format "Name A, Name B, <u>Name C</u>"
+            const parts = fullHtml.split(/,\s*/);
+            
+            // If list is short but wrapped due to narrow screen, maybe we don't truncate if only 2-3 authors?
+            // But user said "over 1 lines".
+            // Let's try to keep first 4 authors.
+            if (parts.length <= 4) return; 
+
+            // Construct truncated HTML
+            let shortHtml = parts.slice(0, 4).join(', ');
+            
+            // Check for target author
+            const targetIdx = parts.findIndex(p => p.includes('Xuanjun Chen'));
+            
+            if (targetIdx >= 4) {
+                 shortHtml += ', ..., ' + parts[targetIdx];
+            } else {
+                 shortHtml += ', ...';
+            }
+            
+            // Add 'et al.'
+            shortHtml += ', et al.';
+            
+            // Store short HTML
+            // Style: small light gray text, no border/background as requested
+            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; margin-left: 6px; vertical-align: middle;';
+            
+            const toggleIconOpen = ` <span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
+            const toggleIconClose = ` <span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
+
+            el.dataset.shortHtml = shortHtml + toggleIconOpen;
+            
+            // Set initial state
+            el.innerHTML = el.dataset.shortHtml;
+            el.classList.add('truncated');
+
+            // Add local onclick handler (simpler than global listener for this specific element)
+            el.onclick = (e) => {
+                let target = e.target;
+                if (target.classList.contains('author-toggle')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (el.classList.contains('truncated')) {
+                        // Expand
+                        el.innerHTML = fullHtml + toggleIconClose;
+                        el.classList.remove('truncated');
+                        el.classList.add('expanded');
+                    } else {
+                        // Collapse
+                        el.innerHTML = el.dataset.shortHtml;
+                        el.classList.remove('expanded');
+                        el.classList.add('truncated');
+                    }
+                }
+            };
+        }
+    });
 }
 
 // function escapeHtml(str) {

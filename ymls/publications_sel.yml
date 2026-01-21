@@ -1,8 +1,8 @@
 # --- Audio Large Language Models ---
 
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
-  authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u><u>Xuanjun Chen</u></u>, et al."
-  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, ..., <u><u>Xuanjun Chen</u></u>, et al."
+  authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
+  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   venue: "arXiv 2025"
   category: "audio-llm"
   selected: true  # <--- 新增這行
@@ -13,8 +13,8 @@
       url: "https://github.com/kehanlu/DeSTA2.5-Audio"
 
 - title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the <br> Capabilities of Spoken Language Models with 180 Tasks"
-  authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, <u><u>Xuanjun Chen</u></u>, et al."
-  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, ..., <u>Xuanjun Chen</u>, et al."
+  authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, Wenze Ren, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
+  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, Wenze Ren, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
   venue: "ICLR 2025"
   category: "audio-llm"
   selected: true  # <--- 新增這行
@@ -38,7 +38,8 @@
       url: "https://github.com/ga642381/speech-trident"
 
 - title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
-  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
+  authors_full: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
+  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, ..., Hung-yi Lee"
   venue: "Findings of ACL 2024"
   category: "audio-llm"
   selected: true  # <--- 新增這行
@@ -55,6 +56,7 @@
       url: "https://huggingface.co/Codec-SUPERB"
 
 - title: "Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models"
+  authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
   venue: "IEEE SLT 2024"
   category: "audio-llm"
@@ -92,7 +94,8 @@
 
 # --- Audio Deepfake ---
 - title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
-  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
+  authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
+  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu,et al."
   venue: "Preprint, 2025"
   category: "deepfake"
   selected: true  # <--- 新增這行
@@ -107,6 +110,7 @@
       url: "https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset"
 
 - title: "Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling"
+  authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "arXiv 2025"
   category: "deepfake"
@@ -115,6 +119,7 @@
       url: "https://arxiv.org/abs/2508.02000"
 
 - title: "How Does Instrumental Music Help SingFake Detection?"
+  authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ICASSP 2026"
   category: "deepfake"
@@ -176,6 +181,7 @@
       url: "https://github.com/hbwu-ntu/spot-adv-by-vocoder.git"
 
 - title: "DFADD: The Diffusion and Flow-Matching based Audio Deepfake Dataset"
+  authors_full: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE SLT 2024"
   category: "deepfake"

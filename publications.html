@@ -1,56 +1,61 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Publications - Xuanjun Chen</title>
-		<link rel="stylesheet" href="assets/css/styles.css">
-		<link rel="stylesheet" href="assets/css/header.css">
-		<link rel="stylesheet" href="assets/css/pubs.css">
-		<link rel="stylesheet" href="assets/css/pygment_trac.css">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&display=swap" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-	</head>
-	<body>
-		<div class="wrapper">
-			<header id="sidebar"></header>
-			<script src="assets/js/load_header.js"></script>
-			<script>initHeader('publications');</script>
 
-			<section>
-				<h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
-				
-				<h3 class="category-header">🎙️ Audio Large Language Models</h3>
-				<div id="audio-llm-container" class="pub-list-dynamic"></div>
-				
-				<h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
-				<div id="rag-container" class="pub-list-dynamic"></div>
-				
-				<h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
-				<div id="deepfake-container" class="pub-list-dynamic"></div>
-			
-				<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-				<script src="assets/js/2mode-pub-renderer.js"></script>
+<head>
+	<meta charset="utf-8">
+	<title>Publications - Xuanjun Chen</title>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/header.css">
+	<link rel="stylesheet" href="assets/css/pubs.css">
+	<link rel="stylesheet" href="assets/css/pygment_trac.css">
 
-				<script>
-					// loadAndRenderPubs("ymls/publications_new.yml", "audio-llm-container", "audio-llm");
-					// loadAndRenderPubs("ymls/publications_new.yml", "rag-container", "rag");
-					// loadAndRenderPubs("ymls/publications_new.yml", "deepfake-container", "deepfake");
-					const PATH = "ymls/publications_sel.yml";
-					// 🎙️ Audio LLM 區塊
-					loadAndRenderPubs(PATH, "audio-llm-container", "audio-llm", false, false, true);
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&display=swap"
+		rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
 
-					// 🔍 RAG 區塊
-					loadAndRenderPubs(PATH, "rag-container", "rag", false, false, true);
+<body>
+	<div class="wrapper">
+		<header id="sidebar"></header>
+		<script src="assets/js/load_header.js"></script>
+		<script>initHeader('publications');</script>
 
-					// 🛡️ Deepfake 區塊
-					loadAndRenderPubs(PATH, "deepfake-container", "deepfake", false, false, true);
-				</script>
+		<section>
+			<h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
 
-				<br>
-				<script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
-			</section>
-		</div>
-	</body>
+			<h3 class="category-header">🎙️ Audio Large Language Models</h3>
+			<div id="audio-llm-container" class="pub-list-dynamic"></div>
+
+			<h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
+			<div id="rag-container" class="pub-list-dynamic"></div>
+
+			<h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+			<div id="deepfake-container" class="pub-list-dynamic"></div>
+
+			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+			<script src="assets/js/2mode-pub-renderer.js"></script>
+
+			<script>
+				// loadAndRenderPubs("ymls/publications_new.yml", "audio-llm-container", "audio-llm");
+				// loadAndRenderPubs("ymls/publications_new.yml", "rag-container", "rag");
+				// loadAndRenderPubs("ymls/publications_new.yml", "deepfake-container", "deepfake");
+				const PATH = "ymls/publications_sel.yml";
+				// 🎙️ Audio LLM 區塊
+				loadAndRenderPubs(PATH, "audio-llm-container", "audio-llm", false, false, true);
+
+				// 🔍 RAG 區塊
+				loadAndRenderPubs(PATH, "rag-container", "rag", false, false, true);
+
+				// 🛡️ Deepfake 區塊
+				loadAndRenderPubs(PATH, "deepfake-container", "deepfake", false, false, true);
+			</script>
+
+			<br>
+			<script type='text/javascript' id='clustrmaps'
+				src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
+		</section>
+	</div>
+</body>
+
 </html>
