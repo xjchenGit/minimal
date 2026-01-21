@@ -320,6 +320,15 @@ screen and (max-width: 960px) {
   }
 }
 
+/* Responsive Text Helpers */
+.mob-text {
+  display: none;
+}
+
+.desk-text {
+  display: inline;
+}
+
 @media (max-width: 768px) {
   section ul {
     padding-left: 1.2rem;
@@ -330,6 +339,18 @@ screen and (max-width: 960px) {
     font-size: 13px;
     /* 手機端字體微調 */
     line-height: 1.4;
+  }
+
+  .mobile-hide-suffix {
+    display: none;
+  }
+
+  .desk-text {
+    display: none !important;
+  }
+
+  .mob-text {
+    display: inline !important;
   }
 }
 
