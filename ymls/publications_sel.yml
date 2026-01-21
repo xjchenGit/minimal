@@ -34,7 +34,7 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2402.13236"
-    - name: "Awesome List"
+    - name: "Awesome"
       url: "https://github.com/ga642381/speech-trident"
 
 - title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
@@ -146,7 +146,7 @@
   category: "deepfake"
   selected: true  # <--- 新增這行
   links:
-    - name: "ISCA Archive"
+    - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2025/chen25j_interspeech.pdf"
     - name: "arXiv"
       url: "https://arxiv.org/pdf/2505.12994"
@@ -159,7 +159,7 @@
   category: "deepfake"
   selected: true  # <--- 新增這行
   links:
-    - name: "ISCA Archive"
+    - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf"
     - name: "arXiv"
       url: "https://arxiv.org/pdf/2406.03111"
@@ -173,7 +173,7 @@
   venue: "INTERSPEECH 2024"
   category: "deepfake"
   links:
-    - name: "ISCA Archive"
+    - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2024/chen24p_interspeech.pdf"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2406.04582"
