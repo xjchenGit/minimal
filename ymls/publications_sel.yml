@@ -3,9 +3,10 @@
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
-  venue: "arXiv 2025"
+  venue: "Preprint 2025"
   category: "audio-llm"
-  selected: 11  # <--- 新增這行
+  id: "lu2025desta25"
+  selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2507.02768"
@@ -26,7 +27,8 @@
   authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, Wenze Ren, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
   venue: "ICLR 2025"
   category: "audio-llm"
-  selected: 10  # <--- 新增這行
+  id: "huang2025dynamic"
+  selected: true  # <--- 新增這行
   links:
     - name: "OpenReview"
       url: "https://openreview.net/forum?id=s7lzZpAW7T"
@@ -47,7 +49,8 @@
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
   venue: "Overview Report, Feb. 2024"
   category: "audio-llm"
-  selected: 1  # <--- 新增這行
+  id: "wu2024towards"
+  selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2402.13236"
@@ -68,7 +71,8 @@
   authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
   venue: "Findings of ACL 2024"
   category: "audio-llm"
-  selected: 2  # <--- 新增這行
+  id: "wu-etal-2024-codec"
+  selected: true  # <--- 新增這行
   links:
     - name: "ACL Anthology"
       url: "https://aclanthology.org/2024.findings-acl.616/"
@@ -98,7 +102,8 @@
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
   venue: "IEEE SLT 2024"
   category: "audio-llm"
-  selected: 3  # <--- 新增這行
+  id: "wu2024codecsuperbslt"
+  selected: true  # <--- 新增這行
   links:
     - name: "IEEE Xplore"
       url: "https://ieeexplore.ieee.org/abstract/document/10832364"
@@ -123,6 +128,7 @@
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Working in Progress"
   category: "rag"
+  id: "chou2024efficient"
   links: []
 
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
@@ -130,7 +136,8 @@
   venue: "ROCLING 2025"
   award: "Best Paper Award"
   category: "rag"
-  selected: 9  # <--- 新增這行
+  id: "lin2025preliminary"
+  selected: true  # <--- 新增這行
   links:
     - name: "ACL Anthology"
       url: "https://aclanthology.org/2025.rocling-main.6/"
@@ -151,7 +158,8 @@
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "Preprint, 2025"
   category: "deepfake"
-  selected: 8  # <--- 新增這行
+  id: "chen2025codecfake"
+  selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
       url: "https://arxiv.org/pdf/2501.08238v2"
@@ -176,6 +184,7 @@
   authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "arXiv 2025"
   category: "deepfake"
+  id: "chen2025localizing"
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2508.02000"
@@ -194,7 +203,8 @@
   authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ICASSP 2026"
   category: "deepfake"
-  selected: 7  # <--- 新增這行
+  id: "chen2025how"
+  selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2509.14675"
@@ -213,7 +223,8 @@
   venue: "IEEE ASRU 2025"
   award: "Best Student Paper nominee"
   category: "deepfake"
-  selected: 6  # <--- 新增這行
+  id: "chen2025towards"
+  selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2506.07294"
@@ -231,7 +242,8 @@
   authors_short: "<u>Xuanjun Chen</u>*, I-Ming Lin*, Lin Zhang, Jiawei Du, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "INTERSPEECH 2025"
   category: "deepfake"
-  selected: 5  # <--- 新增這行
+  id: "chen2025codecbased"
+  selected: true  # <--- 新增這行
   links:
     - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2025/chen25j_interspeech.pdf"
@@ -252,7 +264,8 @@
   authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee"
   venue: "INTERSPEECH 2024 (Oral)"
   category: "deepfake"
-  selected: 4  # <--- 新增這行
+  id: "chen2024singing"
+  selected: true  # <--- 新增這行
   links:
     - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf"
@@ -275,6 +288,7 @@
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee"
   venue: "INTERSPEECH 2024"
   category: "deepfake"
+  id: "chen2024neural"
   links:
     - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2024/chen24p_interspeech.pdf"
@@ -296,6 +310,7 @@
   authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE SLT 2024"
   category: "deepfake"
+  id: "du2024dfadd"
   links:
     - name: "IEEE Xplore"
       url: "https://ieeexplore.ieee.org/document/10832250"
@@ -317,6 +332,7 @@
   authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Chung-Che Wang, Hung-yi Lee, and Jyh-Shing Roger Jang"
   venue: "ICASSP 2024"
   category: "deepfake"
+  id: "chen2024multimodal"
   links:
     - name: "IEEE Xplore"
       url: "https://ieeexplore.ieee.org/abstract/document/10446372"
@@ -340,6 +356,7 @@
   authors_short: "<u>Xuanjun Chen</u>*, Haibin Wu*, Helen Meng, Hung-yi Lee, and Jyh-Shing Roger Jang"
   venue: "IEEE SLT 2022, Jan 2023"
   category: "deepfake"
+  id: "chen2022push"
   links:
     - name: "IEEE Xplore"
       url: "https://ieeexplore.ieee.org/abstract/document/10022646"
@@ -365,6 +382,7 @@
   authors_short: "<u>Xuanjun Chen</u>*, Yen-Lun Liao*, Chung-Che Wang, and Jyh-Shing Roger Jang"
   venue: "ISCA SPSC 2022"
   category: "deepfake"
+  id: "liao2022adversarial"
   links:
     - name: "ISCA Archive"
       url: "https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html"

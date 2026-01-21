@@ -89,7 +89,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 			<!-- <script src="assets/js/pub-renderer.js"></script> -->
 			<!-- 參數依序：路徑, 容器ID, 分類(null), isIndex(true), onlySelected(true) -->
-			<script src="assets/js/2mode-pub-renderer.js?v=9"></script>
+			<script src="assets/js/2mode-pub-renderer.js?v=11"></script>
 			<script>
 				// 參數說明：路徑, 容器, Category(null), isIndex(true), onlySelected(true), reverseOrder(false)
 				loadAndRenderPubs(
@@ -98,7 +98,8 @@
 					null,                   // 不限類別，顯示所有 selected 項目
 					true,                   // 是首頁模式 (影響 CSS Class)
 					true,                   // **關鍵：只顯示 selected 項目**
-					false                   // **關鍵：正序排列 (1, 2, 3...)**
+					false,                  // **關鍵：正序排列 (1, 2, 3...)**
+					"ymls/selected_paper_list.yml" // 使用外部排序清單
 				);
 			</script>
 

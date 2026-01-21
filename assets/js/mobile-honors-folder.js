@@ -30,10 +30,10 @@ function initMobileHonors() {
     // Create "Show more" button
     const hiddenCount = items.length - 6;
     const btn = document.createElement('li'); // Change to li
-    btn.innerHTML = `[ <span style="color: #2b5797;">Show ${hiddenCount} more honors</span> ]`;
+    btn.innerHTML = `[ <span style="color: #999;">Show ${hiddenCount} more honors</span> ]`;
 
     // Style as a list item without bullet, left aligned by default
-    btn.style.cssText = `color: #666; cursor: pointer; list-style: none; margin-top: 5px; margin-bottom: 25px; font-size: 13px; font-style: normal;`;
+    btn.style.cssText = `color: #999; cursor: pointer; list-style: none; margin-top: 5px; margin-bottom: 25px; font-size: 13px; font-style: normal; text-align: left;`;
 
     // Add click handler
     btn.onclick = function () {

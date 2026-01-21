@@ -212,32 +212,50 @@ function copyBib(id) {
     }
 }
 
-function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex = false, onlySelected = false, reverseOrder = false) {
+function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex = false, onlySelected = false, reverseOrder = false, orderYamlPath = null) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch(yamlPath).then(res => res.text()).then(text => {
-        let data = jsyaml.load(text) || [];
+    const fetchPubs = fetch(yamlPath + "?v=" + new Date().getTime()).then(res => res.text()).then(text => jsyaml.load(text) || []);
+    const fetchOrder = orderYamlPath
+        ? fetch(orderYamlPath + "?v=" + new Date().getTime()).then(res => res.text()).then(text => jsyaml.load(text) || {})
+        : Promise.resolve({});
 
-        // 過濾邏輯
+    Promise.all([fetchPubs, fetchOrder]).then(([data, orderData]) => {
         let filtered = data;
-        if (onlySelected) {
-            filtered = filtered.filter(p => p.selected === true || typeof p.selected === 'number' || String(p.selected).toLowerCase() === 'true');
-            // Sort by selected value descending (Higher number appears first [1])
+        let selectedIds = null;
+
+        if (orderYamlPath && orderData && orderData.selected_papers) {
+            selectedIds = orderData.selected_papers;
+        }
+
+        // Logic A: Use external list for "Selected Publications" (isIndex or onlySelected)
+        if (onlySelected && selectedIds) {
+            // Filter: Must be in the list
+            filtered = filtered.filter(p => p.id && selectedIds.includes(p.id));
+
+            // Sort: Based on index in the list
             filtered.sort((a, b) => {
-                let valA = typeof a.selected === 'number' ? a.selected : 0;
-                let valB = typeof b.selected === 'number' ? b.selected : 0;
-                return valB - valA;
+                return selectedIds.indexOf(a.id) - selectedIds.indexOf(b.id);
             });
         }
-        if (filterCategory) filtered = filtered.filter(p => p.category === filterCategory);
+        // Logic B: Default behavior (if no external list or not "onlySelected")
+        else {
+            if (onlySelected) {
+                filtered = filtered.filter(p => p.selected === true || typeof p.selected === 'number' || String(p.selected).toLowerCase() === 'true');
+                // Fallback Sort if numbers used (though verified we reverted them, keeping for robustness)
+                filtered.sort((a, b) => {
+                    let valA = typeof a.selected === 'number' ? a.selected : 0;
+                    let valB = typeof b.selected === 'number' ? b.selected : 0;
+                    return valB - valA;
+                });
+            }
+            if (filterCategory) filtered = filtered.filter(p => p.category === filterCategory);
+        }
 
         // 排序邏輯
         // if (reverseOrder) filtered.reverse();
-        // 僅根據參數決定編號顯示方式
         const html = filtered.map((p, i) => {
-            // 如果 reverseOrder 為 true，則編號從總數往回數：[11], [10], [9]...
-            // 如果 reverseOrder 為 false，則編號從 1 開始數：[1], [2], [3]...
             const displayNum = reverseOrder ? (filtered.length - i) : (i + 1);
             return renderPubItem(p, displayNum);
         }).join("");
@@ -250,6 +268,7 @@ function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex
         foldLinks(container);
         setTimeout(() => foldLinks(container), 200);
         setTimeout(() => foldLinks(container), 1000);
+
     }).catch(err => { console.error("YAML Load Error:", err); });
 }
 
