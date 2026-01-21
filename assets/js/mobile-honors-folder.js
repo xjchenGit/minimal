@@ -29,10 +29,11 @@ function initMobileHonors() {
 
     // Create "Show more" button
     const hiddenCount = items.length - 6;
-    const btn = document.createElement('div');
+    const btn = document.createElement('li'); // Change to li
     btn.innerHTML = `[ <span style="color: #2b5797;">Show ${hiddenCount} more honors</span> ]`;
-    const textAlign = window.innerWidth > 768 ? 'center' : 'right';
-    btn.style.cssText = `color: #666; cursor: pointer; margin-top: -12px; margin-bottom: 25px; font-size: 13px; text-align: ${textAlign}; width: 100%; font-style: normal;`;
+
+    // Style as a list item without bullet, left aligned by default
+    btn.style.cssText = `color: #666; cursor: pointer; list-style: none; margin-top: 5px; margin-bottom: 25px; font-size: 13px; font-style: normal;`;
 
     // Add click handler
     btn.onclick = function () {
@@ -43,8 +44,8 @@ function initMobileHonors() {
         btn.remove(); // Remove button after expanding
     };
 
-    // Insert button after the list
-    honorList.parentNode.insertBefore(btn, honorList.nextSibling);
+    // Insert button at the end of the list
+    honorList.appendChild(btn);
 }
 
 // Run on load and resize (optional, but good for rotation)

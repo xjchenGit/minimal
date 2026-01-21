@@ -24,6 +24,15 @@ function renderPubItem(p, num) {
     if (bibLink) allLinksArr.push(bibLink); // BibTeX first
 
     if (p.links && p.links.length > 0) {
+        // Sort links: "arXiv" comes first
+        p.links.sort((a, b) => {
+            const isArxivA = a.name.toLowerCase() === 'arxiv';
+            const isArxivB = b.name.toLowerCase() === 'arxiv';
+            if (isArxivA && !isArxivB) return -1;
+            if (!isArxivA && isArxivB) return 1;
+            return 0;
+        });
+
         p.links.forEach(l => {
             allLinksArr.push(`<a href="${l.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.name)}</a>`);
         });
@@ -212,7 +221,15 @@ function loadAndRenderPubs(yamlPath, containerId, filterCategory = null, isIndex
 
         // 過濾邏輯
         let filtered = data;
-        if (onlySelected) filtered = filtered.filter(p => p.selected === true || String(p.selected).toLowerCase() === 'true');
+        if (onlySelected) {
+            filtered = filtered.filter(p => p.selected === true || typeof p.selected === 'number' || String(p.selected).toLowerCase() === 'true');
+            // Sort by selected value descending (Higher number appears first [1])
+            filtered.sort((a, b) => {
+                let valA = typeof a.selected === 'number' ? a.selected : 0;
+                let valB = typeof b.selected === 'number' ? b.selected : 0;
+                return valB - valA;
+            });
+        }
         if (filterCategory) filtered = filtered.filter(p => p.category === filterCategory);
 
         // 排序邏輯
@@ -277,7 +294,11 @@ function truncateAuthors(container) {
 
             // If target is beyond the kept part, we need to include it
             if (targetIdx >= keepCount) {
-                shortHtml += ', ..., ' + parts[targetIdx];
+                // Only add ellipsis if there are actual authors in between
+                if (targetIdx > keepCount) {
+                    shortHtml += ', ...';
+                }
+                shortHtml += ', ' + parts[targetIdx];
             }
             // Else: target is already in the first N authors. 
             // User requested NO "..." in this case. Just append ", et al." below.
