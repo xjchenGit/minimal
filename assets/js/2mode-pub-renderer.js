@@ -92,18 +92,21 @@ function truncateAuthors(container) {
             // Assuming format "Name A, Name B, <u>Name C</u>"
             const parts = fullHtml.split(/,\s*/);
             
-            // If list is short but wrapped due to narrow screen, maybe we don't truncate if only 2-3 authors?
-            // But user said "over 1 lines".
-            // Let's try to keep first 4 authors.
-            if (parts.length <= 4) return; 
+            // Responsive limit: 4 for desktop, 2 for mobile
+            const isMobile = window.innerWidth <= 768;
+            const keepCount = isMobile ? 2 : 4;
+
+            // If list is not significantly longer than what we keep, don't truncate
+            if (parts.length <= keepCount) return; 
 
             // Construct truncated HTML
-            let shortHtml = parts.slice(0, 4).join(', ');
+            let shortHtml = parts.slice(0, keepCount).join(', ');
             
             // Check for target author
             const targetIdx = parts.findIndex(p => p.includes('Xuanjun Chen'));
             
-            if (targetIdx >= 4) {
+            // If target is beyond the kept part, we need to include it
+            if (targetIdx >= keepCount) {
                  shortHtml += ', ..., ' + parts[targetIdx];
             } else {
                  shortHtml += ', ...';
