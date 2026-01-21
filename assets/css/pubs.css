@@ -41,6 +41,7 @@
     font-size: 0.92em;
     display: inline;
     color: #999;
+    margin-left: 0;
 }
 
 .pub-links a {
@@ -55,9 +56,20 @@
 }
 
 .pub-award {
-    font-weight: 600;
+    font-weight: normal;
     color: #000;
     margin-left: 5px;
+}
+
+.pub-row-meta {
+    display: inline;
+    /* Default for desktop: keep things inline */
+}
+
+/* Ensure venue stays Navy Blue */
+.pub-venue {
+    color: #002147;
+    font-weight: 500;
 }
 
 .category-header {
@@ -68,10 +80,7 @@
     padding-left: 10px;
 }
 
-.pub-venue-row i {
-    color: #002147;
-    font-weight: 500;
-}
+/* .pub-venue-row removed, replaced by .pub-venue */
 
 @media (max-width: 768px) {
     .title-br {
@@ -84,7 +93,7 @@
         /* text-align: left;  */
         display: flex !important;
         align-items: flex-start !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 20px !important;
 
         /* 兩端對齊優化 */
         text-align: justify;
@@ -101,5 +110,26 @@
         min-width: 1.6em !important;
         font-size: 15px;
         margin-right: 1px;
+    }
+
+    /* Mobile: Reorder Award to new line using Block display */
+    .pub-row-meta {
+        display: block !important;
+    }
+
+    .pub-venue {
+        display: inline;
+    }
+
+    .pub-links {
+        display: inline;
+    }
+
+    .pub-award {
+        display: block !important;
+        width: 100%;
+        margin-left: 0 !important;
+        /* Force reset */
+        margin-top: 2px;
     }
 }
