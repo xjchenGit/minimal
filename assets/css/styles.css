@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   padding: 50px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
 
   /* NEW: serif stack (English + Chinese) */
@@ -171,7 +171,7 @@ img {
 }
 
 header {
-  width: 300px;
+  width: 320px;
   position: sticky;
   top: 50px;
   flex-shrink: 0;
@@ -185,11 +185,11 @@ header ul {
   background: #f4f4f4;
   border-radius: 5px;
   border: 1px solid #e0e0e0;
-  width: 340px;
+  width: 375px;
 }
 
 header li {
-  width: 112px;
+  width: 125px;
   float: left;
   border-right: 1px solid #e0e0e0;
   height: 40px;
@@ -205,7 +205,7 @@ header li:last-child a {
 
 header ul a {
   line-height: 1;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   display: block;
   text-align: center;
@@ -230,11 +230,11 @@ b {
 
 header ul li+li+li {
   border-right: none;
-  width: 112px;
+  width: 125px;
 }
 
 header ul a strong {
-  font-size: 18px;
+  font-size: 20px;
   display: block;
   color: #222;
 }
@@ -274,7 +274,7 @@ hr {
 }
 
 footer {
-  width: 300px;
+  width: 320px;
   float: left;
   position: fixed;
   bottom: 50px;

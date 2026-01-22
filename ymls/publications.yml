@@ -1,5 +1,27 @@
 # --- Audio Large Language Models ---
 
+- title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
+  authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  venue: "Preprint 2026"
+  category: "audio-llm"
+  id: "lee2026ssmttm"
+  selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2601.14786"
+    - name: "Project"
+      url: "https://weijaw.github.io/SSM-TTM-Demo/" # 根據論文摘要提到的 project page 常用格式
+  bibtex: |
+    @misc{lee2026ssmttm,
+        title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
+        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
+        year={2026},
+        eprint={2601.14786},
+        archivePrefix={arXiv},
+        primaryClass={cs.SD}
+    }
+
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
