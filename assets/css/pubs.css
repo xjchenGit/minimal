@@ -89,7 +89,7 @@
 
     /* 手機隱藏強制換行 */
     .pub-item-row {
-        font-size: 16px;
+        font-size: 15px;
         /* text-align: left;  */
         display: flex !important;
         align-items: flex-start !important;

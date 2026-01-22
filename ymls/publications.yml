@@ -71,7 +71,7 @@
 
 - title: "Towards audio language modeling-an overview"
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
-  venue: "Overview Report, Feb. 2024"
+  venue: "Tech Report, Feb. 2024"
   category: "audio-llm"
   id: "wu2024towards"
   selected: true  # <--- 新增這行
