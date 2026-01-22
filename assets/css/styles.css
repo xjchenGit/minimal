@@ -329,13 +329,17 @@ screen and (max-width: 960px) {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
   section ul {
     padding-left: 1.2rem;
     /* 確保手機端縮排不會太深 */
   }
 
   section ul li {
-    font-size: 13px;
+    /* font-size: 13px; */
     /* 手機端字體微調 */
     line-height: 1.4;
   }
