@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   padding: 50px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
 
   /* NEW: serif stack (English + Chinese) */
@@ -109,7 +109,7 @@ a:hover small {
 
 .wrapper {
   display: flex;
-  max-width: 1000px;
+  max-width: 1350px;
   /* width:1400px; */
   margin: 0 auto;
   position: relative;
@@ -171,8 +171,7 @@ img {
 }
 
 header {
-  width: 235px;
-  float: left;
+  width: 300px;
   position: sticky;
   top: 50px;
   flex-shrink: 0;
@@ -186,11 +185,11 @@ header ul {
   background: #f4f4f4;
   border-radius: 5px;
   border: 1px solid #e0e0e0;
-  width: 270px;
+  width: 340px;
 }
 
 header li {
-  width: 89px;
+  width: 112px;
   float: left;
   border-right: 1px solid #e0e0e0;
   height: 40px;
@@ -206,7 +205,7 @@ header li:last-child a {
 
 header ul a {
   line-height: 1;
-  font-size: 11px;
+  font-size: 14px;
   color: #999;
   display: block;
   text-align: center;
@@ -231,11 +230,11 @@ b {
 
 header ul li+li+li {
   border-right: none;
-  width: 89px;
+  width: 112px;
 }
 
 header ul a strong {
-  font-size: 14px;
+  font-size: 18px;
   display: block;
   color: #222;
 }
@@ -248,8 +247,8 @@ section {
   padding-bottom: 50px;
   min-width: 0;
   /* 防止內容撐破佈局 */
-  width: 700px;
-  float: right;
+  /* width: 700px; */
+  /* float: right; */
   padding-bottom: 50px;
 }
 
@@ -275,7 +274,7 @@ hr {
 }
 
 footer {
-  width: 270px;
+  width: 300px;
   float: left;
   position: fixed;
   bottom: 50px;
