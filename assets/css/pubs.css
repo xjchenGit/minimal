@@ -89,15 +89,15 @@
 
     /* 手機隱藏強制換行 */
     .pub-item-row {
-        font-size: 15px;
+        font-size: 14px;
         /* text-align: left;  */
         display: flex !important;
         align-items: flex-start !important;
         margin-bottom: 20px !important;
 
         /* 兩端對齊優化 */
-        text-align: justify;
-        text-justify: inter-word;
+        text-align: left;
+        /* text-justify: inter-word; */
         /* 讓空格平均分佈在單詞間，而非字元間 */
         hyphens: auto;
         /* 允許長單詞自動加連字號斷行 (需要 HTML 加上 lang="en") */
