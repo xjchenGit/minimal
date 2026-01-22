@@ -11,7 +11,9 @@
     - name: "arXiv"
       url: "https://arxiv.org/abs/2601.14786"
     - name: "Project"
-      url: "https://weijaw.github.io/SSM-TTM-Demo/" # 根據論文摘要提到的 project page 常用格式
+      url: "https://lonian6.github.io/ssmttm/" # 根據論文摘要提到的 project page 常用格式
+    - name: "Code"
+      url: "https://github.com/Lonian6/SSM-TTM" # 根據論文摘要提到的 project page 常用格式
   bibtex: |
     @misc{lee2026ssmttm,
         title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
