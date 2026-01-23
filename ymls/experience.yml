@@ -1,0 +1,39 @@
+# Experience Data
+# Field definitions:
+# - time_desk: Desktop view time string
+# - time_mob: Mobile view time string
+# - role: Bolded role title
+# - institution: Organization or University
+# - major_desk: (Optional) Academic major for desktop view
+# - major_mob: (Optional) Academic major for mobile view
+# - selected: true/false
+
+- time_desk: "Apr 2026-Apr 2027"
+  time_mob: "04/2026 - 04/2027"
+  role: "AI Researcher Intern"
+  institution: "Shanda AI Research Tokyo, Japan"
+  selected: false
+
+- time_desk: "Sep 2023 - Present"
+  time_mob: "09/2023 - Now"
+  role: "Ph.D."
+  institution: "National Taiwan University"
+  major_desk: "Communication Engineering"
+  major_mob: "GICE"
+  selected: true
+
+- time_desk: "Jan 2023"
+  time_mob: "01/2023"
+  role: "M.S."
+  institution: "National Taiwan University"
+  major_desk: "Computer Science"
+  major_mob: "CSIE"
+  selected: true
+
+- time_desk: "Jun 2020"
+  time_mob: "06/2020"
+  role: "B.S."
+  institution: "Taiwan Tech"
+  major_desk: "Computer Science"
+  major_mob: "CSIE"
+  selected: true

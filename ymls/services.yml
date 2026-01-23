@@ -1,0 +1,18 @@
+- year: "2025"
+  role: "Co-Organizer"
+  event: "Responsible Speech & Audio Generative AI"
+  link: "https://codecfake.github.io/RespSA-GenAI/"
+  context: "Special Session at IEEE ASRU 2025"
+  selected: true
+
+- year: "2024"
+  role: "Technical Committee"
+  event: "Codec-SUPERB Challenge"
+  link: "https://codecsuperb.github.io/"
+  context: "Special Session at IEEE SLT 2024"
+  selected: true
+
+- year: "2023–Now"
+  role: "Reviewer"
+  event: "AAAI, ACL, EMNLP, ICASSP, INTERSPEECH, ASRU, COLING, MLSP, IJPRAI"
+  selected: true

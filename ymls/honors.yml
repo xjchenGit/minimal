@@ -1,0 +1,57 @@
+- year: "2026"
+  title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
+  details: "one of only 9 recipients in NTU"
+  selected: true
+
+- year: "2025"
+  title: "Best Student Paper nominee"
+  details: "The IEEE Autom. Speech Recognit. and Underst. Workshop"
+  selected: true
+
+- year: "2025"
+  title: "Best Paper Award"
+  details: "The 37th Conf. on Comput. Linguist. and Speech Processing"
+  selected: true
+
+- year: "2025"
+  title: "CTCI Foundation Research Scholarship for Overseas Students"
+  details: "awarded by CTCI Foundation"
+  selected: true
+
+- year: "2025"
+  title: "ACLCLP Student Travel Grant"
+  details: ", granted by ACLCLP."
+  mobile_hide_suffix: true
+  selected: true
+
+- year: "2024"
+  title: "Google Student Travel Grant"
+  details: ", granted by Google LLC."
+  mobile_hide_suffix: true
+  selected: true
+
+- year: "2024"
+  title: "CTCI Foundation Bursary Award for Overseas Students"
+  details: "awarded by the CTCI Foundation"
+  selected: true
+
+- year: "2021"
+  year_prefix: "Ranked "
+  title: "3rd/42 submissions worldwide"
+  details: "on the LA track of ASVspoof 2021 challenge"
+  selected: true
+
+- year: "2020-2025"
+  title: "Kwong Tung Community Outstanding Student Scholarship"
+  details: "awarded five years."
+  selected: true
+
+- year: "2018-2020"
+  title: "Certificate of Achievement"
+  details: "Taiwan Tech (Top 5% of students; three semesters)"
+  selected: true
+
+- year: "2016"
+  title: "National Encouragement Scholarship"
+  details: "awarded by the Ministry of Education"
+  selected: true

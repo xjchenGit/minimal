@@ -1,0 +1,23 @@
+bio: |
+  I am a Ph.D. student at {{icon:ntu}} [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), 
+  advised by [Hung-yi Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and 
+  [Jyh-Shing Roger Jang](http://mirlab.org/jang/cv/cv.asp). Before Ph.D., I received my 
+  M.S. from {{icon:ntu}} [NTU](https://www.ntu.edu.tw/english/) (2023) and B.S. from 
+  {{icon:ntust}} [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020).
+
+intro: |
+  **My research has introduced several approaches for audio deepfakes.** 
+  I proposed [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) 
+  for SOTA SingFake detection and decoded the impact of instrumental accompaniment. 
+  To address data scarcity, I developed [CodecFake+](https://arxiv.org/abs/2501.08238), 
+  a large-scale resynthesis proxy dataset, and pioneered the source tracing task with 
+  [SASTNet](https://arxiv.org/abs/2506.07294) (🏆 **Best Student Paper nominee**, IEEE ASRU 2025). 
+  Concurrently, I have extended my research to **RAG and Audio/Text LLMs**. 
+  I mentor the development of **GPS-RAG** and **CodaRAG** to optimize efficiency and performance; 
+  our analysis of RAG limitations in [historical archives](https://aclanthology.org/2025.rocling-main.6/) 
+  won the 🏆 **Best Paper Award** (ROCLING 2025). 
+  Last but not least, I also contribute to notable projects in audio understanding, generation, and benchmarking, 
+  including [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [SSM-TTM](https://arxiv.org/abs/2601.14786), 
+  [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/), and 
+  [Dynamic-SUPERB Phase 2](https://openreview.net/forum?id=s7lzZpAW7T). 
+  I am also grateful to have received the {{icon:google}} **Google Student Travel Grant** (2024).
