@@ -61,6 +61,11 @@
   details: "awarded by SZIIT"
   selected: true
 
+- year: "2017"
+  title: "National Bronze and Guangdong Provincial Gold Awards, 3rd China College Internet Entrep. Comp."
+  details: ""
+  selected: false
+
 - year: "2016"
   title: "National Encouragement Scholarship"
   details: "awarded by the Ministry of Education"
