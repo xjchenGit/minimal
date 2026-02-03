@@ -204,7 +204,7 @@
         border-radius: 4px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         z-index: 9999;
-        width: 140px;
+        width: 182px;
     }
 
     /* 強制選單內的連結垂直排列，不橫排 */
@@ -212,6 +212,7 @@
         display: flex !important;
         /* 修正：讓圖示和文字水平對齊，但整個 a 垂直堆疊 */
         flex-direction: row !important;
+        align-items: center !important;
         padding: 10px 15px !important;
         color: #444 !important;
         font-size: 13px !important;
