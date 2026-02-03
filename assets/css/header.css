@@ -93,6 +93,11 @@
         padding: 0 !important;
     }
 
+    section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
     #sidebar-content {
         display: flex !important;
         flex-direction: column !important;
