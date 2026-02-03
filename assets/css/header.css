@@ -16,10 +16,12 @@
 
 #main-avatar {
     display: block;
-    width: 120px !important;
-    /* 桌面版大頭貼恢復大小 */
-    height: 120px !important;
-    border-radius: 50%;
+    width: 170px !important;
+    /* 放大圖片寬度 */
+    height: auto !important;
+    /* 自動高度，保持原始比例 */
+    border-radius: 8px;
+    /* 改為圓角矩形，而非圓形 */
     margin-bottom: 25px !important;
 }
 
@@ -128,18 +130,23 @@
     /* 個人資訊：橫排、小頭像 */
     .profile-main {
         display: flex !important;
-        align-items: center !important;
+        align-items: flex-end !important;
+        /* 改為底部對齊 */
     }
 
     #main-avatar {
-        width: 45px !important;
-        height: 45px !important;
+        width: 60px !important;
+        height: auto !important;
+        border-radius: 4px;
         margin: 0 12px 0 0 !important;
     }
 
     #user-name {
-        font-size: 18px !important;
-        margin: 0 !important;
+        font-size: 22px !important;
+        /* 放大名字字體 */
+        margin: 0 0 2px 0 !important;
+        /* 稍微加點底部間距，避免太擠 */
+        line-height: 1.1;
     }
 
     #user-info {
@@ -156,6 +163,8 @@
         display: block !important;
         margin-left: auto;
         position: relative;
+        align-self: center !important;
+        /* 垂直置中，不隨其他內容底部對齊 */
     }
 
     #follow-btn {
