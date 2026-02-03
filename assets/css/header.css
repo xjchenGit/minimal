@@ -167,6 +167,7 @@
     .follow-container {
         display: block !important;
         margin-left: auto;
+        margin-right: 25px;
         position: relative;
         align-self: center !important;
         /* 垂直置中，不隨其他內容底部對齊 */
