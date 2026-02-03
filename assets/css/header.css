@@ -123,7 +123,7 @@
         margin: 0 0 20px 0 !important;
         /* 線條延伸到邊緣 */
         padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-right: 10px !important;
     }
 
     #nav-menu a {
