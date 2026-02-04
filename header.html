@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="follow-container">
-            <button id="follow-btn" onclick="toggleSocial()">
+            <button id="follow-btn">
                 Follow
             </button>
             <div id="social-list" class="social-dropdown">
@@ -46,35 +46,3 @@
         <a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank"><i class="ai ai-cv"></i></a>
     </div>
 </div>
-
-<script>
-    // 導航高亮邏輯
-    (function () {
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        let targetId = "nav-about";
-        if (currentPage === "publications.html") targetId = "nav-pub";
-        else if (currentPage === "blogs.html") targetId = "nav-blogs";
-        const activeLink = document.getElementById(targetId);
-        if (activeLink) {
-            activeLink.style.textDecoration = "underline";
-            activeLink.style.textUnderlineOffset = "6px";
-            activeLink.style.color = "#000";
-            activeLink.style.fontWeight = "600";
-        }
-    })();
-
-    // 下拉選單邏輯
-    function toggleSocial() {
-        event.stopPropagation(); // 防止冒泡
-        const list = document.getElementById('social-list');
-        list.classList.toggle('show');
-    }
-
-    // 點擊空白處關閉
-    window.addEventListener('click', function (event) {
-        const list = document.getElementById('social-list');
-        if (list && !event.target.matches('#follow-btn')) {
-            list.classList.remove('show');
-        }
-    });
-</script>

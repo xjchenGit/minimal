@@ -15,7 +15,7 @@ function initHeader(currentPage) {
             const aboutLink = document.getElementById('nav-about');
             const blogLink = document.getElementById('nav-blogs');
             const pubLink = document.getElementById('nav-pub');
-            
+
             if (aboutLink && pubLink) {
                 // 重置所有連結樣式
                 [aboutLink, blogLink, pubLink].forEach(link => {
@@ -42,9 +42,9 @@ function initHeader(currentPage) {
             // 2. 綁定 Follow 按鈕事件
             const followBtn = document.getElementById('follow-btn');
             const socialList = document.getElementById('social-list');
-            
+
             if (followBtn && socialList) {
-                followBtn.addEventListener('click', function(e) {
+                followBtn.addEventListener('click', function (e) {
                     e.stopPropagation(); // 防止點擊按鈕時觸發 window 的關閉事件
                     socialList.classList.toggle('show');
                 });
@@ -54,12 +54,16 @@ function initHeader(currentPage) {
 }
 
 // 3. 全域點擊監聽 (只需註冊一次，放在函式外)
-window.addEventListener('click', function(event) {
+// 3. 全域點擊監聽 (只需註冊一次，放在函式外)
+function closeSocialMenu(event) {
     const socialList = document.getElementById('social-list');
     // 如果選單是開啟狀態，且點擊的不是按鈕本身，則關閉選單
     if (socialList && socialList.classList.contains('show')) {
-        if (!event.target.matches('#follow-btn')) {
+        if (!event.target.closest('#follow-btn') && !event.target.closest('#social-list')) {
             socialList.classList.remove('show');
         }
     }
-});
+}
+
+window.addEventListener('click', closeSocialMenu);
+window.addEventListener('touchstart', closeSocialMenu);
