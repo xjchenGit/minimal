@@ -302,8 +302,8 @@ function truncateAuthors(container) {
             const parts = fullHtml.split(/,\s*/);
 
             // Responsive limit: 4 for desktop, 1 for mobile (strict 1st author only on mobile)
-            const isMobile = window.innerWidth <= 1100;
-            const keepCount = isMobile ? 1 : 4;
+            const isMobile = window.innerWidth <= 768;
+            const keepCount = isMobile ? 1 : 3;
 
             // If list is not significantly longer than what we keep, don't truncate
             if (parts.length <= keepCount) return;
