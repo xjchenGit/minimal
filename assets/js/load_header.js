@@ -3,7 +3,7 @@
  * @param {string} currentPage - 目前頁面識別碼 ('about' 或 'pub')
  */
 function initHeader(currentPage) {
-    fetch('header.html')
+    fetch('header.html?v=' + new Date().getTime())
         .then(response => response.text())
         .then(data => {
             const sidebar = document.getElementById('sidebar');
