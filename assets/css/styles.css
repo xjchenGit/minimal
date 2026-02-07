@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  padding: 50px;
+  padding: 75px 50px 50px;
   font-size: 20px;
   line-height: 1.6;
 
@@ -74,7 +74,7 @@ h2 {
 }
 
 section h2:first-of-type {
-  margin-top: 0 !important;
+  margin-top: 10px !important;
 }
 
 h3,
@@ -173,7 +173,7 @@ img {
 header {
   width: 320px;
   position: sticky;
-  top: 50px;
+  top: 75px;
   flex-shrink: 0;
   -webkit-font-smoothing: subpixel-antialiased;
 }
