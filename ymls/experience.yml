@@ -37,3 +37,11 @@
   major_desk: "Computer Science"
   major_mob: "CSIE"
   selected: true
+
+- time_desk: "Jul 2018"
+  time_mob: "07/2018"
+  role: "J.C."
+  institution: "Shenzhen Univ. of Info. Tech. (fka SZIIT)"
+  major_desk: "Electronic Information Engineering"
+  major_mob: "EIE"
+  selected: false

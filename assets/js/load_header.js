@@ -49,11 +49,55 @@ function initHeader(currentPage) {
                     socialList.classList.toggle('show');
                 });
             }
+
+            // 3. 初始化 Email 複製功能
+            initEmailCopy();
         })
         .catch(err => console.error('Error loading header:', err));
 }
 
-// 3. 全域點擊監聽 (只需註冊一次，放在函式外)
+function initEmailCopy() {
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Optional: prevent default if you ONLY want copy, 
+            // but usually we want both (try open mail client + copy)
+            // e.preventDefault(); 
+
+            const email = this.getAttribute('href').replace('mailto:', '');
+
+            navigator.clipboard.writeText(email).then(() => {
+                showToast('Email copied to clipboard: ' + email);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    });
+}
+
+function showToast(message) {
+    // Check if toast already exists
+    let toast = document.querySelector('.toast-notification');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+
+    // Trigger reflow
+    void toast.offsetWidth;
+
+    // Show
+    toast.classList.add('show');
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
 // 3. 全域點擊監聽 (只需註冊一次，放在函式外)
 function closeSocialMenu(event) {
     const socialList = document.getElementById('social-list');
