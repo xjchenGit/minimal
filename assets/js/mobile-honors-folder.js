@@ -26,6 +26,9 @@ function initMobileHonors() {
 
     // Removed the "hide manually" loop here.
 
+    // TEMPORARILY DISABLED: Show more honors feature
+    honorList.classList.add('expanded');
+    /*
     // Create "Show more" button
     const hiddenCount = items.length - 6;
     const btn = document.createElement('li');
@@ -44,6 +47,7 @@ function initMobileHonors() {
 
     // Insert button at the end of the list
     honorList.appendChild(btn);
+    */
 }
 
 // Run on load and resize (optional, but good for rotation)

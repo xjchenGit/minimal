@@ -61,6 +61,9 @@ function loadAndRenderHonors(yamlPath, containerId) {
             // Add "Show more" logic directly here
             const ul = container.querySelector('ul.honors-list');
             if (ul) {
+                // TEMPORARILY DISABLED: Show more honors feature
+                ul.classList.add('expanded'); // Force expand to show all items
+                /*
                 const items = ul.querySelectorAll('li');
                 if (items.length > 6) {
                     const hiddenCount = items.length - 6;
@@ -77,6 +80,7 @@ function loadAndRenderHonors(yamlPath, containerId) {
 
                     ul.appendChild(btn);
                 }
+                */
             }
         })
         .catch(err => {
