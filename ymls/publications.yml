@@ -3,7 +3,7 @@
 - title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
   authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
   authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  venue: "Preprint 2026"
+  venue: "TASLP (submitted) 2026"
   category: "audio-llm"
   id: "lee2026ssmttm"
   selected: true
@@ -27,7 +27,7 @@
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with <br> Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
-  venue: "Preprint 2025"
+  venue: "TASLP 2026"
   category: "audio-llm"
   id: "lu2025desta25"
   selected: true  # <--- 新增這行
@@ -180,7 +180,7 @@
 - title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "Preprint, 2025"
+  venue: "TASLP (submitted) 2025"
   category: "deepfake"
   id: "chen2025codecfake"
   selected: true  # <--- 新增這行
