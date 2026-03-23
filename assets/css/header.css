@@ -29,7 +29,7 @@
     margin: 0 0 8px 0 !important;
     font-size: 24px !important;
     font-weight: 600;
-    color: #1D3557;
+    color: #222;
     letter-spacing: 0;
     font-family: "Source Serif 4", serif;
 }
@@ -76,6 +76,11 @@
     color: #444;
     font-size: 18px;
     text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #154c79;
 }
 
 
@@ -221,6 +226,16 @@
         text-decoration: none !important;
         border-bottom: 1px solid #f9f9f9;
         line-height: 1.2 !important;
+        transition: background 0.15s, color 0.15s;
+    }
+
+    .social-dropdown a:hover {
+        background: #f5f8fc !important;
+        color: #154c79 !important;
+    }
+
+    .social-dropdown a:hover i {
+        color: #154c79 !important;
     }
 
     .social-dropdown a i {

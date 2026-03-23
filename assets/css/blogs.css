@@ -42,7 +42,7 @@
     font-size: 1.4em;
     font-weight: 600;
     text-decoration: none;
-    color: #005fa3;
+    color: #154c79;
     cursor: pointer;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .markdown-body blockquote {
-    border-left: 4px solid #005fa3;
+    border-left: 4px solid #154c79;
     padding-left: 15px;
     color: #666;
     font-style: italic;
