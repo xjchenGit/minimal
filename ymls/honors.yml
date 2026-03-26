@@ -16,11 +16,11 @@
 - year: "2025"
   title: "CTCI Foundation Research Scholarship for Overseas Students"
   details: "awarded by CTCI Foundation"
-  selected: true
+  selected: false
 
 - year: "2025"
   title: "ACLCLP Student Travel Grant"
-  details: ", granted by ACLCLP."
+  details: ", granted by ACLCLP in Taiwan."
   mobile_hide_suffix: true
   selected: true
 
@@ -33,6 +33,11 @@
 - year: "2024"
   title: "CTCI Foundation Bursary Award for Overseas Students"
   details: "awarded by the CTCI Foundation"
+  selected: false
+
+- year: "2024-2025"
+  title: "CTCI Foundation Bursary Award & Research Scholarship for Overseas Students"
+  details: ""
   selected: true
 
 - year: "2024-2025"
