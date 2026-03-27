@@ -22,12 +22,17 @@
   title: "ACLCLP Student Travel Grant"
   details: ", granted by ACLCLP in Taiwan."
   mobile_hide_suffix: true
-  selected: true
+  selected: false
 
 - year: "2024"
   title: "Google Student Travel Grant"
   details: ", granted by Google LLC."
   mobile_hide_suffix: true
+  selected: false
+
+- year: "2024-2025"
+  title: "Student Travel Grants"
+  details: "Google (2024) & ACLCLP in Taiwan (2025)"
   selected: true
 
 - year: "2024"
@@ -63,7 +68,8 @@
 
 - year: "2017"
   title: "3rd Prize of SZIIT Academic Award"
-  details: "awarded by SZIIT"
+  details: ", awarded by SZIIT (Top 20% of students)"
+  mobile_hide_suffix: true
   selected: true
 
 - year: "2017"
