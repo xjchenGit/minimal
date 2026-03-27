@@ -7,7 +7,6 @@ bio: |
   My research focuses on Speech Processing, Speech/Text Large Language Models (LLMs), and Deepfake Detection.
 
 intro: |  
-  **Research Highlights:**
   In Deepfakes, I lead the proposal of [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) for SOTA SingFake detection, the development of [CodecFake+](https://arxiv.org/abs/2501.08238) to address data scarcity, and the pioneering of source tracing with [SASTNet](https://arxiv.org/abs/2506.07294). 
   I also core-contribute to audio LLM and benchmark projects including [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB](https://openreview.net/forum?id=s7lzZpAW7T), and [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/). Furthermore, I also mentor research on improving RAG efficiency and revealing limitations.
   My research has been recognized with the 🏆 **Best Paper Award** ([ROCLING 2025](https://aclanthology.org/2025.rocling-main.6/)), a 🏆 **Best Student Paper Nomination** ([IEEE ASRU 2025](https://arxiv.org/abs/2506.07294)), and the {{icon:google}} **Google Student Travel Grant** (2024).
