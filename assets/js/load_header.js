@@ -53,21 +53,6 @@ function initHeader(currentPage) {
             // 3. 初始化 Email 複製功能
             initEmailCopy();
 
-            // 4. 動態插入 clustrmaps 地圖 script（innerHTML 不會執行 script 標籤）
-            const mapContainer = sidebar.querySelector('.sidebar-map');
-            console.log('[clustrmaps] mapContainer:', mapContainer);
-            if (mapContainer) {
-                const script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.async = true;
-                script.src = 'https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=180&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000';
-                script.onerror = () => console.error('[clustrmaps] script failed to load');
-                script.onload = () => console.log('[clustrmaps] script loaded');
-                mapContainer.appendChild(script);
-                console.log('[clustrmaps] script appended');
-            } else {
-                console.warn('[clustrmaps] .sidebar-map not found in sidebar');
-            }
         })
         .catch(err => console.error('Error loading header:', err));
 }
