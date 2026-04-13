@@ -144,7 +144,7 @@
 # --- Retrieval Augmented Generation ---
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
   authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wen-Hua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "ACM Trans. Intell. Syst. Technol. (Submitted to ACM TIST)"
+  venue: "ACM Trans. Intell. Syst. Technol. (Submitted)"
   category: "rag"
   id: "cyli2026codarag"
   links: []
@@ -191,6 +191,9 @@
   venue: "INTERSPEECH 2026 (Submitted)"
   category: "deepfake"
   id: "xjchen2026joint"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2604.04841"
 
 
 - title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
