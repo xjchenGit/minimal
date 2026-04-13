@@ -118,10 +118,14 @@
     }
 
     /* 在 header.html 的 @media (max-width: 1100px) 內部加入 */
-    .sidebar-footer,
-    .sidebar-map {
+    .sidebar-footer {
         display: none !important;
-        /* 手機版隱藏側邊欄地圖，避免撐開高度 */
+    }
+
+    .sidebar-map {
+        display: block !important;
+        text-align: center;
+        margin: 15px 0 10px 0;
     }
 
     /* 導航置頂：橫排、底線、間距 */
