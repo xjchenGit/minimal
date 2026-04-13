@@ -194,6 +194,13 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.04841"
+  bibtex: |
+    @article{chen2026joint,
+      title={Joint Fullband-Subband Modeling for High-Resolution SingFake Detection},
+      author={Chen, Xuanjun and Hu, Chia-Yu and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
+      journal={arXiv preprint arXiv:2604.04841},
+      year={2026}
+    }
 
 
 - title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
