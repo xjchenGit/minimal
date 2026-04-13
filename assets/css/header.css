@@ -83,6 +83,10 @@
     color: #154c79;
 }
 
+.sidebar-map {
+    margin-top: 20px;
+    text-align: center;
+}
 
 /* ========== 手機版 RWD (螢幕 <= 1100px) ========== */
 @media (max-width: 1100px) {
@@ -114,7 +118,8 @@
     }
 
     /* 在 header.html 的 @media (max-width: 1100px) 內部加入 */
-    .sidebar-footer {
+    .sidebar-footer,
+    .sidebar-map {
         display: none !important;
         /* 手機版隱藏側邊欄地圖，避免撐開高度 */
     }

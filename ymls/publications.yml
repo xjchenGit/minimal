@@ -142,17 +142,18 @@
     }
 
 # --- Retrieval Augmented Generation ---
-# - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
-#   authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
-#   venue: "Working in Progress"
-#   category: "rag"
-#   links: []
-
-- title: "Efficient Retrieval-Augmented Generation via Grounded Planning"
-  authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "Working in Progress"
+- title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
+  authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wen-Hua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "ACM Trans. Intell. Syst. Technol. (Submitted to ACM TIST)"
   category: "rag"
-  id: "chou2024efficient"
+  id: "cyli2026codarag"
+  links: []
+
+- title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
+  authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "COLM 2026 (Submitted)"
+  category: "rag"
+  id: "chou2026efficient"
   links: []
 
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
@@ -177,6 +178,21 @@
     }
 
 # --- Audio Deepfake ---
+- title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
+  authors_full: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "INTERSPEECH 2026 (Submitted)"
+  category: "deepfake"
+  id: "xjchen2026joint"
+
+- title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
+  authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "INTERSPEECH 2026 (Submitted)"
+  category: "deepfake"
+  id: "xjchen2026joint"
+
+
 - title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
@@ -202,6 +218,8 @@
         archivePrefix={arXiv},
         primaryClass={cs.SD}
     }
+
+
 
 - title: "Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling"
   authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
