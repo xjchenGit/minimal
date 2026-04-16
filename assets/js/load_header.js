@@ -53,8 +53,22 @@ function initHeader(currentPage) {
             // 3. 初始化 Email 複製功能
             initEmailCopy();
 
+            // 4. 檢查 CV 檔案是否存在，不存在則隱藏 CV icon
+            checkCVVisibility();
+
         })
         .catch(err => console.error('Error loading header:', err));
+}
+
+function checkCVVisibility() {
+    const cvLinks = document.querySelectorAll('a[href*="Chen_Full_CV"]');
+    if (cvLinks.length === 0) return;
+    const cvUrl = cvLinks[0].getAttribute('href');
+    fetch(cvUrl, { method: 'HEAD' })
+        .then(res => {
+            if (!res.ok) cvLinks.forEach(el => el.style.display = 'none');
+        })
+        .catch(() => cvLinks.forEach(el => el.style.display = 'none'));
 }
 
 function initEmailCopy() {
