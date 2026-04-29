@@ -83,6 +83,12 @@
     color: #154c79;
 }
 
+.cv-hidden,
+.social-dropdown a.cv-hidden,
+.social-icons a.cv-hidden {
+    display: none !important;
+}
+
 /* ========== 手機版 RWD (螢幕 <= 1100px) ========== */
 @media (max-width: 1100px) {
 
