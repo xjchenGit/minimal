@@ -32,8 +32,8 @@
 	}
 	</script>
 
-	<link rel="stylesheet" href="assets/css/styles.css?v=6">
-	<link rel="stylesheet" href="assets/css/header.css">
+	<link rel="stylesheet" href="assets/css/styles.css?v=7">
+	<link rel="stylesheet" href="assets/css/header.css?v=2">
 	<link rel="stylesheet" href="assets/css/logo.css">
 	<link rel="stylesheet" href="assets/css/pubs.css?v=47">
 	<link rel="stylesheet" href="assets/css/pygment_trac.css">
@@ -52,12 +52,25 @@
 		<header id="sidebar"></header>
 
 		<section>
-			<script src="assets/js/load_header.js?v=6"></script>
+			<script src="assets/js/load_header.js?v=7"></script>
 			<script>initHeader('about');</script>
 
-			<h2>About</h2>
-
-			<div id="about-container"></div>
+			<div class="hero-profile">
+				<img src="assets/img/xj_4x3.jpg" class="hero-photo" alt="Xuanjun Chen">
+				<div class="hero-headline">
+					<h1 class="hero-name">Xuanjun Chen</h1>
+					<p class="hero-subtitle">Ph.D. Candidate, NTU EECS<span class="subtitle-sep"> &middot; </span><span class="subtitle-loc">Taipei, Taiwan</span></p>
+					<div class="hero-socials">
+						<a href="mailto:D12942018@ntu.edu.tw" aria-label="Email"><i class="fas fa-envelope"></i></a>
+						<a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+						<a href="https://x.com/xjchen_ntu" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+						<a href="https://github.com/xjchenGit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+						<a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+						<a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank" class="cv-link cv-hidden" aria-label="Curriculum Vitae"><i class="ai ai-cv"></i></a>
+					</div>
+				</div>
+				<div id="about-container" class="hero-bio"></div>
+			</div>
 
 			<h2>Selected Publications <small style="font-size: 14px; font-weight: normal;">(* equal
 					contribution)</small></h2>
@@ -97,7 +110,7 @@
 			<h2>Experience</h2>
 			<div id="experience-container"></div>
 
-			<h2>Selected Honors &amp; Services</h2>
+			<h2 id="honors">Selected Honors &amp; Services</h2>
 			<h3 class="category-header">Research and Academic Honors</h3>
 			<div id="honors-container"></div>
 			<h3 class="category-header">International Event Organizer &amp; Reviewer</h3>

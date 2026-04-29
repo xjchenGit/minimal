@@ -1,263 +1,250 @@
-/* ========== 桌面版樣式 (螢幕 > 768px) ========== */
-#sidebar-content {
-    text-align: left;
-    padding: 0 20px;
-    /* 新增：確保內容垂直分佈，地圖會被推到最下面 */
-    display: flex !important;
-    flex-direction: column !important;
-    border-right: none !important;
+/* ========== Top Navigation ========== */
+#sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-/* 讓桌面版的個人資訊恢復垂直排列 */
-.profile-main {
-    display: block;
-    /* 移除手機版的 flex 橫排 */
+#topnav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 22px 80px 18px;
 }
 
-#main-avatar {
-    display: block;
-    width: 170px !important;
-    /* 放大圖片寬度 */
-    height: auto !important;
-    /* 自動高度，保持原始比例 */
-    border-radius: 8px;
-    /* 改為圓角矩形，而非圓形 */
-    margin-bottom: 25px !important;
-}
-
-#user-name {
-    margin: 0 0 8px 0 !important;
-    font-size: 24px !important;
+#brand {
+    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    font-size: 22px;
     font-weight: 600;
     color: #222;
+    text-decoration: none;
     letter-spacing: 0;
-    font-family: "Source Serif 4", serif;
 }
 
-#user-info {
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 20px !important;
-    font-size: 15px !important;
+#brand:hover {
+    color: #154c79;
+    text-decoration: none;
 }
 
-/* 桌面版導航選單：垂直排列 */
 #nav-menu {
-    display: block !important;
-    margin-bottom: 30px !important;
-    border-bottom: none !important;
-    /* 移除手機版的底線 */
-    padding-bottom: 0 !important;
+    display: flex;
+    gap: 32px;
+    align-items: center;
 }
 
 #nav-menu a {
-    text-decoration: none;
-    color: #888;
-    font-weight: 500;
-    display: block !important;
-    /* 垂直排列 */
+    font-family: "Source Serif 4", "Noto Serif TC", serif;
     font-size: 17px;
-    line-height: 2.4;
-    font-family: 'Source Serif 4', serif;
+    font-weight: 500;
+    color: #888;
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color 0.15s;
 }
 
-/* 桌面版顯示原始圖示，隱藏 Follow 按鈕 */
-.follow-container {
-    display: none !important;
+#nav-menu a:hover {
+    color: #222;
+    text-decoration: none;
 }
 
-.social-icons {
+/* ========== About Hero (only on index.html) ========== */
+.hero-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "photo headline"
+        "photo bio";
+    column-gap: 28px;
+    row-gap: 0;
+    margin: 8px 0 24px;
+    align-items: start;
+}
+
+.hero-photo {
+    grid-area: photo;
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    align-self: start;
+}
+
+.hero-headline {
+    grid-area: headline;
+    min-width: 0;
+}
+
+.hero-bio {
+    grid-area: bio;
+    min-width: 0;
+}
+
+.hero-name {
+    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.15;
+    margin: 0 0 6px 0;
+    letter-spacing: 0;
+}
+
+.hero-subtitle {
+    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    font-size: 18px;
+    color: #888;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+}
+
+#about-container.hero-bio p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #444;
+    margin: 0 0 16px 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.hero-socials {
     display: flex;
     gap: 12px;
-    margin-top: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
 }
 
-.social-icons a {
-    color: #444;
-    font-size: 18px;
+.hero-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 16px;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: background 0.15s, color 0.15s, transform 0.15s;
 }
 
-.social-icons a:hover {
-    color: #154c79;
+.hero-socials a:hover {
+    background: #154c79;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
-.cv-hidden,
-.social-dropdown a.cv-hidden,
-.social-icons a.cv-hidden {
+.hero-socials a.cv-hidden {
     display: none !important;
 }
 
-/* ========== 手機版 RWD (螢幕 <= 1100px) ========== */
-@media (max-width: 1100px) {
-
-    /* 強制覆蓋 styles.css 在 960px 時可能加上的 padding */
-    header {
-        padding-right: 0 !important;
-        width: 100% !important;
+/* ========== Tablet (<= 820px) ========== */
+@media (max-width: 820px) {
+    #topnav-content {
+        padding: 16px 20px 14px;
+        max-width: 100%;
     }
 
-    .wrapper {
-        display: block !important;
-        /* 取消桌面版的 flex 排版 */
-        width: 100% !important;
-        padding: 0 !important;
+    #brand {
+        font-size: 19px;
     }
 
-    section {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    #sidebar-content {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 10px 0 !important;
-        height: auto !important;
-        /* 確保高度縮回內容大小 */
-    }
-
-    /* 在 header.html 的 @media (max-width: 1100px) 內部加入 */
-    .sidebar-footer {
-        display: none !important;
-        /* 手機版隱藏側邊欄地圖，避免撐開高度 */
-    }
-
-    /* 導航置頂：橫排、底線、間距 */
     #nav-menu {
-        order: -1;
-        display: flex !important;
-        justify-content: flex-end !important;
-        gap: 20px !important;
-        /* border-bottom: 1px solid #f0f0f0 !important; */
-        padding-bottom: 12px !important;
-        margin: 0 0 20px 0 !important;
-        /* 線條延伸到邊緣 */
-        padding-left: 0 !important;
-        padding-right: 10px !important;
+        gap: 22px;
     }
 
     #nav-menu a {
-        display: inline-block !important;
-        font-size: 15px !important;
-        line-height: 1 !important;
+        font-size: 15px;
     }
 
-    /* 個人資訊：橫排、小頭像 */
-    .profile-main {
-        display: flex !important;
-        align-items: flex-end !important;
-        /* 改為底部對齊 */
+    /* Photo + headline (containing socials) on top; bio full-width below */
+    .hero-profile {
+        grid-template-areas:
+            "photo headline"
+            "bio bio";
+        grid-template-columns: auto 1fr;
+        column-gap: 18px;
+        row-gap: 14px;
+        margin: 8px 0 18px;
+        align-items: start;
     }
 
-    #main-avatar {
-        width: 60px !important;
-        height: auto !important;
-        border-radius: 4px;
-        margin: 0 12px 0 0 !important;
+    .hero-name {
+        margin-bottom: 2px;
     }
 
-    #user-name {
-        font-size: 22px !important;
-        /* 放大名字字體 */
-        margin: 0 0 2px 0 !important;
-        /* 稍微加點底部間距，避免太擠 */
-        line-height: 1.1;
+    .hero-photo {
+        width: 80px;
+        height: auto;
+        border-radius: 8px;
+        align-self: start;
     }
 
-    #user-info {
-        font-size: 12px !important;
-        margin-bottom: 0 !important;
+    .hero-name {
+        font-size: 24px;
     }
 
-    /* 手機版：隱藏原始圖示，顯示 Follow 按鈕 */
-    .social-icons {
-        display: none !important;
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 4px;
     }
 
-    .follow-container {
-        display: block !important;
-        margin-left: auto;
-        margin-right: 25px;
-        position: relative;
-        align-self: center !important;
-        /* 垂直置中，不隨其他內容底部對齊 */
+    #about-container.hero-bio p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+}
+
+/* ========== Mobile (<= 480px) ========== */
+@media (max-width: 480px) {
+    #topnav-content {
+        padding: 14px 16px;
     }
 
-    #follow-btn {
-        padding: 4px 12px;
-        border: 1px solid #ddd;
-        background: #fff;
-        border-radius: 4px;
+    #brand {
+        font-size: 17px;
+    }
+
+    #nav-menu {
+        gap: 16px;
+    }
+
+    #nav-menu a {
+        font-size: 14px;
+    }
+
+    .hero-profile {
+        column-gap: 14px;
+        row-gap: 14px;
+    }
+
+    .hero-photo {
+        width: 84px;
+        border-radius: 6px;
+    }
+
+    .hero-name {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
         font-size: 13px;
-        font-family: inherit;
-
-        /* 新增以下三行，解決手機端顏色與外觀問題 */
-        color: #444;
-        /* 明確指定文字顏色，防止手機端變藍 */
-        -webkit-appearance: none;
-        /* 移除 iOS 預設的按鈕外觀 */
-        appearance: none;
-        /* 移除標準瀏覽器的預設外觀 */
-
-        cursor: pointer;
-        /* 讓電腦端滑鼠移上去有手型圖示 */
     }
 
-    .social-dropdown {
-        display: none;
-        /* 預設隱藏 */
-        position: absolute;
-        right: 0;
-        top: 110%;
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 9999;
-        width: 182px;
+    #about-container.hero-bio p {
+        font-size: 14px;
     }
 
-    /* 強制選單內的連結垂直排列，不橫排 */
-    .social-dropdown a {
-        display: flex !important;
-        /* 修正：讓圖示和文字水平對齊，但整個 a 垂直堆疊 */
-        flex-direction: row !important;
-        align-items: center !important;
-        padding: 10px 15px !important;
-        color: #444 !important;
-        font-size: 13px !important;
-        text-decoration: none !important;
-        border-bottom: 1px solid #f9f9f9;
-        line-height: 1.2 !important;
-        transition: background 0.15s, color 0.15s;
+    .hero-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
     }
-
-    .social-dropdown a:hover {
-        background: #f5f8fc !important;
-        color: #154c79 !important;
-    }
-
-    .social-dropdown a:hover i {
-        color: #154c79 !important;
-    }
-
-    .social-dropdown a i {
-        margin-right: 8px;
-        width: 16px;
-        text-align: center;
-        color: #777 !important;
-        /* 強制改為灰色，覆蓋掉任何藍色設定 */
-    }
-
-    .social-dropdown.show {
-        display: block !important;
-    }
-
-    .cv-hidden {
-        display: none !important;
-    }
-
-    /* 顯示選單 */
 }

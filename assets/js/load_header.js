@@ -1,6 +1,6 @@
 /**
- * 加載 Header 並初始化導覽列高亮與 Follow 按鈕邏輯
- * @param {string} currentPage - 目前頁面識別碼 ('about' 或 'pub')
+ * Load top nav into #sidebar and highlight current page link.
+ * @param {string} currentPage - 'about' | 'publications' | 'blogs'
  */
 function initHeader(currentPage) {
     fetch('header.html?v=' + new Date().getTime())
@@ -10,52 +10,32 @@ function initHeader(currentPage) {
             if (!sidebar) return;
             sidebar.innerHTML = data;
 
-            // 1. 處理導航列高亮邏輯
-            // 1. 處理導航列高亮邏輯
+            // Highlight active nav link
             const aboutLink = document.getElementById('nav-about');
             const blogLink = document.getElementById('nav-blogs');
             const pubLink = document.getElementById('nav-pub');
 
-            if (aboutLink && pubLink) {
-                // 重置所有連結樣式
-                [aboutLink, blogLink, pubLink].forEach(link => {
-                    if (link) {
-                        link.style.textDecoration = "none";
-                        link.style.color = "#888";
-                        link.style.fontWeight = "500";
-                    }
-                });
-
-                // 設定當前 active 頁面樣式
-                let activeLink = aboutLink;
-                if (currentPage === 'publications') activeLink = pubLink;
-                else if (currentPage === 'blogs') activeLink = blogLink;
-
-                if (activeLink) {
-                    activeLink.style.textDecoration = "underline";
-                    activeLink.style.textUnderlineOffset = "6px";
-                    activeLink.style.color = "#000";
-                    activeLink.style.fontWeight = "600";
+            [aboutLink, blogLink, pubLink].forEach(link => {
+                if (link) {
+                    link.style.textDecoration = "none";
+                    link.style.color = "#888";
+                    link.style.fontWeight = "500";
                 }
+            });
+
+            let activeLink = aboutLink;
+            if (currentPage === 'publications') activeLink = pubLink;
+            else if (currentPage === 'blogs') activeLink = blogLink;
+
+            if (activeLink) {
+                activeLink.style.color = "#222";
+                activeLink.style.fontWeight = "600";
+                activeLink.style.borderBottom = "2px solid #154c79";
+                activeLink.style.paddingBottom = "2px";
             }
 
-            // 2. 綁定 Follow 按鈕事件
-            const followBtn = document.getElementById('follow-btn');
-            const socialList = document.getElementById('social-list');
-
-            if (followBtn && socialList) {
-                followBtn.addEventListener('click', function (e) {
-                    e.stopPropagation(); // 防止點擊按鈕時觸發 window 的關閉事件
-                    socialList.classList.toggle('show');
-                });
-            }
-
-            // 3. 初始化 Email 複製功能
             initEmailCopy();
-
-            // 4. 檢查 CV 檔案是否存在，不存在則隱藏 CV icon
             checkCVVisibility();
-
         })
         .catch(err => console.error('Error loading header:', err));
 }
@@ -78,12 +58,7 @@ function initEmailCopy() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     emailLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            // Optional: prevent default if you ONLY want copy, 
-            // but usually we want both (try open mail client + copy)
-            // e.preventDefault(); 
-
             const email = this.getAttribute('href').replace('mailto:', '');
-
             navigator.clipboard.writeText(email).then(() => {
                 showToast('Email copied to clipboard: ' + email);
             }).catch(err => {
@@ -94,38 +69,16 @@ function initEmailCopy() {
 }
 
 function showToast(message) {
-    // Check if toast already exists
     let toast = document.querySelector('.toast-notification');
     if (!toast) {
         toast = document.createElement('div');
         toast.className = 'toast-notification';
         document.body.appendChild(toast);
     }
-
     toast.textContent = message;
-
-    // Trigger reflow
     void toast.offsetWidth;
-
-    // Show
     toast.classList.add('show');
-
-    // Hide after 3 seconds
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
 }
-
-// 3. 全域點擊監聽 (只需註冊一次，放在函式外)
-function closeSocialMenu(event) {
-    const socialList = document.getElementById('social-list');
-    // 如果選單是開啟狀態，且點擊的不是按鈕本身，則關閉選單
-    if (socialList && socialList.classList.contains('show')) {
-        if (!event.target.closest('#follow-btn') && !event.target.closest('#social-list')) {
-            socialList.classList.remove('show');
-        }
-    }
-}
-
-window.addEventListener('click', closeSocialMenu);
-window.addEventListener('touchstart', closeSocialMenu);
