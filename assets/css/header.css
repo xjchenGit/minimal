@@ -249,5 +249,9 @@
         display: block !important;
     }
 
+    .cv-hidden {
+        display: none !important;
+    }
+
     /* 顯示選單 */
 }

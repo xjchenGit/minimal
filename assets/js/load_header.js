@@ -61,14 +61,17 @@ function initHeader(currentPage) {
 }
 
 function checkCVVisibility() {
-    const cvLinks = document.querySelectorAll('a[href*="Chen_Full_CV"]');
+    const cvLinks = document.querySelectorAll('.cv-link');
     if (cvLinks.length === 0) return;
     const cvUrl = cvLinks[0].getAttribute('href');
     fetch(cvUrl, { method: 'HEAD' })
         .then(res => {
-            if (!res.ok) cvLinks.forEach(el => el.style.display = 'none');
+            const ct = res.headers.get('content-type') || '';
+            if (res.ok && ct.includes('pdf')) {
+                cvLinks.forEach(el => el.classList.remove('cv-hidden'));
+            }
         })
-        .catch(() => cvLinks.forEach(el => el.style.display = 'none'));
+        .catch(() => {});
 }
 
 function initEmailCopy() {

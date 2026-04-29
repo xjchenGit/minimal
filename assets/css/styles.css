@@ -77,6 +77,37 @@ section h2:first-of-type {
   margin-top: 10px !important;
 }
 
+section h3.category-header + div ul {
+  margin-top: 0;
+}
+
+section h2 + h3.category-header {
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+#honors-container + h3.category-header,
+#services-container + h3.category-header {
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+#honors-container ul,
+#services-container ul {
+  line-height: 1.35;
+  padding-top: 0;
+}
+
+#honors-container ul li,
+#services-container ul li {
+  margin-bottom: 2px;
+}
+
+#honors-container ul li:first-child,
+#services-container ul li:first-child {
+  margin-top: 0;
+}
+
 h3,
 h4,
 h5,
