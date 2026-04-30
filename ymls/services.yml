@@ -12,8 +12,8 @@
   context: "Special Session at IEEE SLT 2024"
   selected: true
 
-- year: "2023 - Present"
+- year: "2023 - Now"
   role: "Reviewer"
   all_event: "AAAI, ICML, NeurIPS, ACL, EMNLP, COLM, ICASSP, INTERSPEECH, IEEE ASRU, IEEE SLT, COLING, MLSP, IJPRAI"
-  event: "AAAI, ICML, NeurIPS, ACL, EMNLP, COLM, ICASSP, ICME, INTERSPEECH, IEEE ASRU, IEEE SLT, COLING, IJPRAI"
+  event: "AAAI, ICML, NeurIPS, ACL, EMNLP, COLM, ICASSP, ICME, INTERSPEECH, ASRU, SLT, COLING"
   selected: true
