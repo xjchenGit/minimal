@@ -116,7 +116,7 @@
 
 .hero-socials {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin-top: 12px;
     flex-wrap: wrap;
 }
@@ -125,12 +125,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: #f0f0f0;
     color: #555;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     transition: background 0.15s, color 0.15s, transform 0.15s;
 }
@@ -252,8 +252,8 @@
     }
 
     .hero-socials a {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
     }
 }
