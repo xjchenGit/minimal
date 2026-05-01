@@ -8,30 +8,24 @@ function loadAndRenderServices(yamlPath, containerId) {
         .then(data => {
             const filteredData = data.filter(item => item.selected === true);
             const html = filteredData.map(item => {
-                let content = `<li>${item.year}: <b>${item.role}</b>`;
-
-                // Add separator based on role or presence of link
-                // If it looks like the Reviewer entry (no link, no context), use colon if appropriate, 
-                // but standardizing on what was observed:
-                // Organizer/Committee had comma. Reviewer had colon.
+                let body = `<b>${item.role}</b>`;
 
                 if (item.role === 'Reviewer') {
-                    content += `: ${item.event}`;
+                    body += `: ${item.event}`;
                 } else {
-                    content += `, `;
+                    body += `, `;
                     if (item.link) {
-                        content += `<a href="${item.link}">${item.event}</a>`;
+                        body += `<a href="${item.link}">${item.event}</a>`;
                     } else {
-                        content += item.event;
+                        body += item.event;
                     }
 
                     if (item.context) {
-                        content += `, ${item.context}`;
+                        body += `, ${item.context}`;
                     }
                 }
 
-                content += `</li>`;
-                return content;
+                return `<li><span class="entry-row"><span class="entry-date">${item.year}</span><span class="entry-sep">: </span><span class="entry-body">${body}</span></span></li>`;
             }).join("");
 
             container.innerHTML = `<ul>${html}</ul>`;

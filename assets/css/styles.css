@@ -404,3 +404,58 @@ screen and (max-width: 480px) {
     color: #444;
   }
 }
+
+/* Right-aligned dates for Experience / Honors / Services (desktop only) */
+#experience-container .entry-row,
+#honors-container .entry-row,
+#services-container .entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+}
+
+#experience-container .entry-body,
+#honors-container .entry-body,
+#services-container .entry-body {
+  order: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+#experience-container .entry-date,
+#honors-container .entry-date,
+#services-container .entry-date {
+  order: 2;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: #888;
+  font-variant-numeric: tabular-nums;
+}
+
+#experience-container .entry-sep,
+#honors-container .entry-sep,
+#services-container .entry-sep {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #experience-container .entry-row,
+  #honors-container .entry-row,
+  #services-container .entry-row {
+    display: inline;
+  }
+
+  #experience-container .entry-date,
+  #honors-container .entry-date,
+  #services-container .entry-date {
+    color: inherit;
+  }
+
+  #experience-container .entry-sep,
+  #honors-container .entry-sep,
+  #services-container .entry-sep {
+    display: inline;
+  }
+}

@@ -8,27 +8,21 @@ function loadAndRenderExperience(yamlPath, containerId) {
         .then(data => {
             const filteredData = data.filter(item => item.selected === true);
             const html = filteredData.map(item => {
-                let content = `<li>`;
+                let body = `<b>${item.role}</b>`;
 
-                // Time
-                content += `<span class="desk-text">${item.time_desk}:</span><span class="mob-text">${item.time_mob}:</span> `;
-
-                // Role
-                content += `<b>${item.role}</b>`;
-
-                // Major (Academic) vs Location (Industry/Intern)
                 if (item.major_desk) {
-                    content += ` in <span class="desk-text">${item.major_desk}</span>`;
+                    body += ` in <span class="desk-text">${item.major_desk}</span>`;
                     if (item.major_mob) {
-                        content += `<span class="mob-text">${item.major_mob}</span>`;
+                        body += `<span class="mob-text">${item.major_mob}</span>`;
                     }
-                    content += `, ${item.institution}`;
+                    body += `, ${item.institution}`;
                 } else {
-                    content += `, ${item.institution}`;
+                    body += `, ${item.institution}`;
                 }
 
-                content += `</li>`;
-                return content;
+                const date = `<span class="desk-text">${item.time_desk}</span><span class="mob-text">${item.time_mob}</span>`;
+
+                return `<li><span class="entry-row"><span class="entry-date">${date}</span><span class="entry-sep">: </span><span class="entry-body">${body}</span></span></li>`;
             }).join("");
 
             container.innerHTML = `<ul>${html}</ul>`;

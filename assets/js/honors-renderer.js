@@ -11,47 +11,18 @@ function loadAndRenderHonors(yamlPath, containerId) {
             const filteredData = data.filter(item => item.selected === true);
 
             const html = filteredData.map(item => {
-                // Handling special case for "Ranked 3rd..." where "2021" is followed by ": Ranked "
-                // In my YAML, I put "Ranked " in year_prefix if needed, or I can just handle it here.
-                // Current YAML: year: "2021", year_prefix: "Ranked ", title: "3rd/42...", details: "..."
-
-                let line = `<li>`;
-
-                if (item.year_prefix) {
-                    line += `${item.year}: ${item.year_prefix}<b>${item.title}</b>`;
-                } else {
-                    line += `${item.year}: <b>${item.title}</b>`;
-                }
+                let body = item.year_prefix ? `${item.year_prefix}<b>${item.title}</b>` : `<b>${item.title}</b>`;
 
                 if (item.details) {
                     if (item.mobile_hide_suffix) {
-                        line += `<span class="mobile-hide-suffix">${item.details}</span>`;
+                        body += `<span class="mobile-hide-suffix">${item.details}</span>`;
                     } else {
-                        // For normal items, details usually follow a comma if it's not a "Ranked" type or if it's not "awarded by..." directly?
-                        // Original HTML consistency check:
-                        // "2026: <b>Title</b>, details"
-                        // "2025: <b>Title</b>, details"
-                        // "2021: Ranked <b>Title</b> on details" (Note: 'on' is part of details in my YAML)
-
-                        // If details starts with "," or " " or "." lets just append. 
-                        // But my YAML has cleaned strings. 
-                        // "one of only..." -> needs comma?
-                        // "The IEEE..." -> needs comma?
-                        // "awarded by..." -> needs comma?
-                        // "on the LA track..." -> needs space?
-
-                        // Let's refine the separator logic based on my YAML content.
-                        // Most need ", " separator.
-                        // "Ranked ... on ..." needs space separator.
-
-                        // Simpler approach: check if details start with punctuation.
                         const separator = (item.details.startsWith(',') || item.details.startsWith('.') || item.year_prefix) ? " " : ", ";
-                        line += `${separator}${item.details}`;
+                        body += `${separator}${item.details}`;
                     }
                 }
 
-                line += `</li>`;
-                return line;
+                return `<li><span class="entry-row"><span class="entry-date">${item.year}</span><span class="entry-sep">: </span><span class="entry-body">${body}</span></span></li>`;
             }).join("");
 
             // The original list had class "honors-list", let's keep it for CSS if needed
