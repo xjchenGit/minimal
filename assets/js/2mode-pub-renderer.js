@@ -7,6 +7,14 @@ function renderPubItem(p, num) {
     // 1. 作者底線處理
     let authors = (p.authors_short || p.authors_full || "").replace(/Xuanjun Chen/g, "<u>Xuanjun Chen</u>");
 
+    // If authors_full differs from authors_short, expose the full list so the toggle
+    // can expand to the canonical complete list rather than the JS-truncated version.
+    let authorsFullAttr = "";
+    if (p.authors_full && p.authors_short && p.authors_full !== p.authors_short) {
+        const fullHtml = p.authors_full.replace(/Xuanjun Chen/g, "<u>Xuanjun Chen</u>");
+        authorsFullAttr = ` data-expanded-html="${escapeHtml(fullHtml)}"`;
+    }
+
     // 2. 標題與換行：加上 .title-br 類別供 CSS 控制
     let title = p.title ? escapeHtml(p.title) : "";
     title = title.replace(/&lt;br&gt;|\\\\|\\/g, '<br class="title-br">');
@@ -63,7 +71,7 @@ function renderPubItem(p, num) {
             <div class="pub-num-col">[${num}]</div>
             <div class="pub-info-col">
                 <b class="pub-title">${title}</b>${note}<br>
-                <span class="pub-authors">${authors}</span>
+                <span class="pub-authors"${authorsFullAttr}>${authors}</span>
                 <div class="pub-row-meta">
                     <span class="pub-venue">${p.venue}</span>
                     ${linksHtml ? `<span class="pub-links"> ${linksHtml}</span>` : ""}
@@ -282,7 +290,42 @@ function truncateAuthors(container) {
         // Skip if already processed
         if (el.dataset.fullAuthors) return;
 
-        // Check for wrapping. 
+        // Custom-truncation mode: YAML provides both authors_short (already truncated, e.g.
+        // with "...") and authors_full. Always show a (more)/(less) toggle that expands
+        // to the canonical full list, regardless of whether the line wraps.
+        if (el.dataset.expandedHtml) {
+            const customShort = el.innerHTML;
+            const customFull = el.dataset.expandedHtml;
+
+            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; margin-left: 6px; vertical-align: middle;';
+            const toggleIconOpen = ` <span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
+            const toggleIconClose = ` <span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
+
+            el.dataset.fullAuthors = customFull;
+            el.dataset.shortHtml = customShort + toggleIconOpen;
+            el.innerHTML = el.dataset.shortHtml;
+            el.classList.add('truncated');
+
+            el.onclick = (e) => {
+                let target = e.target;
+                if (target.classList.contains('author-toggle')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (el.classList.contains('truncated')) {
+                        el.innerHTML = customFull + toggleIconClose;
+                        el.classList.remove('truncated');
+                        el.classList.add('expanded');
+                    } else {
+                        el.innerHTML = el.dataset.shortHtml;
+                        el.classList.remove('expanded');
+                        el.classList.add('truncated');
+                    }
+                }
+            };
+            return;
+        }
+
+        // Check for wrapping.
         // Strategy: temporarily switch to inline to check clientRects (lines)
         const originalDisplay = el.style.display;
         el.style.display = 'inline';

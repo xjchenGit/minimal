@@ -26,10 +26,10 @@
 
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
-  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
+  authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, ..., <u>Xuanjun Chen</u>, ..., Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   venue: "TASLP 2026"
   category: "audio-llm"
-  id: "lu2025desta25"
+  id: "lu2026desta25"
   selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
@@ -48,7 +48,7 @@
 
 - title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks"
   authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
-  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
+  authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, ..., <u>Xuanjun Chen</u>, ..., Shinji Watanabe, Hung-yi Lee"
   venue: "ICLR 2025"
   category: "audio-llm"
   id: "huang2025dynamic"
@@ -69,30 +69,11 @@
         url={https://openreview.net/forum?id=s7lzZpAW7T}
     }
 
-- title: "Towards audio language modeling-an overview"
-  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
-  venue: "Tech Report, Feb. 2024"
-  category: "audio-llm"
-  id: "wu2024towards"
-  selected: true  # <--- 新增這行
-  links:
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2402.13236"
-    - name: "Awesome"
-      url: "https://github.com/ga642381/speech-trident"
-  bibtex: |
-    @misc{wu2024towards,
-        title={Towards audio language modeling - an overview},
-        author={Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Kai-wei Chang and Ho-Lam Chung and Alexander Liu and Hung-yi Lee},
-        year={2024},
-        eprint={2402.13236},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL}
-    }
+
 
 - title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
-  authors_full: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
-  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, and Hung-yi Lee"
+  authors_full: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
+  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, ..., <u>Xuanjun Chen</u>, ..., Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
   venue: "Findings of ACL 2024"
   category: "audio-llm"
   id: "wu-etal-2024-codec"
@@ -122,8 +103,8 @@
     }
 
 - title: "Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models"
-  authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
-  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, and Hung-yi Lee"
+  authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, Hung-yi Lee"
+  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, ..., Shinji Watanabe, Hung-yi Lee"
   venue: "IEEE SLT 2024"
   category: "audio-llm"
   id: "wu2024codecsuperbslt"
@@ -139,6 +120,27 @@
         author={Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Jiawei Du and Kai-Wei Chang and Ke-Han Lu and Alexander Liu and Ho-Lam Chung and Yuan-Kuei Wu and Dongchao Yang and Songxiang Liu and Yi-Chiao Wu and Xu Tan and James Glass and Shinji Watanabe and Hung-yi Lee},
         booktitle={2024 IEEE Spoken Language Technology Workshop (SLT)},
         year={2024}
+    }
+
+- title: "Towards audio language modeling-an overview"
+  authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
+  venue: "Tech Report, Feb. 2024"
+  category: "audio-llm"
+  id: "wu2024towards"
+  selected: true  # <--- 新增這行
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2402.13236"
+    - name: "Awesome"
+      url: "https://github.com/ga642381/speech-trident"
+  bibtex: |
+    @misc{wu2024towards,
+        title={Towards audio language modeling - an overview},
+        author={Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Kai-wei Chang and Ho-Lam Chung and Alexander Liu and Hung-yi Lee},
+        year={2024},
+        eprint={2402.13236},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
     }
 
 # --- Retrieval Augmented Generation ---
@@ -183,14 +185,14 @@
   authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "INTERSPEECH 2026 (Submitted)"
   category: "deepfake"
-  id: "xjchen2026joint"
+  id: "chen2026mitigating"
 
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "INTERSPEECH 2026 (Submitted)"
   category: "deepfake"
-  id: "xjchen2026joint"
+  id: "chen2026joint"
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.04841"
@@ -203,12 +205,12 @@
     }
 
 
-- title: "CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset"
+- title: "CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech"
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
-  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "TASLP (submitted) 2025"
+  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, ..., Jyh-Shing Roger Jang, Hung-yi Lee"
+  venue: "TASLP 2026"
   category: "deepfake"
-  id: "chen2025codecfake"
+  id: "chen2026codecfake"
   selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
@@ -233,8 +235,8 @@
 
 - title: "Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling"
   authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "arXiv 2025"
+  authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "Technical Report 2025"
   category: "deepfake"
   id: "chen2025localizing"
   links:
@@ -252,7 +254,7 @@
 
 - title: "How Does Instrumental Music Help SingFake Detection?"
   authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ICASSP 2026"
   category: "deepfake"
   id: "chen2025how"
@@ -313,7 +315,7 @@
     }
 
 - title: "Singing Voice Graph Modeling for SingFake Detection"
-  authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee"
+  authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "INTERSPEECH 2024 (Oral)"
   category: "deepfake"
   id: "chen2024singing"
@@ -337,7 +339,7 @@
     }
 
 - title: "Neural Codec-based Adversarial Sample Detection for Speaker Verification"
-  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Jyh-Shing Roger Jang, and Hung-yi Lee"
+  authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "INTERSPEECH 2024"
   category: "deepfake"
   id: "chen2024neural"
@@ -359,7 +361,7 @@
 
 - title: "DFADD: The Diffusion and Flow-Matching based Audio Deepfake Dataset"
   authors_full: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, ..., Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE SLT 2024"
   category: "deepfake"
   id: "du2024dfadd"
@@ -381,7 +383,7 @@
     }
 
 - title: "Multimodal Transformer Distillation for Audio-Visual Synchronization"
-  authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Chung-Che Wang, Hung-yi Lee, and Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Chung-Che Wang, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ICASSP 2024"
   category: "deepfake"
   id: "chen2024multimodal"
@@ -405,7 +407,7 @@
     }
 
 - title: "Push-Pull: Characterizing the Adversarial Robustness for Audio-Visual Active Speaker Detection"
-  authors_short: "<u>Xuanjun Chen</u>*, Haibin Wu*, Helen Meng, Hung-yi Lee, and Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>*, Haibin Wu*, Helen Meng, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE SLT 2022, Jan 2023"
   category: "deepfake"
   id: "chen2022push"
@@ -431,7 +433,7 @@
     }
 
 - title: "Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification"
-  authors_short: "<u>Xuanjun Chen</u>*, Yen-Lun Liao*, Chung-Che Wang, and Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>*, Yen-Lun Liao*, Chung-Che Wang, Jyh-Shing Roger Jang"
   venue: "ISCA SPSC 2022"
   category: "deepfake"
   id: "liao2022adversarial"
