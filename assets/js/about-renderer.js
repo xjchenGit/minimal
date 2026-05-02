@@ -32,7 +32,7 @@ function loadAndRenderAbout(yamlPath, containerId) {
             }
 
             // Desktop-only text-style contact links (visibility controlled by CSS)
-            html += `<p class="hero-contact-text">[<a href="mailto:D12942018@ntu.edu.tw">Email</a> | <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" rel="noopener noreferrer">Linkedin</a> | <a href="https://x.com/xjchen_ntu" target="_blank" rel="noopener noreferrer">Twitter</a> | <a href="https://github.com/xjchenGit" target="_blank" rel="noopener noreferrer">Github</a> | <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</p>`;
+            html += `<p class="hero-contact-text">[ <a href="mailto:D12942018@ntu.edu.tw">Email</a> | <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" rel="noopener noreferrer">Linkedin</a> | <a href="https://x.com/xjchen_ntu" target="_blank" rel="noopener noreferrer">Twitter</a> | <a href="https://github.com/xjchenGit" target="_blank" rel="noopener noreferrer">Github</a> | <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> ]</p>`;
 
             container.innerHTML = html;
 
