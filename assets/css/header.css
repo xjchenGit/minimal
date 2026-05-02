@@ -147,6 +147,33 @@
     display: none !important;
 }
 
+/* Desktop-only text-style contact links (after intro paragraph in about-container).
+   On tablet/mobile (<= 820px) we keep the icon socials and hide this. */
+.hero-contact-text {
+    display: none;
+}
+
+@media (min-width: 821px) {
+    .hero-socials {
+        display: none !important;
+    }
+    .hero-contact-text {
+        display: block;
+        font-size: 17px;
+        line-height: 1.65;
+        color: #444;
+        margin: 0 0 16px 0;
+    }
+    /* hero-socials is hidden on desktop, so collapse the slack it used to occupy
+       between the subtitle and the bio paragraph. */
+    .hero-profile {
+        row-gap: 20px;
+    }
+    .hero-subtitle {
+        margin-bottom: 4px;
+    }
+}
+
 /* ========== Tablet (<= 820px) ========== */
 @media (max-width: 820px) {
     #topnav-content {
