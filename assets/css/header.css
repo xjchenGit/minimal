@@ -59,8 +59,8 @@
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-areas:
-        "photo headline"
-        "photo bio";
+        "photocol headline"
+        "photocol bio";
     grid-template-rows: min-content auto;
     column-gap: 28px;
     row-gap: 18px;
@@ -68,14 +68,20 @@
     align-items: start;
 }
 
+.hero-photo-col {
+    grid-area: photocol;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
 .hero-photo {
-    grid-area: photo;
     width: 170px;
     height: auto;
     border-radius: 10px;
     display: block;
-    align-self: start;
-    margin-left: 20px;
 }
 
 .hero-headline {
@@ -89,13 +95,21 @@
 }
 
 .hero-name {
-    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    font-family: Palatino, "Palatino Linotype", "EB Garamond", Georgia, "Times New Roman", "Noto Serif TC", serif;
     font-size: 32px;
-    font-weight: 600;
-    color: #222;
+    font-weight: 400;
+    color: #666;
     line-height: 1.15;
     margin: 0 0 6px 0;
     letter-spacing: 0;
+}
+
+.hero-name-zh {
+    font-family: "Noto Serif TC", "Songti TC", "Songti SC", "PMingLiU", serif;
+    font-weight: 500;
+    font-size: 0.7em;
+    color: #666;
+    margin-left: 4px;
 }
 
 .hero-subtitle {
@@ -104,6 +118,17 @@
     color: #888;
     margin: 0 0 20px 0;
     line-height: 1.4;
+}
+
+/* Desktop-only: subtitle that sits below the photo (in .hero-photo-col).
+   Hidden by default; shown only at min-width: 821px (see media query below).
+   The mobile/tablet markup keeps a second copy inside .hero-headline. */
+.hero-photo-col .hero-subtitle {
+    display: none;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    width: 170px;
 }
 
 #about-container.hero-bio p {
@@ -164,13 +189,12 @@
         color: #444;
         margin: 0 0 16px 0;
     }
-    /* hero-socials is hidden on desktop, so collapse the slack it used to occupy
-       between the subtitle and the bio paragraph. */
-    .hero-profile {
-        row-gap: 20px;
+    /* Show the under-photo subtitle and hide the inline one inside the headline */
+    .hero-photo-col .hero-subtitle {
+        display: block;
     }
-    .hero-subtitle {
-        margin-bottom: 4px;
+    .hero-headline .hero-subtitle {
+        display: none;
     }
 }
 
@@ -196,7 +220,7 @@
     /* Photo + headline (containing socials) on top; bio full-width below */
     .hero-profile {
         grid-template-areas:
-            "photo headline"
+            "photocol headline"
             "bio bio";
         grid-template-columns: auto 1fr;
         column-gap: 18px;
