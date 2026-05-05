@@ -6,3 +6,14 @@ docs/Chen_Full_CV_26.01.19.pdf
 .assets/img/shanda_ai_tokyo_long.png
 .assets/img/shanda_group_logo.jpeg
 
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock
+
+# Local-only large originals (kept on disk, never committed/deployed)
+assets/img/xj_4x3_orig.jpg
+assets/img/xj.png
+
