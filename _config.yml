@@ -1,0 +1,30 @@
+title: Xuanjun Chen
+description: Personal homepage of Xuanjun Chen, Ph.D. student at National Taiwan University EECS.
+url: https://xjchen.tech
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Files at the repo root we do NOT want copied into _site/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - run.sh
+  - ymls
+  - .claude
+  - vendor
+  - node_modules
+  - "*.log"
+  - assets/img/xj_4x3_orig.jpg
+  - assets/img/xj.png
+
+# Apply default layout to every page in the site
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default

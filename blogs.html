@@ -1,158 +1,118 @@
-<!doctype html>
-<html>
+---
+page_id: blogs
+title_full: "Xuanjun Chen - Blogs"
+extra_css:
+  - assets/css/blogs.css?v=3
+head_extra: |
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Xuanjun Chen - Blogs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=7">
-    <link rel="stylesheet" href="assets/css/header.css?v=2">
-    <link rel="stylesheet" href="assets/css/blogs.css?v=3">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Source+Serif+4:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+	<h2 id="page-title">Blogs</h2>
+	<div class="lang-switch">
+		<button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+		<button id="btn-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
+	</div>
+</div>
 
-<body>
-    <div class="wrapper">
-        <header id="sidebar"></header>
+<div id="blog-list"></div>
 
-        <section>
-            <script src="assets/js/load_header.js?v=7"></script>
-            <script>
-                initHeader('blogs'); 
-            </script>
+<div id="post-container" style="display: none;">
+	<div class="post-meta-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+		<div id="post-date" style="color: #888; font-style: italic;"></div>
+		<div class="back-btn" onclick="closePost()" style="cursor:pointer; font-weight: normal; margin-bottom: 0;">
+			<span class="lang-en">Back to List</span>
+			<span class="lang-zh" style="display:none">返回列表</span>
+			<span style="margin-left: 5px;">&gt;</span>
+		</div>
+	</div>
+	<div id="markdown-content" class="markdown-body"></div>
+</div>
 
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <h2 id="page-title">Blogs</h2>
-                <div class="lang-switch">
-                    <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-                    <button id="btn-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
-                </div>
-            </div>
+<script>
+	let currentLang = 'en';
+	let currentPostId = null;
+	let rawMarkdownCache = "";
 
-            <div id="blog-list"></div>
+	async function initBlog() {
+		try {
+			const response = await fetch('posts/posts.json?v=1');
+			const posts = await response.json();
+			renderBlogList(posts);
+		} catch (err) {
+			document.getElementById('blog-list').innerHTML = "Failed to load blog list.";
+		}
+	}
 
-            <div id="post-container" style="display: none;">
-                <div class="post-meta-row"
-                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <div id="post-date" style="color: #888; font-style: italic;"></div>
-                    <div class="back-btn" onclick="closePost()"
-                        style="cursor:pointer; font-weight: normal; margin-bottom: 0;">
-                        <span class="lang-en">Back to List</span>
-                        <span class="lang-zh" style="display:none">返回列表</span>
-                        <span style="margin-left: 5px;">&gt;</span>
-                    </div>
-                </div>
-                <div id="markdown-content" class="markdown-body"></div>
-            </div>
+	function renderBlogList(posts) {
+		const listEl = document.getElementById('blog-list');
+		listEl.innerHTML = posts.map(post => `
+				<div class="post-item">
+					<div class="post-date">${post.date}</div>
+					<a class="post-title" onclick="openPost('${post.id}')">
+						<span class="lang-en">${post.title_en}</span>
+						<span class="lang-zh" style="display:none">${post.title_zh}</span>
+					</a>
+					<p class="post-excerpt lang-en">${post.excerpt_en}</p>
+					<p class="post-excerpt lang-zh" style="display:none">${post.excerpt_zh}</p>
+				</div>
+			`).join('');
+		setLanguage(currentLang);
+	}
 
-            <script>
-                let currentLang = 'en';
-                let currentPostId = null;
-                let rawMarkdownCache = "";
+	function setLanguage(lang) {
+		currentLang = lang;
+		document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+		document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+		document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'inline-block' : 'none');
+		document.querySelectorAll('.lang-zh').forEach(el => el.style.display = lang === 'zh' ? 'inline-block' : 'none');
+		if (currentPostId) renderMarkdown();
+	}
 
-                // 1. 初始化：讀取 posts.json 並渲染列表
-                async function initBlog() {
-                    try {
-                        const response = await fetch('posts/posts.json?v=' + new Date().getTime());
-                        const posts = await response.json();
-                        renderBlogList(posts);
-                    } catch (err) {
-                        document.getElementById('blog-list').innerHTML = "Failed to load blog list.";
-                    }
-                }
+	async function openPost(postId) {
+		currentPostId = postId;
+		document.getElementById('blog-list').style.display = 'none';
+		document.getElementById('post-container').style.display = 'block';
+		const contentEl = document.getElementById('markdown-content');
+		contentEl.innerHTML = "Loading...";
+		try {
+			const response = await fetch(`posts/${postId}.md?v=1`);
+			if (!response.ok) throw new Error("File not found");
+			rawMarkdownCache = await response.text();
+			renderMarkdown();
+			window.scrollTo(0, 0);
+		} catch (err) {
+			contentEl.innerHTML = "<p>Error: Could not load the post.</p>";
+		}
+	}
 
-                function renderBlogList(posts) {
-                    const listEl = document.getElementById('blog-list');
-                    listEl.innerHTML = posts.map(post => `
-                            <div class="post-item">
-                                <div class="post-date">${post.date}</div>
-                                <a class="post-title" onclick="openPost('${post.id}')">
-                                    <span class="lang-en">${post.title_en}</span>
-                                    <span class="lang-zh" style="display:none">${post.title_zh}</span>
-                                </a>
-                                <p class="post-excerpt lang-en">${post.excerpt_en}</p>
-                                <p class="post-excerpt lang-zh" style="display:none">${post.excerpt_zh}</p>
-                            </div>
-                        `).join('');
-                    // 確保切換到正確語言
-                    setLanguage(currentLang);
-                }
+	function renderMarkdown() {
+		const contentEl = document.getElementById('markdown-content');
+		const dateEl = document.getElementById('post-date');
+		const parts = rawMarkdownCache.split(/\n\s*---\s*\n/);
+		let content = "";
+		if (currentLang === 'en') {
+			content = parts[0] || "Content not available in English.";
+		} else {
+			content = parts[1] ? parts[1].trim() : parts[0];
+		}
+		const match = content.match(/^\s*\*(.*?)\*\s*/);
+		if (match) {
+			dateEl.textContent = match[1];
+			content = content.replace(match[0], '');
+		} else {
+			dateEl.textContent = "";
+		}
+		contentEl.innerHTML = marked.parse(content);
+	}
 
-                function setLanguage(lang) {
-                    currentLang = lang;
-                    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-                    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+	function closePost() {
+		currentPostId = null;
+		rawMarkdownCache = "";
+		document.getElementById('blog-list').style.display = 'block';
+		document.getElementById('post-container').style.display = 'none';
+		window.scrollTo(0, 0);
+	}
 
-                    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'inline-block' : 'none');
-                    document.querySelectorAll('.lang-zh').forEach(el => el.style.display = lang === 'zh' ? 'inline-block' : 'none');
-
-                    if (currentPostId) renderMarkdown();
-                }
-
-                async function openPost(postId) {
-                    currentPostId = postId;
-                    document.getElementById('blog-list').style.display = 'none';
-                    document.getElementById('post-container').style.display = 'block';
-                    const contentEl = document.getElementById('markdown-content');
-                    contentEl.innerHTML = "Loading...";
-
-                    try {
-                        const response = await fetch(`posts/${postId}.md?v=` + new Date().getTime());
-                        if (!response.ok) throw new Error("File not found");
-                        rawMarkdownCache = await response.text();
-                        renderMarkdown();
-                        window.scrollTo(0, 0);
-                    } catch (err) {
-                        contentEl.innerHTML = "<p>Error: Could not load the post.</p>";
-                    }
-                }
-
-                function renderMarkdown() {
-                    const contentEl = document.getElementById('markdown-content');
-                    const dateEl = document.getElementById('post-date');
-
-                    // Split by horizontal rule (---) surrounded by newlines
-                    const parts = rawMarkdownCache.split(/\n\s*---\s*\n/);
-
-                    let content = "";
-                    if (currentLang === 'en') {
-                        content = parts[0] || "Content not available in English.";
-                    } else {
-                        content = parts[1] ? parts[1].trim() : parts[0];
-                    }
-
-                    // Extract Date (Assume first line is *Date*)
-                    // Regex looks for leading *...* and removes it from content
-                    const match = content.match(/^\s*\*(.*?)\*\s*/);
-                    if (match) {
-                        dateEl.textContent = match[1]; // Set extracted date
-                        content = content.replace(match[0], ''); // Remove from MD
-                    } else {
-                        dateEl.textContent = "";
-                    }
-
-                    contentEl.innerHTML = marked.parse(content);
-                }
-
-                function closePost() {
-                    currentPostId = null;
-                    rawMarkdownCache = "";
-                    document.getElementById('blog-list').style.display = 'block';
-                    document.getElementById('post-container').style.display = 'none';
-                    window.scrollTo(0, 0);
-                }
-
-                // 執行初始化
-                initBlog();
-            </script>
-        </section>
-    </div>
-</body>
-
-</html>
+	initBlog();
+</script>

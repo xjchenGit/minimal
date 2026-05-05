@@ -1,0 +1,6 @@
+{%- assign _t = include.text -%}
+{%- for icon in site.data.icons -%}
+{%- assign _placeholder = ":icon-" | append: icon[0] | append: ":" -%}
+{%- assign _t = _t | replace: _placeholder, icon[1] -%}
+{%- endfor -%}
+{{- _t -}}

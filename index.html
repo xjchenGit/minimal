@@ -1,131 +1,132 @@
-<!doctype html>
-<html>
+---
+page_id: about
+title_full: "Xuanjun Chen - About"
+description: "I am a Ph.D. student at National Taiwan University (NTU), advised by Hung-yi Lee and Jyh-Shing Roger Jang. Before Ph.D., I received my M.S. from NTU (2023) and B.S. from Taiwan Tech (2020)."
+og_url: "https://xjchen.tech/"
+og_type: profile
+head_extra: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Xuanjun Chen",
+    "alternateName": "陳炫均",
+    "url": "https://xjchen.tech/",
+    "image": "https://xjchengit.github.io/minimal/assets/img/xj_4x3.jpg",
+    "jobTitle": "Ph.D. Candidate",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "National Taiwan University"
+    },
+    "description": "I am a Ph.D. student at National Taiwan University (NTU), advised by Hung-yi Lee and Jyh-Shing Roger Jang."
+  }
+  </script>
+---
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta name="description"
-		content="I am a Ph.D. student at National Taiwan University (NTU), advised by Hung-yi Lee and Jyh-Shing Roger Jang. Before Ph.D., I received my M.S. from NTU (2023) and B.S. from Taiwan Tech (2020).">
-	<title>Xuanjun Chen - About</title>
+{%- assign about = site.data.about -%}
+{%- capture bio_processed -%}{%- include icon-text.html text=about.bio -%}{%- endcapture -%}
+{%- capture intro_processed -%}{%- include icon-text.html text=about.intro -%}{%- endcapture -%}
 
-	<meta property="og:title" content="Xuanjun Chen - About">
-	<meta property="og:description"
-		content="I am a Ph.D. student at National Taiwan University (NTU), advised by Hung-yi Lee and Jyh-Shing Roger Jang.">
-	<meta property="og:image" content="https://xjchengit.github.io/minimal/assets/img/xj_4x3.jpg">
-	<meta property="og:url" content="https://xjchen.tech/">
-	<meta property="og:type" content="profile">
-
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Person",
-	  "name": "Xuanjun Chen",
-	  "alternateName": "陳炫均",
-	  "url": "https://xjchen.tech/",
-	  "image": "https://xjchengit.github.io/minimal/assets/img/xj_4x3.jpg",
-	  "jobTitle": "Ph.D. Candidate",
-	  "worksFor": {
-		"@type": "Organization",
-		"name": "National Taiwan University"
-	  },
-	  "description": "I am a Ph.D. student at National Taiwan University (NTU), advised by Hung-yi Lee and Jyh-Shing Roger Jang."
-	}
-	</script>
-
-	<link rel="stylesheet" href="assets/css/styles.css?v=8">
-	<link rel="stylesheet" href="assets/css/header.css?v=8">
-	<link rel="stylesheet" href="assets/css/logo.css">
-	<link rel="stylesheet" href="assets/css/pubs.css?v=48">
-	<link rel="stylesheet" href="assets/css/pygment_trac.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&family=Noto+Serif+TC:wght@400;500;600&family=EB+Garamond:wght@400;500;600;700&display=swap"
-		rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-</head>
-
-<body>
-	<div class="wrapper">
-		<header id="sidebar"></header>
-
-		<section>
-			<script src="assets/js/load_header.js?v=7"></script>
-			<script>initHeader('about');</script>
-
-			<div class="hero-profile">
-				<div class="hero-photo-col">
-					<img src="assets/img/xj_4x3.jpg" class="hero-photo" alt="Xuanjun Chen">
-					<p class="hero-subtitle">Ph.D. Candidate<br>NTU EECS</p>
-				</div>
-				<div class="hero-headline">
-					<h1 class="hero-name">Xuanjun Chen <span class="hero-name-zh">(陳炫均)</span></h1>
-					<p class="hero-subtitle">Ph.D. Candidate, NTU EECS<span class="subtitle-sep"> &middot; </span><span class="subtitle-loc">Taipei, Taiwan</span></p>
-					<div class="hero-socials">
-						<a href="mailto:D12942018@ntu.edu.tw" aria-label="Email"><i class="fas fa-envelope"></i></a>
-						<a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-						<a href="https://x.com/xjchen_ntu" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-						<a href="https://github.com/xjchenGit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-						<a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-						<a href="docs/Chen_Full_CV_26.01.19.pdf" target="_blank" class="cv-link cv-hidden" aria-label="Curriculum Vitae"><i class="ai ai-cv"></i></a>
-					</div>
-				</div>
-				<div id="about-container" class="hero-bio"></div>
-			</div>
-
-			<h2>Selected Publications <small style="font-size: 14px; font-weight: normal;">(* equal
-					contribution)</small></h2>
-			<div id="pub-container"></div>
-
-			<!-- YAML parser -->
-			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-			<!-- Markdown parser -->
-			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-			<!-- <script src="assets/js/pub-renderer.js"></script> -->
-			<!-- 參數依序：路徑, 容器ID, 分類(null), isIndex(true), onlySelected(true) -->
-			<script src="assets/js/2mode-pub-renderer.js?v=16"></script>
-			<script src="assets/js/about-renderer.js?v=3"></script>
-			<script src="assets/js/services-renderer.js?v=2"></script>
-			<script src="assets/js/honors-renderer.js?v=2"></script>
-			<script src="assets/js/experience-renderer.js?v=2"></script>
-			<script>
-				document.addEventListener('DOMContentLoaded', () => {
-					// 參數說明：路徑, 容器, Category(null), isIndex(true), onlySelected(true), reverseOrder(false)
-					loadAndRenderPubs(
-						"ymls/publications.yml", // 統一使用這份 YAML
-						"pub-container",        // 你的 HTML 容器 ID
-						null,                   // 不限類別，顯示所有 selected 項目
-						true,                   // 是首頁模式 (影響 CSS Class)
-						true,                   // **關鍵：只顯示 selected 項目**
-						false,                  // **關鍵：正序排列 (1, 2, 3...)**
-						"ymls/selected_paper.yml" // 使用外部排序清單
-					);
-
-					loadAndRenderServices("ymls/services.yml", "services-container");
-					loadAndRenderHonors("ymls/honors.yml", "honors-container");
-					loadAndRenderExperience("ymls/experience.yml", "experience-container");
-					loadAndRenderAbout("ymls/about.yml", "about-container");
-				});
-			</script>
-
-			<h2>Experience</h2>
-			<div id="experience-container"></div>
-
-			<h2 id="honors">Selected Honors &amp; Services</h2>
-			<h3 class="category-header">Research and Academic Honors</h3>
-			<div id="honors-container"></div>
-			<h3 class="category-header">International Event Organizer &amp; Reviewer</h3>
-			<div id="services-container"></div>
-
-			<script src="assets/js/mobile-honors-folder.js"></script>
-			<br>
-			<script type='text/javascript' id='clustrmaps' async
-				src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
-
-		</section>
+<div class="hero-profile">
+	<div class="hero-photo-col">
+		<picture>
+			<source srcset="assets/img/xj_4x3.webp" type="image/webp">
+			<img src="assets/img/xj_4x3.jpg" class="hero-photo" alt="Xuanjun Chen" width="600" height="800" fetchpriority="high" decoding="async">
+		</picture>
+		<p class="hero-subtitle">Ph.D. Candidate<br>NTU EECS</p>
 	</div>
-</body>
+	<div class="hero-headline">
+		<h1 class="hero-name">Xuanjun Chen <span class="hero-name-zh">(陳炫均)</span></h1>
+		<p class="hero-subtitle">Ph.D. Candidate, NTU EECS<span class="subtitle-sep"> &middot; </span><span class="subtitle-loc">Taipei, Taiwan</span></p>
+		<div class="hero-socials">
+			<a href="mailto:D12942018@ntu.edu.tw" aria-label="Email"><i class="fas fa-envelope"></i></a>
+			<a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="https://x.com/xjchen_ntu" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+			<a href="https://github.com/xjchenGit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+			{%- if about.cv_visible %}
+			<a href="{{ about.cv_url }}" target="_blank" class="cv-link" aria-label="Curriculum Vitae"><i class="ai ai-cv"></i></a>
+			{%- endif %}
+		</div>
+	</div>
+	<div id="about-container" class="hero-bio">
+		{{ bio_processed | markdownify }}
+		{{ intro_processed | markdownify }}
+		<p class="hero-contact-text">[ <a href="mailto:D12942018@ntu.edu.tw">Email</a> | <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" rel="noopener noreferrer">Linkedin</a> | <a href="https://x.com/xjchen_ntu" target="_blank" rel="noopener noreferrer">Twitter</a> | <a href="https://github.com/xjchenGit" target="_blank" rel="noopener noreferrer">Github</a> | <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> ]</p>
+	</div>
+</div>
 
-</html>
+<h2>Selected Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+<div id="pub-container">
+{%- assign selected_ids = site.data.selected_paper.selected_papers -%}
+{%- for pub_id in selected_ids -%}
+{%- assign matching = site.data.publications | where: "id", pub_id -%}
+{%- if matching.size > 0 -%}
+{%- assign pub = matching | first -%}
+{% include pub-item.html pub=pub num=forloop.index %}
+{%- endif -%}
+{%- endfor %}
+</div>
+
+<h2>Experience</h2>
+<div id="experience-container">
+	<ul>
+		{%- assign exp_items = site.data.experience | where: "selected", true -%}
+		{%- for item in exp_items %}
+		<li><span class="entry-row"><span class="entry-date"><span class="desk-text">{{ item.time_desk }}</span><span class="mob-text">{{ item.time_mob }}</span></span><span class="entry-sep">: </span><span class="entry-body"><b>{{ item.role }}</b>{% if item.major_desk %} in <span class="desk-text">{{ item.major_desk }}</span>{% if item.major_mob %}<span class="mob-text">{{ item.major_mob }}</span>{% endif %}, {{ item.institution }}{% else %}, {{ item.institution }}{% endif %}</span></span></li>
+		{%- endfor %}
+	</ul>
+</div>
+
+<h2 id="honors">Selected Honors &amp; Services</h2>
+<h3 class="category-header">Research and Academic Honors</h3>
+<div id="honors-container">
+	<ul class="honors-list expanded">
+		{%- assign honor_items = site.data.honors | where: "selected", true -%}
+		{%- for item in honor_items -%}
+		{%- assign body = "" -%}
+		{%- if item.year_prefix -%}
+		{%- assign body = item.year_prefix | append: "<b>" | append: item.title | append: "</b>" -%}
+		{%- else -%}
+		{%- assign body = "<b>" | append: item.title | append: "</b>" -%}
+		{%- endif -%}
+		{%- if item.details -%}
+		{%- if item.mobile_hide_suffix -%}
+		{%- assign body = body | append: '<span class="mobile-hide-suffix">' | append: item.details | append: '</span>' -%}
+		{%- else -%}
+		{%- assign first_char = item.details | slice: 0 -%}
+		{%- assign sep = ", " -%}
+		{%- if first_char == "," or first_char == "." or item.year_prefix -%}{%- assign sep = " " -%}{%- endif -%}
+		{%- assign body = body | append: sep | append: item.details -%}
+		{%- endif -%}
+		{%- endif %}
+		<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
+		{%- endfor %}
+	</ul>
+</div>
+<h3 class="category-header">International Event Organizer &amp; Reviewer</h3>
+<div id="services-container">
+	<ul>
+		{%- assign service_items = site.data.services | where: "selected", true -%}
+		{%- for item in service_items -%}
+		{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
+		{%- if item.role == "Reviewer" -%}
+		{%- assign body = body | append: ": " | append: item.event -%}
+		{%- else -%}
+		{%- assign body = body | append: ", " -%}
+		{%- if item.link -%}
+		{%- assign body = body | append: '<a href="' | append: item.link | append: '">' | append: item.event | append: '</a>' -%}
+		{%- else -%}
+		{%- assign body = body | append: item.event -%}
+		{%- endif -%}
+		{%- if item.context -%}
+		{%- assign body = body | append: ", " | append: item.context -%}
+		{%- endif -%}
+		{%- endif %}
+		<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
+		{%- endfor %}
+	</ul>
+</div>
+
+<script src="assets/js/2mode-pub-renderer.js?v=17" defer></script>
+<script src="assets/js/mobile-honors-folder.js" defer></script>

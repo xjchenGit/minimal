@@ -1,71 +1,35 @@
-<!doctype html>
-<html>
+---
+page_id: publications
+title_full: "Xuanjun Chen - Publications"
+description: "Publications by Xuanjun Chen, Ph.D. student at National Taiwan University. Research in Audio LLMs, Retrieval Augmented Generation, and Audio Deepfake Detection."
+og_url: "https://xjchen.tech/publications.html"
+og_type: profile
+---
 
-<head>
-	<meta charset="utf-8">
-	<title>Xuanjun Chen - Publications</title>
+<h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
 
-	<meta name="description" content="Publications by Xuanjun Chen, Ph.D. student at National Taiwan University. Research in Audio LLMs, Retrieval Augmented Generation, and Audio Deepfake Detection.">
-	<meta property="og:title" content="Xuanjun Chen - Publications">
-	<meta property="og:description" content="Publications by Xuanjun Chen, Ph.D. student at National Taiwan University.">
-	<meta property="og:image" content="https://xjchengit.github.io/minimal/assets/img/xj_4x3.jpg">
-	<meta property="og:url" content="https://xjchen.tech/publications.html">
-	<meta property="og:type" content="profile">
+<h3 class="category-header">🎙️ Audio Large Language Models</h3>
+<div id="audio-llm-container" class="pub-list-dynamic">
+{%- assign audio_pubs = site.data.publications | where: "category", "audio-llm" -%}
+{%- for pub in audio_pubs %}
+{% include pub-item.html pub=pub num=forloop.rindex %}
+{%- endfor %}
+</div>
 
-	<link rel="stylesheet" href="assets/css/styles.css?v=7">
-	<link rel="stylesheet" href="assets/css/header.css?v=2">
-	<link rel="stylesheet" href="assets/css/logo.css">
-	<link rel="stylesheet" href="assets/css/pubs.css?v=48">
-	<link rel="stylesheet" href="assets/css/pygment_trac.css">
+<h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
+<div id="rag-container" class="pub-list-dynamic">
+{%- assign rag_pubs = site.data.publications | where: "category", "rag" -%}
+{%- for pub in rag_pubs %}
+{% include pub-item.html pub=pub num=forloop.rindex %}
+{%- endfor %}
+</div>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&display=swap"
-		rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-</head>
+<h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+<div id="deepfake-container" class="pub-list-dynamic">
+{%- assign deepfake_pubs = site.data.publications | where: "category", "deepfake" -%}
+{%- for pub in deepfake_pubs %}
+{% include pub-item.html pub=pub num=forloop.rindex %}
+{%- endfor %}
+</div>
 
-<body>
-	<div class="wrapper">
-		<header id="sidebar"></header>
-		<script src="assets/js/load_header.js?v=7"></script>
-		<script>initHeader('publications');</script>
-
-		<section>
-			<h2>Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
-
-			<h3 class="category-header">🎙️ Audio Large Language Models</h3>
-			<div id="audio-llm-container" class="pub-list-dynamic"></div>
-
-			<h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
-			<div id="rag-container" class="pub-list-dynamic"></div>
-
-			<h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
-			<div id="deepfake-container" class="pub-list-dynamic"></div>
-
-			<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-			<script src="assets/js/2mode-pub-renderer.js?v=16"></script>
-
-			<script>
-				// loadAndRenderPubs("ymls/publications_new.yml", "audio-llm-container", "audio-llm");
-				// loadAndRenderPubs("ymls/publications_new.yml", "rag-container", "rag");
-				// loadAndRenderPubs("ymls/publications_new.yml", "deepfake-container", "deepfake");
-				const PATH = "ymls/publications.yml";
-				// 🎙️ Audio LLM 區塊
-				loadAndRenderPubs(PATH, "audio-llm-container", "audio-llm", false, false, true);
-
-				// 🔍 RAG 區塊
-				loadAndRenderPubs(PATH, "rag-container", "rag", false, false, true);
-
-				// 🛡️ Deepfake 區塊
-				loadAndRenderPubs(PATH, "deepfake-container", "deepfake", false, false, true);
-			</script>
-
-			<br>
-			<script type='text/javascript' id='clustrmaps' async
-				src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=ffffff&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
-		</section>
-	</div>
-</body>
-
-</html>
+<script src="assets/js/2mode-pub-renderer.js?v=17" defer></script>

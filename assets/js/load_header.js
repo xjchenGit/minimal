@@ -1,58 +1,14 @@
-/**
- * Load top nav into #sidebar and highlight current page link.
- * @param {string} currentPage - 'about' | 'publications' | 'blogs'
- */
-function initHeader(currentPage) {
-    fetch('header.html?v=' + new Date().getTime())
-        .then(response => response.text())
-        .then(data => {
-            const sidebar = document.getElementById('sidebar');
-            if (!sidebar) return;
-            sidebar.innerHTML = data;
-
-            // Highlight active nav link
-            const aboutLink = document.getElementById('nav-about');
-            const blogLink = document.getElementById('nav-blogs');
-            const pubLink = document.getElementById('nav-pub');
-
-            [aboutLink, blogLink, pubLink].forEach(link => {
-                if (link) {
-                    link.style.textDecoration = "none";
-                    link.style.color = "#888";
-                    link.style.fontWeight = "500";
-                }
-            });
-
-            let activeLink = aboutLink;
-            if (currentPage === 'publications') activeLink = pubLink;
-            else if (currentPage === 'blogs') activeLink = blogLink;
-
-            if (activeLink) {
-                activeLink.style.color = "#222";
-                activeLink.style.fontWeight = "600";
-                activeLink.style.borderBottom = "2px solid #154c79";
-                activeLink.style.paddingBottom = "2px";
-            }
-
-            initEmailCopy();
-            checkCVVisibility();
-        })
-        .catch(err => console.error('Error loading header:', err));
-}
-
-function checkCVVisibility() {
-    const cvLinks = document.querySelectorAll('.cv-link');
-    if (cvLinks.length === 0) return;
-    const cvUrl = cvLinks[0].getAttribute('href');
-    fetch(cvUrl, { method: 'HEAD' })
-        .then(res => {
-            const ct = res.headers.get('content-type') || '';
-            if (res.ok && ct.includes('pdf')) {
-                cvLinks.forEach(el => el.classList.remove('cv-hidden'));
-            }
-        })
-        .catch(() => {});
-}
+// Header markup is now inlined in each page; this file only wires interactive
+// behaviour (mailto -> clipboard copy + toast, external about-bio links).
+document.addEventListener('DOMContentLoaded', () => {
+    initEmailCopy();
+    // Force markdown-rendered links inside the about bio to open in a new tab,
+    // matching the previous client-side renderer's behaviour.
+    document.querySelectorAll('#about-container a').forEach(a => {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+    });
+});
 
 function initEmailCopy() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');

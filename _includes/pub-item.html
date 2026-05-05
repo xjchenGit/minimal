@@ -1,0 +1,57 @@
+{%- assign pub = include.pub -%}
+{%- assign num = include.num -%}
+{%- assign bib_id = "bib-" | append: pub.id -%}
+{%- assign authors_html = pub.authors_short | default: pub.authors_full | default: "" -%}
+{%- assign title_html = pub.title | escape | replace: "&lt;br&gt;", '<br class="title-br">' -%}
+{%- assign expanded_attr = "" -%}
+{%- if pub.authors_full and pub.authors_short and pub.authors_full != pub.authors_short -%}
+{%- assign expanded_attr = pub.authors_full | escape -%}
+{%- endif -%}
+
+{%- comment -%}Build links: bib first, then arXiv, then the rest, joined by " | "{%- endcomment -%}
+{%- assign all_links = "" -%}
+{%- if pub.bibtex -%}
+{%- capture bib_anchor -%}<a href="javascript:void(0)" onclick="toggleBib('{{ bib_id }}')">bib</a>{%- endcapture -%}
+{%- assign all_links = bib_anchor -%}
+{%- endif -%}
+{%- assign pub_links_size = pub.links | size -%}
+{%- if pub_links_size > 0 -%}
+{%- assign arxiv_links = pub.links | where: "name", "arXiv" -%}
+{%- assign other_links = pub.links | where_exp: "l", "l.name != 'arXiv'" -%}
+{%- assign sorted_links = arxiv_links | concat: other_links -%}
+{%- for l in sorted_links -%}
+{%- capture link_anchor -%}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.name | escape }}</a>{%- endcapture -%}
+{%- if all_links == "" -%}
+{%- assign all_links = link_anchor -%}
+{%- else -%}
+{%- assign all_links = all_links | append: " | " | append: link_anchor -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+
+<div class="pub-item-row">
+	<div class="pub-num-col">[{{ num }}]</div>
+	<div class="pub-info-col">
+		<b class="pub-title">{{ title_html }}</b>{%- if pub.note %} <span class="pub-note">({{ pub.note | escape }})</span>{%- endif %}<br>
+		<span class="pub-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</span>
+		<div class="pub-row-meta">
+			<span class="pub-venue">{{ pub.venue }}</span>
+			{%- if all_links != "" %} <span class="pub-links">[ {{ all_links }} ]</span>{%- endif %}
+			{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}
+		</div>
+		{%- if pub.bibtex %}
+		<div id="{{ bib_id }}" class="pub-bibtex" style="display:none; opacity:1;"
+			onmouseenter="cancelHideBib('{{ bib_id }}')"
+			onmouseleave="scheduleHideBib('{{ bib_id }}')"
+			ontouchstart="cancelHideBib('{{ bib_id }}')"
+			ontouchend="scheduleHideBib('{{ bib_id }}')">
+			<pre>{{ pub.bibtex | escape }}</pre>
+			<div class="bib-ctrl">
+				<span class="bib-copy-btn" onclick="copyBib('{{ bib_id }}')" title="Copy to Clipboard">
+					<i class="fa fa-copy"></i>
+				</span>
+			</div>
+		</div>
+		{%- endif %}
+	</div>
+</div>
