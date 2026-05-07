@@ -12,7 +12,7 @@ bio: |
   
 
 intro: |  
-  My previous research encompassed speech processing, speech/text LLMs, and deepfake detection. 
+  **Previously**, my research encompassed speech processing, speech/text LLMs, and deepfake detection. 
   I lead Deepfake research by proposing [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) for SingFake detection, 
   developing [CodecFake+](https://arxiv.org/abs/2501.08238) for data scarcity, and pioneering source tracing with [SASTNet](https://arxiv.org/abs/2506.07294).
   Beyond security, I am a core contributor to several audio LLM and benchmarking projects, including [DeSTA 2.5](https://arxiv.org/abs/2507.02768), 
