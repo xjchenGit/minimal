@@ -147,6 +147,22 @@
     text-justify: inter-word;
 }
 
+#about-container.hero-bio p:has(+ ul) {
+    margin-bottom: 0;
+}
+
+#about-container.hero-bio ul {
+    margin: 0 0 16px 0;
+    padding-left: 22px;
+}
+
+#about-container.hero-bio li {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 0;
+    color: #444;
+}
+
 .hero-socials {
     display: flex;
     gap: 10px;

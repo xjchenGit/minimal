@@ -6,15 +6,11 @@ bio: |
   I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), 
   advised by [Hung-yi Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) & 
   [Jyh-Shing Roger Jang](http://mirlab.org/jang/cv/cv.asp). 
-  Recently, my research focuses on speech tokenization and spoken language modeling.
+  Recently, my research focuses on speech tokenization, generative speech & spoken language modeling.
   
 
-intro: |  
-  **Previously**, I received my M.S. degree from :icon-ntu: [NTU](https://www.ntu.edu.tw/english/) (2023) and B.S. degree from
-  :icon-ntust: [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020). My research encompassed speech processing, speech/text LLMs, and deepfake detection. 
-  I lead Deepfake research by proposing [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) for SingFake detection, 
-  developing [CodecFake+](https://arxiv.org/abs/2501.08238) for data scarcity, and pioneering source tracing with [SASTNet](https://arxiv.org/abs/2506.07294).
-  Beyond security, I am a core contributor to several audio LLM and benchmarking projects, including [DeSTA 2.5](https://arxiv.org/abs/2507.02768), 
-  [Dynamic-SUPERB Phase 2](https://openreview.net/forum?id=s7lzZpAW7T), and [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/). 
-  I also mentor research on optimizing RAG efficiency for LLMs and uncovering their practical limitations.
-  These works earned several honors, notably Best Paper Awards and Travel Grants. (see [#Honors](#honors)). 
+intro: |
+  Previously, I earned my M.S. from :icon-ntu: [NTU](https://www.ntu.edu.tw/english/) (2023) and B.S. from :icon-ntust: [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020). My research spans:
+  *   **Deepfakes:** Led [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) (SingFake), [CodecFake+](https://arxiv.org/abs/2501.08238) (data scarcity), & [SASTNet](https://arxiv.org/abs/2506.07294) (source tracing) efforts.
+  *   **Speech LLMs & Benchmarks:** Co-contributed to [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB](https://openreview.net/forum?id=s7lzZpAW7T), & [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/).
+  *   **Text LLMs:** Mentored research on RAG efficiency and Text-based LLM limitations.
