@@ -276,6 +276,11 @@
         font-size: 15px;
         line-height: 1.55;
     }
+
+    #about-container.hero-bio li {
+        font-size: 15px;
+        line-height: 1.55;
+    }
 }
 
 /* ========== Mobile (<= 480px) ========== */
@@ -323,6 +328,10 @@
     }
 
     #about-container.hero-bio p {
+        font-size: 14px;
+    }
+
+    #about-container.hero-bio li {
         font-size: 14px;
     }
 
