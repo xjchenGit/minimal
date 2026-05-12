@@ -112,6 +112,12 @@
         margin-right: 1px;
     }
 
+    /* Author list 在手機版改為左對齊,避免逗號分隔造成的怪空隙 */
+    .pub-authors {
+        text-align: left;
+        word-spacing: normal;
+    }
+
     /* Mobile: Reorder Award to new line using Block display */
     .pub-row-meta {
         display: block !important;

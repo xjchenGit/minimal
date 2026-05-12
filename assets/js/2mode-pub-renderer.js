@@ -176,9 +176,18 @@ function truncateAuthors(container) {
             const customShort = el.innerHTML;
             const customFull = el.dataset.expandedHtml;
 
-            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; margin-left: 6px; vertical-align: middle;';
-            const toggleIconOpen = ` <span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
-            const toggleIconClose = ` <span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
+            // 作者數 ≤ 10 時直接展示完整列表,不顯示 (more) toggle
+            const fullAuthorCount = customFull.split(/,\s*/).filter(p => p.trim()).length;
+            if (fullAuthorCount <= 10) {
+                el.innerHTML = customFull;
+                el.dataset.fullAuthors = customFull;
+                return;
+            }
+
+            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; vertical-align: middle;';
+            // 用 &nbsp; 把 toggle 綁到最後一個字,避免 (more)/(less) 變成獨立一行的孤兒
+            const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
+            const toggleIconClose = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
 
             el.dataset.fullAuthors = customFull;
             el.dataset.shortHtml = customShort + toggleIconOpen;
@@ -219,9 +228,12 @@ function truncateAuthors(container) {
             const fullHtml = el.innerHTML;
             el.dataset.fullAuthors = fullHtml;
 
-            // Split by comma. Be careful about nested tags. 
+            // Split by comma. Be careful about nested tags.
             // Assuming format "Name A, Name B, <u>Name C</u>"
             const parts = fullHtml.split(/,\s*/);
+
+            // 作者數 ≤ 10 時不縮排,就算換行也讓完整列表自然 wrap
+            if (parts.length <= 10) return;
 
             // Responsive limit: 4 for desktop, 1 for mobile (strict 1st author only on mobile)
             const isMobile = window.innerWidth <= 768;
@@ -252,10 +264,11 @@ function truncateAuthors(container) {
 
             // Store short HTML
             // Style: small light gray text, no border/background as requested
-            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; margin-left: 6px; vertical-align: middle;';
+            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; vertical-align: middle;';
 
-            const toggleIconOpen = ` <span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
-            const toggleIconClose = ` <span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
+            // 用 &nbsp; 把 toggle 綁到最後一個字,避免 (more)/(less) 變成獨立一行的孤兒
+            const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
+            const toggleIconClose = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
 
             el.dataset.shortHtml = shortHtml + toggleIconOpen;
 
