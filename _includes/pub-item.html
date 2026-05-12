@@ -1,11 +1,26 @@
 {%- assign pub = include.pub -%}
 {%- assign num = include.num -%}
 {%- assign bib_id = "bib-" | append: pub.id -%}
-{%- assign authors_html = pub.authors_short | default: pub.authors_full | default: "" -%}
+{%- assign authors_raw = pub.authors_short | default: pub.authors_full | default: "" -%}
+{%- comment -%}Wrap each author in a nowrap span so lines never break mid-name at spaces or hyphens (e.g. "Hung-yi Lee", "Kai-wei Chang").{%- endcomment -%}
+{%- assign authors_html = "" -%}
+{%- assign _parts = authors_raw | split: ", " -%}
+{%- for _p in _parts -%}
+{%- capture _nb -%}<span class="pub-author">{{ _p }}</span>{%- endcapture -%}
+{%- if forloop.first -%}{%- assign authors_html = _nb -%}
+{%- else -%}{%- assign authors_html = authors_html | append: ", " | append: _nb -%}{%- endif -%}
+{%- endfor -%}
 {%- assign title_html = pub.title | escape | replace: "&lt;br&gt;", '<br class="title-br">' -%}
 {%- assign expanded_attr = "" -%}
 {%- if pub.authors_full and pub.authors_short and pub.authors_full != pub.authors_short -%}
-{%- assign expanded_attr = pub.authors_full | escape -%}
+{%- assign _full_nb = "" -%}
+{%- assign _full_parts = pub.authors_full | split: ", " -%}
+{%- for _p in _full_parts -%}
+{%- capture _nb -%}<span class="pub-author">{{ _p }}</span>{%- endcapture -%}
+{%- if forloop.first -%}{%- assign _full_nb = _nb -%}
+{%- else -%}{%- assign _full_nb = _full_nb | append: ", " | append: _nb -%}{%- endif -%}
+{%- endfor -%}
+{%- assign expanded_attr = _full_nb | escape -%}
 {%- endif -%}
 
 {%- comment -%}Build links: bib first, then arXiv, then the rest, joined by " | "{%- endcomment -%}
