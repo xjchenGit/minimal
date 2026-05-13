@@ -121,7 +121,10 @@
 }
 
 .hero-name-zh {
-    font-family: inherit;
+    /* Explicit CJK serif stack so iOS doesn't fall back to PingFang (sans-serif),
+     * which mismatches the Latin Palatino in .hero-name. */
+    font-family: "Songti TC", "Songti SC", STSong, "Source Han Serif TC",
+                 "Noto Serif TC", "Noto Serif CJK TC", serif;
     font-weight: 500;
     font-size: 0.6em;
     color: inherit;
