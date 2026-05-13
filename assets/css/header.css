@@ -177,28 +177,27 @@
     flex-wrap: wrap;
 }
 
-/* Hide photo-col duplicate; always show headline socials with breathing room */
-.hero-photo-col .hero-socials {
-    display: none;
-}
-
+/* Contact display: inline "Feel free..." text at the end of bio on ALL viewports.
+ * Both icon-pill rows (photo-col + headline duplicates in index.html) are hidden everywhere.
+ *
+ * To restore the previous behavior (icons on mobile, inline text on desktop),
+ * replace this block with:
+ *
+ *   .hero-photo-col .hero-socials { display: none; }
+ *   .hero-headline  .hero-socials { display: flex; margin-top: 10px; }
+ *   .hero-contact-text { display: none; }
+ *   @media (min-width: 821px) {
+ *       .hero-headline .hero-socials { display: none; }
+ *       .hero-contact-text { display: block; }
+ *   }
+ */
+.hero-photo-col .hero-socials,
 .hero-headline .hero-socials {
-    display: flex;
-    margin-top: 10px;
-}
-
-/* Desktop: hide icon pills, show inline text contact at end of bio */
-.hero-contact-text {
     display: none;
 }
 
-@media (min-width: 821px) {
-    .hero-headline .hero-socials {
-        display: none;
-    }
-    .hero-contact-text {
-        display: block;
-    }
+.hero-contact-text {
+    display: block;
 }
 
 .hero-socials a {
@@ -287,6 +286,15 @@
         margin-bottom: 4px;
     }
 
+    /* Break "Taipei, Taiwan" onto its own line on tablet/mobile */
+    .hero-subtitle .subtitle-sep {
+        display: none;
+    }
+
+    .hero-subtitle .subtitle-loc {
+        display: block;
+    }
+
     #about-container.hero-bio p {
         font-size: 15px;
         line-height: 1.55;
@@ -335,13 +343,7 @@
         font-size: 13px;
     }
 
-    .hero-subtitle .subtitle-sep {
-        display: none;
-    }
-
-    .hero-subtitle .subtitle-loc {
-        display: block;
-    }
+    /* subtitle-sep/subtitle-loc break rule lives in the <=820px block above */
 
     #about-container.hero-bio p {
         font-size: 14px;
