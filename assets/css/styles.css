@@ -379,6 +379,10 @@ screen and (max-width: 960px) {
     font-size: 15px;
   }
 
+  h2 {
+    font-size: 22px;
+  }
+
   section ul {
     padding-left: 1.2rem;
     /* 確保手機端縮排不會太深 */

@@ -126,9 +126,10 @@
     }
 
     .pub-num-col {
-        flex: 0 0 2.0em !important;
-        min-width: 1.6em !important;
-        font-size: 15px;
+        flex: 0 0 1.8em !important;
+        min-width: 1.4em !important;
+        font-size: 13px;
+        color: var(--text-muted);
         margin-right: 1px;
     }
 
