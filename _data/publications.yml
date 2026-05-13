@@ -215,6 +215,8 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/pdf/2501.08238v2"
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/document/11515080"
     - name: "Project Page"
       url: "https://responsiblegenai.github.io/CodecFake-Plus-Dataset/"
     - name: "Hugging Face"
