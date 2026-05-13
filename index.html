@@ -12,7 +12,7 @@ head_extra: |
     "name": "Xuanjun Chen",
     "alternateName": "陳炫均",
     "url": "https://xjchen.tech/",
-    "image": "https://xjchengit.github.io/minimal/assets/img/xj_4x3.jpg",
+    "image": "https://xjchengit.github.io/minimal/assets/img/xj_casual.jpg",
     "jobTitle": "Ph.D. Candidate",
     "worksFor": {
       "@type": "Organization",
@@ -30,10 +30,19 @@ head_extra: |
 <div class="hero-profile">
 	<div class="hero-photo-col">
 		<picture>
-			<source srcset="assets/img/xj_4x3.webp" type="image/webp">
-			<img src="assets/img/xj_4x3.jpg" class="hero-photo" alt="Xuanjun Chen" width="600" height="800" fetchpriority="high" decoding="async">
+			<source srcset="assets/img/xj_casual.webp" type="image/webp">
+			<img src="assets/img/xj_casual.jpg" class="hero-photo" alt="Xuanjun Chen" width="599" height="750" fetchpriority="high" decoding="async">
 		</picture>
-		<p class="hero-subtitle">Ph.D. Candidate<br>NTU EECS</p>
+		<div class="hero-socials">
+			<a href="mailto:D12942018@ntu.edu.tw" aria-label="Email"><i class="fas fa-envelope"></i></a>
+			<a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+			<a href="https://github.com/xjchenGit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://x.com/xjchen_ntu" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+			{%- if about.cv_visible %}
+			<a href="{{ about.cv_url }}" target="_blank" class="cv-link" aria-label="Curriculum Vitae"><i class="ai ai-cv"></i></a>
+			{%- endif %}
+		</div>
 	</div>
 	<div class="hero-headline">
 		<h1 class="hero-name">Xuanjun Chen <span class="hero-name-zh">(陳炫均)</span></h1>
@@ -52,11 +61,11 @@ head_extra: |
 	<div id="about-container" class="hero-bio">
 		{{ bio_processed | markdownify }}
 		{{ intro_processed | markdownify }}
-		<p class="hero-contact-text">[ <a href="mailto:D12942018@ntu.edu.tw">Email</a> | <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> | <a href="https://github.com/xjchenGit" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://x.com/xjchen_ntu" target="_blank" rel="noopener noreferrer">𝕏</a> ]</p>
+		<p class="hero-contact-text">Feel free to reach out via <a href="mailto:D12942018@ntu.edu.tw">Email</a>, <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank">LinkedIn</a>, <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a>, <a href="https://github.com/xjchenGit" target="_blank">GitHub</a>, or <a href="https://x.com/xjchen_ntu" target="_blank">X</a>.</p>
 	</div>
 </div>
 
-<h2>Selected Publications <small style="font-size: 14px; font-weight: normal;">(* equal contribution)</small></h2>
+<h2>Selected Publications <small style="font-size: 14px; font-weight: normal; color: var(--text-muted);">(* equal contribution)</small></h2>
 <div id="pub-container">
 {%- assign selected_ids = site.data.selected_paper.selected_papers -%}
 {%- for pub_id in selected_ids -%}

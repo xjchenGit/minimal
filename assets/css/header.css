@@ -13,23 +13,24 @@
 #topnav-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 1080px;
     margin: 0 auto;
     padding: 22px 80px 18px;
 }
 
 #brand {
-    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    display: none;
+    font-family: var(--font-sans);
     font-size: 22px;
-    font-weight: 600;
-    color: #222;
+    font-weight: 700;
+    color: var(--text-strong);
     text-decoration: none;
-    letter-spacing: 0;
+    letter-spacing: -0.01em;
 }
 
 #brand:hover {
-    color: #154c79;
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -40,38 +41,34 @@
 }
 
 #nav-menu a {
-    font-family: "Source Serif 4", "Noto Serif TC", serif;
+    font-family: var(--font-sans);
     font-size: 17px;
     font-weight: 500;
-    color: #888;
+    color: var(--text-muted);
     text-decoration: none;
     padding: 4px 0;
     transition: color 0.15s;
 }
 
 #nav-menu a:hover {
-    color: #222;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #nav-menu a.active {
-    color: #222;
-    font-weight: 600;
-    border-bottom: 2px solid #154c79;
-    padding-bottom: 2px;
+    /* same look as default; hover still shows underline */
 }
 
 /* ========== About Hero (only on index.html) ========== */
 .hero-profile {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(0, 760px) auto;
     grid-template-areas:
-        "photocol headline"
-        "photocol bio";
+        "headline photocol"
+        "bio      photocol";
     grid-template-rows: min-content auto;
-    column-gap: 28px;
-    row-gap: 18px;
-    margin: 8px 0 24px;
+    column-gap: 40px;
+    row-gap: 14px;
+    margin: 8px 0 32px;
     align-items: start;
 }
 
@@ -80,15 +77,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-left: 20px;
+    gap: 14px;
+    align-self: center;
 }
 
 .hero-photo {
-    width: 170px;
+    width: 220px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 48px;
     display: block;
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.06),
+        0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .hero-headline {
@@ -102,49 +102,40 @@
 }
 
 .hero-name {
-    font-family: Palatino, "Palatino Linotype", "EB Garamond", Georgia, "Times New Roman", "Noto Serif TC", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #666;
-    line-height: 1.15;
-    margin: 0 0 6px 0;
-    letter-spacing: 0;
+    font-family: var(--font-sans);
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-strong);
+    line-height: 1.1;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
 }
 
 .hero-name-zh {
-    font-family: "Noto Serif TC", "Songti TC", "Songti SC", "PMingLiU", serif;
+    font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 0.7em;
-    color: #666;
-    margin-left: 4px;
+    font-size: 0.6em;
+    color: var(--text-muted);
+    margin-left: 6px;
+    letter-spacing: 0;
 }
 
 .hero-subtitle {
-    font-family: "Source Serif 4", "Noto Serif TC", serif;
-    font-size: 18px;
-    color: #888;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-body);
     margin: 0 0 20px 0;
-    line-height: 1.4;
-}
-
-/* Desktop-only: subtitle that sits below the photo (in .hero-photo-col).
-   Hidden by default; shown only at min-width: 821px (see media query below).
-   The mobile/tablet markup keeps a second copy inside .hero-headline. */
-.hero-photo-col .hero-subtitle {
-    display: none;
-    font-size: 15px;
-    margin: 0;
-    text-align: center;
-    width: 170px;
+    line-height: 1.45;
 }
 
 #about-container.hero-bio p {
     font-size: 17px;
     line-height: 1.65;
-    color: #444;
-    margin: 0 0 16px 0;
-    text-align: justify;
-    text-justify: inter-word;
+    color: var(--text-body);
+    margin: 0 0 14px 0;
+    text-align: left;
+    text-wrap: pretty;
 }
 
 #about-container.hero-bio p:has(+ ul) {
@@ -152,40 +143,63 @@
 }
 
 #about-container.hero-bio ul {
-    margin: 0 0 16px 0;
+    margin: 0 0 14px 0;
     padding-left: 22px;
 }
 
 #about-container.hero-bio li {
     font-size: 17px;
-    line-height: 1.65;
-    margin-bottom: 0;
-    color: #444;
+    line-height: 1.55;
+    margin-bottom: 9px;
+    color: var(--text-body);
 }
 
 .hero-socials {
     display: flex;
-    gap: 10px;
-    margin-top: 12px;
+    gap: 8px;
     flex-wrap: wrap;
+}
+
+/* Hide photo-col duplicate; always show headline socials with breathing room */
+.hero-photo-col .hero-socials {
+    display: none;
+}
+
+.hero-headline .hero-socials {
+    display: flex;
+    margin-top: 10px;
+}
+
+/* Desktop: hide icon pills, show inline text contact at end of bio */
+.hero-contact-text {
+    display: none;
+}
+
+@media (min-width: 821px) {
+    .hero-headline .hero-socials {
+        display: none;
+    }
+    .hero-contact-text {
+        display: block;
+    }
 }
 
 .hero-socials a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #f0f0f0;
-    color: #555;
-    font-size: 14px;
+    color: var(--text-body);
+    font-size: 16px;
     text-decoration: none;
     transition: background 0.15s, color 0.15s, transform 0.15s;
 }
 
 .hero-socials a:hover {
-    background: #154c79;
+    background: var(--link);
     color: #fff;
     text-decoration: none;
     transform: translateY(-2px);
@@ -193,32 +207,6 @@
 
 .hero-socials a.cv-hidden {
     display: none !important;
-}
-
-/* Desktop-only text-style contact links (after intro paragraph in about-container).
-   On tablet/mobile (<= 820px) we keep the icon socials and hide this. */
-.hero-contact-text {
-    display: none;
-}
-
-@media (min-width: 821px) {
-    .hero-socials {
-        display: none !important;
-    }
-    .hero-contact-text {
-        display: block;
-        font-size: 17px;
-        line-height: 1.65;
-        color: #444;
-        margin: 0 0 16px 0;
-    }
-    /* Show the under-photo subtitle and hide the inline one inside the headline */
-    .hero-photo-col .hero-subtitle {
-        display: block;
-    }
-    .hero-headline .hero-subtitle {
-        display: none;
-    }
 }
 
 /* ========== Tablet (<= 820px) ========== */
@@ -259,7 +247,7 @@
     .hero-photo {
         width: 80px;
         height: auto;
-        border-radius: 8px;
+        border-radius: 18px;
         align-self: start;
     }
 
@@ -307,8 +295,9 @@
     }
 
     .hero-photo {
-        width: 84px;
-        border-radius: 6px;
+        width: 78px;
+        height: auto;
+        border-radius: 17px;
     }
 
     .hero-name {

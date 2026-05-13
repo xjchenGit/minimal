@@ -3,14 +3,11 @@ cv_visible: false
 cv_url: docs/Chen_Full_CV_26.01.19.pdf
 
 bio: |
-  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), 
-  advised by [Hung-yi Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) & 
-  [Jyh-Shing Roger Jang](http://mirlab.org/jang/cv/cv.asp). 
-  Recently, my research focuses on speech tokenization, speech generation & spoken language modeling.
-  
+  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Hung-yi Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and [Jyh-Shing Roger Jang](http://mirlab.org/jang/cv/cv.asp). My research focuses on speech tokenization, generation, and spoken language modeling, with broader contributions across three threads:
 
 intro: |
-  Previously, I earned my M.S. from :icon-ntu: [NTU](https://www.ntu.edu.tw/english/) (2023) and B.S. from :icon-ntust: [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020). My research spans:
-  *   **Deepfakes:** Led [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) (SingFake), [CodecFake+](https://arxiv.org/abs/2501.08238) (data scarcity), & [SASTNet](https://arxiv.org/abs/2506.07294) (source tracing) efforts.
-  *   **Speech LLMs & Benchmarks:** Co-contributed to [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB](https://openreview.net/forum?id=s7lzZpAW7T), & [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/).
-  *   **Text LLMs:** Mentored research on RAG efficiency and Text-based LLM limitations.
+  *   **Deepfakes:** Led [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) (SingFake), [CodecFake+](https://arxiv.org/abs/2501.08238) (data scarcity), & [SASTNet](https://arxiv.org/abs/2506.07294) (source tracing).
+  *   **Speech LLMs & Benchmarks:** Contributed to [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB](https://openreview.net/forum?id=s7lzZpAW7T), & [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/).
+  *   **Text LLMs:** Mentored research on RAG efficiency and the limits of text-based LLMs.
+
+  Before my Ph.D., I earned my M.S. from [NTU](https://www.ntu.edu.tw/english/) (2023) and B.S. from [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020).

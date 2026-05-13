@@ -1,15 +1,15 @@
 .pub-item-row {
     display: flex !important;
     align-items: flex-start !important;
-    margin-bottom: 15px !important;
-    text-align: justify;
+    margin-bottom: 30px !important;
+    text-align: left;
 }
 
 .pub-num-col {
     flex: 0 0 2.5em !important;
     min-width: 2.5em !important;
     /* font-weight: 600;  */
-    color: #777;
+    color: var(--text-muted);
 }
 
 .pub-info-col {
@@ -19,13 +19,13 @@
 }
 
 .pub-title {
-    color: #222;
+    color: var(--text-strong);
     font-weight: 600;
 }
 
 .pub-authors {
     display: block;
-    color: #999;
+    color: var(--text-muted);
     margin-top: 2px;
 }
 
@@ -46,26 +46,42 @@
 
 .pub-links {
     font-size: 0.92em;
-    display: inline;
-    color: #999;
+    display: block;
+    color: var(--text-muted);
+    margin-top: 5px;
     margin-left: 0;
 }
 
 .pub-links a {
-    color: #999;
+    color: var(--link);
     text-decoration: none;
 }
 
 .pub-links a:hover {
-    color: #555;
-    /* Slightly darker on hover */
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
+.pub-link-sep {
+    color: var(--text-muted);
+    opacity: 0.55;
+    margin: 0 2px;
+    font-weight: 400;
+    user-select: none;
+}
+
 .pub-award {
-    font-weight: normal;
-    color: #000;
-    margin-left: 5px;
+    display: inline-block;
+    padding: 1px 9px;
+    background: rgba(180, 130, 0, 0.12);
+    color: #8a6800;
+    border-radius: 999px;
+    font-size: 0.78em;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-left: 8px;
+    vertical-align: 1px;
+    white-space: nowrap;
 }
 
 .pub-row-meta {
@@ -73,17 +89,16 @@
     /* Default for desktop: keep things inline */
 }
 
-/* Ensure venue stays Navy Blue */
 .pub-venue {
-    color: #002147;
-    font-weight: 500;
+    color: var(--text-strong);
+    font-weight: 600;
 }
 
 .category-header {
     margin: 40px 0 20px;
     font-size: 17px;
     font-weight: 600;
-    border-left: 3px solid #3a7bd5;
+    border-left: 3px solid var(--link);
     padding-left: 10px;
 }
 
@@ -134,16 +149,10 @@
         display: inline;
     }
 
-    .pub-links {
-        display: inline;
-    }
-
     .pub-award {
-        display: block !important;
-        width: 100%;
-        margin-left: 0 !important;
-        /* Force reset */
-        margin-top: 2px;
+        display: inline-block !important;
+        margin-left: 8px !important;
+        margin-top: 0;
     }
 }
 
@@ -168,7 +177,7 @@
     /* Don't wrap lines immediately, let it scroll if needed for code/bib */
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     margin: 0;
-    color: #444;
+    color: var(--text-body);
     /* Base dark gray */
     font-weight: 400;
     /* Regular weight */
@@ -179,23 +188,23 @@
 
 /* Syntax Highlighting */
 .bib-type {
-    color: #000000;
+    color: var(--text-strong);
     font-weight: 600;
 }
 
 /* @inproceedings */
 .bib-key {
-    color: #444;
+    color: var(--text-body);
 }
 
 /* title, author */
 .bib-val {
-    color: #2b5797;
+    color: var(--link);
 }
 
 /* "Content" */
 .bib-sym {
-    color: #777;
+    color: var(--text-muted);
 }
 
 /* { } = , */
@@ -208,7 +217,7 @@
 
 .bib-copy-btn {
     cursor: pointer;
-    color: #888;
+    color: var(--text-muted);
     padding: 4px 6px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 4px;
@@ -216,7 +225,7 @@
 }
 
 .bib-copy-btn:hover {
-    color: #333;
+    color: var(--text-strong);
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

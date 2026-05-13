@@ -39,7 +39,7 @@
 {%- if all_links == "" -%}
 {%- assign all_links = link_anchor -%}
 {%- else -%}
-{%- assign all_links = all_links | append: " | " | append: link_anchor -%}
+{%- assign all_links = all_links | append: ' <span class="pub-link-sep">·</span> ' | append: link_anchor -%}
 {%- endif -%}
 {%- endfor -%}
 {%- endif -%}
@@ -50,9 +50,8 @@
 		<b class="pub-title">{{ title_html }}</b>{%- if pub.note %} <span class="pub-note">({{ pub.note | escape }})</span>{%- endif %}<br>
 		<span class="pub-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</span>
 		<div class="pub-row-meta">
-			<span class="pub-venue">{{ pub.venue }}</span>
-			{%- if all_links != "" %} <span class="pub-links">[ {{ all_links }} ]</span>{%- endif %}
-			{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}
+			<span class="pub-venue">{{ pub.venue }}</span>{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}
+			{%- if all_links != "" %} <span class="pub-links">{{ all_links }}</span>{%- endif %}
 		</div>
 		{%- if pub.bibtex %}
 		<div id="{{ bib_id }}" class="pub-bibtex" style="display:none; opacity:1;"

@@ -184,7 +184,7 @@ function truncateAuthors(container) {
                 return;
             }
 
-            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; vertical-align: middle;';
+            const btnStyle = 'font-size: 0.85em; color: var(--text-muted); cursor: pointer; vertical-align: middle;';
             // 用 &nbsp; 把 toggle 綁到最後一個字,避免 (more)/(less) 變成獨立一行的孤兒
             const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
             const toggleIconClose = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show less">(less)</span>`;
@@ -264,7 +264,7 @@ function truncateAuthors(container) {
 
             // Store short HTML
             // Style: small light gray text, no border/background as requested
-            const btnStyle = 'font-size: 0.85em; color: #999; cursor: pointer; vertical-align: middle;';
+            const btnStyle = 'font-size: 0.85em; color: var(--text-muted); cursor: pointer; vertical-align: middle;';
 
             // 用 &nbsp; 把 toggle 綁到最後一個字,避免 (more)/(less) 變成獨立一行的孤兒
             const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all">(more)</span>`;
@@ -358,10 +358,11 @@ function foldLinks(container) {
             // Construct Short HTML if needed
             if (!el.dataset.shortHtml) {
                 const remainingCount = allLinks.length - 2;
-                const toggleStyle = 'cursor: pointer; color: #154c79; font-weight: 600; text-decoration: none; margin-left: 2px;';
+                const toggleStyle = 'cursor: pointer; color: var(--link); font-weight: 600; text-decoration: none; margin-left: 2px;';
                 const plusBtn = `<span class="link-expand-btn" style="${toggleStyle}">+${remainingCount}</span>`;
                 // Reconstruct using the parsed links from fullHtml
-                el.dataset.shortHtml = ` [ ${allLinks[0].outerHTML} | ${allLinks[1].outerHTML} | ${plusBtn} ]`;
+                const sep = ' <span class="pub-link-sep">·</span> ';
+                el.dataset.shortHtml = ` ${allLinks[0].outerHTML}${sep}${allLinks[1].outerHTML}${sep}${plusBtn}`;
             }
 
             // Apply if not already applied
