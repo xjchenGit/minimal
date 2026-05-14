@@ -79,7 +79,7 @@
   id: "wu-etal-2024-codec"
   selected: true  # <--- 新增這行
   links:
-    - name: "ACL Anthology"
+    - name: "Anthology"
       url: "https://aclanthology.org/2024.findings-acl.616/"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2402.13071"
@@ -87,7 +87,7 @@
       url: "https://codecsuperb.com/"
     - name: "Code"
       url: "https://github.com/voidful/Codec-SUPERB"
-    - name: "Huggingface"
+    - name: "Hugging Face"
       url: "https://huggingface.co/Codec-SUPERB"
   bibtex: |
     @inproceedings{wu-etal-2024-codec,
@@ -166,7 +166,7 @@
   id: "lin2025preliminary"
   selected: true  # <--- 新增這行
   links:
-    - name: "ACL Anthology"
+    - name: "Anthology"
       url: "https://aclanthology.org/2025.rocling-main.6/"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2511.07445"
