@@ -27,7 +27,7 @@
   role: "M.S."
   institution: "National Taiwan University"
   major_desk: "Computer Science"
-  major_mob: "CSIE"
+  major_mob: "Computer Science"
   selected: true
 
 - time_desk: "Jun 2020"
@@ -35,7 +35,7 @@
   role: "B.S."
   institution: "Taiwan Tech"
   major_desk: "Computer Science"
-  major_mob: "CSIE"
+  major_mob: "Computer Science"
   selected: true
 
 - time_desk: "Jul 2018"
