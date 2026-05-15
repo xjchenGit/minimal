@@ -70,14 +70,14 @@
 /* ========== About Hero (only on index.html) ========== */
 .hero-profile {
     display: grid;
-    grid-template-columns: minmax(0, 760px) auto;
+    grid-template-columns: auto minmax(0, 1fr);
     grid-template-areas:
-        "headline photocol"
-        "bio      photocol";
+        "photocol headline"
+        "photocol bio";
     grid-template-rows: min-content auto;
     column-gap: 40px;
     row-gap: 14px;
-    margin: 8px 0 32px;
+    margin: 8px 0 48px;
     align-items: start;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .hero-photo {
-    width: 220px;
+    width: 190px;
     height: auto;
     border-radius: 16px;
     display: block;
