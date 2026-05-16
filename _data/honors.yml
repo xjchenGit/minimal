@@ -5,12 +5,12 @@
 
 - year: "2025"
   title: "Best Student Paper nominee"
-  details: "The IEEE Autom. Speech Recognit. and Underst. Workshop"
+  details: "The IEEE Automatic Speech Recognition and Understanding Workshop"
   selected: true
 
 - year: "2025"
   title: "Best Paper Award"
-  details: "The 37th Conf. on Comput. Linguist. and Speech Processing"
+  details: "The 37th Conference on Computational Linguistics and Speech Processing"
   selected: true
 
 - year: "2025"
@@ -30,7 +30,7 @@
   mobile_hide_suffix: true
   selected: false
 
-- year: "2024-2025"
+- year: "2024–2025"
   title: "Student Travel Grants"
   details: "Google APAC 2024 & ACLCLP in Taiwan 2025"
   selected: true
@@ -40,12 +40,12 @@
   details: "awarded by the CTCI Foundation"
   selected: false
 
-- year: "2024-2025"
+- year: "2024–2025"
   title: "CTCI Foundation Bursary Award & Research Scholarship for Overseas Students"
   details: ""
   selected: true
 
-- year: "2024-2025"
+- year: "2024–2025"
   title: "Subsidy for Domestic Graduate Students to Attend International Academic Conferences"
   details: "awarded by NSTC Taiwan twice"
   selected: false
@@ -56,12 +56,12 @@
   details: "on the LA track of ASVspoof 2021 challenge"
   selected: true
 
-- year: "2020-2026"
+- year: "2020–2026"
   title: "Kwong Tung Community Outstanding Student Scholarship"
   details: "awarded six years."
   selected: true
 
-- year: "2018-2020"
+- year: "2018–2020"
   title: "Certificate of Achievement"
   details: "Taiwan Tech (Top 5% of students; three semesters)"
   selected: true
@@ -73,7 +73,7 @@
   selected: true
 
 - year: "2017"
-  title: "National Bronze and Guangdong Provincial Gold Awards, 3rd China College Internet Entrep. Comp."
+  title: "National Bronze and Guangdong Provincial Gold Awards, 3rd China College Internet Entrepreneurship Competition"
   details: ""
   selected: false
 

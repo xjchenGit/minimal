@@ -8,14 +8,14 @@
 # - major_mob: (Optional) Academic major for mobile view
 # - selected: true/false
 
-- time_desk: "Apr 2026 - Present"
-  time_mob: "04/2026 - Present"
+- time_desk: "Apr 2026 – Present"
+  time_mob: "04/2026 – Present"
   role: "Research Intern"
   institution: "Shanda AI Research Tokyo, Japan"
   selected: true
 
-- time_desk: "Sep 2023 - Present"
-  time_mob: "09/2023 - Present"
+- time_desk: "Sep 2023 – Present"
+  time_mob: "09/2023 – Present"
   role: "Ph.D."
   institution: "National Taiwan University"
   major_desk: "Communication Engineering"

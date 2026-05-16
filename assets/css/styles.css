@@ -88,7 +88,9 @@ section h2:first-of-type {
 h2 .h2-note {
   font-size: 14px;
   font-weight: normal;
+  font-style: italic;
   color: var(--text-muted);
+  opacity: 0.75;
   white-space: nowrap;
 }
 
@@ -146,13 +148,17 @@ h6 {
 }
 
 a {
-  color: var(--link);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.12);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  color: var(--link);
+  text-decoration-color: var(--link);
 }
 
 a small {
@@ -452,6 +458,22 @@ screen and (max-width: 480px) {
   }
 }
 
+/* Remove default bullets — rely on the two-column row layout for structure */
+#experience-container ul,
+#honors-container ul,
+#services-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  #experience-container ul,
+  #honors-container ul,
+  #services-container ul {
+    padding-left: 0;
+  }
+}
+
 /* Right-aligned dates for Experience / Honors / Services (desktop only) */
 #experience-container .entry-row,
 #honors-container .entry-row,
@@ -469,6 +491,7 @@ screen and (max-width: 480px) {
   order: 1;
   flex: 1;
   min-width: 0;
+  padding-left: 1rem;
 }
 
 #experience-container .entry-date,
@@ -504,5 +527,11 @@ screen and (max-width: 480px) {
   #honors-container .entry-sep,
   #services-container .entry-sep {
     display: inline;
+  }
+
+  #experience-container .entry-body,
+  #honors-container .entry-body,
+  #services-container .entry-body {
+    padding-left: 0;
   }
 }

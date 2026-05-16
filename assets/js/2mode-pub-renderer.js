@@ -184,10 +184,10 @@ function truncateAuthors(container) {
                 return;
             }
 
-            const btnStyle = 'font-size: 0.85em; color: var(--link); cursor: pointer; vertical-align: baseline; margin-left: 6px;';
+            const btnStyle = 'font-size: 0.85em; color: var(--text-muted); cursor: pointer; vertical-align: baseline; margin-left: 6px;';
             // 用 &nbsp; 把 toggle 綁到最後一個字,避免 Show all / Show less 變成獨立一行的孤兒
-            const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all authors">Show all</span>`;
-            const toggleIconClose = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show less">Show less</span>`;
+            const toggleIconOpen = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show all authors">(show all)</span>`;
+            const toggleIconClose = `&nbsp;<span class="author-toggle" style="${btnStyle}" title="Show less">(show less)</span>`;
 
             el.dataset.fullAuthors = customFull;
             el.dataset.shortHtml = customShort + toggleIconOpen;
