@@ -181,21 +181,21 @@
 }
 
 /* Contact display: inline "Feel free..." text at the end of bio on ALL viewports.
- * Both icon-pill rows (photo-col + headline duplicates in index.html) are hidden everywhere.
+ * The single .hero-socials icon row (inside .hero-photo-col) is hidden by default.
  *
- * To restore the previous behavior (icons on mobile, inline text on desktop),
- * replace this block with:
+ * To restore icons on mobile only (inline text on desktop), replace this block with:
  *
- *   .hero-photo-col .hero-socials { display: none; }
- *   .hero-headline  .hero-socials { display: flex; margin-top: 10px; }
+ *   .hero-socials { display: flex; }
  *   .hero-contact-text { display: none; }
  *   @media (min-width: 821px) {
- *       .hero-headline .hero-socials { display: none; }
+ *       .hero-socials { display: none; }
  *       .hero-contact-text { display: block; }
  *   }
+ *
+ * To show icons next to the headline on desktop, move .hero-socials between grid
+ * areas via `order:` (flex column in .hero-photo-col) or by adding a new grid area.
  */
-.hero-photo-col .hero-socials,
-.hero-headline .hero-socials {
+.hero-socials {
     display: none;
 }
 
