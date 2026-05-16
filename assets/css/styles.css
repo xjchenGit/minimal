@@ -149,16 +149,12 @@ h6 {
 
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.12);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:hover {
   color: var(--link);
-  text-decoration-color: var(--link);
 }
 
 a small {

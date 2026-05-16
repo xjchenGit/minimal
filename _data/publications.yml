@@ -87,7 +87,7 @@
       url: "https://codecsuperb.com/"
     - name: "Code"
       url: "https://github.com/voidful/Codec-SUPERB"
-    - name: "Hugging Face"
+    - name: "HF"
       url: "https://huggingface.co/Codec-SUPERB"
   bibtex: |
     @inproceedings{wu-etal-2024-codec,
@@ -219,7 +219,7 @@
       url: "https://ieeexplore.ieee.org/document/11515080"
     - name: "Project"
       url: "https://responsiblegenai.github.io/CodecFake-Plus-Dataset/"
-    - name: "Hugging Face"
+    - name: "HF"
       url: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
     - name: "Code"
       url: "https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset"
@@ -374,7 +374,7 @@
       url: "https://www.arxiv.org/abs/2409.08731"
     - name: "Code"
       url: "https://github.com/isjwdu/DFADD"
-    - name: "Huggingface"
+    - name: "HF"
       url: "https://huggingface.co/datasets/isjwdu/DFADD"
   bibtex: |
     @inproceedings{du2024dfadd,
