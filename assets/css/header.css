@@ -159,6 +159,14 @@
     padding-left: 22px;
 }
 
+#about-container.hero-bio ul:has(+ p.hero-edu) {
+    margin-bottom: 2px;
+}
+
+#about-container.hero-bio p.hero-edu {
+    margin-top: 0;
+}
+
 #about-container.hero-bio p + ul {
     margin-top: -2px;
 }
