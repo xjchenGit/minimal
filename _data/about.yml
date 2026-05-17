@@ -7,7 +7,7 @@ bio: |
 
 intro: |
   *   **Deepfakes:** Led [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) (SingFake), [CodecFake+](https://arxiv.org/abs/2501.08238) (data scarcity), & [SASTNet](https://arxiv.org/abs/2506.07294) (source tracing).
-  *   **Speech LLMs & Benchmarks:** Contributed to [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB](https://openreview.net/forum?id=s7lzZpAW7T), & [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/).
+  *   **Speech LLMs & Benchmarks:** Contributed to [DeSTA 2.5](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), & [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/).
   *   **Text LLMs:** Mentored research on RAG efficiency and the limits of text-based LLMs.
 
   Before my Ph.D., I earned my M.S. and B.S. in Computer Science from [NTU](https://www.ntu.edu.tw/english/) (2023) and [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020).
