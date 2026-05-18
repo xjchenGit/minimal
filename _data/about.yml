@@ -3,7 +3,7 @@ cv_visible: false
 cv_url: docs/Chen_Full_CV_26.01.19.pdf
 
 bio: |
-  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Hung-yi&nbsp;Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and [Jyh-Shing&nbsp;Roger&nbsp;Jang](http://mirlab.org/jang/cv/cv.asp). Recently, my research has focused on speech tokenization, speech generation, and spoken language modeling. Previously, I made broader contributions across three threads:
+  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Hung-yi&nbsp;Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and [Jyh-Shing&nbsp;Roger&nbsp;Jang](http://mirlab.org/jang/cv/cv.asp). Currently, my research focuses on speech tokenization, speech generation, and spoken language modeling. Previously, my research contributed to three threads spanning speech, audio, and language:
 
 intro: |
   *   **Deepfakes:** Led [SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html) (SingFake), [CodecFake+](https://arxiv.org/abs/2501.08238) (data scarcity), & [SASTNet](https://arxiv.org/abs/2506.07294) (source tracing).
