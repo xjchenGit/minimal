@@ -297,15 +297,6 @@
         margin-bottom: 4px;
     }
 
-    /* Break "Taipei, Taiwan" onto its own line on tablet/mobile */
-    .hero-subtitle .subtitle-sep {
-        display: none;
-    }
-
-    .hero-subtitle .subtitle-loc {
-        display: block;
-    }
-
     #about-container.hero-bio p {
         font-size: 15px;
         line-height: 1.55;
@@ -353,8 +344,6 @@
     .hero-subtitle {
         font-size: 13px;
     }
-
-    /* subtitle-sep/subtitle-loc break rule lives in the <=820px block above */
 
     #about-container.hero-bio p {
         font-size: 14px;
