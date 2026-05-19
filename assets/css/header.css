@@ -345,6 +345,11 @@
         font-size: 13px;
     }
 
+    .hero-subtitle .subtitle-sep,
+    .hero-subtitle .subtitle-loc {
+        display: none;
+    }
+
     #about-container.hero-bio p {
         font-size: 14px;
     }
