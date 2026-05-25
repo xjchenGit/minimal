@@ -224,14 +224,15 @@
     - name: "Code"
       url: "https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset"
   bibtex: |
-    @misc{chen2025codecfake,
-        title={CodecFake+: A Large-Scale Neural Audio Codec-Based Deepfake Speech Dataset},
-        author={Xuanjun Chen and Jiawei Du and Haibin Wu and Lin Zhang and I-Ming Lin and I-Hsiang Chiu and Wenze Ren and Yuan Tseng and Yu Tsao and Jyh-Shing Roger Jang and Hung-yi Lee},
-        year={2025},
-        eprint={2501.08238},
-        archivePrefix={arXiv},
-        primaryClass={cs.SD}
+    @ARTICLE{chen2025codecfake,
+    author={Chen, Xuanjun and Du, Jiawei and Wu, Haibin and Zhang, Lin and Lin, I-Ming and Chiu, I-Hsiang and Ren, Wenze and Tseng, Yuan and Tsao, Yu and Jang, Jyh-Shing Roger and Lee, Hung-yi},
+    journal={IEEE Transactions on Audio, Speech and Language Processing}, 
+    title={CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech}, 
+    year={2026},
+    pages={1-16},
+    doi={10.1109/TASLPRO.2026.3692291}
     }
+
 
 
 

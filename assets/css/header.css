@@ -146,8 +146,9 @@
     line-height: 1.65;
     color: var(--text-body);
     margin: 0 0 14px 0;
-    text-align: left;
+    text-align: justify;
     text-wrap: pretty;
+    hyphens: auto;
 }
 
 #about-container.hero-bio p:has(+ ul) {
