@@ -51,8 +51,7 @@
   selected: false
 
 - year: "2021"
-  year_prefix: "Ranked "
-  title: "3rd/42 submissions worldwide"
+  title: "Ranked 3rd of 42 worldwide"
   details: "on the LA track of ASVspoof 2021 challenge"
   selected: true
 
