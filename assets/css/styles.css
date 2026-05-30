@@ -102,10 +102,6 @@ h2 .h2-note {
   }
 }
 
-.hero-profile + h2 {
-  margin-top: 60px !important;
-}
-
 section h3.category-header + div ul {
   margin-top: 0;
 }
@@ -383,6 +379,11 @@ screen and (max-width: 960px) {
 
   h2 {
     font-size: 22px;
+    margin-top: 48px !important;
+  }
+
+  section h2:first-of-type {
+    margin-top: 48px !important;
   }
 
   section ul {
