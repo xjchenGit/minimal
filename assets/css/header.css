@@ -298,6 +298,11 @@
         margin-bottom: 4px;
     }
 
+    .hero-subtitle .subtitle-sep,
+    .hero-subtitle .subtitle-loc {
+        display: none;
+    }
+
     #about-container.hero-bio p {
         font-size: 15px;
         line-height: 1.55;
@@ -344,11 +349,6 @@
 
     .hero-subtitle {
         font-size: 13px;
-    }
-
-    .hero-subtitle .subtitle-sep,
-    .hero-subtitle .subtitle-loc {
-        display: none;
     }
 
     #about-container.hero-bio p {

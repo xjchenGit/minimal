@@ -6,8 +6,8 @@
 }
 
 .pub-num-col {
-    flex: 0 0 2.5em !important;
-    min-width: 2.5em !important;
+    flex: 0 0 2em !important;
+    min-width: 2em !important;
     color: var(--text-body);
 }
 
@@ -147,8 +147,8 @@
     }
 
     .pub-num-col {
-        flex: 0 0 2.4em !important;
-        min-width: 2.4em !important;
+        flex: 0 0 1.9em !important;
+        min-width: 1.9em !important;
         font-size: 13px;
         color: var(--text-muted);
         margin-right: 1px;
