@@ -509,10 +509,9 @@ screen and (max-width: 480px) {
 }
 
 #experience-container .entry-gpa {
-  font-size: 0.9em;
-  font-style: italic;
-  color: var(--text-muted);
-  opacity: 0.75;
+  font-size: 0.85em;
+  color: #86868b;
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
   margin-left: 0.6em;
 }

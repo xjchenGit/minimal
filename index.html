@@ -82,7 +82,7 @@ head_extra: |
 	<ul>
 		{%- assign exp_items = site.data.experience | where: "selected", true -%}
 		{%- for item in exp_items %}
-		<li><span class="entry-row"><span class="entry-date"><span class="desk-text">{{ item.time_desk }}</span><span class="mob-text">{{ item.time_mob }}</span></span><span class="entry-sep">: </span><span class="entry-body"><b>{{ item.role }}</b>{% if item.major_desk %} in <span class="desk-text">{{ item.major_desk }}</span>{% if item.major_mob %}<span class="mob-text">{{ item.major_mob }}</span>{% endif %}, {{ item.institution }}{% else %}, {{ item.institution }}{% endif %}{% if item.gpa %} <span class="entry-gpa">(GPA: {{ item.gpa }})</span>{% endif %}</span></span></li>
+		<li><span class="entry-row"><span class="entry-date"><span class="desk-text">{{ item.time_desk }}</span><span class="mob-text">{{ item.time_mob }}</span></span><span class="entry-sep">: </span><span class="entry-body"><b>{{ item.role }}</b>{% if item.major_desk %} in <span class="desk-text">{{ item.major_desk }}</span>{% if item.major_mob %}<span class="mob-text">{{ item.major_mob }}</span>{% endif %}, {{ item.institution }}{% else %}, {{ item.institution }}{% endif %}{% if item.gpa %} <span class="entry-gpa">&middot;&nbsp; GPA {{ item.gpa }}</span>{% endif %}</span></span></li>
 		{%- endfor %}
 	</ul>
 </div>
