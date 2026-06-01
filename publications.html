@@ -78,6 +78,16 @@ og_type: profile
 	targets.forEach(t => observer.observe(t));
 	setActive(targets[0].id);
 
+	// Detect when chip row is stuck below nav; add .is-stuck for extra padding.
+	const sentinel = document.createElement('div');
+	sentinel.style.cssText = 'position:absolute;top:0;left:0;height:1px;width:1px;pointer-events:none;';
+	toc.style.position && (toc.parentElement.style.position = toc.parentElement.style.position || 'relative');
+	toc.parentElement.insertBefore(sentinel, toc);
+	const stickyObserver = new IntersectionObserver(([entry]) => {
+		toc.classList.toggle('is-stuck', !entry.isIntersecting);
+	}, { rootMargin: '-61px 0px 0px 0px', threshold: 0 });
+	stickyObserver.observe(sentinel);
+
 	// Update progress fill based on overall scroll position through sections.
 	const updateProgress = () => {
 		const startY = targets[0].offsetTop;

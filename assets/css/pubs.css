@@ -126,6 +126,16 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     line-height: 1.3;
+    /* Anchor-jump offset: sticky chip row (~60 + ~70 height) + small gap */
+    scroll-margin-top: 150px;
+}
+
+@media (max-width: 820px) {
+    .category-header { scroll-margin-top: 140px; }
+}
+
+@media (max-width: 480px) {
+    .category-header { scroll-margin-top: 130px; }
 }
 
 /* .pub-venue-row removed, replaced by .pub-venue */
@@ -317,8 +327,8 @@
         position: sticky;
         top: 60px;
         margin: 0 calc(-1 * (50vw - 50%)) 16px;
-        /* Larger padding-top gives the markers more breathing room below the nav */
-        padding: 30px calc(50vw - 50%) 14px;
+        /* Compact at rest; gets extra padding when stuck (see .is-stuck below). */
+        padding: 14px calc(50vw - 50%) 14px;
         width: auto;
         max-width: none;
         text-align: left;
@@ -329,6 +339,12 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         box-shadow: none;
         z-index: 10;
+        transition: padding-top 0.18s ease;
+    }
+
+    /* When stuck below the top nav, push markers down for breathing room. */
+    .pubs-toc.is-stuck {
+        padding-top: 30px;
     }
 
     .pubs-toc-title {
