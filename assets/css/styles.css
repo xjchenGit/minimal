@@ -383,7 +383,8 @@ screen and (max-width: 960px) {
   }
 
   section h2:first-of-type {
-    margin-top: 48px !important;
+    margin-top: 32px !important;
+    margin-bottom: 8px;
   }
 
   section ul {
