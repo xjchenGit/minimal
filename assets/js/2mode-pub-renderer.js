@@ -176,9 +176,9 @@ function truncateAuthors(container) {
             const customShort = el.innerHTML;
             const customFull = el.dataset.expandedHtml;
 
-            // 作者數 ≤ 10 時直接展示完整列表,不顯示 (more) toggle
+            // 作者數 < 10 時直接展示完整列表,不顯示 (more) toggle
             const fullAuthorCount = customFull.split(/,\s*/).filter(p => p.trim()).length;
-            if (fullAuthorCount <= 10) {
+            if (fullAuthorCount < 10) {
                 el.innerHTML = customFull;
                 el.dataset.fullAuthors = customFull;
                 return;
@@ -232,8 +232,8 @@ function truncateAuthors(container) {
             // Assuming format "Name A, Name B, <u>Name C</u>"
             const parts = fullHtml.split(/,\s*/);
 
-            // 作者數 ≤ 10 時不縮排,就算換行也讓完整列表自然 wrap
-            if (parts.length <= 10) return;
+            // 作者數 < 10 時不縮排,就算換行也讓完整列表自然 wrap
+            if (parts.length < 10) return;
 
             // Responsive limit: 4 for desktop, 1 for mobile (strict 1st author only on mobile)
             const isMobile = window.innerWidth <= 768;

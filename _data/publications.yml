@@ -8,6 +8,8 @@
   id: "lee2026ssmttm"
   selected: true
   links:
+    - name: "ISMIR LBD"
+      url: "https://arxiv.org/abs/2507.06674"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2601.14786"
     - name: "Project"
@@ -122,9 +124,47 @@
         year={2024}
     }
 
+- title: "A Preliminary Exploration with GPT-4o Voice Mode"
+  authors_full: "Yu-Xiang Lin, Chih-Kai Yang, Wei-Chih Chen, Chen-An Li, Chien-yu Huang, <u>Xuanjun Chen</u>, Hung-yi Lee"
+  authors_short: "Yu-Xiang Lin, Chih-Kai Yang, Wei-Chih Chen, Chen-An Li, Chien-yu Huang, <u>Xuanjun Chen</u>, Hung-yi Lee"
+  venue: "Technical Report, Feb. 2025"
+  category: "audio-llm"
+  id: "lin2025gpt4o"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2502.09940"
+  bibtex: |
+    @misc{lin2025gpt4o,
+        title={A Preliminary Exploration with GPT-4o Voice Mode},
+        author={Yu-Xiang Lin and Chih-Kai Yang and Wei-Chih Chen and Chen-An Li and Chien-yu Huang and Xuanjun Chen and Hung-yi Lee},
+        year={2025},
+        eprint={2502.09940},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
+
+- title: "Building a Taiwanese Mandarin Spoken Language Model: A First Attempt"
+  authors_full: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, Yi-Cheng Lin, Yu-Xiang Lin, Wei-Chih Chen, Ho Lam Chung, Chun-Yi Kuan, Wei-Ping Huang, Ke-Han Lu, Tzu-Quan Lin, Hsiu-Hsuan Wang, En-Pei Hu, Chan-Jan Hsu, Liang-Hsuan Tseng, I-Hsiang Chiu, Ulin Sanga, <u>Xuanjun Chen</u>, Po-chun Hsu, Shu-wen Yang, Hung-yi Lee"
+  authors_short: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, ..., <u>Xuanjun Chen</u>, ..., Shu-wen Yang, Hung-yi Lee"
+  venue: "Technical Report, Nov. 2024"
+  category: "audio-llm"
+  id: "yang2024building"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2411.07111"
+  bibtex: |
+    @misc{yang2024building,
+        title={Building a Taiwanese Mandarin Spoken Language Model: A First Attempt},
+        author={Chih-Kai Yang and Yu-Kuan Fu and Chen-An Li and Yi-Cheng Lin and Yu-Xiang Lin and Wei-Chih Chen and Ho Lam Chung and Chun-Yi Kuan and Wei-Ping Huang and Ke-Han Lu and Tzu-Quan Lin and Hsiu-Hsuan Wang and En-Pei Hu and Chan-Jan Hsu and Liang-Hsuan Tseng and I-Hsiang Chiu and Ulin Sanga and Xuanjun Chen and Po-chun Hsu and Shu-wen Yang and Hung-yi Lee},
+        year={2024},
+        eprint={2411.07111},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
+
 - title: "Towards audio language modeling-an overview"
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
-  venue: "Tech Report, Feb. 2024"
+  venue: "Technical Report, Feb. 2024"
   category: "audio-llm"
   id: "wu2024towards"
   selected: true  # <--- 新增這行
@@ -142,6 +182,8 @@
         archivePrefix={arXiv},
         primaryClass={cs.CL}
     }
+
+
 
 # --- Retrieval Augmented Generation ---
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
@@ -452,4 +494,45 @@
         booktitle={Proc. 2022 ISCA Symposium on Security and Privacy in Speech Communication},
         year={2022},
         url={https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html}
+    }
+
+# --- Speech Separation ---
+- title: "Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement"
+  authors_full: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao"
+  authors_short: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, ..., Hsin-Min Wang, Yu Tsao"
+  venue: "ICASSP 2025"
+  category: "speech-enhance"
+  id: "ren2025leveraging"
+  links:
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/abstract/document/10890412"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2409.10376"
+  bibtex: |
+    @inproceedings{ren2025leveraging,
+        title={Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement},
+        author={Ren, Wenze and Wu, Haibin and Lin, Yi-Cheng and Chen, Xuanjun and Chao, Rong and Hung, Kuo-Hsuan and Li, You-Jin and Ting, Wen-Yuan and Wang, Hsin-Min and Tsao, Yu},
+        booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+        year={2025},
+        doi={10.1109/ICASSP49660.2025.10890412}
+    }
+
+- title: "Singer Separation for Karaoke Content Generation"
+  authors_full: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
+  authors_short: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
+  venue: "O-COCOSDA 2024"
+  category: "speech-enhance"
+  id: "lin2024singer"
+  links:
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/abstract/document/10800383"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2110.06707"
+  bibtex: |
+    @inproceedings{lin2024singer,
+        title={Singer Separation for Karaoke Content Generation},
+        author={Lin, Hsuan-Yu and Chen, Xuanjun and Jang, Jyh-Shing Roger},
+        booktitle={2024 27th Conference of the Oriental COCOSDA International Committee for the Co-ordination and Standardisation of Speech Databases and Assessment Techniques (O-COCOSDA)},
+        year={2024},
+        doi={10.1109/O-COCOSDA64382.2024.10800383}
     }

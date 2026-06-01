@@ -8,7 +8,17 @@ og_type: profile
 
 <h2>Publications <small class="h2-note">(* equal contribution)</small></h2>
 
-<h3 class="category-header">🎙️ Audio Large Language Models</h3>
+<nav class="pubs-toc" aria-label="On this page">
+	<div class="pubs-toc-title">Research Topics</div>
+	<ul>
+		<li><a href="#sec-audio-llm" data-target="sec-audio-llm"><span class="label-full">Audio LLMs</span><span class="label-short">Audio LLMs</span></a></li>
+		<li><a href="#sec-rag" data-target="sec-rag"><span class="label-full">RAG Methods</span><span class="label-short">RAG</span></a></li>
+		<li><a href="#sec-deepfake" data-target="sec-deepfake"><span class="label-full">Audio Deepfakes</span><span class="label-short">Deepfakes</span></a></li>
+		<li><a href="#sec-speech-enhance" data-target="sec-speech-enhance"><span class="label-full">Speech Separation</span><span class="label-short">Separation</span></a></li>
+	</ul>
+</nav>
+
+<h3 id="sec-audio-llm" class="category-header">🎙️ Audio Large Language Models</h3>
 <div id="audio-llm-container" class="pub-list-dynamic">
 {%- assign audio_pubs = site.data.publications | where: "category", "audio-llm" -%}
 {%- for pub in audio_pubs %}
@@ -16,7 +26,7 @@ og_type: profile
 {%- endfor %}
 </div>
 
-<h3 class="category-header">🔍 Retrieval Augmented Generation</h3>
+<h3 id="sec-rag" class="category-header">🔍 Retrieval Augmented Generation</h3>
 <div id="rag-container" class="pub-list-dynamic">
 {%- assign rag_pubs = site.data.publications | where: "category", "rag" -%}
 {%- for pub in rag_pubs %}
@@ -24,7 +34,7 @@ og_type: profile
 {%- endfor %}
 </div>
 
-<h3 class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
+<h3 id="sec-deepfake" class="category-header">🛡️ Audio Deepfake Detection, Localization, Attribution, and Reliability</h3>
 <div id="deepfake-container" class="pub-list-dynamic">
 {%- assign deepfake_pubs = site.data.publications | where: "category", "deepfake" -%}
 {%- for pub in deepfake_pubs %}
@@ -32,4 +42,55 @@ og_type: profile
 {%- endfor %}
 </div>
 
-<script src="assets/js/2mode-pub-renderer.js?v=19" defer></script>
+<h3 id="sec-speech-enhance" class="category-header">🎧 Speech Separation</h3>
+<div id="speech-enhance-container" class="pub-list-dynamic">
+{%- assign speech_enhance_pubs = site.data.publications | where: "category", "speech-enhance" -%}
+{%- for pub in speech_enhance_pubs %}
+{% include pub-item.html pub=pub num=forloop.rindex %}
+{%- endfor %}
+</div>
+
+<script src="assets/js/2mode-pub-renderer.js?v=20" defer></script>
+<script>
+(function () {
+	const toc = document.querySelector('.pubs-toc');
+	if (!toc) return;
+	const links = Array.from(toc.querySelectorAll('a[data-target]'));
+	const targets = links
+		.map(a => document.getElementById(a.dataset.target))
+		.filter(Boolean);
+	if (!targets.length) return;
+
+	const ul = toc.querySelector('ul');
+	const setActive = (id) => {
+		links.forEach(a => a.classList.toggle('active', a.dataset.target === id));
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		const visible = entries
+			.filter(e => e.isIntersecting)
+			.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+		if (visible.length) {
+			setActive(visible[0].target.id);
+		}
+	}, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+	targets.forEach(t => observer.observe(t));
+	setActive(targets[0].id);
+
+	// Update progress fill based on overall scroll position through sections.
+	const updateProgress = () => {
+		const startY = targets[0].offsetTop;
+		const endY = targets[targets.length - 1].offsetTop;
+		const scrollY = window.scrollY + window.innerHeight * 0.35;
+		const range = endY - startY;
+		const progress = range > 0
+			? Math.max(0, Math.min(1, (scrollY - startY) / range))
+			: 0;
+		if (ul) ul.style.setProperty('--pubs-progress', progress.toFixed(3));
+	};
+	window.addEventListener('scroll', updateProgress, { passive: true });
+	window.addEventListener('resize', updateProgress);
+	updateProgress();
+})();
+</script>
