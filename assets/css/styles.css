@@ -507,6 +507,15 @@ screen and (max-width: 480px) {
   display: none;
 }
 
+#experience-container .entry-gpa {
+  font-size: 0.9em;
+  font-style: italic;
+  color: var(--text-muted);
+  opacity: 0.75;
+  white-space: nowrap;
+  margin-left: 0.6em;
+}
+
 @media (max-width: 768px) {
   #experience-container .entry-row,
   #honors-container .entry-row,

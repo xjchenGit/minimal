@@ -6,6 +6,7 @@
 # - institution: Organization or University
 # - major_desk: (Optional) Academic major for desktop view
 # - major_mob: (Optional) Academic major for mobile view
+# - gpa: (Optional) GPA string, rendered de-emphasized at end
 # - selected: true/false
 
 - time_desk: "Apr 2026 – Present"
@@ -20,6 +21,7 @@
   institution: "National Taiwan University"
   major_desk: "Communication Engineering"
   major_mob: "Communication Engineering"
+  gpa: "4.3/4.3"
   selected: true
 
 - time_desk: "Jan 2023"
@@ -28,6 +30,7 @@
   institution: "National Taiwan University"
   major_desk: "Computer Science"
   major_mob: "Computer Science"
+  gpa: "4.19/4.3"
   selected: true
 
 - time_desk: "Jun 2020"
@@ -36,6 +39,7 @@
   institution: "Taiwan Tech"
   major_desk: "Computer Science"
   major_mob: "Computer Science"
+  gpa: "4.11/4.3"
   selected: true
 
 - time_desk: "Jul 2018"
