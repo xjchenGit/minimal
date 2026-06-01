@@ -9,7 +9,7 @@ og_type: profile
 <h2>Publications <small class="h2-note">(* equal contribution)</small></h2>
 
 <nav class="pubs-toc" aria-label="On this page">
-	<div class="pubs-toc-title">Research Topics</div>
+	<div class="pubs-toc-title">Topics</div>
 	<ul>
 		<li><a href="#sec-audio-llm" data-target="sec-audio-llm"><span class="label-full">Audio LLMs</span><span class="label-short">Audio LLMs</span></a></li>
 		<li><a href="#sec-rag" data-target="sec-rag"><span class="label-full">RAG Methods</span><span class="label-short">RAG</span></a></li>
@@ -66,17 +66,26 @@ og_type: profile
 		links.forEach(a => a.classList.toggle('active', a.dataset.target === id));
 	};
 
-	const observer = new IntersectionObserver((entries) => {
-		const visible = entries
-			.filter(e => e.isIntersecting)
-			.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-		if (visible.length) {
-			setActive(visible[0].target.id);
+	const updateActive = () => {
+		const viewportH = window.innerHeight;
+		const scrollTop = window.scrollY || document.documentElement.scrollTop;
+		const docH = document.documentElement.scrollHeight;
+		if (scrollTop + viewportH >= docH - 2) {
+			setActive(targets[targets.length - 1].id);
+			return;
 		}
-	}, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-
-	targets.forEach(t => observer.observe(t));
-	setActive(targets[0].id);
+		const triggerY = scrollTop + viewportH * 0.25;
+		let current = targets[0];
+		for (const t of targets) {
+			const top = t.getBoundingClientRect().top + scrollTop;
+			if (top <= triggerY) current = t;
+			else break;
+		}
+		setActive(current.id);
+	};
+	window.addEventListener('scroll', updateActive, { passive: true });
+	window.addEventListener('resize', updateActive);
+	updateActive();
 
 	// Detect when chip row is stuck below nav; add .is-stuck for extra padding.
 	const sentinel = document.createElement('div');

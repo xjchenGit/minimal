@@ -28,10 +28,10 @@ head_extra: |
 {%- capture intro_processed -%}{%- include icon-text.html text=about.intro -%}{%- endcapture -%}
 
 <nav class="pubs-toc" aria-label="On this page">
-	<div class="pubs-toc-title">Sections</div>
+	<div class="pubs-toc-title">TOC</div>
 	<ul>
-		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Me</span><span class="label-short">Me</span></a></li>
-		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Publications</span><span class="label-short">Pubs</span></a></li>
+		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span><span class="label-short">Bio</span></a></li>
+		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span><span class="label-short">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span><span class="label-short">Experience</span></a></li>
 		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span><span class="label-short">Honors</span></a></li>
 	</ul>
@@ -65,7 +65,7 @@ head_extra: |
 	</div>
 </div>
 
-<h2 id="sec-publications">Selected Publications <small class="h2-note">(* equal contribution)</small></h2>
+<h2 id="sec-publications">Research Highlights <small class="h2-note">(* equal contribution)</small></h2>
 <div id="pub-container">
 {%- assign selected_ids = site.data.selected_paper.selected_papers -%}
 {%- for pub_id in selected_ids -%}
@@ -87,7 +87,7 @@ head_extra: |
 	</ul>
 </div>
 
-<h2 id="honors">Selected Honors &amp; Services</h2>
+<h2 id="honors">Selected Honors &amp; Service</h2>
 <h3 class="category-header">Research and Academic Honors</h3>
 <div id="honors-container">
 	<ul class="honors-list expanded">
@@ -154,17 +154,26 @@ head_extra: |
 		links.forEach(a => a.classList.toggle('active', a.dataset.target === id));
 	};
 
-	const observer = new IntersectionObserver((entries) => {
-		const visible = entries
-			.filter(e => e.isIntersecting)
-			.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-		if (visible.length) {
-			setActive(visible[0].target.id);
+	const updateActive = () => {
+		const viewportH = window.innerHeight;
+		const scrollTop = window.scrollY || document.documentElement.scrollTop;
+		const docH = document.documentElement.scrollHeight;
+		if (scrollTop + viewportH >= docH - 2) {
+			setActive(targets[targets.length - 1].id);
+			return;
 		}
-	}, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-
-	targets.forEach(t => observer.observe(t));
-	setActive(targets[0].id);
+		const triggerY = scrollTop + viewportH * 0.25;
+		let current = targets[0];
+		for (const t of targets) {
+			const top = t.getBoundingClientRect().top + scrollTop;
+			if (top <= triggerY) current = t;
+			else break;
+		}
+		setActive(current.id);
+	};
+	window.addEventListener('scroll', updateActive, { passive: true });
+	window.addEventListener('resize', updateActive);
+	updateActive();
 
 	const sentinel = document.createElement('div');
 	sentinel.style.cssText = 'position:absolute;top:0;left:0;height:1px;width:1px;pointer-events:none;';
