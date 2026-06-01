@@ -208,7 +208,7 @@
     display: none;
 }
 
-#about-container.hero-bio p.hero-contact-text {
+.hero-contact-text {
     display: block;
     text-align: left;
 }
