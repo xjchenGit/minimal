@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="assets/css/styles.css?v=19">
 	<link rel="stylesheet" href="assets/css/header.css?v=20">
 	<link rel="stylesheet" href="assets/css/logo.css">
-	<link rel="stylesheet" href="assets/css/pubs.css?v=81">
+	<link rel="stylesheet" href="assets/css/pubs.css?v=85">
 	<link rel="stylesheet" href="assets/css/pygment_trac.css">
 	{% for css in page.extra_css %}<link rel="stylesheet" href="{{ css }}">
 	{% endfor %}
@@ -42,7 +42,7 @@
 	{{ page.head_extra }}
 </head>
 
-<body>
+<body class="page-{{ page.page_id | default: 'unknown' }}">
 	<div class="wrapper">
 		{% include header.html %}
 
