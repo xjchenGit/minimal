@@ -21,7 +21,7 @@
     max-height: 100%;
     object-fit: contain;     /* 確保圖片不變形 */
     /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08)); 加上輕微陰影 */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s var(--ease);
 }
 
 .logo-item img:hover {
@@ -54,7 +54,7 @@
     max-height: 80%;         /* 稍微限制高度，讓長條 Logo 看起來更優雅 */
     object-fit: contain;
     /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08)); */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s var(--ease);
 }
 
 .logo-item-long img:hover {

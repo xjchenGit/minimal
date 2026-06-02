@@ -2,6 +2,7 @@
 // behaviour (mailto -> clipboard copy + toast, external about-bio links).
 document.addEventListener('DOMContentLoaded', () => {
     initEmailCopy();
+    initScrollAwareNav();
     // Force markdown-rendered links inside the about bio to open in a new tab,
     // matching the previous client-side renderer's behaviour.
     document.querySelectorAll('#about-container a').forEach(a => {
@@ -9,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
         a.setAttribute('rel', 'noopener noreferrer');
     });
 });
+
+function initScrollAwareNav() {
+    const sidebar = document.getElementById('sidebar');
+    if (!sidebar) return;
+    const update = () => {
+        sidebar.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+}
 
 function initEmailCopy() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');

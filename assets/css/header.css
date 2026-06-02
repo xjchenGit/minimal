@@ -3,17 +3,28 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(251, 251, 253, 0.72);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom: 1px solid transparent;
     width: 100%;
     margin: 0;
     padding: 0;
+    transition: background 0.25s var(--ease),
+                border-color 0.25s var(--ease),
+                -webkit-backdrop-filter 0.25s var(--ease),
+                backdrop-filter 0.25s var(--ease);
+}
+
+#sidebar.is-scrolled {
+    background: rgba(251, 251, 253, 0.72);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom-color: var(--hairline);
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    #sidebar {
+    #sidebar.is-scrolled {
         background: var(--bg);
     }
 }
@@ -29,7 +40,6 @@
 
 #brand {
     display: none;
-    font-family: var(--font-sans);
     font-size: 22px;
     font-weight: 700;
     color: var(--text-strong);
@@ -49,13 +59,12 @@
 }
 
 #nav-menu a {
-    font-family: var(--font-sans);
     font-size: 17px;
     font-weight: 500;
     color: var(--text-muted);
     text-decoration: none;
     padding: 4px 0;
-    transition: color 0.15s;
+    transition: color 0.15s var(--ease);
 }
 
 #nav-menu a:hover {
@@ -95,9 +104,6 @@
     height: auto;
     border-radius: 16px;
     display: block;
-    box-shadow:
-        0 4px 30px rgba(0, 0, 0, 0.06),
-        0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .hero-headline {
@@ -112,12 +118,12 @@
 
 .hero-name {
     font-family: Palatino, "EB Garamond", Georgia, "Times New Roman", serif;
-    font-size: 40px;
+    font-size: 46px;
     font-weight: 500;
     color: var(--text-strong);
-    line-height: 1.1;
-    margin: 0 0 8px 0;
-    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.022em;
 }
 
 .hero-name-zh {
@@ -133,7 +139,6 @@
 }
 
 .hero-subtitle {
-    font-family: var(--font-sans);
     font-size: 17px;
     font-weight: 400;
     color: var(--text-body);
@@ -149,6 +154,19 @@
     text-align: justify;
     text-wrap: pretty;
     hyphens: auto;
+}
+
+#about-container a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s var(--ease),
+                color 0.15s var(--ease);
+}
+
+#about-container a:hover {
+    text-decoration-color: currentColor;
 }
 
 #about-container.hero-bio p:has(+ ul) {
@@ -221,16 +239,16 @@
     height: 32px;
     border-radius: 50%;
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--hairline);
     color: var(--text-muted);
     font-size: 14px;
     text-decoration: none;
-    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    transition: background 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
 }
 
 .hero-socials a:hover {
     background: rgba(0, 0, 0, 0.04);
-    border-color: rgba(0, 0, 0, 0.2);
+    border-color: var(--text-strong);
     color: var(--text-strong);
     text-decoration: none;
 }

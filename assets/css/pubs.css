@@ -1,14 +1,16 @@
 .pub-item-row {
-    display: flex !important;
-    align-items: flex-start !important;
-    margin-bottom: 25px !important;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
     text-align: left;
 }
 
 .pub-num-col {
-    flex: 0 0 2.5em !important;
-    min-width: 2.5em !important;
+    flex: 0 0 2.5em;
+    min-width: 2.5em;
     color: var(--text-body);
+    font-family: var(--font-sans);
+    font-variant-numeric: lining-nums tabular-nums;
 }
 
 .pub-info-col {
@@ -50,6 +52,7 @@
     display: inline;
     color: var(--text-muted);
     margin-left: 0;
+    font-family: var(--font-sans);
 }
 
 .pub-links::before {
@@ -74,7 +77,7 @@
 .pub-links a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 0.15s var(--ease);
 }
 
 .pub-links a:hover {
@@ -112,19 +115,19 @@
 .pub-venue {
     color: var(--text-strong);
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 14px;
-    font-variant-numeric: tabular-nums;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.08em;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums lining-nums;
 }
 
 .category-header {
     margin: 32px 0 12px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.15em;
     line-height: 1.3;
     /* Anchor-jump offset clears top nav + ~30px breathing room. */
     scroll-margin-top: 110px;
@@ -177,17 +180,14 @@
     /* 手機隱藏強制換行 */
     .pub-item-row {
         font-size: 14px;
-        display: flex !important;
-        align-items: flex-start !important;
-        margin-bottom: 20px !important;
-        text-align: left;
+        margin-bottom: 20px;
         hyphens: auto;
         word-break: break-word;
     }
 
     .pub-num-col {
-        flex: 0 0 2.4em !important;
-        min-width: 2.4em !important;
+        flex: 0 0 2.4em;
+        min-width: 2.4em;
         font-size: 13px;
         color: var(--text-muted);
         margin-right: 1px;
@@ -202,7 +202,7 @@
 
     /* Mobile: Reorder Award to new line using Block display */
     .pub-row-meta {
-        display: block !important;
+        display: block;
     }
 
     .pub-venue {
@@ -211,8 +211,8 @@
     }
 
     .pub-award {
-        display: inline !important;
-        margin-left: 8px !important;
+        display: inline;
+        margin-left: 8px;
         margin-top: 0;
         font-size: 12px;
     }
@@ -229,7 +229,7 @@
     font-size: 13px;
     line-height: 1.4;
     overflow-x: auto;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s var(--ease);
 }
 
 .pub-bibtex pre {
@@ -280,16 +280,28 @@
 .bib-copy-btn {
     cursor: pointer;
     color: var(--text-muted);
-    padding: 4px 6px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 4px;
-    transition: all 0.2s;
+    font-family: var(--font-sans);
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    transition: color 0.2s var(--ease),
+                background 0.2s var(--ease),
+                border-color 0.2s var(--ease),
+                transform 0.2s var(--ease);
 }
 
 .bib-copy-btn:hover {
     color: var(--text-strong);
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.16);
+    transform: translateY(-1px);
+}
+
+.bib-copy-btn:active {
+    transform: translateY(0);
 }
 
 
@@ -304,11 +316,11 @@
 /* On-this-page TOC for publications page */
 .pubs-toc {
     position: fixed;
-    top: 140px;
+    top: 235px;
     right: calc(50% + 540px + 56px);
     width: 180px;
     text-align: right;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid var(--hairline);
     padding-right: 14px;
     font-size: 14px;
     line-height: 1.4;
@@ -316,10 +328,10 @@
 }
 
 .pubs-toc-title {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 11px;
-    font-weight: 700;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight: 500;
     color: var(--text-strong);
     margin-bottom: 14px;
 }
@@ -338,7 +350,7 @@
 .pubs-toc a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 0.15s var(--ease);
 }
 
 .pubs-toc a:hover {
@@ -367,9 +379,9 @@
         background: rgba(251, 251, 253, 0.88);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
-        border-top: none;
+        border-top: 1px solid var(--hairline);
         border-bottom: none;
-        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04);
+        box-shadow: none;
         z-index: 50;
     }
 
@@ -387,18 +399,19 @@
         display: flex;
         position: relative;
         list-style: none;
-        margin: 0;
+        margin: 0 auto;
         padding: 0 6px;
         gap: 0;
         background: transparent;
         border-radius: 0;
+        max-width: 540px;
     }
 
     /* Background track (thin gray line through marker centers) */
     .pubs-toc ul::before {
         content: '';
         position: absolute;
-        top: 4px;
+        top: 8px;
         left: 6px;
         right: 6px;
         height: 2px;
@@ -410,13 +423,13 @@
     .pubs-toc ul::after {
         content: '';
         position: absolute;
-        top: 4px;
+        top: 8px;
         left: 6px;
         width: calc(var(--pubs-progress, 0) * (100% - 12px));
         height: 2px;
         background: var(--text-strong);
         border-radius: 1px;
-        transition: width 0.25s cubic-bezier(0.42, 0, 0.58, 1);
+        transition: width 0.25s var(--ease);
     }
 
     .pubs-toc li {
@@ -431,33 +444,36 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
-        padding: 0;
+        gap: 6px;
+        width: 100%;
+        padding: 4px 0;
         background: transparent;
         font-size: 12px;
         color: var(--text-muted);
         white-space: nowrap;
         transition:
-            color 0.2s cubic-bezier(0.42, 0, 0.58, 1),
-            font-weight 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+            color 0.2s var(--ease),
+            font-weight 0.2s var(--ease);
     }
 
-    /* Marker dot above the label */
+    /* Marker dot above the label — fixed 10×10 outer box keeps track aligned;
+       visible dot size is controlled by transparent border-width
+       (default 2px → 6×6 visible; active 1px → 8×8 visible). */
     .pubs-toc a::before {
         content: '';
         display: block;
+        box-sizing: border-box;
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: var(--bg);
-        border: 2px solid rgba(60, 60, 67, 0.18);
-        box-sizing: border-box;
+        background: rgba(60, 60, 67, 0.28);
+        background-clip: padding-box;
+        border: 2px solid transparent;
         position: relative;
         z-index: 1;
         transition:
             background 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-            border-color 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-            transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-width 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .pubs-toc a:hover {
@@ -465,19 +481,18 @@
     }
 
     .pubs-toc a:hover::before {
-        border-color: rgba(60, 60, 67, 0.35);
+        background: rgba(60, 60, 67, 0.5);
     }
 
     .pubs-toc a.active {
         color: var(--text-strong);
-        font-weight: 600;
+        font-weight: 590;
+        letter-spacing: -0.01em;
     }
 
     .pubs-toc a.active::before {
-        background: var(--bg);
-        border-color: var(--text-strong);
-        border-width: 2.5px;
-        transform: scale(1.35);
+        background: var(--text-strong);
+        border-width: 1px;
     }
 
     /* Label swap: hide full labels, show short on chip row */
@@ -509,8 +524,17 @@
         left: auto;
         right: auto;
         margin: 0 calc(-1 * (50vw - 50%)) 8px;
-        padding: 38px calc(50vw - 50%) 14px;
+        padding: 20px calc(50vw - 50%) 14px;
         box-shadow: none;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    /* Top-sticky chip row should fill section content width — the 540px cap
+       (kept on the bottom-fixed default for future narrow-page use) looks
+       stranded in the middle of a wide medium viewport. */
+    body.page-publications .pubs-toc ul {
+        max-width: none;
     }
     body.page-publications {
         padding-bottom: 0;
