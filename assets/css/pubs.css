@@ -530,6 +530,12 @@
         border-bottom: none;
     }
 
+    /* When the top-sticky chip row sits right under the header, the header's
+       scrolled hairline doubles up visually — hide it on publications page. */
+    body.page-publications #sidebar.is-scrolled {
+        border-bottom-color: transparent;
+    }
+
     /* Top-sticky chip row should fill section content width — the 540px cap
        (kept on the bottom-fixed default for future narrow-page use) looks
        stranded in the middle of a wide medium viewport. */
