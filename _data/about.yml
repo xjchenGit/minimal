@@ -5,9 +5,9 @@ cv_url: docs/Chen_Full_CV_26.01.19.pdf
 bio: |
   I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Hung-yi&nbsp;Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and [Jyh-Shing&nbsp;Roger&nbsp;Jang](http://mirlab.org/jang/cv/cv.asp). 
   Prior to this, I earned my M.S. and B.S. in Computer Science from [NTU](https://www.ntu.edu.tw/english/) (2023) and [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020). 
-  Currently, my research focuses on speech tokenization, speech generation, and spoken language modeling. 
 
 intro: |
+  My recent research focus areas are speech tokenization, speech generation, and spoken language modeling. 
   Previously, my research spanned three threads: 
   I led work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)), 
   contributed to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/)), 
