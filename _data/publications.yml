@@ -3,7 +3,7 @@
 - title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
   authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
   authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  venue: "TASLP (submitted) 2026"
+  venue: "TASLP 2026 (Submitted)"
   category: "audio-llm"
   id: "lee2026ssmttm"
   selected: true

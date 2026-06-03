@@ -6,11 +6,14 @@
 }
 
 .pub-num-col {
-    flex: 0 0 2.5em;
-    min-width: 2.5em;
-    color: var(--text-body);
-    font-family: var(--font-sans);
+    flex: 0 0 3.2em;
+    min-width: 3.2em;
+    padding-right: 10px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
     font-variant-numeric: lining-nums tabular-nums;
+    padding-top: 3px;
 }
 
 .pub-info-col {
@@ -114,9 +117,11 @@
 
 .pub-venue {
     color: var(--text-strong);
+    font-family: var(--font-serif);
+    font-style: italic;
     font-weight: 500;
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.08em;
+    font-variant-caps: normal;
+    letter-spacing: 0;
     font-size: 15px;
     font-variant-numeric: tabular-nums lining-nums;
 }
@@ -186,11 +191,11 @@
     }
 
     .pub-num-col {
-        flex: 0 0 2.4em;
-        min-width: 2.4em;
-        font-size: 13px;
+        flex: 0 0 3em;
+        min-width: 3em;
+        padding-right: 8px;
+        font-size: 11px;
         color: var(--text-muted);
-        margin-right: 1px;
         white-space: nowrap;
     }
 
