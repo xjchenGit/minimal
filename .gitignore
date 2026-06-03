@@ -15,5 +15,4 @@ Gemfile.lock
 
 # Local-only large originals (kept on disk, never committed/deployed)
 assets/img/xj_4x3_orig.jpg
-assets/img/xj.png
 
