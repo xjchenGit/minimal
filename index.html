@@ -101,12 +101,9 @@ head_extra: |
 		{%- endif -%}
 		{%- if item.details and item.details != "" and item.details != empty -%}
 		{%- if item.mobile_hide_suffix -%}
-		{%- assign body = body | append: '<span class="mobile-hide-suffix">' | append: item.details | append: '</span>' -%}
+		{%- assign body = body | append: ' <span class="mobile-hide-suffix honor-detail">' | append: item.details | append: '</span>' -%}
 		{%- else -%}
-		{%- assign first_char = item.details | slice: 0 -%}
-		{%- assign sep = ", " -%}
-		{%- if first_char == "," or first_char == "." or item.year_prefix -%}{%- assign sep = " " -%}{%- endif -%}
-		{%- assign body = body | append: sep | append: item.details -%}
+		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.details | append: '</span>' -%}
 		{%- endif -%}
 		{%- endif %}
 		<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
@@ -118,18 +115,19 @@ head_extra: |
 	<ul>
 		{%- assign service_items = site.data.services | where: "selected", true -%}
 		{%- for item in service_items -%}
-		{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
 		{%- if item.role == "Reviewer" -%}
-		{%- assign body = body | append: ": " | append: item.event -%}
+		{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
+		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.event | append: '</span>' -%}
 		{%- else -%}
-		{%- assign body = body | append: ", " -%}
+		{%- assign body = "<b>" | append: item.role | append: ", " -%}
 		{%- if item.link -%}
 		{%- assign body = body | append: '<a href="' | append: item.link | append: '">' | append: item.event | append: '</a>' -%}
 		{%- else -%}
 		{%- assign body = body | append: item.event -%}
 		{%- endif -%}
+		{%- assign body = body | append: "</b>" -%}
 		{%- if item.context != blank -%}
-		{%- assign body = body | append: ", " | append: item.context -%}
+		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.context | append: '</span>' -%}
 		{%- endif -%}
 		{%- endif %}
 		<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>

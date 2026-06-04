@@ -574,6 +574,13 @@ screen and (max-width: 480px) {
   margin-left: 0.6em;
 }
 
+#honors-container .honor-detail,
+#services-container .honor-detail {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-left: 0.5em;
+}
+
 @media (max-width: 768px) {
   #experience-container .entry-row,
   #honors-container .entry-row,

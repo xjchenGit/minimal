@@ -1,6 +1,6 @@
 - year: "2026"
   title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
-  details: "one of only 9 recipients at NTU"
+  details: "One of nine recipients at NTU"
   selected: true
 
 - year: "2025"
@@ -15,18 +15,18 @@
 
 - year: "2025"
   title: "CTCI Foundation Research Scholarship for Overseas Students"
-  details: "awarded by CTCI Foundation"
+  details: "Awarded by CTCI Foundation"
   selected: false
 
 - year: "2025"
   title: "ACLCLP Student Travel Grant"
-  details: ", granted by ACLCLP in Taiwan."
+  details: "Granted by ACLCLP in Taiwan"
   mobile_hide_suffix: true
   selected: false
 
 - year: "2024"
   title: "Google Student Travel Grant"
-  details: ", granted by Google LLC."
+  details: "Granted by Google LLC"
   mobile_hide_suffix: true
   selected: false
 
@@ -37,32 +37,32 @@
 
 - year: "2024"
   title: "CTCI Foundation Bursary Award for Overseas Students"
-  details: "awarded by the CTCI Foundation"
+  details: "Awarded by the CTCI Foundation"
   selected: false
 
 - year: "2024 – 2025"
-  title: "CTCI Foundation Bursary Award & Research Scholarship for Overseas Students"
-  details: ""
+  title: "CTCI Foundation Bursary & Research Scholarships"
+  details: "Awarded by the CTCI Foundation for overseas students"
   selected: true
 
 - year: "2024 – 2025"
   title: "Subsidy for Domestic Graduate Students to Attend International Academic Conferences"
-  details: "awarded by NSTC Taiwan twice"
+  details: "Awarded by NSTC Taiwan twice"
   selected: false
 
 - year: "2021"
   title: "Ranked 3rd of 42 worldwide"
-  details: "on the LA track of ASVspoof 2021 challenge"
+  details: "On the LA track of ASVspoof 2021 challenge"
   selected: true
 
 - year: "2020 – 2026"
   title: "Kwong Tung Community Outstanding Student Scholarship"
-  details: "six-time recipient"
+  details: "Awarded across six academic years"
   selected: true
 
 - year: "2018 – 2020"
   title: "Certificate of Achievement"
-  details: "Taiwan Tech (Top 5% of students; three semesters)"
+  details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
   selected: true
 
 - year: "2017"
