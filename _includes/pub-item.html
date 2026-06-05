@@ -47,7 +47,7 @@
 <div class="pub-item-row">
 	<div class="pub-num-col">[{{ num }}]</div>
 	<div class="pub-info-col">
-		<b class="pub-title">{{ title_html }}</b>{%- if pub.note %} <span class="pub-note">({{ pub.note | escape }})</span>{%- endif %}<br>
+		<b class="pub-title">{{ title_html }}</b><br>
 		<span class="pub-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</span>
 		<div class="pub-row-meta">
 			<span class="pub-venue">{{ pub.venue }}</span>{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}

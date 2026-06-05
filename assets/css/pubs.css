@@ -207,6 +207,7 @@ h3.category-header[id] {
     .pub-authors {
         text-align: left;
         word-spacing: normal;
+        font-size: 13px;
     }
 
     /* Mobile: Reorder Award to new line using Block display */

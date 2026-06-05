@@ -232,7 +232,7 @@
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "INTERSPEECH 2026"
+  venue: "INTERSPEECH 2026 (Long Paper)"
   category: "deepfake"
   id: "chen2026joint"
   links:
@@ -307,6 +307,8 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2509.14675"
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/abstract/document/11460829"
   bibtex: |
     @misc{chen2025how,
         title={How Does Instrumental Music Help SingFake Detection?},
