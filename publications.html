@@ -14,7 +14,7 @@ og_type: profile
 		<li><a href="#sec-audio-llm" data-target="sec-audio-llm"><span class="label-full">Audio LLMs</span><span class="label-short">Audio LLMs</span></a></li>
 		<li><a href="#sec-rag" data-target="sec-rag"><span class="label-full">RAG Methods</span><span class="label-short">RAG</span></a></li>
 		<li><a href="#sec-deepfake" data-target="sec-deepfake"><span class="label-full">Audio Deepfakes</span><span class="label-short">Deepfakes</span></a></li>
-		<li><a href="#sec-speech-enhance" data-target="sec-speech-enhance"><span class="label-full">Speech Separation</span><span class="label-short">Separation</span></a></li>
+		<li><a href="#sec-audio-generation" data-target="sec-audio-generation"><span class="label-full">Audio Generation</span><span class="label-short">Generation</span></a></li>
 	</ul>
 </nav>
 
@@ -42,10 +42,10 @@ og_type: profile
 {%- endfor %}
 </div>
 
-<h3 id="sec-speech-enhance" class="category-header">Speech Separation</h3>
-<div id="speech-enhance-container" class="pub-list-dynamic">
-{%- assign speech_enhance_pubs = site.data.publications | where: "category", "speech-enhance" -%}
-{%- for pub in speech_enhance_pubs %}
+<h3 id="sec-audio-generation" class="category-header">Audio Generation</h3>
+<div id="audio-generation-container" class="pub-list-dynamic">
+{%- assign audio_generation_pubs = site.data.publications | where: "category", "audio-generation" -%}
+{%- for pub in audio_generation_pubs %}
 {% include pub-item.html pub=pub num=forloop.rindex %}
 {%- endfor %}
 </div>

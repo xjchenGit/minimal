@@ -1,31 +1,5 @@
 # --- Audio Large Language Models ---
 
-- title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
-  authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  venue: "TASLP 2026 (Submitted)"
-  category: "audio-llm"
-  id: "lee2026ssmttm"
-  selected: true
-  links:
-    - name: "ISMIR LBD"
-      url: "https://arxiv.org/abs/2507.06674"
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2601.14786"
-    - name: "Project"
-      url: "https://lonian6.github.io/ssmttm/" # 根據論文摘要提到的 project page 常用格式
-    - name: "Code"
-      url: "https://github.com/Lonian6/SSM-TTM" # 根據論文摘要提到的 project page 常用格式
-  bibtex: |
-    @misc{lee2026ssmttm,
-        title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
-        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
-        year={2026},
-        eprint={2601.14786},
-        archivePrefix={arXiv},
-        primaryClass={cs.SD}
-    }
-
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, ..., <u>Xuanjun Chen</u>, ..., Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
@@ -502,12 +476,38 @@
         url={https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html}
     }
 
-# --- Speech Separation ---
+# --- Audio Generation ---
+- title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
+  authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  venue: "TASLP 2026 (Submitted)"
+  category: "audio-generation"
+  id: "lee2026ssmttm"
+  selected: true
+  links:
+    - name: "ISMIR LBD"
+      url: "https://arxiv.org/abs/2507.06674"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2601.14786"
+    - name: "Project"
+      url: "https://lonian6.github.io/ssmttm/" # 根據論文摘要提到的 project page 常用格式
+    - name: "Code"
+      url: "https://github.com/Lonian6/SSM-TTM" # 根據論文摘要提到的 project page 常用格式
+  bibtex: |
+    @misc{lee2026ssmttm,
+        title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
+        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
+        year={2026},
+        eprint={2601.14786},
+        archivePrefix={arXiv},
+        primaryClass={cs.SD}
+    }
+
 - title: "Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement"
   authors_full: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao"
   authors_short: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, ..., Hsin-Min Wang, Yu Tsao"
   venue: "ICASSP 2025"
-  category: "speech-enhance"
+  category: "audio-generation"
   id: "ren2025leveraging"
   links:
     - name: "IEEE"
@@ -527,7 +527,7 @@
   authors_full: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
   authors_short: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
   venue: "O-COCOSDA 2024"
-  category: "speech-enhance"
+  category: "audio-generation"
   id: "lin2024singer"
   links:
     - name: "IEEE"
