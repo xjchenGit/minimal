@@ -459,7 +459,7 @@
 
 - title: "Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification"
   authors_short: "<u>Xuanjun Chen</u>*, Yen-Lun Liao*, Chung-Che Wang, Jyh-Shing Roger Jang"
-  venue: "SPSC Symposium, INTERSPEECH 2022"
+  venue: "SPSC Symposium at INTERSPEECH 2022"
   category: "deepfake"
   id: "liao2022adversarial"
   links:
