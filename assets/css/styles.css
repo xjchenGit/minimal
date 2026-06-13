@@ -401,6 +401,36 @@ footer {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.site-footer {
+  position: static;
+  float: none;
+  width: auto;
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
+  }
+}
+
 @media print,
 screen and (max-width: 960px) {
 
