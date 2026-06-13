@@ -9,8 +9,8 @@ bio: |
 intro: |
   My recent research focus areas are speech tokenization, speech generation, and spoken language modeling. 
   Previously, my research spanned three threads: 
-  I led work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)), 
-  contributed to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/)), 
-  and mentored research on LLMs for RAG efficiency and their inherent limits.
+  leading work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)),
+  contributing to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/)),
+  and mentoring research on LLMs for RAG efficiency and their inherent limits.
   
   {: .hero-edu}
