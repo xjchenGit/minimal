@@ -181,12 +181,24 @@
         primaryClass={cs.CL}
     }
 
+
+
 - title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "COLM 2026 (Submitted)"
   category: "rag"
   id: "chou2026efficient"
   links: []
+  bibtex: |
+    @misc{chou2026efficient,
+        title={Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG},
+        author={Wei-Chieh Chou and Xuanjun Chen and Jian-Ren Lin and Claire Lin and Hung-yi Lee and Jyh-Shing Roger Jang},
+        year={2026},
+        note={Submitted to COLM 2026}
+    }
+
+
+
 
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_short: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen</u>*, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
