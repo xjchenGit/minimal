@@ -164,11 +164,22 @@
 
 # --- Retrieval Augmented Generation ---
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
-  authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wen-Hua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "Cheng-Yen Li*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ACM Trans. Intell. Syst. Technol. (Submitted)"
   category: "rag"
   id: "cyli2026codarag"
-  links: []
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2604.10426"
+  bibtex: |
+    @misc{cyli2026codarag,
+        title={CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning},
+        author={Cheng-Yen Li and Xuanjun Chen and Claire Lin and Wei-Yu Chen and Wenhua Nie and Hung-yi Lee and Jyh-Shing Roger Jang},
+        year={2026},
+        eprint={2604.10426},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
 
 - title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
