@@ -228,6 +228,16 @@
   venue: "ISCSLP 2026 (Submitted)"
   category: "deepfake"
   id: "chen2026mitigating"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2606.07494"
+  bibtex: |
+    @article{chen2026mitigating,
+      title={Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech},
+      author={Chen, Xuanjun and Wu, Yun-Shing and Lu, Wei-Chung and Lin, Claire and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
+      journal={arXiv preprint arXiv:2606.07494},
+      year={2026}
+    }
 
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
