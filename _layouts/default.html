@@ -24,7 +24,7 @@
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/styles.css?v=25">
+	<link rel="stylesheet" href="assets/css/styles.css?v=26">
 	<link rel="stylesheet" href="assets/css/header.css?v=23">
 	<link rel="stylesheet" href="assets/css/logo.css?v=2">
 	<link rel="stylesheet" href="assets/css/pubs.css?v=99">
@@ -52,11 +52,19 @@
 
 		<section>
 			{{ content }}
-			<!-- ClustrMaps cdn.clustrmaps.com DNS SERVFAIL as of 2026-06-03 (no NS/SOA via 8.8.8.8 or 1.1.1.1); widget currently dead — revisit later, remove or swap if not restored -->
+			<!-- ClustrMaps widget disabled 2026-06-13: cdn.clustrmaps.com has been
+			     DNS SERVFAIL (no NS/SOA via 8.8.8.8 or 1.1.1.1) since 2026-06-03, so
+			     the service is dead. Commented out rather than deleted — re-enable or
+			     swap if it ever comes back.
 			<div class="site-map-block">
 				<script type='text/javascript' id='clustrmaps' async
 					src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=fbfbfd&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
 			</div>
+			-->
+			<footer class="site-footer">
+				<!-- <p class="footer-updated">Last updated {{ site.time | date: "%B %Y" }}</p> -->
+				<p class="footer-updated">Last updated April 2026</p>
+			</footer>
 		</section>
 	</div>
 	<script src="assets/js/load_header.js?v=10" defer></script>

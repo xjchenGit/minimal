@@ -164,11 +164,24 @@
 
 # --- Retrieval Augmented Generation ---
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
-  authors_short: "Cheng-Yen Lee*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wen-Hua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "Cheng-Yen Li*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ACM Trans. Intell. Syst. Technol. (Submitted)"
   category: "rag"
   id: "cyli2026codarag"
-  links: []
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2604.10426"
+  bibtex: |
+    @misc{cyli2026codarag,
+        title={CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning},
+        author={Cheng-Yen Li and Xuanjun Chen and Claire Lin and Wei-Yu Chen and Wenhua Nie and Hung-yi Lee and Jyh-Shing Roger Jang},
+        year={2026},
+        eprint={2604.10426},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
+
+
 
 - title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
@@ -176,6 +189,16 @@
   category: "rag"
   id: "chou2026efficient"
   links: []
+  bibtex: |
+    @misc{chou2026efficient,
+        title={Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG},
+        author={Wei-Chieh Chou and Xuanjun Chen and Jian-Ren Lin and Claire Lin and Hung-yi Lee and Jyh-Shing Roger Jang},
+        year={2026},
+        note={Submitted to COLM 2026}
+    }
+
+
+
 
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_short: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen</u>*, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
@@ -215,7 +238,10 @@
       journal={arXiv preprint arXiv:2606.07494},
       year={2026}
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8f622f603c617c5604b816056c3ac9ca4d518d3
 
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
