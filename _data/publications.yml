@@ -270,7 +270,7 @@
   selected: true  # <--- 新增這行
   links:
     - name: "arXiv"
-      url: "https://arxiv.org/pdf/2501.08238v2"
+      url: "https://arxiv.org/abs/2501.08238"
     - name: "IEEE"
       url: "https://ieeexplore.ieee.org/document/11515080"
     - name: "Project"
