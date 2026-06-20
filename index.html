@@ -67,12 +67,17 @@ head_extra: |
 
 <h2 id="sec-publications">Research Highlights <small class="h2-note">* equal contribution</small></h2>
 <div id="pub-container">
+{%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
 {%- assign selected_ids = site.data.selected_paper.selected_papers -%}
+{%- assign highlight_num = 0 -%}
 {%- for pub_id in selected_ids -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}
 {%- assign pub = matching | first -%}
-{% include pub-item.html pub=pub num=forloop.index %}
+{%- if pub.selected -%}
+{%- assign highlight_num = highlight_num | plus: 1 -%}
+{% include pub-item.html pub=pub num=highlight_num %}
+{%- endif -%}
 {%- endif -%}
 {%- endfor %}
 </div>

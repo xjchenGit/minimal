@@ -3,10 +3,10 @@
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, ..., <u>Xuanjun Chen</u>, ..., Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
-  venue: "TASLP, Vol. 34, 2026"
+  venue: "TASLP 2026"
   category: "audio-llm"
   id: "lu2026desta25"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2507.02768"
@@ -31,7 +31,7 @@
   venue: "ICLR 2025"
   category: "audio-llm"
   id: "huang2025dynamic"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "OpenReview"
       url: "https://openreview.net/forum?id=s7lzZpAW7T"
@@ -56,7 +56,7 @@
   venue: "Findings of ACL 2024"
   category: "audio-llm"
   id: "wu-etal-2024-codec"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "Anthology"
       url: "https://aclanthology.org/2024.findings-acl.616/"
@@ -87,7 +87,7 @@
   venue: "IEEE SLT 2024"
   category: "audio-llm"
   id: "wu2024codecsuperbslt"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "IEEE Xplore"
       url: "https://ieeexplore.ieee.org/abstract/document/10832364"
@@ -144,7 +144,7 @@
   venue: "Technical Report, Feb. 2024"
   category: "audio-llm"
   id: "wu2024towards"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2402.13236"
@@ -168,6 +168,7 @@
   venue: "ACM Trans. Intell. Syst. Technol. (Submitted)"
   category: "rag"
   id: "cyli2026codarag"
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.10426"
@@ -188,6 +189,7 @@
   venue: "COLM 2026 (Submitted)"
   category: "rag"
   id: "chou2026efficient"
+  selected: true
   links: []
   bibtex: |
     @misc{chou2026efficient,
@@ -206,7 +208,7 @@
   award: "Best Paper Award"
   category: "rag"
   id: "lin2025preliminary"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "Anthology"
       url: "https://aclanthology.org/2025.rocling-main.6/"
@@ -245,6 +247,7 @@
   venue: "INTERSPEECH 2026 (Long Paper)"
   category: "deepfake"
   id: "chen2026joint"
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.04841"
@@ -260,10 +263,10 @@
 - title: "CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech"
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, ..., Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "TASLP, Vol. 34, 2026"
+  venue: "TASLP 2026"
   category: "deepfake"
   id: "chen2026codecfake"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2501.08238"
@@ -314,7 +317,7 @@
   venue: "ICASSP 2026"
   category: "deepfake"
   id: "chen2025how"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2509.14675"
@@ -336,7 +339,7 @@
   award: "Best Student Paper nominee"
   category: "deepfake"
   id: "chen2025towards"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2506.07294"
@@ -355,7 +358,7 @@
   venue: "INTERSPEECH 2025"
   category: "deepfake"
   id: "chen2025codecbased"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2025/chen25j_interspeech.pdf"
@@ -377,7 +380,7 @@
   venue: "INTERSPEECH 2024 (Oral)"
   category: "deepfake"
   id: "chen2024singing"
-  selected: true  # <--- 新增這行
+  selected: true
   links:
     - name: "ISCA"
       url: "https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf"
@@ -516,7 +519,6 @@
   venue: "TASLP 2026 (Submitted)"
   category: "audio-generation"
   id: "lee2026ssmttm"
-  selected: true
   links:
     - name: "ISMIR LBD"
       url: "https://arxiv.org/abs/2507.06674"
