@@ -227,7 +227,7 @@
 - title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
   authors_full: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "Technical Report"
+  venue: "Technical Report 2026"
   category: "deepfake"
   id: "chen2026mitigating"
   links:
