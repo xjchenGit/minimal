@@ -190,7 +190,9 @@
   category: "rag"
   id: "chou2026efficient"
   selected: true
-  links: []
+  links: 
+    - name: "arXiv"
+      url: "https://arxiv.org/pdf/2606.22681"
   bibtex: |
     @misc{chou2026efficient,
         title={Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG},
