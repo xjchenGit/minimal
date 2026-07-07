@@ -165,7 +165,7 @@
 # --- Retrieval Augmented Generation ---
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
   authors_short: "Cheng-Yen Li*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "ACM Trans. Intell. Syst. Technol. (Submitted)"
+  venue: "ACM Trans. Intell. Syst. Technol. (ACM TIST)"
   category: "rag"
   id: "cyli2026codarag"
   selected: true
