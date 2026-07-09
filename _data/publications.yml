@@ -186,7 +186,7 @@
 
 - title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "COLM 2026 (Submitted)"
+  venue: "COLM 2026"
   category: "rag"
   id: "chou2026efficient"
   selected: true
