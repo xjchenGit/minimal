@@ -225,24 +225,73 @@
         url = "https://aclanthology.org/2025.rocling-main.6"
     }
 
-# --- Audio Deepfake ---
-- title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
-  authors_full: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "Technical Report 2026"
-  category: "deepfake"
-  id: "chen2026mitigating"
+# --- Audio Generation ---
+- title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
+  authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
+  venue: "Late-Breaking Demo at ISMIR 2025 (Full Paper Under Review at TASLP)"
+  category: "audio-generation"
+  id: "lee2026ssmttm"
   links:
+    - name: "ISMIR LBD"
+      url: "https://arxiv.org/abs/2507.06674"
     - name: "arXiv"
-      url: "https://arxiv.org/abs/2606.07494"
+      url: "https://arxiv.org/abs/2601.14786"
+    - name: "Project"
+      url: "https://lonian6.github.io/ssmttm/" # 根據論文摘要提到的 project page 常用格式
+    - name: "Code"
+      url: "https://github.com/Lonian6/SSM-TTM" # 根據論文摘要提到的 project page 常用格式
   bibtex: |
-    @article{chen2026mitigating,
-      title={Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech},
-      author={Chen, Xuanjun and Wu, Yun-Shing and Lu, Wei-Chung and Lin, Claire and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
-      journal={arXiv preprint arXiv:2606.07494},
-      year={2026}
+    @misc{lee2026ssmttm,
+        title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
+        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
+        year={2026},
+        eprint={2601.14786},
+        archivePrefix={arXiv},
+        primaryClass={cs.SD}
     }
 
+- title: "Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement"
+  authors_full: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao"
+  authors_short: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, ..., Hsin-Min Wang, Yu Tsao"
+  venue: "ICASSP 2025"
+  category: "audio-generation"
+  id: "ren2025leveraging"
+  links:
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/abstract/document/10890412"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2409.10376"
+  bibtex: |
+    @inproceedings{ren2025leveraging,
+        title={Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement},
+        author={Ren, Wenze and Wu, Haibin and Lin, Yi-Cheng and Chen, Xuanjun and Chao, Rong and Hung, Kuo-Hsuan and Li, You-Jin and Ting, Wen-Yuan and Wang, Hsin-Min and Tsao, Yu},
+        booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+        year={2025},
+        doi={10.1109/ICASSP49660.2025.10890412}
+    }
+
+- title: "Singer Separation for Karaoke Content Generation"
+  authors_full: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
+  authors_short: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
+  venue: "O-COCOSDA 2024"
+  category: "audio-generation"
+  id: "lin2024singer"
+  links:
+    - name: "IEEE"
+      url: "https://ieeexplore.ieee.org/abstract/document/10800383"
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2110.06707"
+  bibtex: |
+    @inproceedings{lin2024singer,
+        title={Singer Separation for Karaoke Content Generation},
+        author={Lin, Hsuan-Yu and Chen, Xuanjun and Jang, Jyh-Shing Roger},
+        booktitle={2024 27th Conference of the Oriental COCOSDA International Committee for the Co-ordination and Standardisation of Speech Databases and Assessment Techniques (O-COCOSDA)},
+        year={2024},
+        doi={10.1109/O-COCOSDA64382.2024.10800383}
+    }
+
+# --- Audio Deepfake ---
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
@@ -260,7 +309,6 @@
       journal={arXiv preprint arXiv:2604.04841},
       year={2026}
     }
-
 
 - title: "CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech"
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
@@ -291,28 +339,6 @@
     doi={10.1109/TASLPRO.2026.3692291}
     }
 
-
-
-
-- title: "Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling"
-  authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "Technical Report 2025"
-  category: "deepfake"
-  id: "chen2025localizing"
-  links:
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2508.02000"
-  bibtex: |
-    @misc{chen2025localizing,
-        title={Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling},
-        author={Xuanjun Chen and Shih-Peng Cheng and Jiawei Du and Lin Zhang and Xiaoxiao Miao and Chung-Che Wang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
-        year={2025},
-        eprint={2508.02000},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV}
-    }
-
 - title: "How Does Instrumental Music Help SingFake Detection?"
   authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
@@ -333,6 +359,40 @@
         eprint={2509.14675},
         archivePrefix={arXiv},
         primaryClass={cs.SD}
+    }
+
+- title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
+  authors_full: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "ISCSLP 2026"
+  category: "deepfake"
+  id: "chen2026mitigating"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2606.07494"
+  bibtex: |
+    @inproceedings{chen2026mitigating,
+        title={Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech},
+        author={Xuanjun Chen and Yun-Shing Wu and Wei-Chung Lu and Claire Lin and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        booktitle={2026 International Symposium on Chinese Spoken Language Processing (ISCSLP)},
+        year={2026}
+    }
+
+- title: "Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling"
+  authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
+  venue: "ISCSLP 2026"
+  category: "deepfake"
+  id: "chen2025localizing"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2508.02000"
+  bibtex: |
+    @inproceedings{chen2025localizing,
+        title={Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling},
+        author={Xuanjun Chen and Shih-Peng Cheng and Jiawei Du and Lin Zhang and Xiaoxiao Miao and Chung-Che Wang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        booktitle={2026 International Symposium on Chinese Spoken Language Processing (ISCSLP)},
+        year={2026}
     }
 
 - title: "Towards Generalized Source Tracing for Codec-Based Deepfake Speech"
@@ -512,70 +572,4 @@
         booktitle={Proc. 2022 ISCA Symposium on Security and Privacy in Speech Communication},
         year={2022},
         url={https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html}
-    }
-
-# --- Audio Generation ---
-- title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
-  authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
-  venue: "Late-Breaking Demo at ISMIR 2025 (Full Paper Under Review)"
-  category: "audio-generation"
-  id: "lee2026ssmttm"
-  links:
-    - name: "ISMIR LBD"
-      url: "https://arxiv.org/abs/2507.06674"
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2601.14786"
-    - name: "Project"
-      url: "https://lonian6.github.io/ssmttm/" # 根據論文摘要提到的 project page 常用格式
-    - name: "Code"
-      url: "https://github.com/Lonian6/SSM-TTM" # 根據論文摘要提到的 project page 常用格式
-  bibtex: |
-    @misc{lee2026ssmttm,
-        title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
-        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
-        year={2026},
-        eprint={2601.14786},
-        archivePrefix={arXiv},
-        primaryClass={cs.SD}
-    }
-
-- title: "Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement"
-  authors_full: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao"
-  authors_short: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, ..., Hsin-Min Wang, Yu Tsao"
-  venue: "ICASSP 2025"
-  category: "audio-generation"
-  id: "ren2025leveraging"
-  links:
-    - name: "IEEE"
-      url: "https://ieeexplore.ieee.org/abstract/document/10890412"
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2409.10376"
-  bibtex: |
-    @inproceedings{ren2025leveraging,
-        title={Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement},
-        author={Ren, Wenze and Wu, Haibin and Lin, Yi-Cheng and Chen, Xuanjun and Chao, Rong and Hung, Kuo-Hsuan and Li, You-Jin and Ting, Wen-Yuan and Wang, Hsin-Min and Tsao, Yu},
-        booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-        year={2025},
-        doi={10.1109/ICASSP49660.2025.10890412}
-    }
-
-- title: "Singer Separation for Karaoke Content Generation"
-  authors_full: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
-  authors_short: "Hsuan-Yu Lin, <u>Xuanjun Chen</u>, Jyh-Shing Roger Jang"
-  venue: "O-COCOSDA 2024"
-  category: "audio-generation"
-  id: "lin2024singer"
-  links:
-    - name: "IEEE"
-      url: "https://ieeexplore.ieee.org/abstract/document/10800383"
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2110.06707"
-  bibtex: |
-    @inproceedings{lin2024singer,
-        title={Singer Separation for Karaoke Content Generation},
-        author={Lin, Hsuan-Yu and Chen, Xuanjun and Jang, Jyh-Shing Roger},
-        booktitle={2024 27th Conference of the Oriental COCOSDA International Committee for the Co-ordination and Standardisation of Speech Databases and Assessment Techniques (O-COCOSDA)},
-        year={2024},
-        doi={10.1109/O-COCOSDA64382.2024.10800383}
     }
