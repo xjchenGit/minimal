@@ -12,6 +12,13 @@
   context: "Special Session at IEEE SLT 2024"
   selected: true
 
+- year: "2024"
+  role: "Invited Speaker"
+  event: "Singing Voice Graph Modeling for SingFake Detection"
+  link: "https://svddchallenge.org/challenges/special_session_ieee_slt.html"
+  context: "Special Session at IEEE SLT 2024"
+  selected: true
+
 - year: "2023 – 2026"
   role: "Admin Assistant"
   event: "NVIDIA-NTU AI Joint Innovation Center"
