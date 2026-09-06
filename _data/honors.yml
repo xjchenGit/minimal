@@ -1,4 +1,9 @@
 - year: "2026"
+  title: "NVIDIA Academic Grant Recipient"
+  details: "Awarded dedicated GPU compute via competitive global selection"
+  selected: true
+
+- year: "2026"
   title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
   details: "One of nine recipients at NTU"
   selected: true
@@ -11,6 +16,11 @@
 - year: "2025"
   title: "Best Paper Award"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
+  selected: true
+
+- year: "2025"
+  title: "Future Tech Award, NSTC Taiwan"
+  details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
   selected: true
 
 - year: "2025"
