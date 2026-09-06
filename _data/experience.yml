@@ -9,8 +9,8 @@
 # - gpa: (Optional) GPA string, rendered de-emphasized at end
 # - selected: true/false
 
-- time_desk: "Oct 2026 – Present"
-  time_mob: "10/2026 – Present"
+- time_desk: "Sep 2026 – Present"
+  time_mob: "09/2026 – Present"
   role: "Lead Researcher"
   institution: "NVIDIA Academic Grant Program, Taipei, Taiwan"
   selected: true
