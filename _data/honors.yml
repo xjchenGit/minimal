@@ -18,10 +18,10 @@
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
   selected: true
 
-- year: "2025"
-  title: "Future Tech Award, NSTC Taiwan"
-  details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
-  selected: true
+# - year: "2025"
+#   title: "Future Tech Award, NSTC Taiwan"
+#   details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
+#   selected: true
 
 - year: "2025"
   title: "CTCI Foundation Research Scholarship for Overseas Students"
