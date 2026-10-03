@@ -3,14 +3,20 @@ cv_visible: false
 cv_url: docs/Chen_Full_CV_26.01.19.pdf
 
 bio: |
-  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Hung-yi&nbsp;Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php) and [Jyh-Shing&nbsp;Roger&nbsp;Jang](http://mirlab.org/jang/cv/cv.asp). 
-  Prior to this, I earned my M.S. and B.S. in Computer Science from [NTU](https://www.ntu.edu.tw/english/) (2023) and [Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020). 
+  I am a Ph.D. student at [National Taiwan University (NTU)](https://www.ntu.edu.tw/english/), advised by [Jyh-Shing&nbsp;Roger&nbsp;Jang](http://mirlab.org/jang/cv/cv.asp) and [Hung-yi&nbsp;Lee](https://speech.ee.ntu.edu.tw/~hylee/index.php).
+  Prior to this, I earned my M.S. and B.S. in Computer Science from :icon-ntu:&nbsp;[NTU](https://www.ntu.edu.tw/english/) (2023) and :icon-ntust:&nbsp;[Taiwan Tech](https://www.ntust.edu.tw/index.php?Lang=en) (2020).
+  My research interests include large language models, spoken language models, speech generation, and deepfakes.
+  Along the way, I have been fortunate to receive several research honors, highlighted by:
 
-intro: |
-  My recent research focus areas are speech tokenization, speech generation, and spoken language modeling. 
+  - **Awards:** [Best Paper Award](https://aclanthology.org/2025.rocling-main.6/) at ROCLING 2025 and [Best Student Paper nomination](https://arxiv.org/abs/2506.07294) at ASRU 2025.
+  - **Support:** <!-- Temporarily hidden until the official announcement: :icon-google:&nbsp;[Google PhD Fellowship](https://research.google/programs-and-events/phd-fellowship/), --> :icon-nvidia:&nbsp;[NVIDIA Academic Grant](https://www.google.com), and :icon-sps:&nbsp;[IEEE Signal Processing Society Scholarship](https://www.google.com).
+
+  Currently, I am exploring model training and benchmarking for audio understanding and generation.
   Previously, my research spanned three threads: 
   leading work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)),
   contributing to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/)),
   and mentoring research on LLMs for RAG efficiency and their inherent limits.
+
+intro: |
   
   {: .hero-edu}

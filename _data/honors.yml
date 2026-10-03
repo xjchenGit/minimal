@@ -1,4 +1,9 @@
 - year: "2026"
+  title: "IEEE Signal Processing Society Scholarship"
+  details: "One of dozens of international recipients"
+  selected: true
+
+- year: "2026"
   title: "NVIDIA Academic Grant Recipient"
   details: "Awarded dedicated GPU compute via competitive global selection"
   selected: true
@@ -51,8 +56,8 @@
   selected: false
 
 - year: "2024 – 2025"
-  title: "CTCI Foundation Bursary & Research Scholarships"
-  details: "Awarded by the CTCI Foundation for overseas students"
+  title: "CTCI Foundation Science and Technology Scholarship"
+  details: "Research Scholarship (2025) & Bursary Award (2024)"
   selected: true
 
 - year: "2024 – 2025"
@@ -66,7 +71,7 @@
   selected: true
 
 - year: "2020 – 2026"
-  title: "Kwong Tung Community Outstanding Student Scholarship"
+  title: "Taipei City Guangdong Association Scholarship"
   details: "Awarded across six academic years"
   selected: true
 
