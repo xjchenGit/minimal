@@ -328,7 +328,7 @@ h3.category-header[id] {
     position: fixed;
     top: 235px;
     right: calc(50% + 540px + 56px);
-    width: 180px;
+    width: 220px;
     text-align: right;
     border-right: 1px solid var(--hairline);
     padding-right: 14px;
@@ -360,6 +360,7 @@ h3.category-header[id] {
 .pubs-toc a {
     color: var(--text-muted);
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.15s var(--ease);
 }
 

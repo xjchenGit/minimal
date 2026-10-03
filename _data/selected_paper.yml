@@ -1,4 +1,6 @@
 selected_papers:
+  - chen2026metabench     # 15
+  - chen2026llmagents     # 16
   - chen2026codecfake     # 14# - chen2026joint
   - chen2026joint         # 13
   - chen2025how           # 12

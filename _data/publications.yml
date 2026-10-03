@@ -162,7 +162,26 @@
 
 
 
-# --- Retrieval Augmented Generation ---
+# --- Retrieval & Agentic AI ---
+- title: "MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses"
+  authors_short: "<u>Xuanjun Chen</u>, Hua-Hsuan Chen, Wei-Chung Lu, Yinghao Ma, Jyh-Shing Roger Jang, Hung-yi Lee"
+  venue: "Technical Report, Sep. 2026"
+  category: "rag"
+  id: "chen2026metabench"
+  selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2609.33411"
+  bibtex: |
+    @misc{chen2026metabench,
+        title={MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses},
+        author={Xuanjun Chen and Hua-Hsuan Chen and Wei-Chung Lu and Yinghao Ma and Jyh-Shing Roger Jang and Hung-yi Lee},
+        year={2026},
+        month={September},
+        eprint={2609.33411},
+        archivePrefix={arXiv}
+    }
+
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
   authors_short: "Cheng-Yen Li*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ACM Trans. Intell. Syst. Technol. (ACM TIST)"
@@ -226,6 +245,38 @@
     }
 
 # --- Audio Generation ---
+- title: "Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?"
+  authors_short: "<u>Xuanjun Chen</u>, Zixiong Su, Hao Shi, Chang Zeng, Kai Li, Jyh-Shing Roger Jang, Hung-yi Lee"
+  venue: "Technical Report, Sep. 2026"
+  category: "audio-generation"
+  id: "chen2026llmagents"
+  selected: true
+  bibtex: |
+    @misc{chen2026llmagents,
+        title={Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?},
+        author={Xuanjun Chen and Zixiong Su and Hao Shi and Chang Zeng and Kai Li and Jyh-Shing Roger Jang and Hung-yi Lee},
+        year={2026},
+        month={September},
+        note={Technical Report}
+    }
+
+- title: "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis"
+  authors_short: "Chee-En Yu, Yi-Cheng Lin, Sung-Feng Huang, Yun-Shao Tsai, Ho-Lam Chung, <u>Xuanjun Chen</u>, Hung-yi Lee"
+  venue: "IEEE SLT 2026"
+  category: "audio-generation"
+  id: "yu2026listen"
+  selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2609.24163"
+  bibtex: |
+    @inproceedings{yu2026listen,
+        title={Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis},
+        author={Chee-En Yu and Yi-Cheng Lin and Sung-Feng Huang and Yun-Shao Tsai and Ho-Lam Chung and Xuanjun Chen and Hung-yi Lee},
+        booktitle={2026 IEEE Spoken Language Technology Workshop (SLT)},
+        year={2026}
+    }
+
 - title: "Training-Efficient Text-to-Music Generation with State-Space Modeling"
   authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
   authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
