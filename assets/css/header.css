@@ -169,6 +169,12 @@
     text-decoration-color: currentColor;
 }
 
+/* Theme-blue emphasis for a call-out phrase in the bio (e.g. internship search) */
+#about-container .bio-highlight {
+    color: var(--link);
+    font-weight: 600;
+}
+
 #about-container.hero-bio p:has(+ ul) {
     margin-bottom: 4px;
 }
