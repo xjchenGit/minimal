@@ -162,7 +162,7 @@
 
 
 
-# --- Retrieval & Agentic AI ---
+# --- Retrieval & Agentic LLMs ---
 - title: "MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses"
   authors_short: "<u>Xuanjun Chen</u>, Hua-Hsuan Chen, Wei-Chung Lu, Yinghao Ma, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "Technical Report, Sep. 2026"

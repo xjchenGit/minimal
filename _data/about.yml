@@ -11,11 +11,11 @@ bio: |
   - **Awards:** [Best Paper Award](https://aclanthology.org/2025.rocling-main.6/) at ROCLING 2025 and [Best Student Paper nomination](https://arxiv.org/abs/2506.07294) at ASRU 2025.
   - **Support:** <!-- Temporarily hidden until the official announcement: :icon-google:&nbsp;[Google PhD Fellowship](https://research.google/programs-and-events/phd-fellowship/), --> :icon-nvidia:&nbsp;[NVIDIA Academic Grant](https://www.google.com), and :icon-sps:&nbsp;[IEEE Signal Processing Society Scholarship](https://www.google.com).
 
-  Currently, I am exploring model training and benchmarking for audio understanding and generation.
-  Previously, my research spanned three threads: 
-  leading work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)),
-  contributing to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/)),
-  and mentoring research on LLMs for RAG efficiency and their inherent limits.
+  Recently, I have been exploring model training and benchmarking for audio understanding and generation,
+  building on my earlier work across three main threads:
+  leading research on retrieval and agentic LLMs ([MetaBench-Harness](https://arxiv.org/abs/2609.33411), [CodaRAG](https://arxiv.org/abs/2604.10426), [GDP-RAG](https://arxiv.org/abs/2606.22681));
+  contributing to large audio-language models and benchmarks ([DeSTA 2.5-Audio](https://arxiv.org/abs/2507.02768), [Dynamic-SUPERB Phase-2](https://openreview.net/forum?id=s7lzZpAW7T), [Codec-SUPERB](https://aclanthology.org/2024.findings-acl.616/));
+  and spearheading work on audio deepfakes ([SingGraph](https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.html), [CodecFake+](https://arxiv.org/abs/2501.08238), [SASTNet](https://arxiv.org/abs/2506.07294)).
 
 intro: |
   
