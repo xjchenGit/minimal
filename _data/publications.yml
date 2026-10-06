@@ -51,8 +51,8 @@
 
 
 - title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
-  authors_full: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, Yuan-Kuei Wu, <u>Xuanjun Chen</u>, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
-  authors_short: "Haibin Wu, Ho-Lam Chung, Yi-Cheng Lin, ..., <u>Xuanjun Chen</u>, ..., Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
+  authors_full: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
+  authors_short: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, ..., Alexander H. Liu, Hung-yi Lee"
   venue: "Findings of ACL 2024"
   category: "audio-llm"
   id: "wu-etal-2024-codec"
