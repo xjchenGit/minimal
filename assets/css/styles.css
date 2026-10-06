@@ -641,11 +641,3 @@ screen and (max-width: 480px) {
   margin-top: 0.75em;
   font-size: 0.95em;
 }
-
-.see-all-pubs a {
-  color: var(--link);
-}
-
-.see-all-pubs a:hover {
-  color: var(--link-hover);
-}

@@ -1,20 +1,19 @@
 selected_papers:
   # Retrieval & agentic LLMs
-  - chen2026metabench     # 15
-  - cyli2026codarag       # 14
-  - chou2026efficient     # 13
-  - lin2025preliminary    # 12
+  - chen2026metabench     # 14
+  - cyli2026codarag       # 13
+  - chou2026efficient     # 12
   # Audio generation
   - chen2026llmagents     # 11
   # Audio deepfakes
-  - chen2026codecfake     # 10
-  - chen2025codecbased    # 9
-  - chen2025towards       # 8
-  - chen2026joint         # 7
-  - chen2025how           # 6
+  - chen2026joint         # 10
+  - chen2026codecfake     # 9
+  - chen2025how           # 8
+  - chen2025towards       # 7
+  - chen2025codecbased    # 6
   - chen2024singing       # 5
   # Audio-language models & benchmarks
-  - huang2025dynamic      # 4
-  - wu-etal-2024-codec    # 3
-  - lu2026desta25         # 2
+  - lu2026desta25         # 4
+  - huang2025dynamic      # 3
+  - wu-etal-2024-codec    # 2
   - wu2024towards         # 1
