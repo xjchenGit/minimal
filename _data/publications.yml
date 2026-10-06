@@ -192,13 +192,11 @@
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.10426"
   bibtex: |
-    @misc{cyli2026codarag,
+    @article{cyli2026codarag,
         title={CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning},
         author={Cheng-Yen Li and Xuanjun Chen and Claire Lin and Wei-Yu Chen and Wenhua Nie and Hung-yi Lee and Jyh-Shing Roger Jang},
-        year={2026},
-        eprint={2604.10426},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL}
+        journal={ACM Transactions on Intelligent Systems and Technology},
+        year={2026}
     }
 
 
@@ -213,11 +211,11 @@
     - name: "arXiv"
       url: "https://arxiv.org/pdf/2606.22681"
   bibtex: |
-    @misc{chou2026efficient,
+    @inproceedings{chou2026efficient,
         title={Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG},
         author={Wei-Chieh Chou and Xuanjun Chen and Jian-Ren Lin and Claire Lin and Hung-yi Lee and Jyh-Shing Roger Jang},
-        year={2026},
-        note={Submitted to COLM 2026}
+        booktitle={Third Conference on Language Modeling (COLM)},
+        year={2026}
     }
 
 
@@ -247,16 +245,21 @@
 # --- Audio Generation ---
 - title: "Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?"
   authors_short: "<u>Xuanjun Chen</u>, Zixiong Su, Hao Shi, Chang Zeng, Kai Li, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "Technical Report, Sep. 2026"
+  venue: "Technical Report, Oct. 2026"
   category: "audio-generation"
   id: "chen2026llmagents"
   selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2610.04488"
   bibtex: |
     @misc{chen2026llmagents,
         title={Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?},
         author={Xuanjun Chen and Zixiong Su and Hao Shi and Chang Zeng and Kai Li and Jyh-Shing Roger Jang and Hung-yi Lee},
         year={2026},
-        month={September},
+        month={October},
+        eprint={2610.04488},
+        archivePrefix={arXiv},
         note={Technical Report}
     }
 
