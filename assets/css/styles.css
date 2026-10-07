@@ -641,3 +641,12 @@ screen and (max-width: 480px) {
   margin-top: 0;
   font-size: 0.95em;
 }
+
+/* Theme-blue emphasis on the Scholar link, without bolding */
+.pubs-note a.pubs-note-scholar {
+  color: var(--link);
+}
+
+.pubs-note a.pubs-note-scholar:hover {
+  color: var(--link-hover);
+}

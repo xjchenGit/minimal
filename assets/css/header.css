@@ -175,11 +175,9 @@
     font-weight: 600;
 }
 
-/* Closing call-out + contact line: left-aligned and balanced so it doesn't
-   end with a stray word on its own line */
+/* Closing call-out + contact line: justified to match the bio paragraphs */
 #about-container.hero-bio p.hero-contact-text {
-    text-align: left;
-    text-wrap: balance;
+    text-align: justify;
 }
 
 #about-container.hero-bio p:has(+ ul) {
