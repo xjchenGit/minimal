@@ -637,7 +637,7 @@ screen and (max-width: 480px) {
   }
 }
 
-.see-all-pubs {
-  margin-top: 0.75em;
+.pubs-note {
+  margin-top: 0;
   font-size: 0.95em;
 }
