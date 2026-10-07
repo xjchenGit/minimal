@@ -1,10 +1,10 @@
 selected_papers:
-  # Retrieval & agentic LLMs
-  - chen2026metabench     # 14
-  - cyli2026codarag       # 13
-  - chou2026efficient     # 12
   # Audio generation
-  - chen2026llmagents     # 11
+  - chen2026llmagents     # 14
+  # Retrieval & agentic LLMs
+  - chen2026metabench     # 13
+  - cyli2026codarag       # 12
+  - chou2026efficient     # 11
   # Audio deepfakes
   - chen2026joint         # 10
   - chen2026codecfake     # 9
