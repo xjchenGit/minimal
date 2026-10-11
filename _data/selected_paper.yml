@@ -1,19 +1,26 @@
-selected_papers:
-  # Audio generation
-  - chen2026llmagents     # 14
-  # Retrieval & agentic LLMs
-  - chen2026metabench     # 13
-  - cyli2026codarag       # 12
-  - chou2026efficient     # 11
-  # Audio deepfakes
-  - chen2026codecfake     # 10
-  - chen2026joint         # 9
-  - chen2025how           # 8
-  - chen2025towards       # 7
-  - chen2025codecbased    # 6
-  - chen2024singing       # 5
-  # Audio-language models & benchmarks
-  - lu2026desta25         # 4
-  - huang2025dynamic      # 3
-  - wu-etal-2024-codec    # 2
-  - wu2024towards         # 1
+# Research Highlights on index.html, grouped by publication type.
+# Within each group, papers appear in the order listed here.
+# Membership also requires `selected: true` in publications.yml.
+groups:
+  - title: "International Journals"
+    papers:
+      - cyli2026codarag       # Retrieval & agentic LLMs
+      - chen2026codecfake     # Audio deepfakes
+      - lu2026desta25         # Audio-language models & benchmarks
+  - title: "International Conferences"
+    papers:
+      # ML / NLP venues first
+      - chou2026efficient     # Retrieval & agentic LLMs
+      - huang2025dynamic      # Audio-language models & benchmarks
+      - wu-etal-2024-codec    # Audio-language models & benchmarks
+      # Speech venues
+      - chen2026joint         # Audio deepfakes
+      - chen2025how           # Audio deepfakes
+      - chen2025towards       # Audio deepfakes
+      - chen2025codecbased    # Audio deepfakes
+      - chen2024singing       # Audio deepfakes
+  - title: "Preprints &amp; Technical Reports"
+    papers:
+      - chen2026llmagents     # Audio generation
+      - chen2026metabench     # Retrieval & agentic LLMs
+      - wu2024towards         # Audio-language models & benchmarks

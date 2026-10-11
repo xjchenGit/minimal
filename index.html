@@ -68,10 +68,11 @@ head_extra: |
 <h2 id="sec-publications">Research Highlights <small class="h2-note">* equal contribution, † co-second</small></h2>
 <p class="pubs-note">(See all publications <a href="publications.html">by topic</a>, or my <a class="pubs-note-scholar" href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> for a full list)</p>
 <div id="pub-container">
-{%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
-{%- assign selected_ids = site.data.selected_paper.selected_papers -%}
+{%- comment -%} Groups and order come from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
+{%- for group in site.data.selected_paper.groups %}
+<h3 class="category-header">{{ group.title }}</h3>
 {%- assign highlight_num = 0 -%}
-{%- for pub_id in selected_ids -%}
+{%- for pub_id in group.papers -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}
 {%- assign pub = matching | first -%}
@@ -80,6 +81,7 @@ head_extra: |
 {% include pub-item.html pub=pub num=highlight_num %}
 {%- endif -%}
 {%- endif -%}
+{%- endfor -%}
 {%- endfor %}
 </div>
 

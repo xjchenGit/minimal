@@ -111,6 +111,33 @@
     content: "★ ";
 }
 
+.pub-venue-note {
+    display: inline;
+    color: #a3324a;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.pub-venue-note::before {
+    content: "◆ ";
+}
+
+.pub-venue-note--accept-rate::before {
+    content: "◎ ";
+}
+
+.pub-venue-note--github-stars::before {
+    content: "★ ";
+}
+
+/* U+FE0E keeps the arrow as text so Apple platforms don't render it as an emoji. */
+.pub-venue-note--citations::before {
+    content: "\2197\FE0E  ";
+}
+
 .pub-row-meta {
     display: inline;
     /* Default for desktop: keep things inline */
@@ -135,6 +162,10 @@
     font-variant-caps: all-small-caps;
     letter-spacing: 0.15em;
     line-height: 1.3;
+}
+
+#pub-container > .category-header:first-child {
+    margin-top: 12px;
 }
 
 /* Specificity-matched override for styles.css `h3.category-header[id]`. */
@@ -220,7 +251,8 @@ h3.category-header[id] {
         font-size: 12px;
     }
 
-    .pub-award {
+    .pub-award,
+    .pub-venue-note {
         display: inline;
         margin-left: 8px;
         margin-top: 0;

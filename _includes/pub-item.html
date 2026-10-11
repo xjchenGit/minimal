@@ -50,7 +50,7 @@
 		<b class="pub-title">{{ title_html }}</b><br>
 		<span class="pub-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</span>
 		<div class="pub-row-meta">
-			<span class="pub-venue">{{ pub.venue }}</span>{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}
+			<span class="pub-venue">{{ pub.venue }}</span>{%- for note in pub.venue_notes %} <span class="pub-venue-note{% if note.type %} pub-venue-note--{{ note.type }}{% endif %}">{{ note.text | escape }}</span>{%- endfor %}{%- if pub.award %} <span class="pub-award">{{ pub.award }}</span>{%- endif %}
 			{%- if all_links != "" %} <span class="pub-links">{{ all_links }}</span>{%- endif %}
 		</div>
 		{%- if pub.bibtex %}
