@@ -642,11 +642,9 @@ screen and (max-width: 480px) {
   font-size: 0.95em;
 }
 
-/* Theme-blue emphasis on the Scholar link, without bolding */
-.pubs-note a.pubs-note-scholar {
-  color: var(--link);
-}
-
-.pubs-note a.pubs-note-scholar:hover {
-  color: var(--link-hover);
+/* Underline the links instead of coloring them */
+.pubs-note a {
+  text-decoration: underline;
+  text-decoration-color: #c7c7cc;
+  text-underline-offset: 0.2em;
 }

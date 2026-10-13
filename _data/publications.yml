@@ -1,5 +1,18 @@
 # --- Audio Large Language Models ---
 
+- title: "What Does LALM Post-training Learn? Rethinking Audio Understanding and Reasoning Capabilities"
+  authors_short: "Hua-Hsuan Chen*, <u>Xuanjun Chen</u>*, Wei-Chung Lu, Chih-Kai Yang, Yu-Xiang Lin, Sung-Feng Huang, Haibin Wu, Hung-yi Lee"
+  venue: "Technical Report, Oct. 2026"
+  category: "audio-llm"
+  id: "chen2026lalm"
+  selected: true
+  bibtex: |
+    @misc{chen2026lalm,
+        title={What Does LALM Post-training Learn? Rethinking Audio Understanding and Reasoning Capabilities},
+        author={Chen, Hua-Hsuan and Chen, Xuanjun and Lu, Wei-Chung and Yang, Chih-Kai and Lin, Yu-Xiang and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi},
+        year={2026}
+    }
+
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, ..., <u>Xuanjun Chen</u>, ..., Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
@@ -17,14 +30,14 @@
     - name: "Code"
       url: "https://github.com/kehanlu/DeSTA2.5-Audio"
   bibtex: |
-    @ARTICLE{lu2026desta25,
-    author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Huang, Sung-Feng and Yang, Chih-Kai and Yu, Chee-En and Chen, Chun-Wei and Chen, Wei-Chih and Huang, Chien-yu and Lin, Yi-Cheng and Lin, Yu-Xiang and Fu, Chi-An and Kuan, Chun-Yi and Ren, Wenze and Chen, Xuanjun and Huang, Wei-Ping and Hu, En-Pei and Lin, Tzu-Quan and Wu, Yuan-Kuei and Huang, Kuan-Po and Huang, Hsiao-Ying and Chou, Huang-Cheng and Chang, Kai-Wei and Chiang, Cheng-Han and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-yi},
-    journal={IEEE Transactions on Audio, Speech and Language Processing},
-    title={DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model With Self-Generated Cross-Modal Alignment},
-    year={2026},
-    volume={34},
-    pages={2062--2076},
-    doi={10.1109/TASLPRO.2026.3675792}
+    @article{lu2026desta25,
+        title={DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model With Self-Generated Cross-Modal Alignment},
+        author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Huang, Sung-Feng and Yang, Chih-Kai and Yu, Chee-En and Chen, Chun-Wei and Chen, Wei-Chih and Huang, Chien-yu and Lin, Yi-Cheng and Lin, Yu-Xiang and Fu, Chi-An and Kuan, Chun-Yi and Ren, Wenze and Chen, Xuanjun and Huang, Wei-Ping and Hu, En-Pei and Lin, Tzu-Quan and Wu, Yuan-Kuei and Huang, Kuan-Po and Huang, Hsiao-Ying and Chou, Huang-Cheng and Chang, Kai-Wei and Chiang, Cheng-Han and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-yi},
+        journal={IEEE Transactions on Audio, Speech and Language Processing},
+        volume={34},
+        pages={2062--2076},
+        year={2026},
+        doi={10.1109/TASLPRO.2026.3675792}
     }
 
 - title: "Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks"
@@ -45,8 +58,8 @@
       url: "https://github.com/dynamic-superb/dynamic-superb"
   bibtex: |
     @inproceedings{huang2025dynamic,
-        title={Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the <br> Capabilities of Spoken Language Models with 180 Tasks},
-        author={Chien-yu Huang and Wei-Chih Chen and Shu-wen Yang and Andy T. Liu and Chen-An Li and Yu-Xiang Lin and Wei-Cheng Tseng and Anuj Diwan and Yi-Jen Shih and Jiatong Shi and William Chen and Chih-Kai Yang and Wenze Ren and Xuanjun Chen and Chi-Yuan Hsiao and Puyuan Peng and Shih-Heng Wang and Chun-Yi Kuan and Ke-Han Lu and Kai-Wei Chang and Fabian Ritter-Gutierrez and Kuan-Po Huang and Siddhant Arora and You-Kuan Lin and Ming To Chuang and Eunjung Yeo and Kalvin Chang and Chung-Ming Chien and Kwanghee Choi and Jun-You Wang and Cheng-Hsiu Hsieh and Yi-Cheng Lin and Chee-En Yu and I-Hsiang Chiu and Heitor R. Guimarães and Jionghao Han and Tzu-Quan Lin and Tzu-Yuan Lin and Homu Chang and Ting-Wu Chang and Chun Wei Chen and Shou-Jen Chen and Yu-Hua Chen and Hsi-Chun Cheng and Kunal Dhawan and Jia-Lin Fang and Shi-Xin Fang and Kuan-Yu Fang Chiang and Chi An Fu and Hsien-Fu Hsiao and Ching Yu Hsu and Shao-Syuan Huang and Lee Chen Wei and Hsi-Che Lin and Hsuan-Hao Lin and Hsuan-Ting Lin and Jian-Ren Lin and Ting-Chun Liu and Li-Chun Lu and Tsung-Min Pai and Ankita Pasad and Shih-Yun Shan Kuan and Suwon Shon and Yuxun Tang and Yun-Shao Tsai and Jui-Chiang Wei and Tzu-Chieh Wei and Chengxi Wu and Dien-Ruei Wu and Chao-Han Huck Yang and Chieh-Chi Yang and Jia Qi Yip and Shao-Xiang Yuan and Vahid Noroozi and Zhehuai Chen and Haibin Wu and Karen Livescu and David Harwath and Shinji Watanabe and Hung-yi Lee},
+        title={Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks},
+        author={Huang, Chien-yu and Chen, Wei-Chih and Yang, Shu-wen and Liu, Andy T. and Li, Chen-An and Lin, Yu-Xiang and Tseng, Wei-Cheng and Diwan, Anuj and Shih, Yi-Jen and Shi, Jiatong and Chen, William and Yang, Chih-Kai and Ren, Wenze and Chen, Xuanjun and Hsiao, Chi-Yuan and Peng, Puyuan and Wang, Shih-Heng and Kuan, Chun-Yi and Lu, Ke-Han and Chang, Kai-Wei and Ritter-Gutierrez, Fabian and Huang, Kuan-Po and Arora, Siddhant and Lin, You-Kuan and Chuang, Ming To and Yeo, Eunjung and Chang, Kalvin and Chien, Chung-Ming and Choi, Kwanghee and Wang, Jun-You and Hsieh, Cheng-Hsiu and Lin, Yi-Cheng and Yu, Chee-En and Chiu, I-Hsiang and Guimarães, Heitor R. and Han, Jionghao and Lin, Tzu-Quan and Lin, Tzu-Yuan and Chang, Homu and Chang, Ting-Wu and Chen, Chun Wei and Chen, Shou-Jen and Chen, Yu-Hua and Cheng, Hsi-Chun and Dhawan, Kunal and Fang, Jia-Lin and Fang, Shi-Xin and Chiang, Kuan-Yu Fang and Fu, Chi An and Hsiao, Hsien-Fu and Hsu, Ching Yu and Huang, Shao-Syuan and Wei, Lee Chen and Lin, Hsi-Che and Lin, Hsuan-Hao and Lin, Hsuan-Ting and Lin, Jian-Ren and Liu, Ting-Chun and Lu, Li-Chun and Pai, Tsung-Min and Pasad, Ankita and Kuan, Shih-Yun Shan and Shon, Suwon and Tang, Yuxun and Tsai, Yun-Shao and Wei, Jui-Chiang and Wei, Tzu-Chieh and Wu, Chengxi and Wu, Dien-Ruei and Yang, Chao-Han Huck and Yang, Chieh-Chi and Yip, Jia Qi and Yuan, Shao-Xiang and Noroozi, Vahid and Chen, Zhehuai and Wu, Haibin and Livescu, Karen and Harwath, David and Watanabe, Shinji and Lee, Hung-yi},
         booktitle={International Conference on Learning Representations},
         year={2025},
         url={https://openreview.net/forum?id=s7lzZpAW7T}
@@ -77,15 +90,13 @@
       url: "https://huggingface.co/Codec-SUPERB"
   bibtex: |
     @inproceedings{wu-etal-2024-codec,
-        title = "Codec-{SUPERB}: An In-Depth Analysis of Sound Codec Models",
-        author = "Wu, Haibin  and Chung, Ho-Lam  and Lin, Yi-Cheng  and Wu, Yuan-Kuei  and Chen, Xuanjun  and Pai, Yu-Chi  and Wang, Hsiu-Hsuan  and Chang, Kai-Wei  and Liu, Alexander  and Lee, Hung-yi",
-        editor = "Ku, Lun-Wei  and Martins, Andre  and Srikumar, Vivek",
-        booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
-        year = "2024",
-        publisher = "Association for Computational Linguistics",
-        url = "https://aclanthology.org/2024.findings-acl.616/",
-        doi = "10.18653/v1/2024.findings-acl.616",
-        pages = "10330--10348",
+        title={Codec-{SUPERB}: An In-Depth Analysis of Sound Codec Models},
+        author={Wu, Haibin and Chung, Ho-Lam and Lin, Yi-Cheng and Wu, Yuan-Kuei and Chen, Xuanjun and Pai, Yu-Chi and Wang, Hsiu-Hsuan and Chang, Kai-Wei and Liu, Alexander and Lee, Hung-yi},
+        booktitle={Findings of the Association for Computational Linguistics: ACL 2024},
+        pages={10330--10348},
+        year={2024},
+        doi={10.18653/v1/2024.findings-acl.616},
+        url={https://aclanthology.org/2024.findings-acl.616/}
     }
 
 - title: "Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models"
@@ -103,7 +114,7 @@
   bibtex: |
     @inproceedings{wu2024codecsuperbslt,
         title={Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural codec models},
-        author={Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Jiawei Du and Kai-Wei Chang and Ke-Han Lu and Alexander Liu and Ho-Lam Chung and Yuan-Kuei Wu and Dongchao Yang and Songxiang Liu and Yi-Chiao Wu and Xu Tan and James Glass and Shinji Watanabe and Hung-yi Lee},
+        author={Wu, Haibin and Chen, Xuanjun and Lin, Yi-Cheng and Du, Jiawei and Chang, Kai-Wei and Lu, Ke-Han and Liu, Alexander and Chung, Ho-Lam and Wu, Yuan-Kuei and Yang, Dongchao and Liu, Songxiang and Wu, Yi-Chiao and Tan, Xu and Glass, James and Watanabe, Shinji and Lee, Hung-yi},
         booktitle={2024 IEEE Spoken Language Technology Workshop (SLT)},
         year={2024}
     }
@@ -120,7 +131,7 @@
   bibtex: |
     @misc{lin2025gpt4o,
         title={A Preliminary Exploration with GPT-4o Voice Mode},
-        author={Yu-Xiang Lin and Chih-Kai Yang and Wei-Chih Chen and Chen-An Li and Chien-yu Huang and Xuanjun Chen and Hung-yi Lee},
+        author={Lin, Yu-Xiang and Yang, Chih-Kai and Chen, Wei-Chih and Li, Chen-An and Huang, Chien-yu and Chen, Xuanjun and Lee, Hung-yi},
         year={2025},
         eprint={2502.09940},
         archivePrefix={arXiv},
@@ -139,7 +150,7 @@
   bibtex: |
     @misc{yang2024building,
         title={Building a Taiwanese Mandarin Spoken Language Model: A First Attempt},
-        author={Chih-Kai Yang and Yu-Kuan Fu and Chen-An Li and Yi-Cheng Lin and Yu-Xiang Lin and Wei-Chih Chen and Ho Lam Chung and Chun-Yi Kuan and Wei-Ping Huang and Ke-Han Lu and Tzu-Quan Lin and Hsiu-Hsuan Wang and En-Pei Hu and Chan-Jan Hsu and Liang-Hsuan Tseng and I-Hsiang Chiu and Ulin Sanga and Xuanjun Chen and Po-chun Hsu and Shu-wen Yang and Hung-yi Lee},
+        author={Yang, Chih-Kai and Fu, Yu-Kuan and Li, Chen-An and Lin, Yi-Cheng and Lin, Yu-Xiang and Chen, Wei-Chih and Chung, Ho Lam and Kuan, Chun-Yi and Huang, Wei-Ping and Lu, Ke-Han and Lin, Tzu-Quan and Wang, Hsiu-Hsuan and Hu, En-Pei and Hsu, Chan-Jan and Tseng, Liang-Hsuan and Chiu, I-Hsiang and Sanga, Ulin and Chen, Xuanjun and Hsu, Po-chun and Yang, Shu-wen and Lee, Hung-yi},
         year={2024},
         eprint={2411.07111},
         archivePrefix={arXiv},
@@ -162,7 +173,7 @@
   bibtex: |
     @misc{wu2024towards,
         title={Towards audio language modeling - an overview},
-        author={Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Kai-wei Chang and Ho-Lam Chung and Alexander Liu and Hung-yi Lee},
+        author={Wu, Haibin and Chen, Xuanjun and Lin, Yi-Cheng and Chang, Kai-wei and Chung, Ho-Lam and Liu, Alexander and Lee, Hung-yi},
         year={2024},
         eprint={2402.13236},
         archivePrefix={arXiv},
@@ -174,7 +185,7 @@
 # --- Retrieval & Agentic LLMs ---
 - title: "MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses"
   authors_short: "<u>Xuanjun Chen</u>, Hua-Hsuan Chen, Wei-Chung Lu, Yinghao Ma, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "Technical Report, Sep. 2026"
+  venue: "Technical Report, Oct. 2026"
   category: "rag"
   id: "chen2026metabench"
   selected: true
@@ -184,11 +195,11 @@
   bibtex: |
     @misc{chen2026metabench,
         title={MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses},
-        author={Xuanjun Chen and Hua-Hsuan Chen and Wei-Chung Lu and Yinghao Ma and Jyh-Shing Roger Jang and Hung-yi Lee},
+        author={Chen, Xuanjun and Chen, Hua-Hsuan and Lu, Wei-Chung and Ma, Yinghao and Jang, Jyh-Shing Roger and Lee, Hung-yi},
         year={2026},
-        month={September},
         eprint={2609.33411},
-        archivePrefix={arXiv}
+        archivePrefix={arXiv},
+        primaryClass={cs.AI}
     }
 
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
@@ -205,7 +216,7 @@
   bibtex: |
     @article{cyli2026codarag,
         title={CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning},
-        author={Cheng-Yen Li and Xuanjun Chen and Claire Lin and Wei-Yu Chen and Wenhua Nie and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Li, Cheng-Yen and Chen, Xuanjun and Lin, Claire and Chen, Wei-Yu and Nie, Wenhua and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         journal={ACM Transactions on Intelligent Systems and Technology},
         year={2026}
     }
@@ -226,7 +237,7 @@
   bibtex: |
     @inproceedings{chou2026efficient,
         title={Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG},
-        author={Wei-Chieh Chou and Xuanjun Chen and Jian-Ren Lin and Claire Lin and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chou, Wei-Chieh and Chen, Xuanjun and Lin, Jian-Ren and Lin, Claire and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={Third Conference on Language Modeling (COLM)},
         year={2026}
     }
@@ -248,11 +259,11 @@
       url: "https://arxiv.org/abs/2511.07445"
   bibtex: |
     @inproceedings{lin2025preliminary,
-        title = "A Preliminary Study of {RAG} for {T}aiwanese Historical Archives",
-        author = "Lin, Claire  and Feng, Bo-Han  and Chen, Xuanjun  and Yang, Te-Lun  and Lee, Hung-yi  and Jang, Jyh-Shing Roger",
-        booktitle = "Proceedings of the 37th Conference on Computational Linguistics and Speech Processing (ROCLING 2025)",
-        year = "2025",
-        url = "https://aclanthology.org/2025.rocling-main.6"
+        title={A Preliminary Study of {RAG} for {T}aiwanese Historical Archives},
+        author={Lin, Claire and Feng, Bo-Han and Chen, Xuanjun and Yang, Te-Lun and Lee, Hung-yi and Jang, Jyh-Shing Roger},
+        booktitle={Proceedings of the 37th Conference on Computational Linguistics and Speech Processing (ROCLING 2025)},
+        year={2025},
+        url={https://aclanthology.org/2025.rocling-main.6}
     }
 
 # --- Audio Generation ---
@@ -268,12 +279,11 @@
   bibtex: |
     @misc{chen2026llmagents,
         title={Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?},
-        author={Xuanjun Chen and Zixiong Su and Hao Shi and Chang Zeng and Kai Li and Jyh-Shing Roger Jang and Hung-yi Lee},
+        author={Chen, Xuanjun and Su, Zixiong and Shi, Hao and Zeng, Chang and Li, Kai and Jang, Jyh-Shing Roger and Lee, Hung-yi},
         year={2026},
-        month={October},
         eprint={2610.04488},
         archivePrefix={arXiv},
-        note={Technical Report}
+        primaryClass={cs.SD}
     }
 
 - title: "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis"
@@ -288,7 +298,7 @@
   bibtex: |
     @inproceedings{yu2026listen,
         title={Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis},
-        author={Chee-En Yu and Yi-Cheng Lin and Sung-Feng Huang and Yun-Shao Tsai and Ho-Lam Chung and Xuanjun Chen and Hung-yi Lee},
+        author={Yu, Chee-En and Lin, Yi-Cheng and Huang, Sung-Feng and Tsai, Yun-Shao and Chung, Ho-Lam and Chen, Xuanjun and Lee, Hung-yi},
         booktitle={2026 IEEE Spoken Language Technology Workshop (SLT)},
         year={2026}
     }
@@ -311,7 +321,7 @@
   bibtex: |
     @misc{lee2026ssmttm,
         title={Training-Efficient Text-to-Music Generation with State-Space Modeling},
-        author={Wei-Jaw Lee and Fang-Chih Hsieh and Xuanjun Chen and Fang-Duo Tsai and Yi-Hsuan Yang},
+        author={Lee, Wei-Jaw and Hsieh, Fang-Chih and Chen, Xuanjun and Tsai, Fang-Duo and Yang, Yi-Hsuan},
         year={2026},
         eprint={2601.14786},
         archivePrefix={arXiv},
@@ -372,11 +382,11 @@
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.04841"
   bibtex: |
-    @article{chen2026joint,
-      title={Joint Fullband-Subband Modeling for High-Resolution SingFake Detection},
-      author={Chen, Xuanjun and Hu, Chia-Yu and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
-      journal={arXiv preprint arXiv:2604.04841},
-      year={2026}
+    @inproceedings{chen2026joint,
+        title={Joint Fullband-Subband Modeling for High-Resolution SingFake Detection},
+        author={Chen, Xuanjun and Hu, Chia-Yu and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
+        booktitle={Interspeech 2026},
+        year={2026}
     }
 
 - title: "CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech"
@@ -400,14 +410,14 @@
     - name: "Code"
       url: "https://github.com/ResponsibleGenAI/CodecFake-Plus-Dataset"
   bibtex: |
-    @ARTICLE{chen2026codecfake,
-    author={Chen, Xuanjun and Du, Jiawei and Wu, Haibin and Zhang, Lin and Lin, I-Ming and Chiu, I-Hsiang and Ren, Wenze and Tseng, Yuan and Tsao, Yu and Jang, Jyh-Shing Roger and Lee, Hung-yi},
-    journal={IEEE Transactions on Audio, Speech and Language Processing},
-    title={CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech},
-    year={2026},
-    volume={34},
-    pages={2929--2944},
-    doi={10.1109/TASLPRO.2026.3692291}
+    @article{chen2026codecfake,
+        title={CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech},
+        author={Chen, Xuanjun and Du, Jiawei and Wu, Haibin and Zhang, Lin and Lin, I-Ming and Chiu, I-Hsiang and Ren, Wenze and Tseng, Yuan and Tsao, Yu and Jang, Jyh-Shing Roger and Lee, Hung-yi},
+        journal={IEEE Transactions on Audio, Speech and Language Processing},
+        volume={34},
+        pages={2929--2944},
+        year={2026},
+        doi={10.1109/TASLPRO.2026.3692291}
     }
 
 - title: "How Does Instrumental Music Help SingFake Detection?"
@@ -423,13 +433,11 @@
     - name: "IEEE"
       url: "https://ieeexplore.ieee.org/abstract/document/11460829"
   bibtex: |
-    @misc{chen2025how,
+    @inproceedings{chen2025how,
         title={How Does Instrumental Music Help SingFake Detection?},
-        author={Xuanjun Chen and Chia-Yu Hu and I-Ming Lin and Yi-Cheng Lin and I-Hsiang Chiu and You Zhang and Sung-Feng Huang and Yi-Hsuan Yang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
-        year={2025},
-        eprint={2509.14675},
-        archivePrefix={arXiv},
-        primaryClass={cs.SD}
+        author={Chen, Xuanjun and Hu, Chia-Yu and Lin, I-Ming and Lin, Yi-Cheng and Chiu, I-Hsiang and Zhang, You and Huang, Sung-Feng and Yang, Yi-Hsuan and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
+        booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+        year={2026}
     }
 
 - title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
@@ -444,7 +452,7 @@
   bibtex: |
     @inproceedings{chen2026mitigating,
         title={Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech},
-        author={Xuanjun Chen and Yun-Shing Wu and Wei-Chung Lu and Claire Lin and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Wu, Yun-Shing and Lu, Wei-Chung and Lin, Claire and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={2026 International Symposium on Chinese Spoken Language Processing (ISCSLP)},
         year={2026}
     }
@@ -461,7 +469,7 @@
   bibtex: |
     @inproceedings{chen2025localizing,
         title={Localizing Audio-Visual Deepfakes via Hierarchical Boundary Modeling},
-        author={Xuanjun Chen and Shih-Peng Cheng and Jiawei Du and Lin Zhang and Xiaoxiao Miao and Chung-Che Wang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Cheng, Shih-Peng and Du, Jiawei and Zhang, Lin and Miao, Xiaoxiao and Wang, Chung-Che and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={2026 International Symposium on Chinese Spoken Language Processing (ISCSLP)},
         year={2026}
     }
@@ -481,7 +489,7 @@
   bibtex: |
     @inproceedings{chen2025towards,
         title={Towards Generalized Source Tracing for Codec-Based Deepfake Speech},
-        author={Xuanjun Chen and I-Ming Lin and Lin Zhang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Lin, I-Ming and Zhang, Lin and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
         year={2025}
     }
@@ -502,7 +510,7 @@
   bibtex: |
     @inproceedings{chen2025codecbased,
         title={Codec-Based Deepfake Source Tracing via Neural Audio Codec Taxonomy},
-        author={Xuanjun Chen and I-Ming Lin and Lin Zhang and Jiawei Du and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Lin, I-Ming and Zhang, Lin and Du, Jiawei and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={Interspeech 2025},
         year={2025},
         url={https://www.isca-archive.org/interspeech_2025/chen25j_interspeech.pdf}
@@ -528,7 +536,7 @@
   bibtex: |
     @inproceedings{chen2024singing,
         title={Singing Voice Graph Modeling for SingFake Detection},
-        author={Xuanjun Chen and Haibin Wu and Jyh-Shing Roger Jang and Hung-yi Lee},
+        author={Chen, Xuanjun and Wu, Haibin and Jang, Jyh-Shing Roger and Lee, Hung-yi},
         booktitle={Interspeech 2024},
         year={2024},
         url={https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf}
@@ -549,7 +557,7 @@
   bibtex: |
     @inproceedings{chen2024neural,
         title={Neural Codec-based Adversarial Sample Detection for Speaker Verification},
-        author={Xuanjun Chen and Jiawei Du and Haibin Wu and Jyh-Shing Roger Jang and Hung-yi Lee},
+        author={Chen, Xuanjun and Du, Jiawei and Wu, Haibin and Jang, Jyh-Shing Roger and Lee, Hung-yi},
         booktitle={Interspeech 2024},
         year={2024},
         url={https://www.isca-archive.org/interspeech_2024/chen24p_interspeech.pdf}
@@ -573,7 +581,7 @@
   bibtex: |
     @inproceedings{du2024dfadd,
         title={DFADD: The Diffusion and Flow-Matching based Audio Deepfake Dataset},
-        author={Jiawei Du and I-Ming Lin and I-Hsiang Chiu and Xuanjun Chen and Haibin Wu and Wenze Ren and Yu Tsao and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Du, Jiawei and Lin, I-Ming and Chiu, I-Hsiang and Chen, Xuanjun and Wu, Haibin and Ren, Wenze and Tsao, Yu and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={2024 IEEE Spoken Language Technology Workshop (SLT)},
         year={2024}
     }
@@ -595,10 +603,10 @@
   bibtex: |
     @inproceedings{chen2024multimodal,
         title={Multimodal Transformer Distillation for Audio-Visual Synchronization},
-        author={Xuanjun Chen and Haibin Wu and Chung-Che Wang and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Wu, Haibin and Wang, Chung-Che and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-        year={2024},
         pages={1--5},
+        year={2024},
         doi={10.1109/ICASSP48485.2024.10446372}
     }
 
@@ -621,10 +629,10 @@
   bibtex: |
     @inproceedings{chen2022push,
         title={Push-Pull: Characterizing the Adversarial Robustness for Audio-Visual Active Speaker Detection},
-        author={Xuanjun Chen and Haibin Wu and Helen Meng and Hung-yi Lee and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Wu, Haibin and Meng, Helen and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         booktitle={2022 IEEE Spoken Language Technology Workshop (SLT)},
-        year={2022},
         pages={1--8},
+        year={2022},
         doi={10.1109/SLT54892.2023.10022646}
     }
 
@@ -641,7 +649,7 @@
   bibtex: |
     @inproceedings{liao2022adversarial,
         title={Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification},
-        author={Xuanjun Chen and Yen-Lun Liao and Chung-Che Wang and Jyh-Shing Roger Jang},
+        author={Chen, Xuanjun and Liao, Yen-Lun and Wang, Chung-Che and Jang, Jyh-Shing Roger},
         booktitle={Proc. 2022 ISCA Symposium on Security and Privacy in Speech Communication},
         year={2022},
         url={https://www.isca-speech.org/archive/spsc_2022/liao22_spsc.html}

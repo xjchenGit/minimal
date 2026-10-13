@@ -1,12 +1,13 @@
 # Research Highlights on index.html, grouped by publication type.
-# Preprints lead: first-author recent work signals current direction to ML reviewers.
+# Technical reports lead: first-author recent work signals current direction to ML reviewers.
 # Within each group, papers appear in the order listed here.
 # Membership also requires `selected: true` in publications.yml.
 groups:
-  - title: "Preprints &amp; Technical Reports"
+  - title: "Technical Report"
     papers:
-      - chen2026llmagents     # Audio generation
       - chen2026metabench     # Retrieval & agentic LLMs
+      - chen2026lalm          # Audio-language models & benchmarks
+      - chen2026llmagents     # Audio generation
       - wu2024towards         # Audio-language models & benchmarks
   - title: "International Journals"
     papers:
@@ -21,7 +22,5 @@ groups:
       - wu-etal-2024-codec    # Audio-language models & benchmarks
       # Speech venues
       - chen2026joint         # Audio deepfakes
-      - chen2025how           # Audio deepfakes
       - chen2025towards       # Audio deepfakes
-      - chen2025codecbased    # Audio deepfakes
       - chen2024singing       # Audio deepfakes
