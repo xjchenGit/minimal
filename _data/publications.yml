@@ -6,11 +6,17 @@
   category: "audio-llm"
   id: "chen2026lalm"
   selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2610.19476"
   bibtex: |
     @misc{chen2026lalm,
         title={What Does LALM Post-training Learn? Rethinking Audio Understanding and Reasoning Capabilities},
         author={Chen, Hua-Hsuan and Chen, Xuanjun and Lu, Wei-Chung and Yang, Chih-Kai and Lin, Yu-Xiang and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi},
-        year={2026}
+        year={2026},
+        eprint={2610.19476},
+        archivePrefix={arXiv},
+        primaryClass={cs.SD}
     }
 
 - title: "DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment"
