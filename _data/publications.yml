@@ -219,12 +219,15 @@
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.10426"
+    - name: "ACM"
+      url: "https://dl.acm.org/doi/10.1145/3859251"
   bibtex: |
     @article{cyli2026codarag,
         title={CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning},
         author={Li, Cheng-Yen and Chen, Xuanjun and Lin, Claire and Chen, Wei-Yu and Nie, Wenhua and Lee, Hung-yi and Jang, Jyh-Shing Roger},
         journal={ACM Transactions on Intelligent Systems and Technology},
-        year={2026}
+        year={2026},
+        doi={10.1145/3859251}
     }
 
 
