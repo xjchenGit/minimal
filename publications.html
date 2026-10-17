@@ -11,14 +11,15 @@ og_type: profile
 <nav class="pubs-toc" aria-label="On this page">
 	<div class="pubs-toc-title">Topics</div>
 	<ul>
-		<li><a href="#sec-rag" data-target="sec-rag"><span class="label-full">Retrieval &amp; Agentic LLMs</span><span class="label-short">LLMs</span></a></li>
-		<li><a href="#sec-audio-llm" data-target="sec-audio-llm"><span class="label-full">Audio&nbsp;Language&nbsp;Model</span><span class="label-short">Audio LLMs</span></a></li>
+		<li><a href="#sec-rag" data-target="sec-rag"><span class="label-full">RAG &amp; Agentic LLMs</span><span class="label-short">LLMs</span></a></li>
+		<li><a href="#sec-audio-llm" data-target="sec-audio-llm"><span class="label-full">Audio Understanding</span><span class="label-short">Understanding</span></a></li>
 		<li><a href="#sec-audio-generation" data-target="sec-audio-generation"><span class="label-full">Audio Generation</span><span class="label-short">Generation</span></a></li>
 		<li><a href="#sec-deepfake" data-target="sec-deepfake"><span class="label-full">Audio Deepfakes</span><span class="label-short">Deepfakes</span></a></li>
+		<li><a href="#sec-audio-visual" data-target="sec-audio-visual"><span class="label-full">Audio-Visual</span><span class="label-short">Audio-Visual</span></a></li>
 	</ul>
 </nav>
 
-<h3 id="sec-rag" class="category-header">Retrieval &amp; Agentic LLMs</h3>
+<h3 id="sec-rag" class="category-header">RAG &amp; Agentic LLMs</h3>
 <div id="rag-container" class="pub-list-dynamic">
 {%- assign rag_pubs = site.data.publications | where: "category", "rag" -%}
 {%- for pub in rag_pubs %}
@@ -26,7 +27,7 @@ og_type: profile
 {%- endfor %}
 </div>
 
-<h3 id="sec-audio-llm" class="category-header">Audio Large Language Models</h3>
+<h3 id="sec-audio-llm" class="category-header">Audio Understanding</h3>
 <div id="audio-llm-container" class="pub-list-dynamic">
 {%- assign audio_pubs = site.data.publications | where: "category", "audio-llm" -%}
 {%- for pub in audio_pubs %}
@@ -46,6 +47,14 @@ og_type: profile
 <div id="deepfake-container" class="pub-list-dynamic">
 {%- assign deepfake_pubs = site.data.publications | where: "category", "deepfake" -%}
 {%- for pub in deepfake_pubs %}
+{% include pub-item.html pub=pub num=forloop.rindex %}
+{%- endfor %}
+</div>
+
+<h3 id="sec-audio-visual" class="category-header">Audio-Visual Learning</h3>
+<div id="audio-visual-container" class="pub-list-dynamic">
+{%- assign av_pubs = site.data.publications | where: "category", "audio-visual" -%}
+{%- for pub in av_pubs %}
 {% include pub-item.html pub=pub num=forloop.rindex %}
 {%- endfor %}
 </div>
