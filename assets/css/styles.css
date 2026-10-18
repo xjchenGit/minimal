@@ -83,7 +83,7 @@ body {
   padding: 0 0 50px;
   font-size: 17px;
   line-height: 1.65;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--text-body);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -97,7 +97,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--text-strong);
   font-weight: 600;
   margin: 0 0 20px;

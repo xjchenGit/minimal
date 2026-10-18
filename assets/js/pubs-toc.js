@@ -8,8 +8,66 @@
 	if (!targets.length) return;
 
 	const ul = toc.querySelector('ul');
+
+	// Phone: section menu in the top nav bar (shown by CSS at <=480px)
+	const navBar = document.getElementById('topnav-content');
+	const menuLinks = [];
+	if (navBar) {
+		const menu = document.createElement('div');
+		menu.className = 'pubs-toc-menu';
+		const toggle = document.createElement('button');
+		toggle.type = 'button';
+		toggle.className = 'pubs-toc-toggle';
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-label', 'Topics');
+		toggle.innerHTML = '<svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+		const list = document.createElement('ul');
+		list.className = 'pubs-toc-panel';
+		links.forEach(a => {
+			const li = document.createElement('li');
+			const clone = a.cloneNode(true);
+			li.appendChild(clone);
+			list.appendChild(li);
+			menuLinks.push(clone);
+		});
+		menu.appendChild(toggle);
+		navBar.appendChild(menu);
+		// Lives under <body>: the header's backdrop-filter would otherwise become
+		// the containing block for this fixed panel.
+		document.body.appendChild(list);
+
+		// The panel is fixed and spans the header, opening from its bottom edge;
+		// its right padding lines the labels up with the toggle icon.
+		const header = document.getElementById('sidebar');
+		const placePanel = () => {
+			const hr = header.getBoundingClientRect();
+			const tr = toggle.getBoundingClientRect();
+			list.style.top = hr.bottom + 'px';
+			list.style.left = hr.left + 'px';
+			list.style.width = hr.width + 'px';
+			list.style.paddingRight = (hr.right - tr.right + 8) + 'px';
+		};
+		const setOpen = (open) => {
+			if (open) placePanel();
+			list.classList.toggle('is-open', open);
+			toggle.setAttribute('aria-expanded', String(open));
+		};
+		window.addEventListener('scroll', () => {
+			if (list.classList.contains('is-open')) placePanel();
+		}, { passive: true });
+		window.addEventListener('resize', () => setOpen(false));
+		toggle.addEventListener('click', () => setOpen(!list.classList.contains('is-open')));
+		menuLinks.forEach(a => a.addEventListener('click', () => setOpen(false)));
+		document.addEventListener('click', (e) => {
+			if (!menu.contains(e.target) && !list.contains(e.target)) setOpen(false);
+		});
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') setOpen(false);
+		});
+	}
+
 	const setActive = (id) => {
-		links.forEach(a => a.classList.toggle('active', a.dataset.target === id));
+		links.concat(menuLinks).forEach(a => a.classList.toggle('active', a.dataset.target === id));
 	};
 
 	const updateActive = () => {

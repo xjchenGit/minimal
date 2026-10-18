@@ -145,7 +145,7 @@
 
 .pub-venue {
     color: var(--text-strong);
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-style: italic;
     font-weight: 500;
     font-variant-caps: normal;
@@ -359,11 +359,11 @@ h3.category-header[id] {
 .pubs-toc {
     position: fixed;
     top: 235px;
-    right: calc(50% + 540px + 56px);
+    left: calc(50% + 540px + 32px);
     width: 220px;
-    text-align: right;
-    border-right: 1px solid var(--hairline);
-    padding-right: 14px;
+    text-align: left;
+    border-left: 1px solid var(--hairline);
+    padding-left: 14px;
     font-size: 14px;
     line-height: 1.4;
     z-index: 5;
@@ -386,7 +386,7 @@ h3.category-header[id] {
 
 .pubs-toc li {
     margin: 0 0 10px;
-    text-align: right;
+    text-align: left;
 }
 
 .pubs-toc a {
@@ -418,7 +418,7 @@ h3.category-header[id] {
         width: auto;
         max-width: none;
         text-align: left;
-        border-right: none;
+        border-left: none;
         background: rgba(251, 251, 253, 0.88);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
@@ -613,7 +613,107 @@ h3.category-header[id] {
     }
 }
 
-/* Ensure the button is visible */
-.honors-list li.honors-toggle-btn {
-    display: list-item !important;
+/* Section menu at the right end of the top nav bar (built by pubs-toc.js).
+   Shown wherever the sidebar TOC is gone: About page below the sidebar
+   breakpoint, and Publications on phones where five chip labels no longer
+   fit. */
+.pubs-toc-menu {
+    display: none;
+    position: relative;
+    margin-left: auto;
+}
+
+.pubs-toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-right: -8px;
+    padding: 0;
+    color: var(--text-strong);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Full-width frosted panel that drops from the header's bottom edge, in the
+   header's own material (no card, shadow or radius). pubs-toc.js sets
+   top/left/width/padding-right. */
+.pubs-toc-panel {
+    position: fixed;
+    z-index: 99;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 6px 0 10px;
+    list-style: none;
+    background: rgba(251, 251, 253, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border: none;
+    border-bottom: 1px solid var(--hairline);
+    border-radius: 0;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.2s var(--ease),
+        transform 0.2s var(--ease),
+        visibility 0s linear 0.2s;
+}
+
+.pubs-toc-panel.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition:
+        opacity 0.2s var(--ease),
+        transform 0.2s var(--ease);
+}
+
+.pubs-toc-panel a {
+    display: block;
+    line-height: 1.4;
+    text-align: right;
+    padding: 9px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.pubs-toc-panel a.active {
+    color: var(--text-strong);
+    font-weight: 600;
+}
+
+.pubs-toc-panel .label-short {
+    display: none;
+}
+
+@media (max-width: 1620px) {
+    body.page-about .pubs-toc-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    body.page-publications .pubs-toc {
+        display: none;
+    }
+
+    body.page-publications .pubs-toc-menu {
+        display: block;
+    }
+
+    /* The chip row no longer covers the header hairline here */
+    body.page-publications #sidebar.is-scrolled {
+        border-bottom-color: var(--hairline);
+    }
+
+    body.page-publications .category-header {
+        scroll-margin-top: 80px;
+    }
 }

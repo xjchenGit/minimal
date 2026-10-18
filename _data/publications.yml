@@ -284,7 +284,7 @@
 - title: "Codec-SUPERB: An In-Depth Analysis of Sound Codec Models"
   authors_full: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
   authors_short: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, ..., Alexander H. Liu, Hung-yi Lee"
-  venue: "Findings Assoc. Comput. Linguist. (ACL) 2024"
+  venue: "Findings Assoc. Comput. Linguist. (Findings of ACL) 2024"
   venue_notes:
     - { text: "Accept Rate 22.1%", type: "accept-rate" }
     - { text: "311 GitHub Stars", type: "github-stars" }
