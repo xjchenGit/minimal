@@ -47,12 +47,13 @@
 
 - year: "2025"
   title: "NSTC & ACLCLP Travel Grants"
-  details: "INTERSPEECH 2025 (NSTC), IEEE ASRU 2025 (ACLCLP)"
+  details: "Sponsored to present at INTERSPEECH 2025 (NSTC) and IEEE ASRU 2025 (ACLCLP)"
   selected: true
 
 - year: "2024"
   title: "Google Student Travel Grant"
-  details: "Google APAC 2024"
+  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
+  # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
   selected: true
 
 - year: "2024"
@@ -71,8 +72,8 @@
   selected: false
 
 - year: "2021"
-  title: "Ranked 3rd of 42 worldwide"
-  details: "On the LA track of ASVspoof 2021 challenge"
+  title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
+  details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
   selected: true
 
 - year: "2020 – 2026"
