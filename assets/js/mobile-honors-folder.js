@@ -1,12 +1,12 @@
-// The honors list shows its first eight items (CSS in pubs.css) and this adds
-// a right-aligned "Show N more" / "Show less" link that toggles the rest.
-const HONORS_VISIBLE = 8;
+// Honors marked `featured: true` in _data/honors.yml are always visible; the
+// rest carry class .honor-more and are hidden by CSS (pubs.css). This adds a
+// right-aligned "Show N more" / "Show less" link that toggles them.
 
 function initMobileHonors() {
     const honorList = document.querySelector('#honors-container .honors-list');
     if (!honorList) return;
 
-    const hiddenCount = honorList.querySelectorAll('li').length - HONORS_VISIBLE;
+    const hiddenCount = honorList.querySelectorAll('li.honor-more').length;
     if (hiddenCount <= 0) return;
 
     const li = document.createElement('li');

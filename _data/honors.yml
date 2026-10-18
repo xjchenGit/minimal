@@ -1,26 +1,64 @@
+# Items with `featured: true` show above the "Show N more" fold, in the order
+# listed here. Everything else that is `selected: true` is folded until the
+# visitor expands the list.
+
+# Featured (hand-picked order) ------------------------------------------------
+
+# Temporarily hidden until the official announcement (2026-11-01):
+# - year: "2026"
+#   title: "Google PhD Fellowship"
+#   details: "Awarded by Google Research"
+#   featured: true
+#   selected: true
+
 - year: "2026"
   title: "IEEE Signal Processing Society Scholarship"
   details: "One of dozens of international recipients"
+  featured: true
   selected: true
 
 - year: "2026"
   title: "NVIDIA Academic Grant"
   details: "Awarded dedicated GPU compute via competitive selection"
-  selected: true
-
-- year: "2026"
-  title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
-  details: "One of nine recipients at NTU"
+  featured: true
   selected: true
 
 - year: "2025"
   title: "Best Student Paper Nomination"
   details: "The IEEE Automatic Speech Recognition and Understanding Workshop"
+  featured: true
   selected: true
 
 - year: "2025"
   title: "Best Paper Award"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
+  featured: true
+  selected: true
+
+- year: "2024"
+  title: "Google Student Travel Grant"
+  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
+  # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
+  featured: true
+  selected: true
+
+- year: "2021"
+  title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
+  details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
+  featured: true
+  selected: true
+
+- year: "Fall 2018, Fall 2019, Spring 2020"
+  title: "Certificate of Achievement"
+  details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
+  featured: true
+  selected: true
+
+# Folded behind "Show N more" (chronological) --------------------------------
+
+- year: "2026"
+  title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
+  details: "One of nine recipients at NTU"
   selected: true
 
 # - year: "2025"
@@ -51,12 +89,6 @@
   selected: true
 
 - year: "2024"
-  title: "Google Student Travel Grant"
-  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
-  # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
-  selected: true
-
-- year: "2024"
   title: "CTCI Foundation Bursary Award for Overseas Students"
   details: "Awarded by the CTCI Foundation"
   selected: false
@@ -71,19 +103,9 @@
   details: "Awarded by NSTC Taiwan twice"
   selected: false
 
-- year: "2021"
-  title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
-  details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
-  selected: true
-
 - year: "2020 – 2026"
   title: "Taipei City Guangdong Association Scholarship"
   details: "Awarded across six academic years"
-  selected: true
-
-- year: "Fall 2018, Fall 2019, Spring 2020"
-  title: "Certificate of Achievement"
-  details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
   selected: true
 
 - year: "2017"
