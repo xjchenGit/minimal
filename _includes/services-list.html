@@ -1,12 +1,15 @@
 {%- comment -%}
 Renders a list of services (from _data/services.yml): organizer / committee /
 talk / reviewer rows. Usage: {% include services-list.html items=service_items %}
+Pass full=true to show the Reviewer row's complete venue list (all_event)
+instead of the short hand-picked one (event).
 {%- endcomment -%}
 <ul>
 	{%- for item in include.items -%}
 	{%- if item.role == "Reviewer" -%}
+	{%- if include.full and item.all_event -%}{%- assign venues = item.all_event -%}{%- else -%}{%- assign venues = item.event -%}{%- endif -%}
 	{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
-	{%- assign body = body | append: ' <span class="honor-detail">' | append: item.event | append: '</span>' -%}
+	{%- assign body = body | append: ' <span class="honor-detail">' | append: venues | append: '</span>' -%}
 	{%- else -%}
 	{%- assign body = "<b>" | append: item.role | append: ", " -%}
 	{%- if item.link -%}
