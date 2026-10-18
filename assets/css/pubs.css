@@ -29,6 +29,7 @@
     line-height: 1.3;
     letter-spacing: -0.012em;
     color: var(--text-strong);
+    text-wrap: pretty; /* same as h4.hl-title: fill the first line, no balanced halves */
 }
 
 /* Author line, shared by publications.html and the homepage highlight cards */
