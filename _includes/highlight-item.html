@@ -1,0 +1,58 @@
+{%- comment -%}
+Apple-style card for Research Highlights on index.html (publications.html keeps
+pub-item.html). Title, muted authors, then a venue line (award · venue ·
+metrics) and blue "Name ›" links with BibTeX last.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign bib_id = "bib-" | append: pub.id -%}
+{%- assign authors_raw = pub.authors_short | default: pub.authors_full | default: "" -%}
+{%- assign authors_html = "" -%}
+{%- assign _parts = authors_raw | split: ", " -%}
+{%- for _p in _parts -%}
+{%- capture _nb -%}<span class="pub-author">{{ _p }}</span>{%- endcapture -%}
+{%- if forloop.first -%}{%- assign authors_html = _nb -%}
+{%- else -%}{%- assign authors_html = authors_html | append: ", " | append: _nb -%}{%- endif -%}
+{%- endfor -%}
+{%- assign title_html = pub.title | escape | replace: "&lt;br&gt;", " " -%}
+{%- assign expanded_attr = "" -%}
+{%- if pub.authors_full and pub.authors_short and pub.authors_full != pub.authors_short -%}
+{%- assign _full_nb = "" -%}
+{%- assign _full_parts = pub.authors_full | split: ", " -%}
+{%- for _p in _full_parts -%}
+{%- capture _nb -%}<span class="pub-author">{{ _p }}</span>{%- endcapture -%}
+{%- if forloop.first -%}{%- assign _full_nb = _nb -%}
+{%- else -%}{%- assign _full_nb = _full_nb | append: ", " | append: _nb -%}{%- endif -%}
+{%- endfor -%}
+{%- assign expanded_attr = _full_nb | escape -%}
+{%- endif -%}
+{%- assign arxiv_links = pub.links | where: "name", "arXiv" -%}
+{%- assign other_links = pub.links | where_exp: "l", "l.name != 'arXiv'" -%}
+{%- assign sorted_links = arxiv_links | concat: other_links -%}
+
+<article class="hl-item">
+	<h4 class="hl-title">{{ title_html }}</h4>
+	<p class="pub-authors hl-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</p>
+	<p class="hl-meta">
+		{%- if pub.award %}<span class="hl-award">{{ pub.award }}</span>{% endif -%}
+		<span class="hl-venue">{{ pub.venue_short | default: pub.venue }}</span>
+		{%- for note in pub.venue_notes %}<span class="hl-metric">{{ note.text | escape }}</span>{% endfor -%}
+	</p>
+	<p class="hl-links">
+		{%- for l in sorted_links %}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.name | escape }}</a>{% endfor -%}
+		{%- if pub.bibtex %}<a href="javascript:void(0)" onclick="toggleBib('{{ bib_id }}')">BibTeX</a>{% endif -%}
+	</p>
+	{%- if pub.bibtex %}
+	<div id="{{ bib_id }}" class="pub-bibtex" style="display:none; opacity:1;"
+		onmouseenter="cancelHideBib('{{ bib_id }}')"
+		onmouseleave="scheduleHideBib('{{ bib_id }}')"
+		ontouchstart="cancelHideBib('{{ bib_id }}')"
+		ontouchend="scheduleHideBib('{{ bib_id }}')">
+		<pre>{{ pub.bibtex | escape }}</pre>
+		<div class="bib-ctrl">
+			<span class="bib-copy-btn" onclick="copyBib('{{ bib_id }}')" title="Copy to Clipboard">
+				<i class="fa fa-copy"></i>
+			</span>
+		</div>
+	</div>
+	{%- endif %}
+</article>

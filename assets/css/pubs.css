@@ -348,11 +348,42 @@ h3.category-header[id] {
 
 
 
-/* Mobile Honors Folding (CSS-based to prevent flash) */
-/* Moved outside media query based on user feedback needing global folding */
-/* Hide 7th item onwards by default, BUT exclude the toggle button */
-.honors-list:not(.expanded) li:nth-child(n+7):not(.honors-toggle-btn) {
+/* Honors folding (CSS-based to prevent flash): show the first eight,
+   mobile-honors-folder.js adds an Apple-style "Show N more ⌄" link on the
+   right that toggles the rest. */
+.honors-list:not(.expanded) li:nth-child(n+9):not(.honors-toggle-btn) {
     display: none;
+}
+
+#honors-container .honors-list li.honors-toggle-btn {
+    display: block;
+    margin: 4px 0 0;
+    text-align: right;
+}
+
+.honors-toggle-btn button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    font: inherit;
+    font-size: 15px;
+    color: var(--link);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.honors-toggle-btn button:hover {
+    text-decoration: underline;
+}
+
+.honors-toggle-btn svg {
+    transition: transform 0.2s var(--ease);
+}
+
+.honors-list.expanded .honors-toggle-btn svg {
+    transform: rotate(180deg);
 }
 
 /* On-this-page TOC for publications page */
@@ -715,5 +746,160 @@ h3.category-header[id] {
 
     body.page-publications .category-header {
         scroll-margin-top: 80px;
+    }
+}
+
+/* ========== Research Highlights (index.html): Apple-style cards ==========
+   One accent (award), everything else grey metadata; blue "Name ›" links. */
+.hl-item {
+    margin: 0 0 30px;
+}
+
+.hl-meta {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0;
+    row-gap: 2px;
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-muted);
+    letter-spacing: 0;
+}
+
+/* Separator hangs off the preceding item so a wrapped line never starts with it */
+.hl-meta > span:not(:last-child)::after {
+    content: "·";
+    margin: 0 7px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.hl-award {
+    color: #b64400;
+}
+
+.hl-venue {
+    color: var(--text-strong);
+}
+
+.hl-metric {
+    font-weight: 500;
+}
+
+h4.hl-title {
+    margin: 0 0 4px;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--text-strong);
+}
+
+.hl-authors.pub-authors {
+    margin: 0 0 4px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+.hl-authors.pub-authors u {
+    color: var(--text-strong);
+    font-weight: 600;
+}
+
+.hl-links {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    row-gap: 2px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.hl-links a {
+    color: var(--link);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hl-links a::after {
+    content: "\00a0\203A";
+}
+
+.hl-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hl-item {
+        margin-bottom: 26px;
+    }
+
+    .hl-meta {
+        font-size: 12px;
+    }
+
+    h4.hl-title {
+        font-size: 17px;
+    }
+
+    .hl-authors.pub-authors {
+        font-size: 13px;
+    }
+
+    .hl-links {
+        column-gap: 16px;
+        font-size: 13px;
+    }
+}
+
+/* Research Highlights heading block (index.html), Apple-style: tighter
+   headline, upright grey legend, and plain blue inline links. */
+h2#sec-publications {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+}
+
+h2#sec-publications .h2-note,
+body.page-publications h2 .h2-note {
+    display: block;
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    opacity: 1;
+}
+
+#sec-publications + .pubs-note {
+    margin: 0 0 8px;
+    font-size: 17px;
+    color: var(--text-muted);
+}
+
+#sec-publications + .pubs-note a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+#sec-publications + .pubs-note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h2#sec-publications {
+        font-size: 26px;
+    }
+
+    h2#sec-publications .h2-note,
+    body.page-publications h2 .h2-note {
+        font-size: 13px;
+    }
+
+    #sec-publications + .pubs-note {
+        font-size: 15px;
     }
 }

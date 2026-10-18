@@ -1,54 +1,30 @@
+// The honors list shows its first eight items (CSS in pubs.css) and this adds
+// a right-aligned "Show N more" / "Show less" link that toggles the rest.
+const HONORS_VISIBLE = 8;
+
 function initMobileHonors() {
-    // Run on all devices (Desktop & Mobile)
-    // if (window.innerWidth > 768) return;
+    const honorList = document.querySelector('#honors-container .honors-list');
+    if (!honorList) return;
 
-    // Find the "Selected Honors" header
-    const headers = document.querySelectorAll('h2');
-    let honorsHeader = null;
-    for (const h of headers) {
-        if (h.textContent.includes('Selected Honors')) {
-            honorsHeader = h;
-            break;
-        }
-    }
+    const hiddenCount = honorList.querySelectorAll('li').length - HONORS_VISIBLE;
+    if (hiddenCount <= 0) return;
 
-    if (!honorsHeader) return;
-
-    // The list is immediately after the header
-    const honorList = honorsHeader.nextElementSibling;
-    if (!honorList || honorList.tagName !== 'UL') return;
-
-    const items = honorList.querySelectorAll('li');
-    if (items.length <= 6) return;
-
-    // CSS triggers hiding via :nth-child. 
-    // We just rely on that default state, preventing the "flash".
-
-    // Removed the "hide manually" loop here.
-
-    // TEMPORARILY DISABLED: Show more honors feature
-    honorList.classList.add('expanded');
-    /*
-    // Create "Show more" button
-    const hiddenCount = items.length - 6;
-    const btn = document.createElement('li');
-    btn.className = 'honors-toggle-btn'; // Identify button
-    btn.innerHTML = `[ <span style="color: #999;">Show ${hiddenCount} more honors</span> ]`;
-
-    // Style button to match links (color #999) and left align
-    btn.style.cssText = `color: #999; cursor: pointer; list-style: none; margin-top: 5px; margin-bottom: 25px; font-size: 13px; font-style: normal; text-align: left;`;
-
-    // Add click handler
-    btn.onclick = function () {
-        // Add .expanded class to parent UL -> CSS will reveal items
-        honorList.classList.add('expanded');
-        btn.remove();
-    };
-
-    // Insert button at the end of the list
-    honorList.appendChild(btn);
-    */
+    const li = document.createElement('li');
+    li.className = 'honors-toggle-btn';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    const label = document.createElement('span');
+    label.textContent = `Show ${hiddenCount} more`;
+    btn.appendChild(label);
+    btn.insertAdjacentHTML('beforeend', '<svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    btn.addEventListener('click', () => {
+        const expanded = honorList.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', String(expanded));
+        label.textContent = expanded ? 'Show less' : `Show ${hiddenCount} more`;
+    });
+    li.appendChild(btn);
+    honorList.appendChild(li);
 }
 
-// Run on load and resize (optional, but good for rotation)
 document.addEventListener('DOMContentLoaded', initMobileHonors);

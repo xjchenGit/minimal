@@ -65,7 +65,7 @@ head_extra: |
 	</div>
 </div>
 
-<h2 id="sec-publications">Research Highlights <small class="h2-note">* equal contribution, † co-second</small></h2>
+<h2 id="sec-publications">Research Highlights <small class="h2-note">* equal contribution, † co-second author</small></h2>
 <p class="pubs-note">See all on <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="publications.html">browse by topic</a>.</p>
 <div id="pub-container">
 {%- comment -%} Groups and order come from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
@@ -78,7 +78,7 @@ head_extra: |
 {%- assign pub = matching | first -%}
 {%- if pub.selected -%}
 {%- assign highlight_num = highlight_num | plus: 1 -%}
-{% include pub-item.html pub=pub num=highlight_num %}
+{% include highlight-item.html pub=pub %}
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
@@ -98,7 +98,7 @@ head_extra: |
 <h2 id="honors">Selected Honors &amp; Service</h2>
 <h3 class="category-header">Research and Academic Honors</h3>
 <div id="honors-container">
-	<ul class="honors-list expanded">
+	<ul class="honors-list">
 		{%- assign honor_items = site.data.honors | where: "selected", true -%}
 		{%- for item in honor_items -%}
 		{%- assign body = "" -%}
@@ -144,5 +144,5 @@ head_extra: |
 </div>
 
 <script src="assets/js/2mode-pub-renderer.js?v=20" defer></script>
-<script src="assets/js/mobile-honors-folder.js" defer></script>
+<script src="assets/js/mobile-honors-folder.js?v=4" defer></script>
 <script src="assets/js/pubs-toc.js?v=4" defer></script>

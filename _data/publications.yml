@@ -23,6 +23,7 @@
   authors_full: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, Chao-Han Huck Yang, Sung-Feng Huang, Chih-Kai Yang, Chee-En Yu, Chun-Wei Chen, Wei-Chih Chen, Chien-yu Huang, Yi-Cheng Lin, Yu-Xiang Lin, Chi-An Fu, Chun-Yi Kuan, Wenze Ren, <u>Xuanjun Chen</u>, Wei-Ping Huang, En-Pei Hu, Tzu-Quan Lin, Yuan-Kuei Wu, Kuan-Po Huang, Hsiao-Ying Huang, Huang-Cheng Chou, Kai-Wei Chang, Cheng-Han Chiang, Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   authors_short: "Ke-Han Lu, Zhehuai Chen, Szu-Wei Fu, ..., <u>Xuanjun Chen</u>, ..., Boris Ginsburg, Yu-Chiang Frank Wang, Hung-yi Lee"
   venue: "IEEE Trans. Audio Speech Lang. Process. (IEEE TASLP) 2026"
+  venue_short: "IEEE TASLP 2026"
   venue_notes:
     - { text: "JCR Q1, IF 5.1" }
   category: "audio-llm"
@@ -50,6 +51,7 @@
   authors_full: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, Andy T. Liu, Chen-An Li, Yu-Xiang Lin, Wei-Cheng Tseng, Anuj Diwan, Yi-Jen Shih, Jiatong Shi, William Chen, Chih-Kai Yang, <u>Xuanjun Chen</u>, Chi-Yuan Hsiao, Puyuan Peng, Shih-Heng Wang, Chun-Yi Kuan, Ke-Han Lu, Kai-Wei Chang, Fabian Ritter-Gutierrez, Kuan-Po Huang, Siddhant Arora, You-Kuan Lin, Ming To Chuang, Eunjung Yeo, Kalvin Chang, Chung-Ming Chien, Kwanghee Choi, Jun-You Wang, Cheng-Hsiu Hsieh, Yi-Cheng Lin, Chee-En Yu, I-Hsiang Chiu, Heitor R. Guimarães, Jionghao Han, Tzu-Quan Lin, Tzu-Yuan Lin, Homu Chang, Ting-Wu Chang, Chun Wei Chen, Shou-Jen Chen, Yu-Hua Chen, Hsi-Chun Cheng, Kunal Dhawan, Jia-Lin Fang, Shi-Xin Fang, Kuan-Yu Fang Chiang, Chi An Fu, Hsien-Fu Hsiao, Ching Yu Hsu, Shao-Syuan Huang, Lee Chen Wei, Hsi-Che Lin, Hsuan-Hao Lin, Hsuan-Ting Lin, Jian-Ren Lin, Ting-Chun Liu, Li-Chun Lu, Tsung-Min Pai, Ankita Pasad, Shih-Yun Shan Kuan, Suwon Shon, Yuxun Tang, Yun-Shao Tsai, Jui-Chiang Wei, Tzu-Chieh Wei, Chengxi Wu, Dien-Ruei Wu, Chao-Han Huck Yang, Chieh-Chi Yang, Jia Qi Yip, Shao-Xiang Yuan, Vahid Noroozi, Zhehuai Chen, Haibin Wu, Karen Livescu, David Harwath, Shinji Watanabe, Hung-yi Lee"
   authors_short: "Chien-yu Huang, Wei-Chih Chen, Shu-wen Yang, ..., <u>Xuanjun Chen</u>, ..., Shinji Watanabe, Hung-yi Lee"
   venue: "Int. Conf. Learn. Represent. (ICLR) 2025"
+  venue_short: "ICLR 2025"
   venue_notes:
     - { text: "Accept Rate 32.08%", type: "accept-rate" }
   category: "audio-llm"
@@ -115,6 +117,7 @@
 - title: "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
   authors_short: "Cheng-Yen Li*, <u>Xuanjun Chen</u>*, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "ACM Trans. Intell. Syst. Technol. (ACM TIST) 2026"
+  venue_short: "ACM TIST 2026"
   venue_notes:
     - { text: "JCR Q1, IF 10.7" }
   category: "rag"
@@ -139,6 +142,7 @@
 - title: "Only Ask What You Don't Know: Grounded Delta Planning for Efficient Multi-step RAG"
   authors_short: "Wei-Chieh Chou*, <u>Xuanjun Chen</u>*, Jian-Ren Lin, Claire Lin, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Conf. Lang. Model. (COLM) 2026"
+  venue_short: "COLM 2026"
   venue_notes:
     - { text: "Accept Rate 29.1%", type: "accept-rate" }
   category: "rag"
@@ -161,6 +165,7 @@
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_short: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen</u>*, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Conf. Comput. Linguist. Speech Process. (ROCLING) 2025"
+  venue_short: "ROCLING 2025"
   award: "Best Paper Award"
   category: "rag"
   id: "lin2025preliminary"
@@ -202,6 +207,7 @@
 - title: "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis"
   authors_short: "Chee-En Yu, Yi-Cheng Lin, Sung-Feng Huang, Yun-Shao Tsai, Ho-Lam Chung, <u>Xuanjun Chen</u>, Hung-yi Lee"
   venue: "IEEE Spoken Lang. Technol. Workshop (IEEE SLT) 2026"
+  venue_short: "IEEE SLT 2026"
   category: "audio-generation"
   id: "yu2026listen"
   selected: true
@@ -220,6 +226,7 @@
   authors_full: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
   authors_short: "Wei-Jaw Lee, Fang-Chih Hsieh, <u>Xuanjun Chen</u>, Fang-Duo Tsai, Yi-Hsuan Yang"
   venue: "Late-Breaking Demo at Int. Soc. Music Inf. Retr. Conf. (ISMIR) 2025 (Full Paper Under Review at TASLP)"
+  venue_short: "ISMIR 2025 LBD"
   category: "audio-generation"
   id: "lee2026ssmttm"
   links:
@@ -245,6 +252,7 @@
   authors_full: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, Rong Chao, Kuo-Hsuan Hung, You-Jin Li, Wen-Yuan Ting, Hsin-Min Wang, Yu Tsao"
   authors_short: "Wenze Ren, Haibin Wu, Yi-Cheng Lin, <u>Xuanjun Chen</u>, ..., Hsin-Min Wang, Yu Tsao"
   venue: "IEEE Int. Conf. Acoust. Speech Signal Process. (ICASSP) 2025"
+  venue_short: "ICASSP 2025"
   category: "audio-generation"
   id: "ren2025leveraging"
   links:
@@ -285,6 +293,7 @@
   authors_full: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, Yu-Chi Pai, Hsiu-Hsuan Wang, Kai-Wei Chang, Alexander H. Liu, Hung-yi Lee"
   authors_short: "Haibin Wu*, Ho-Lam Chung*, Yi-Cheng Lin†, Yuan-Kuei Wu†, <u>Xuanjun Chen</u>†, ..., Alexander H. Liu, Hung-yi Lee"
   venue: "Findings Assoc. Comput. Linguist. (Findings of ACL) 2024"
+  venue_short: "Findings of ACL 2024"
   venue_notes:
     - { text: "Accept Rate 22.1%", type: "accept-rate" }
     - { text: "311 GitHub Stars", type: "github-stars" }
@@ -317,6 +326,7 @@
   authors_full: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, Ke-Han Lu, Alexander Liu, Ho-Lam Chung, Yuan-Kuei Wu, Dongchao Yang, Songxiang Liu, Yi-Chiao Wu, Xu Tan, James Glass, Shinji Watanabe, Hung-yi Lee"
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Jiawei Du, Kai-Wei Chang, ..., Shinji Watanabe, Hung-yi Lee"
   venue: "IEEE Spoken Lang. Technol. Workshop (IEEE SLT) 2024"
+  venue_short: "IEEE SLT 2024"
   category: "audio-generation"
   id: "wu2024codecsuperbslt"
   selected: true
@@ -400,6 +410,7 @@
   authors_full: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, I-Hsiang Chiu, Wenze Ren, Yuan Tseng, Yu Tsao, Jyh-Shing Roger Jang, Hung-yi Lee"
   authors_short: "<u>Xuanjun Chen</u>*, Jiawei Du*, Haibin Wu, Lin Zhang, I-Ming Lin, ..., Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "IEEE Trans. Audio Speech Lang. Process. (IEEE TASLP) 2026"
+  venue_short: "IEEE TASLP 2026"
   venue_notes:
     - { text: "JCR Q1, IF 5.1" }
   category: "deepfake"
@@ -431,6 +442,7 @@
   authors_full: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, You Zhang, Sung-Feng Huang, Yi-Hsuan Yang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>, Chia-Yu Hu, I-Ming Lin, Yi-Cheng Lin, I-Hsiang Chiu, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Int. Conf. Acoust. Speech Signal Process. (ICASSP) 2026"
+  venue_short: "ICASSP 2026"
   category: "deepfake"
   id: "chen2025how"
   selected: true
@@ -451,6 +463,7 @@
   authors_full: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Int. Symp. Chin. Spoken Lang. Process. (ISCSLP) 2026"
+  venue_short: "ISCSLP 2026"
   category: "deepfake"
   id: "chen2026mitigating"
   links:
@@ -467,6 +480,7 @@
 - title: "Towards Generalized Source Tracing for Codec-Based Deepfake Speech"
   authors_short: "<u>Xuanjun Chen</u>*, I-Ming Lin*, Lin Zhang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Autom. Speech Recognit. Underst. Workshop (IEEE ASRU) 2025"
+  venue_short: "IEEE ASRU 2025"
   award: "Best Student Paper Nominee (Top 2.5%)"
   category: "deepfake"
   id: "chen2025towards"
@@ -557,6 +571,7 @@
   authors_full: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, ..., Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Spoken Lang. Technol. Workshop (IEEE SLT) 2024"
+  venue_short: "IEEE SLT 2024"
   category: "deepfake"
   id: "du2024dfadd"
   links:
@@ -579,6 +594,7 @@
 - title: "Adversarial Speaker Distillation for Countermeasure Model on Automatic Speaker Verification"
   authors_short: "<u>Xuanjun Chen</u>*, Yen-Lun Liao*, Chung-Che Wang, Jyh-Shing Roger Jang"
   venue: "Symp. Secur. Priv. Speech Commun. (SPSC) at INTERSPEECH 2022"
+  venue_short: "SPSC 2022"
   category: "deepfake"
   id: "liao2022adversarial"
   links:
@@ -600,6 +616,7 @@
   authors_full: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, Chung-Che Wang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Shih-Peng Cheng*, Jiawei Du, Lin Zhang, Xiaoxiao Miao, ..., Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Int. Symp. Chin. Spoken Lang. Process. (ISCSLP) 2026"
+  venue_short: "ISCSLP 2026"
   category: "audio-visual"
   id: "chen2025localizing"
   links:
@@ -616,6 +633,7 @@
 - title: "Multimodal Transformer Distillation for Audio-Visual Synchronization"
   authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Chung-Che Wang, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Int. Conf. Acoust. Speech Signal Process. (ICASSP) 2024"
+  venue_short: "ICASSP 2024"
   category: "audio-visual"
   id: "chen2024multimodal"
   links:
@@ -640,6 +658,7 @@
 - title: "Push-Pull: Characterizing the Adversarial Robustness for Audio-Visual Active Speaker Detection"
   authors_short: "<u>Xuanjun Chen</u>*, Haibin Wu*, Helen Meng, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Spoken Lang. Technol. Workshop (IEEE SLT) 2022, Jan 2023"
+  venue_short: "IEEE SLT 2022"
   category: "audio-visual"
   id: "chen2022push"
   links:
