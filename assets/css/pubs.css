@@ -371,12 +371,12 @@ h3.category-header[id] {
     left: 0;
     right: 0;
     height: 1px;
+    /* Flat in the middle 60% (darker than --hairline so the fade stays visible), fading over the outer 20% each side. */
     background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.04) 15%,
-        rgba(0, 0, 0, 0.10) 50%,
-        rgba(0, 0, 0, 0.04) 85%,
+        rgba(0, 0, 0, 0.22) 20%,
+        rgba(0, 0, 0, 0.22) 80%,
         rgba(0, 0, 0, 0) 100%
     );
 }

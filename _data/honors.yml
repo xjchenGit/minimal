@@ -24,13 +24,13 @@
   selected: true
 
 - year: "2025"
-  title: "Best Student Paper Nomination"
-  details: "The IEEE Automatic Speech Recognition and Understanding Workshop"
+  title: "IEEE ASRU 2025 Best Student Paper Nomination"
+  details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
   featured: true
   selected: true
 
 - year: "2025"
-  title: "Best Paper Award"
+  title: "ROCLING 2025 Best Paper Award"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
   featured: true
   selected: true
@@ -39,6 +39,12 @@
   title: "Google Student Travel Grant"
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
+  featured: true
+  selected: true
+
+- year: "2024 – 2025"
+  title: "CTCI Foundation Science and Technology Scholarship"
+  details: "Bursary Award 2024 & Research Scholarship 2025"
   featured: true
   selected: true
 
@@ -92,11 +98,6 @@
   title: "CTCI Foundation Bursary Award for Overseas Students"
   details: "Awarded by the CTCI Foundation"
   selected: false
-
-- year: "2024 – 2025"
-  title: "CTCI Foundation Science and Technology Scholarship"
-  details: "Bursary Award 2024 & Research Scholarship 2025"
-  selected: true
 
 - year: "2024 – 2025"
   title: "Subsidy for Domestic Graduate Students to Attend International Academic Conferences"
