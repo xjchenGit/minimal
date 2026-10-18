@@ -23,15 +23,21 @@
 }
 
 .pub-title {
-    color: var(--text-strong);
+    margin: 0 0 4px;
+    font-size: 17px;
     font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--text-strong);
 }
 
+/* Author line, shared by publications.html and the homepage highlight cards */
 .pub-authors {
     display: block;
-    color: var(--text-body);
-    margin-top: 2px;
-    font-size: 15px;
+    margin: 0 0 4px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-muted);
 }
 
 .author-toggle:hover {
@@ -39,8 +45,8 @@
 }
 
 .pub-authors u {
-    color: inherit;
-    font-weight: 700;
+    color: var(--text-strong);
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -49,109 +55,6 @@
     word-break: keep-all;
     overflow-wrap: normal;
     hyphens: manual;
-}
-
-.pub-links {
-    font-size: 13px;
-    display: inline;
-    color: var(--text-muted);
-    margin-left: 0;
-    font-family: var(--font-sans);
-}
-
-.pub-links::before {
-    content: "·";
-    color: var(--text-muted);
-    opacity: 0.55;
-    margin: 0 6px;
-    font-weight: 400;
-}
-
-@media (max-width: 768px) {
-    .pub-links {
-        display: block;
-        margin-top: 4px;
-    }
-
-    .pub-links::before {
-        content: none;
-    }
-}
-
-.pub-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.15s var(--ease);
-}
-
-.pub-links a:hover {
-    color: var(--link);
-    text-decoration: none;
-}
-
-.pub-link-sep {
-    color: var(--text-muted);
-    opacity: 0.55;
-    margin: 0 2px;
-    font-weight: 400;
-    user-select: none;
-}
-
-.pub-award {
-    display: inline;
-    color: #8a6800;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    margin-left: 10px;
-    white-space: nowrap;
-}
-
-.pub-award::before {
-    content: "★ ";
-}
-
-.pub-venue-note {
-    display: inline;
-    color: #a3324a;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    margin-left: 10px;
-    white-space: nowrap;
-}
-
-.pub-venue-note::before {
-    content: "◆ ";
-}
-
-.pub-venue-note--accept-rate::before {
-    content: "◎ ";
-}
-
-.pub-venue-note--github-stars::before {
-    content: "★ ";
-}
-
-/* U+FE0E keeps the arrow as text so Apple platforms don't render it as an emoji. */
-.pub-venue-note--citations::before {
-    content: "\2197\FE0E  ";
-}
-
-.pub-row-meta {
-    display: inline;
-    /* Default for desktop: keep things inline */
-}
-
-.pub-venue {
-    color: var(--text-strong);
-    font-family: var(--font-sans);
-    font-style: italic;
-    font-weight: 500;
-    font-variant-caps: normal;
-    letter-spacing: 0;
-    font-size: 15px;
-    font-variant-numeric: tabular-nums lining-nums;
 }
 
 .category-header {
@@ -212,19 +115,13 @@ h3.category-header[id] {
     .category-header { scroll-margin-top: 130px; }
 }
 
-/* .pub-venue-row removed, replaced by .pub-venue */
-
 @media (max-width: 768px) {
     .title-br {
         display: none;
     }
 
-    /* 手機隱藏強制換行 */
     .pub-item-row {
-        font-size: 14px;
         margin-bottom: 20px;
-        hyphens: auto;
-        word-break: break-word;
     }
 
     .pub-num-col {
@@ -236,29 +133,12 @@ h3.category-header[id] {
         white-space: nowrap;
     }
 
-    /* Author list 在手機版改為左對齊,避免逗號分隔造成的怪空隙 */
+    .pub-title {
+        font-size: 17px;
+    }
+
     .pub-authors {
-        text-align: left;
-        word-spacing: normal;
         font-size: 13px;
-    }
-
-    /* Mobile: Reorder Award to new line using Block display */
-    .pub-row-meta {
-        display: block;
-    }
-
-    .pub-venue {
-        display: inline;
-        font-size: 12px;
-    }
-
-    .pub-award,
-    .pub-venue-note {
-        display: inline;
-        margin-left: 8px;
-        margin-top: 0;
-        font-size: 12px;
     }
 }
 
@@ -713,8 +593,10 @@ h3.category-header[id] {
     }
 }
 
-/* ========== Research Highlights (index.html): Apple-style cards ==========
-   One accent (award), everything else grey metadata; blue "Name ›" links. */
+/* ========== Publication cards (index.html highlights + publications.html) ==========
+   Apple-style: one accent (award), everything else grey metadata; blue
+   "Name ›" links. .hl-meta / .hl-links are shared by both pages; the
+   homepage keeps its larger .hl-title / .hl-item spacing. */
 .hl-item {
     margin: 0 0 30px;
 }
@@ -761,18 +643,6 @@ h4.hl-title {
     color: var(--text-strong);
 }
 
-.hl-authors.pub-authors {
-    margin: 0 0 4px;
-    font-size: 14px;
-    line-height: 1.45;
-    color: var(--text-muted);
-}
-
-.hl-authors.pub-authors u {
-    color: var(--text-strong);
-    font-weight: 600;
-}
-
 .hl-links {
     display: flex;
     flex-wrap: wrap;
@@ -810,10 +680,6 @@ h4.hl-title {
         font-size: 17px;
     }
 
-    .hl-authors.pub-authors {
-        font-size: 13px;
-    }
-
     .hl-links {
         column-gap: 16px;
         font-size: 12px; /* matches .hl-meta on mobile */
@@ -825,6 +691,12 @@ h4.hl-title {
 h2#sec-publications {
     font-size: 32px;
     letter-spacing: -0.02em;
+}
+
+/* Headings followed by a "See all / full list" note sit close to it */
+h2#sec-publications,
+body.page-about h2#honors {
+    margin-bottom: 10px;
 }
 
 h2#sec-publications .h2-note,
