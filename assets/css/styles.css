@@ -172,8 +172,10 @@ section h3.category-header + div ul {
   margin-top: 0;
 }
 
+/* A sub-header right after an h2 (Honors page) keeps the same 32px top margin as
+   every other .category-header, so the first group is not squeezed against the title. */
 section h2 + h3.category-header {
-  margin-top: 0;
+  margin-top: 32px;
 }
 
 /* Homepage "Selected Honors": the "See the full list" note sits between the
