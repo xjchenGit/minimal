@@ -710,20 +710,15 @@ body.page-publications h2 .h2-note {
     opacity: 1;
 }
 
-#sec-publications + .pubs-note {
+#sec-publications + .pubs-note,
+body.page-about h2#honors + .pubs-note {
     margin: 0 0 8px;
     font-size: 17px;
     color: var(--text-muted);
 }
 
-#sec-publications + .pubs-note a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-#sec-publications + .pubs-note a:hover {
-    text-decoration: underline;
-}
+/* Note links: grey + light underline comes from styles.css `.pubs-note a`;
+   the global `a:hover` turns them blue on hover. No override needed here. */
 
 @media (max-width: 768px) {
     h2#sec-publications {
@@ -735,7 +730,8 @@ body.page-publications h2 .h2-note {
         font-size: 13px;
     }
 
-    #sec-publications + .pubs-note {
+    #sec-publications + .pubs-note,
+    body.page-about h2#honors + .pubs-note {
         font-size: 15px;
     }
 }
