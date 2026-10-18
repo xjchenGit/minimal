@@ -14,7 +14,7 @@
   selected: true
 
 - year: "2025"
-  title: "Best Student Paper nominee"
+  title: "Best Student Paper Nomination"
   details: "The IEEE Automatic Speech Recognition and Understanding Workshop"
   selected: true
 
@@ -46,8 +46,8 @@
   selected: false
 
 - year: "2025"
-  title: "Conference Travel Grants"
-  details: "supported by Taiwan's ACLCLP & NSTC"
+  title: "NSTC & ACLCLP Travel Grants"
+  details: "INTERSPEECH 2025 (NSTC), IEEE ASRU 2025 (ACLCLP)"
   selected: true
 
 - year: "2024"
@@ -62,7 +62,7 @@
 
 - year: "2024 – 2025"
   title: "CTCI Foundation Science and Technology Scholarship"
-  details: "Research Scholarship 2025 & Bursary Award 2024"
+  details: "Bursary Award 2024 & Research Scholarship 2025"
   selected: true
 
 - year: "2024 – 2025"
@@ -80,7 +80,7 @@
   details: "Awarded across six academic years"
   selected: true
 
-- year: "Fall '18, Fall '19, Spring '20"
+- year: "Fall 2018, Fall 2019, Spring 2020"
   title: "Certificate of Achievement"
   details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
   selected: true
