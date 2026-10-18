@@ -13,7 +13,7 @@ metrics) and blue "Name ›" links with BibTeX last.
 {%- if forloop.first -%}{%- assign authors_html = _nb -%}
 {%- else -%}{%- assign authors_html = authors_html | append: ", " | append: _nb -%}{%- endif -%}
 {%- endfor -%}
-{%- assign title_html = pub.title | escape | replace: "&lt;br&gt;", " " -%}
+{%- assign title_html = pub.title | escape | replace: "&lt;br&gt;", " " | replace: "&lt;nobr&gt;", '<span class="title-nobr">' | replace: "&lt;/nobr&gt;", "</span>" -%}
 {%- assign expanded_attr = "" -%}
 {%- if pub.authors_full and pub.authors_short and pub.authors_full != pub.authors_short -%}
 {%- assign _full_nb = "" -%}

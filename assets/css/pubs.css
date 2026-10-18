@@ -646,6 +646,14 @@ h4.hl-title {
     text-wrap: pretty;
 }
 
+/* <nobr>…</nobr> in a publications.yml title: keep that phrase on one line
+   on desktop so the wrap lands before it; phones wrap it freely. */
+@media (min-width: 769px) {
+    .title-nobr {
+        white-space: nowrap;
+    }
+}
+
 .hl-links {
     display: flex;
     flex-wrap: wrap;
