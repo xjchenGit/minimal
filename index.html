@@ -98,7 +98,7 @@ head_extra: |
 	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
 	{% include honors-list.html items=honor_items %}
 </div>
-<h3 class="category-header"><span class="desk-text">International Event Organizer &amp; Reviewer</span><span class="mob-text">Organizer and Reviewer</span></h3>
+<h3 class="category-header">Service and Outreach</h3>
 <div id="services-container">
 	{%- assign service_items = site.data.services | where: "selected", true | where: "featured", true %}
 	{% include services-list.html items=service_items %}
