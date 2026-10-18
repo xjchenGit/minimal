@@ -356,29 +356,16 @@ h3.category-header[id] {
     display: none;
 }
 
-/* When expanded, a 1px rule that fades out toward both ends sits above the
-   first folded item, marking where the hand-picked block ends. */
-.honors-list.expanded li:not(.honor-more) + li.honor-more {
-    position: relative;
-    margin-top: 18px;
-    padding-top: 14px;
-}
-
-.honors-list.expanded li:not(.honor-more) + li.honor-more::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    /* Flat in the middle 60% (darker than --hairline so the fade stays visible), fading over the outer 20% each side. */
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.22) 20%,
-        rgba(0, 0, 0, 0.22) 80%,
-        rgba(0, 0, 0, 0) 100%
-    );
+/* When expanded, a small-caps sub-header (same look as .category-header)
+   sits above the first folded item, marking where the hand-picked block ends. */
+#honors-container .honors-list li.honors-more-header {
+    margin: 24px 0 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
 }
 
 #honors-container .honors-list li.honors-toggle-btn {

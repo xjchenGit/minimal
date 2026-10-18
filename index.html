@@ -114,6 +114,10 @@ head_extra: |
 		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.details | append: '</span>' -%}
 		{%- endif -%}
 		{%- endif %}
+		{%- unless item.featured or more_header_done %}
+		<li class="honor-more honors-more-header">More Research and Academic Honors</li>
+		{%- assign more_header_done = true -%}
+		{%- endunless %}
 		<li{% unless item.featured %} class="honor-more"{% endunless %}><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
 		{%- endfor %}
 	</ul>
@@ -144,5 +148,5 @@ head_extra: |
 </div>
 
 <script src="assets/js/2mode-pub-renderer.js?v=20" defer></script>
-<script src="assets/js/mobile-honors-folder.js?v=5" defer></script>
+<script src="assets/js/mobile-honors-folder.js?v=6" defer></script>
 <script src="assets/js/pubs-toc.js?v=4" defer></script>

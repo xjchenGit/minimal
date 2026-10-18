@@ -1,12 +1,13 @@
 // Honors marked `featured: true` in _data/honors.yml are always visible; the
-// rest carry class .honor-more and are hidden by CSS (pubs.css). This adds a
+// rest carry class .honor-more and are hidden by CSS (pubs.css), along with a
+// "More Research and Academic Honors" sub-header li that is not counted. This adds a
 // right-aligned "Show N more" / "Show less" link that toggles them.
 
 function initMobileHonors() {
     const honorList = document.querySelector('#honors-container .honors-list');
     if (!honorList) return;
 
-    const hiddenCount = honorList.querySelectorAll('li.honor-more').length;
+    const hiddenCount = honorList.querySelectorAll('li.honor-more:not(.honors-more-header)').length;
     if (hiddenCount <= 0) return;
 
     const li = document.createElement('li');
