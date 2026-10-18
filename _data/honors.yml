@@ -28,13 +28,15 @@
   selected: true
 
 - year: "2025"
-  title: "IEEE ASRU 2025 Best Student Paper Nomination"
+  title: "Best Student Paper Nomination"
+  venue: "ASRU 2025"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
   featured: 3
   selected: true
 
 - year: "2025"
-  title: "ROCLING 2025 Best Paper Award"
+  title: "Best Paper Award"
+  venue: "ROCLING 2025"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
   featured: 4
   selected: true

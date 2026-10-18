@@ -10,6 +10,9 @@ Usage: {% include honors-list.html items=honor_items %}
 	{%- else -%}
 	{%- assign body = "<b>" | append: item.title | append: "</b>" -%}
 	{%- endif -%}
+	{%- if item.venue -%}
+	{%- assign body = body | append: ' (' | append: item.venue | append: ')' -%}
+	{%- endif -%}
 	{%- if item.details and item.details != "" and item.details != empty -%}
 	{%- if item.mobile_hide_suffix -%}
 	{%- assign body = body | append: ' <span class="mobile-hide-suffix honor-detail">' | append: item.details | append: '</span>' -%}
