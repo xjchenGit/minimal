@@ -609,37 +609,21 @@ screen and (max-width: 480px) {
   color: #86868b;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  margin-left: 0.6em;
 }
 
 #honors-container .honor-detail,
 #services-container .honor-detail {
   font-size: 0.9em;
   color: var(--text-muted);
-  margin-left: 0.5em;
 }
 
-/* Desktop: .entry-body is a wrapping flex row of .entry-main + detail/GPA, so
-   a long detail moves to the next line as one block, left-aligned with the
-   bold title, instead of breaking mid-sentence (Honors looked ragged vs.
-   Experience). Spacing comes from column-gap, not margin-left, so a dropped
-   detail is flush left. */
-@media (min-width: 769px) {
-  #experience-container .entry-body,
-  #honors-container .entry-body,
-  #services-container .entry-body {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    column-gap: 0.5em;
-    row-gap: 0;
-  }
-
-  #experience-container .entry-gpa,
-  #honors-container .honor-detail,
-  #services-container .honor-detail {
-    margin-left: 0;
-  }
+/* Gap between the bold title (.entry-main) and its grey detail / GPA lives on
+   the title's right margin, not the detail's left margin, so when the detail
+   wraps onto the next line it starts flush left under the title. */
+#experience-container .entry-main,
+#honors-container .entry-main,
+#services-container .entry-main {
+  margin-right: 0.3em;
 }
 
 @media (max-width: 768px) {
