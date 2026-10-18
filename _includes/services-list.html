@@ -8,16 +8,16 @@ instead of the short hand-picked one (event).
 	{%- for item in include.items -%}
 	{%- if item.role == "Reviewer" -%}
 	{%- if include.full and item.all_event -%}{%- assign venues = item.all_event -%}{%- else -%}{%- assign venues = item.event -%}{%- endif -%}
-	{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
+	{%- assign body = '<span class="entry-main"><b>' | append: item.role | append: "</b></span>" -%}
 	{%- assign body = body | append: ' <span class="honor-detail">' | append: venues | append: '</span>' -%}
 	{%- else -%}
-	{%- assign body = "<b>" | append: item.role | append: ", " -%}
+	{%- assign body = '<span class="entry-main"><b>' | append: item.role | append: ", " -%}
 	{%- if item.link -%}
 	{%- assign body = body | append: '<a href="' | append: item.link | append: '">' | append: item.event | append: '</a>' -%}
 	{%- else -%}
 	{%- assign body = body | append: item.event -%}
 	{%- endif -%}
-	{%- assign body = body | append: "</b>" -%}
+	{%- assign body = body | append: "</b></span>" -%}
 	{%- if item.context != blank -%}
 	{%- assign body = body | append: ' <span class="honor-detail">' | append: item.context | append: '</span>' -%}
 	{%- endif -%}

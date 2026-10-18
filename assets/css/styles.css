@@ -585,7 +585,7 @@ screen and (max-width: 480px) {
   order: 1;
   flex: 1;
   min-width: 0;
-  padding-left: 1rem;
+  /* No indent: rows sit flush with the section heading, like the highlight cards */
 }
 
 #experience-container .entry-date,
@@ -619,6 +619,29 @@ screen and (max-width: 480px) {
   margin-left: 0.5em;
 }
 
+/* Desktop: .entry-body is a wrapping flex row of .entry-main + detail/GPA, so
+   a long detail moves to the next line as one block, left-aligned with the
+   bold title, instead of breaking mid-sentence (Honors looked ragged vs.
+   Experience). Spacing comes from column-gap, not margin-left, so a dropped
+   detail is flush left. */
+@media (min-width: 769px) {
+  #experience-container .entry-body,
+  #honors-container .entry-body,
+  #services-container .entry-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.5em;
+    row-gap: 0;
+  }
+
+  #experience-container .entry-gpa,
+  #honors-container .honor-detail,
+  #services-container .honor-detail {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   #experience-container .entry-row,
   #honors-container .entry-row,
@@ -638,11 +661,6 @@ screen and (max-width: 480px) {
     display: inline;
   }
 
-  #experience-container .entry-body,
-  #honors-container .entry-body,
-  #services-container .entry-body {
-    padding-left: 0;
-  }
 }
 
 .pubs-note {

@@ -134,7 +134,7 @@ h3.category-header[id] {
     }
 
     .pub-title {
-        font-size: 17px;
+        font-size: 16px; /* matches h4.hl-title on mobile */
     }
 
     .pub-authors {
@@ -596,7 +596,7 @@ h3.category-header[id] {
 /* ========== Publication cards (index.html highlights + publications.html) ==========
    Apple-style: one accent (award), everything else grey metadata; blue
    "Name ›" links. .hl-meta / .hl-links are shared by both pages; the
-   homepage keeps its larger .hl-title / .hl-item spacing. */
+   homepage keeps its own .hl-item spacing. */
 .hl-item {
     margin: 0 0 30px;
 }
@@ -636,11 +636,14 @@ h3.category-header[id] {
 
 h4.hl-title {
     margin: 0 0 4px;
-    font-size: 19px;
+    font-size: 17px; /* matches .pub-title on publications.html */
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.012em;
     color: var(--text-strong);
+    /* Override the global heading `text-wrap: balance`: a long title should
+       fill its first line like body text, not split into two even halves. */
+    text-wrap: pretty;
 }
 
 .hl-links {
@@ -677,7 +680,7 @@ h4.hl-title {
     }
 
     h4.hl-title {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .hl-links {
@@ -686,14 +689,8 @@ h4.hl-title {
     }
 }
 
-/* Research Highlights heading block (index.html), Apple-style: tighter
-   headline, upright grey legend, and plain blue inline links. */
-h2#sec-publications {
-    font-size: 32px;
-    letter-spacing: -0.02em;
-}
-
-/* Headings followed by a "See all / full list" note sit close to it */
+/* Research Highlights heading (index.html) uses the global h2 size.
+   Headings followed by a "See all / full list" note sit close to it. */
 h2#sec-publications,
 body.page-about h2#honors {
     margin-bottom: 10px;
@@ -721,10 +718,6 @@ body.page-about h2#honors + .pubs-note {
    the global `a:hover` turns them blue on hover. No override needed here. */
 
 @media (max-width: 768px) {
-    h2#sec-publications {
-        font-size: 26px;
-    }
-
     h2#sec-publications .h2-note,
     body.page-publications h2 .h2-note {
         font-size: 13px;
