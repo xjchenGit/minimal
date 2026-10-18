@@ -1,26 +1,19 @@
-# Research Highlights on index.html, grouped by publication type.
-# Technical reports lead: first-author recent work signals current direction to ML reviewers.
-# Within each group, papers appear in the order listed here.
+# Research Highlights on index.html: a single flat list, in the order given here.
 # Membership also requires `selected: true` in publications.yml.
-groups:
-  - title: "Technical Report"
-    papers:
-      - chen2026metabench     # Retrieval & agentic LLMs
-      - chen2026lalm          # Audio-language models & benchmarks
-      - chen2026llmagents     # Audio generation
-      - wu2024towards         # Audio-language models & benchmarks
-  - title: "International Journals"
-    papers:
-      - cyli2026codarag       # Retrieval & agentic LLMs
-      - chen2026codecfake     # Audio deepfakes
-      - lu2026desta25         # Audio-language models & benchmarks
-  - title: "International Conferences"
-    papers:
-      # ML / NLP venues first
-      - chou2026efficient     # Retrieval & agentic LLMs
-      - huang2025dynamic      # Audio-language models & benchmarks
-      - wu-etal-2024-codec    # Audio-language models & benchmarks
-      # Speech venues
-      - chen2026joint         # Audio deepfakes
-      - chen2025towards       # Audio deepfakes
-      - chen2024singing       # Audio deepfakes
+# Audio understanding & generation lead (job-search target), then retrieval &
+# agentic-LLM papers, then audio deepfakes close the list.
+papers:
+  - chen2026lalm          # Audio-language models & benchmarks (tech report)
+  - chen2026llmagents     # Audio generation (tech report)
+  - lu2026desta25         # Audio-language models & benchmarks (journal)
+  - huang2025dynamic      # Audio-language models & benchmarks (ML/NLP venue)
+  - wu-etal-2024-codec    # Audio-language models & benchmarks (ML/NLP venue)
+  - wu2024towards         # Audio-language models & benchmarks (tech report)
+  # Retrieval & agentic LLMs
+  - chen2026metabench
+  - cyli2026codarag
+  - chou2026efficient
+  # Audio deepfakes
+  - chen2026codecfake     # journal
+  - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
+  - chen2024singing       # speech venue, SLT lightning talk

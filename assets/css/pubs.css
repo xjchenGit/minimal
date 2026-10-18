@@ -164,8 +164,10 @@
     line-height: 1.3;
 }
 
-#pub-container > .category-header:first-child {
-    margin-top: 12px;
+/* Highlights are a flat list (no category sub-headers); keep the gap between
+   the "See all" note and the first card. */
+#pub-container {
+    padding-top: 20px;
 }
 
 /* Specificity-matched override for styles.css `h3.category-header[id]`. */
@@ -347,58 +349,6 @@ h3.category-header[id] {
 }
 
 
-
-/* Honors folding (CSS-based to prevent flash): items marked `featured: true`
-   in _data/honors.yml stay visible; the rest get class .honor-more and
-   mobile-honors-folder.js adds an Apple-style "Show N more ⌄" link on the
-   right that toggles them. */
-.honors-list:not(.expanded) li.honor-more {
-    display: none;
-}
-
-/* When expanded, a small-caps sub-header (same look as .category-header)
-   sits above the first folded item, marking where the hand-picked block ends. */
-#honors-container .honors-list li.honors-more-header {
-    margin: 24px 0 12px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-muted);
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.15em;
-    line-height: 1.3;
-}
-
-#honors-container .honors-list li.honors-toggle-btn {
-    display: block;
-    margin: 4px 0 0;
-    text-align: right;
-}
-
-.honors-toggle-btn button {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0;
-    font: inherit;
-    font-size: 15px;
-    color: var(--text-body);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.honors-toggle-btn button:hover {
-    color: var(--text-strong);
-    text-decoration: underline;
-}
-
-.honors-toggle-btn svg {
-    transition: transform 0.2s var(--ease);
-}
-
-.honors-list.expanded .honors-toggle-btn svg {
-    transform: rotate(180deg);
-}
 
 /* On-this-page TOC for publications page */
 .pubs-toc {

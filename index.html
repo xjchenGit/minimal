@@ -30,7 +30,7 @@ head_extra: |
 <nav class="pubs-toc" aria-label="On this page">
 	<div class="pubs-toc-title">TOC</div>
 	<ul>
-		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Intro</span><span class="label-short">Intro</span></a></li>
+		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span><span class="label-short">Biography</span></a></li>
 		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span><span class="label-short">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span><span class="label-short">Experience</span></a></li>
 		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span><span class="label-short">Honors</span></a></li>
@@ -65,23 +65,18 @@ head_extra: |
 	</div>
 </div>
 
-<h2 id="sec-publications">Research Highlights <small class="h2-note">* equal contribution, † co-second author</small></h2>
+<h2 id="sec-publications">Research Highlights</h2>
 <p class="pubs-note">See all on <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="publications.html">browse by topic</a>.</p>
 <div id="pub-container">
-{%- comment -%} Groups and order come from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
-{%- for group in site.data.selected_paper.groups %}
-<h3 class="category-header">{{ group.title }}</h3>
-{%- assign highlight_num = 0 -%}
-{%- for pub_id in group.papers -%}
+{%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
+{%- for pub_id in site.data.selected_paper.papers -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}
 {%- assign pub = matching | first -%}
-{%- if pub.selected -%}
-{%- assign highlight_num = highlight_num | plus: 1 -%}
+{%- if pub.selected %}
 {% include highlight-item.html pub=pub %}
 {%- endif -%}
 {%- endif -%}
-{%- endfor -%}
 {%- endfor %}
 </div>
 
@@ -95,58 +90,19 @@ head_extra: |
 	</ul>
 </div>
 
-<h2 id="honors">Selected Honors &amp; Service</h2>
+<h2 id="honors">Selected Honors</h2>
+<p class="pubs-note">See the full list on the <a href="honors.html">Honors</a> page.</p>
 <h3 class="category-header">Research and Academic Honors</h3>
 <div id="honors-container">
-	<ul class="honors-list">
-		{%- assign honor_items = site.data.honors | where: "selected", true -%}
-		{%- for item in honor_items -%}
-		{%- assign body = "" -%}
-		{%- if item.year_prefix -%}
-		{%- assign body = item.year_prefix | append: "<b>" | append: item.title | append: "</b>" -%}
-		{%- else -%}
-		{%- assign body = "<b>" | append: item.title | append: "</b>" -%}
-		{%- endif -%}
-		{%- if item.details and item.details != "" and item.details != empty -%}
-		{%- if item.mobile_hide_suffix -%}
-		{%- assign body = body | append: ' <span class="mobile-hide-suffix honor-detail">' | append: item.details | append: '</span>' -%}
-		{%- else -%}
-		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.details | append: '</span>' -%}
-		{%- endif -%}
-		{%- endif %}
-		{%- unless item.featured or more_header_done %}
-		<li class="honor-more honors-more-header">More Research and Academic Honors</li>
-		{%- assign more_header_done = true -%}
-		{%- endunless %}
-		<li{% unless item.featured %} class="honor-more"{% endunless %}><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
-		{%- endfor %}
-	</ul>
+	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
+	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
+	{% include honors-list.html items=honor_items %}
 </div>
 <h3 class="category-header">International Event Organizer, Speaker &amp; Reviewer</h3>
 <div id="services-container">
-	<ul>
-		{%- assign service_items = site.data.services | where: "selected", true -%}
-		{%- for item in service_items -%}
-		{%- if item.role == "Reviewer" -%}
-		{%- assign body = "<b>" | append: item.role | append: "</b>" -%}
-		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.event | append: '</span>' -%}
-		{%- else -%}
-		{%- assign body = "<b>" | append: item.role | append: ", " -%}
-		{%- if item.link -%}
-		{%- assign body = body | append: '<a href="' | append: item.link | append: '">' | append: item.event | append: '</a>' -%}
-		{%- else -%}
-		{%- assign body = body | append: item.event -%}
-		{%- endif -%}
-		{%- assign body = body | append: "</b>" -%}
-		{%- if item.context != blank -%}
-		{%- assign body = body | append: ' <span class="honor-detail">' | append: item.context | append: '</span>' -%}
-		{%- endif -%}
-		{%- endif %}
-		<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
-		{%- endfor %}
-	</ul>
+	{%- assign service_items = site.data.services | where: "selected", true | where: "featured", true %}
+	{% include services-list.html items=service_items %}
 </div>
 
 <script src="assets/js/2mode-pub-renderer.js?v=20" defer></script>
-<script src="assets/js/mobile-honors-folder.js?v=6" defer></script>
 <script src="assets/js/pubs-toc.js?v=4" defer></script>

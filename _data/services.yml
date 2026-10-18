@@ -1,8 +1,12 @@
+# Items with `selected: true` appear on honors.html; items that are also
+# `featured: true` appear on the homepage (index.html).
+
 - year: "2025"
   role: "Co-Organizer"
   event: "Responsible Speech & Audio Generative AI"
   link: "https://codecfake.github.io/RespSA-GenAI/"
   context: "Special Session at IEEE ASRU 2025"
+  featured: true
   selected: true
 
 - year: "2024"
@@ -10,6 +14,7 @@
   event: "Codec-SUPERB Challenge"
   link: "https://codecsuperb.github.io/"
   context: "Special Session at IEEE SLT 2024"
+  featured: true
   selected: true
 
 - year: "2024"
@@ -37,4 +42,5 @@
   role: "Reviewer"
   all_event: "AAAI, ICLR, NeurIPS, ICML, ACL, EMNLP, COLM, ICASSP, INTERSPEECH, IEEE ASRU, IEEE SLT, COLING, MLSP, IJPRAI"
   event: "AAAI, ICLR, NeurIPS, ICML, ACL, EMNLP, COLM, ICASSP, ICME, INTERSPEECH, ASRU, SLT, COLING, etc."
+  featured: true
   selected: true

@@ -523,6 +523,7 @@
 - title: "Singing Voice Graph Modeling for SingFake Detection"
   authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
   venue: "INTERSPEECH 2024 (Oral)"
+  award: "Lightning Talk @ SLT '24"
   venue_notes:
     - { text: "35 Citations as of Oct. 2026", type: "citations" }
   category: "deepfake"

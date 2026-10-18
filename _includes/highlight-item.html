@@ -1,6 +1,6 @@
 {%- comment -%}
 Apple-style card for Research Highlights on index.html (publications.html keeps
-pub-item.html). Title, muted authors, then a venue line (award · venue ·
+pub-item.html). Title, muted authors, then a venue line (venue · award ·
 metrics) and blue "Name ›" links with BibTeX last.
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
@@ -33,8 +33,9 @@ metrics) and blue "Name ›" links with BibTeX last.
 	<h4 class="hl-title">{{ title_html }}</h4>
 	<p class="pub-authors hl-authors"{% if expanded_attr != "" %} data-expanded-html="{{ expanded_attr }}"{% endif %}>{{ authors_html }}</p>
 	<p class="hl-meta">
-		{%- if pub.award %}<span class="hl-award">{{ pub.award }}</span>{% endif -%}
+		{%- comment -%} Venue leads, then the award badge, then metrics {%- endcomment -%}
 		<span class="hl-venue">{{ pub.venue_short | default: pub.venue }}</span>
+		{%- if pub.award %}<span class="hl-award">{{ pub.award }}</span>{% endif -%}
 		{%- for note in pub.venue_notes %}<span class="hl-metric">{{ note.text | escape }}</span>{% endfor -%}
 	</p>
 	<p class="hl-links">

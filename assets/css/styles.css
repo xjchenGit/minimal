@@ -176,6 +176,12 @@ section h2 + h3.category-header {
   margin-top: 0;
 }
 
+/* Homepage "Selected Honors": the "See the full list" note sits between the
+   h2 and the first sub-header, so tighten the sub-header's top margin. */
+section .pubs-note + h3.category-header {
+  margin-top: 12px;
+}
+
 .pub-list-dynamic > .pub-item-row:last-child {
   margin-bottom: 0;
 }

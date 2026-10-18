@@ -1,0 +1,22 @@
+{%- comment -%}
+Renders a list of honors (from _data/honors.yml) as date / title / detail rows.
+Usage: {% include honors-list.html items=honor_items %}
+{%- endcomment -%}
+<ul class="honors-list">
+	{%- for item in include.items -%}
+	{%- assign body = "" -%}
+	{%- if item.year_prefix -%}
+	{%- assign body = item.year_prefix | append: "<b>" | append: item.title | append: "</b>" -%}
+	{%- else -%}
+	{%- assign body = "<b>" | append: item.title | append: "</b>" -%}
+	{%- endif -%}
+	{%- if item.details and item.details != "" and item.details != empty -%}
+	{%- if item.mobile_hide_suffix -%}
+	{%- assign body = body | append: ' <span class="mobile-hide-suffix honor-detail">' | append: item.details | append: '</span>' -%}
+	{%- else -%}
+	{%- assign body = body | append: ' <span class="honor-detail">' | append: item.details | append: '</span>' -%}
+	{%- endif -%}
+	{%- endif %}
+	<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body">{{ body }}</span></span></li>
+	{%- endfor %}
+</ul>
