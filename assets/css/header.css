@@ -85,7 +85,9 @@
         "photocol bio";
     grid-template-rows: min-content auto;
     column-gap: 40px;
-    row-gap: 14px;
+    /* Desktop: a bit more air between the name/icons block and the bio
+       (14px -> 24px, user request 2026-10-19). Tablet/mobile keep 14px below. */
+    row-gap: 24px;
     margin: 8px 0 48px;
     align-items: start;
 }
@@ -95,8 +97,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
+    /* Vertically centred on the whole text column (name + icons + bio):
+       the photo's midpoint sits at the midpoint of the text (user, 2026-10-19). */
     align-self: center;
+    margin-top: 0;
 }
 
 .hero-photo {
@@ -122,7 +127,7 @@
     font-weight: 500;
     color: var(--text-strong);
     line-height: 1.05;
-    margin: 0 0 10px 0;
+    margin: 0 0 14px 0;
     letter-spacing: -0.022em;
 }
 
@@ -144,6 +149,30 @@
     color: var(--text-body);
     margin: 0 0 20px 0;
     line-height: 1.45;
+}
+
+/* Two copies of the subtitle: .hero-subtitle-photo sits under the photo on
+   desktop (two centred lines, same width as the photo); .hero-subtitle-headline
+   sits under the name on tablet/mobile only. */
+.hero-subtitle-headline {
+    display: none;
+}
+
+.hero-subtitle-photo {
+    width: 190px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.hero-subtitle-photo .subtitle-sep {
+    display: none;
+}
+
+.hero-subtitle-photo .subtitle-loc {
+    display: block;
 }
 
 #about-container.hero-bio p {
@@ -212,33 +241,21 @@
     margin-bottom: 0;
 }
 
-.hero-socials {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Contact display: inline "Feel free..." text at the end of bio on ALL viewports.
- * The single .hero-socials icon row (inside .hero-photo-col) is hidden by default.
- *
- * To restore icons on mobile only (inline text on desktop), replace this block with:
- *
- *   .hero-socials { display: flex; }
- *   .hero-contact-text { display: none; }
- *   @media (min-width: 821px) {
- *       .hero-socials { display: none; }
- *       .hero-contact-text { display: block; }
- *   }
- *
- * To show icons next to the headline on desktop, move .hero-socials between grid
- * areas via `order:` (flex column in .hero-photo-col) or by adding a new grid area.
+/* Contact display:
+ *  - desktop (> 820px): a row of small stroke icons (.hero-socials, inline SVG)
+ *    under the name; the "Feel free to reach out..." sentence is hidden.
+ *  - tablet/mobile (<= 820px): icons hidden, the sentence shows at the end of
+ *    the bio, as before (user: 手機版保留原狀, 2026-10-19).
  */
 .hero-socials {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 4px 0 0 2px;
 }
 
 .hero-contact-text {
-    display: block;
+    display: none;
     text-align: left;
 }
 
@@ -246,21 +263,25 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: transparent;
-    border: 1px solid var(--hairline);
+    width: 22px;
+    height: 22px;
     color: var(--text-muted);
-    font-size: 14px;
     text-decoration: none;
-    transition: background 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+    transition: color 0.15s var(--ease);
+}
+
+.hero-socials svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .hero-socials a:hover {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: var(--text-strong);
-    color: var(--text-strong);
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -333,6 +354,26 @@
         display: none;
     }
 
+    /* Mobile keeps the old layout: subtitle under the name, contact sentence
+       at the end of the bio, no icon row, no subtitle under the photo. */
+    .hero-subtitle-photo,
+    .hero-socials {
+        display: none;
+    }
+
+    .hero-subtitle-headline {
+        display: block;
+    }
+
+    .hero-contact-text {
+        display: block;
+    }
+
+    .hero-photo-col {
+        margin-top: 0;
+        align-self: start;
+    }
+
     #about-container.hero-bio p {
         font-size: 15px;
         line-height: 1.55;
@@ -387,11 +428,5 @@
 
     #about-container.hero-bio li {
         font-size: 14px;
-    }
-
-    .hero-socials a {
-        width: 28px;
-        height: 28px;
-        font-size: 12px;
     }
 }
