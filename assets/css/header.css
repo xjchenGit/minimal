@@ -169,10 +169,10 @@
     text-decoration-color: currentColor;
 }
 
-/* Theme-blue emphasis for a call-out phrase in the bio (e.g. internship search) */
+/* Theme-blue emphasis in the bio (advisor names, internship call-out): colour only,
+   normal weight (bold dropped 2026-10-19 at the user's request) */
 #about-container .bio-highlight {
     color: var(--link);
-    font-weight: 600;
 }
 
 /* Closing call-out + contact line: justified to match the bio paragraphs */
