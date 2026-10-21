@@ -465,8 +465,10 @@
   authors_short: "<u>Xuanjun Chen</u>, Yun-Shing Wu, Wei-Chung Lu, Claire Lin, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "Int. Symp. Chin. Spoken Lang. Process. (ISCSLP) 2026"
   venue_short: "ISCSLP 2026"
+  award: "Selected Outstanding Paper"
   category: "deepfake"
   id: "chen2026mitigating"
+  selected: true
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2606.07494"

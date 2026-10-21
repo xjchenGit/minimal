@@ -23,6 +23,13 @@
   selected: true
 
 - year: "2026"
+  title: "Selected Outstanding Paper"
+  venue: "ISCSLP 2026"
+  details: "The 15th International Symposium on Chinese Spoken Language Processing"
+  featured: 3
+  selected: true
+
+- year: "2026"
   title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
   details: "One of nine recipients at NTU"
   selected: true
@@ -31,14 +38,14 @@
   title: "Best Student Paper Nomination"
   venue: "ASRU 2025"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
-  featured: 3
+  featured: 4
   selected: true
 
 - year: "2025"
   title: "Best Paper Award"
   venue: "ROCLING 2025"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
-  featured: 4
+  featured: 5
   selected: true
 
 # - year: "2025"
@@ -65,7 +72,7 @@
 - year: "2024 – 2025"
   title: "CTCI Foundation Science and Technology Scholarship"
   details: "Bursary Award 2024 & Research Scholarship 2025"
-  featured: 6
+  featured: 7
   selected: true
 
 - year: "2024 – 2025"
@@ -77,7 +84,7 @@
   title: "Google Student Travel Grant"
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
-  featured: 5
+  featured: 6
   selected: true
 
 - year: "2024"
@@ -94,7 +101,7 @@
 - year: "2021"
   title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
   details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
-  featured: 7
+  featured: 8
   selected: true
 
 - year: "2020 – 2026"
@@ -105,7 +112,7 @@
 - year: "Fall ’18, Fall ’19, Spr. ’20"
   title: "Certificate of Achievement"
   details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
-  featured: 8
+  featured: 9
   selected: true
 
 - year: "2017"

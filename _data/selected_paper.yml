@@ -15,5 +15,6 @@ papers:
   - chou2026efficient
   # Audio deepfakes
   - chen2026codecfake     # journal
+  - chen2026mitigating    # speech venue, ISCSLP Selected Outstanding Paper
   - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
   - chen2024singing       # speech venue, SLT lightning talk
