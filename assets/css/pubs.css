@@ -623,8 +623,10 @@ h3.category-header[id] {
     opacity: 0.6;
 }
 
-.hl-award {
-    color: #b64400;
+/* Award badge + Oral / Long Oral tag: deep red, same as the CV's \award colour (2026-10-21) */
+.hl-award,
+.hl-venue .hl-oral {
+    color: #a1192b;
 }
 
 .hl-venue {

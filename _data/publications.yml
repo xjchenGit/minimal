@@ -390,7 +390,7 @@
 - title: "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection"
   authors_full: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
   authors_short: "<u>Xuanjun Chen</u>*, Chia-Yu Hu*, Sung-Feng Huang, Haibin Wu, Hung-yi Lee, Jyh-Shing Roger Jang"
-  venue: "INTERSPEECH 2026 (Long Oral)"
+  venue: 'INTERSPEECH 2026 <span class="hl-oral">(Long Oral)</span>'
   venue_notes:
     - { text: "Accept Rate 30%", type: "accept-rate" }
   category: "deepfake"
@@ -525,7 +525,7 @@
 
 - title: "Singing Voice Graph Modeling for SingFake Detection"
   authors_short: "<u>Xuanjun Chen</u>, Haibin Wu, Jyh-Shing Roger Jang, Hung-yi Lee"
-  venue: "INTERSPEECH 2024 (Oral)"
+  venue: 'INTERSPEECH 2024 <span class="hl-oral">(Oral)</span>'
   award: "Lightning Talk @ SLT '24"
   venue_notes:
     - { text: "35 Citations as of Oct. 2026", type: "citations" }
