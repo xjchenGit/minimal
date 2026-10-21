@@ -719,7 +719,7 @@ body.page-publications h2 .h2-note {
 #sec-publications + .pubs-note,
 body.page-about h2#honors + .pubs-note {
     margin: 0 0 8px;
-    font-size: 17px;
+    font-size: 14px; /* same as .pub-authors */
     color: var(--text-muted);
 }
 
@@ -734,6 +734,6 @@ body.page-about h2#honors + .pubs-note {
 
     #sec-publications + .pubs-note,
     body.page-about h2#honors + .pubs-note {
-        font-size: 15px;
+        font-size: 13px; /* same as .pub-authors on mobile */
     }
 }
