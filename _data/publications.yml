@@ -576,8 +576,8 @@
     }
 
 - title: "DFADD: The Diffusion and Flow-Matching based Audio Deepfake Dataset"
-  authors_full: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
-  authors_short: "Jiawei Du, I-Ming Lin, I-Hsiang Chiu, <u>Xuanjun Chen</u>, ..., Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_full: "Jiawei Du*, I-Ming Lin*, I-Hsiang Chiu*, <u>Xuanjun Chen</u>, Haibin Wu, Wenze Ren, Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
+  authors_short: "Jiawei Du*, I-Ming Lin*, I-Hsiang Chiu*, <u>Xuanjun Chen</u>, ..., Yu Tsao, Hung-yi Lee, Jyh-Shing Roger Jang"
   venue: "IEEE Spoken Lang. Technol. Workshop (IEEE SLT) 2024"
   venue_short: "IEEE SLT 2024"
   category: "deepfake"
