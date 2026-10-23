@@ -6,7 +6,20 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<script>
 		if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-		if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+		if (location.hash) {
+			// Pages always open at the top, except links to a paper card
+			// (honors -> publications.html#<pub id>): scroll there once fonts and
+			// author truncation have settled, so the card lands under the header.
+			var hashId = decodeURIComponent(location.hash.slice(1));
+			history.replaceState(null, '', location.pathname + location.search);
+			window.addEventListener('load', function () {
+				var el = document.getElementById(hashId);
+				if (!el || !el.classList.contains('pub-item-row')) return;
+				(document.fonts ? document.fonts.ready : Promise.resolve()).then(function () {
+					el.scrollIntoView({ block: 'start', behavior: 'instant' });
+				});
+			});
+		}
 	</script>
 	<title>{{ page.title_full | default: site.title }}</title>
 
