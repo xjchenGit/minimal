@@ -26,6 +26,7 @@
   venue_short: "IEEE TASLP 2026"
   venue_notes:
     - { text: "JCR Q1, IF 5.1" }
+    - { text: "73 Citations as of Oct. 2026", type: "citations" }
   category: "audio-llm"
   id: "lu2026desta25"
   selected: true
@@ -57,6 +58,7 @@
   venue_short: "ICLR 2025"
   venue_notes:
     - { text: "Accept Rate 32.08%", type: "accept-rate" }
+    - { text: "99 Citations as of Oct. 2026", type: "citations" }
   category: "audio-llm"
   id: "huang2025dynamic"
   selected: true
