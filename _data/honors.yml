@@ -2,6 +2,8 @@
 # honors.html. Items with `selected: true` appear on honors.html; items with a
 # numeric `featured` rank also appear on the homepage (index.html), sorted by
 # that rank. Items with `selected: false` are kept for reference only.
+# `pub` (a publications.yml id) makes the title link to that paper on
+# publications.html.
 
 # Temporarily hidden until the official announcement (2026-11-01):
 # - year: "2026"
@@ -25,6 +27,7 @@
 - year: "2026"
   title: "Selected Outstanding Paper"
   venue: "ISCSLP 2026"
+  pub: "chen2026mitigating"
   details: "The 15th International Symposium on Chinese Spoken Language Processing"
   featured: 3
   selected: true
@@ -37,6 +40,7 @@
 - year: "2025"
   title: "Best Student Paper Nomination"
   venue: "ASRU 2025"
+  pub: "chen2025towards"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
   featured: 4
   selected: true
@@ -44,6 +48,7 @@
 - year: "2025"
   title: "Best Paper Award"
   venue: "ROCLING 2025"
+  pub: "lin2025preliminary"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
   featured: 5
   selected: true

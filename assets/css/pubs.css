@@ -79,6 +79,12 @@ h3.category-header[id] {
     scroll-margin-top: 110px;
 }
 
+/* Paper cards are anchor targets for the honors links; same offsets as the
+   category headers on publications.html. */
+body.page-publications .pub-item-row[id] {
+    scroll-margin-top: 110px;
+}
+
 @media (max-width: 820px) { h3.category-header[id] { scroll-margin-top: 100px; } }
 @media (max-width: 480px) { h3.category-header[id] { scroll-margin-top: 90px; } }
 
@@ -466,7 +472,8 @@ h3.category-header[id] {
     }
 
     /* Top-sticky chip row covers ~70-80px at top; bump scroll-margin to clear it */
-    body.page-publications .category-header {
+    body.page-publications .category-header,
+    body.page-publications .pub-item-row[id] {
         scroll-margin-top: 150px;
     }
 }
@@ -475,7 +482,8 @@ h3.category-header[id] {
     body.page-publications .pubs-toc {
         top: 50px;
     }
-    body.page-publications .category-header {
+    body.page-publications .category-header,
+    body.page-publications .pub-item-row[id] {
         scroll-margin-top: 140px;
     }
 }
@@ -484,7 +492,8 @@ h3.category-header[id] {
     body.page-publications .pubs-toc {
         top: 44px;
     }
-    body.page-publications .category-header {
+    body.page-publications .category-header,
+    body.page-publications .pub-item-row[id] {
         scroll-margin-top: 130px;
     }
 }
@@ -589,7 +598,8 @@ h3.category-header[id] {
         border-bottom-color: var(--hairline);
     }
 
-    body.page-publications .category-header {
+    body.page-publications .category-header,
+    body.page-publications .pub-item-row[id] {
         scroll-margin-top: 80px;
     }
 }

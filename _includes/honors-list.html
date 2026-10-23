@@ -15,6 +15,11 @@ Usage: {% include honors-list.html items=honor_items %}
 	{%- if item.venue -%}
 	{%- assign body = body | append: ' (' | append: item.venue | append: ')' -%}
 	{%- endif -%}
+	{%- comment -%} `pub` links the title to the paper's card on publications.html, styled as plain text {%- endcomment -%}
+	{%- if item.pub -%}
+	{%- assign link_open = '<a class="honor-pub-link" href="publications.html#' | append: item.pub | append: '">' -%}
+	{%- assign body = body | replace_first: '<span class="entry-main">', '' | prepend: link_open | prepend: '<span class="entry-main">' | append: '</a>' -%}
+	{%- endif -%}
 	{%- assign body = body | append: '</span>' -%}
 	{%- if item.details and item.details != "" and item.details != empty -%}
 	{%- if item.mobile_hide_suffix -%}

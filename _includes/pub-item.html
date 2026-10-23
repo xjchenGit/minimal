@@ -28,7 +28,7 @@
 {%- assign other_links = pub.links | where_exp: "l", "l.name != 'arXiv'" -%}
 {%- assign sorted_links = arxiv_links | concat: other_links -%}
 
-<div class="pub-item-row">
+<div class="pub-item-row"{% if pub.id %} id="{{ pub.id }}"{% endif %}>
 	<div class="pub-num-col">[{{ num }}]</div>
 	<div class="pub-info-col">
 		<h4 class="pub-title">{{ title_html }}</h4>

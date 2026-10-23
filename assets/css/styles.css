@@ -611,6 +611,13 @@ screen and (max-width: 480px) {
   white-space: nowrap;
 }
 
+/* Honors linked to a paper look exactly like unlinked ones */
+#honors-container .honor-pub-link,
+#honors-container .honor-pub-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 #honors-container .honor-detail,
 #services-container .honor-detail {
   font-size: 0.9em;
