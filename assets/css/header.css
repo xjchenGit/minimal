@@ -85,9 +85,10 @@
         "photocol bio";
     grid-template-rows: min-content auto;
     column-gap: 40px;
-    /* Desktop: a bit more air between the name/icons block and the bio
-       (14px -> 24px, user request 2026-10-19). Tablet/mobile keep 14px below. */
-    row-gap: 24px;
+    /* Desktop gap between the name/subtitle block and the bio: 24px when the icons sat
+       under the name (2026-10-19); 20px now that the subtitle is there (its bottom margin
+       is zeroed below, so this is the whole gap; 2026-10-24). Tablet/mobile keep 14px. */
+    row-gap: 20px;
     margin: 8px 0 48px;
     align-items: start;
 }
@@ -151,11 +152,11 @@
     line-height: 1.45;
 }
 
-/* Two copies of the subtitle: .hero-subtitle-photo sits under the photo on
-   desktop (two centred lines, same width as the photo); .hero-subtitle-headline
-   sits under the name on tablet/mobile only. */
+/* Two copies of the subtitle: .hero-subtitle-headline sits under the name on every
+   width (back on desktop 2026-10-24, when the icon row moved below the bio);
+   .hero-subtitle-photo (under the photo, desktop) is shelved in index.html. */
 .hero-subtitle-headline {
-    display: none;
+    margin-bottom: 0;
 }
 
 .hero-subtitle-photo {
@@ -241,17 +242,15 @@
     margin-bottom: 0;
 }
 
-/* Contact display:
- *  - desktop (> 820px): a row of small stroke icons (.hero-socials, inline SVG)
- *    under the name; the "Feel free to reach out..." sentence is hidden.
- *  - tablet/mobile (<= 820px): icons hidden, the sentence shows at the end of
- *    the bio, as before (user: 手機版保留原狀, 2026-10-19).
+/* Contact display (2026-10-24): one row of small stroke icons (.hero-socials,
+ * inline SVG) at the end of the bio on every width; the "Feel free to reach
+ * out..." sentence is hidden everywhere.
  */
 .hero-socials {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin: 4px 0 0 2px;
+    margin: 0;
 }
 
 .hero-contact-text {
@@ -354,18 +353,12 @@
         display: none;
     }
 
-    /* Mobile keeps the old layout: subtitle under the name, contact sentence
-       at the end of the bio, no icon row, no subtitle under the photo. */
-    .hero-subtitle-photo,
-    .hero-socials {
+    /* No subtitle under the photo (the copy under the name shows instead). */
+    .hero-subtitle-photo {
         display: none;
     }
 
     .hero-subtitle-headline {
-        display: block;
-    }
-
-    .hero-contact-text {
         display: block;
     }
 

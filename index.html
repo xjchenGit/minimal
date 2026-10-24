@@ -46,14 +46,20 @@ head_extra: |
 		{%- comment -%} Desktop subtitle under the photo: tried and shelved 2026-10-19
 		("先不加"). To bring it back, restore this line (CSS .hero-subtitle-photo still exists):
 		<p class="hero-subtitle hero-subtitle-photo">Ph.D.&nbsp;Candidate, NTU&nbsp;EECS<span class="subtitle-sep"> &middot; </span><span class="subtitle-loc">Taipei,&nbsp;Taiwan</span></p>
-		The copy inside .hero-headline below shows on tablet/mobile only. {%- endcomment %}
+		The copy inside .hero-headline below shows on every width. {%- endcomment %}
 	</div>
 	<div class="hero-headline">
 		<h1 class="hero-name">Xuanjun Chen <span class="hero-name-zh">(陳炫均)</span></h1>
 		<p class="hero-subtitle hero-subtitle-headline">Ph.D.&nbsp;Candidate, NTU&nbsp;EECS<span class="subtitle-sep"> &middot; </span><span class="subtitle-loc">Taipei,&nbsp;Taiwan</span></p>
-		{%- comment -%} Desktop only: contact icons under the name (mobile keeps the
-		"Feel free to reach out" sentence at the end of the bio). Inline stroke icons
-		from Tabler Icons (MIT), so nothing waits on the deferred Font Awesome CSS. {%- endcomment %}
+	</div>
+	<div id="about-container" class="hero-bio">
+		{{ bio_processed | markdownify }}
+		{{ intro_processed | markdownify }}
+		<p class="hero-contact-text">Feel free to reach out at <a href="mailto:d12942018@ntu.edu.tw">d12942018&nbsp;[at]&nbsp;ntu.edu.tw</a>, or find him on <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank">LinkedIn</a>, <a href="https://github.com/xjchenGit" target="_blank">GitHub</a>, and&nbsp;<a href="https://x.com/xjchen_ntu" target="_blank">𝕏</a>.</p>
+		{%- comment -%} Contact icons at the end of the bio on every screen width (2026-10-24; from 2026-10-19
+		they sat under the name on desktop only). The subtitle is back under the name, and the "Feel free to
+		reach out" sentence above stays hidden (CSS). Inline stroke icons from Tabler Icons (MIT), so nothing
+		waits on the deferred Font Awesome CSS. {%- endcomment %}
 		<div class="hero-socials">
 			<a href="mailto:d12942018@ntu.edu.tw" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7 9 6 9-6"/></svg></a>
 			<a href="https://www.linkedin.com/in/jun-ntu/" target="_blank" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg></a>
@@ -61,14 +67,9 @@ head_extra: |
 			<a href="https://github.com/xjchenGit" target="_blank" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
 			<a href="https://x.com/xjchen_ntu" target="_blank" aria-label="X (Twitter)" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 11.733 16h4.267L8.267 4z"/><path d="m4 20 6.768-6.768m2.46-2.46L20 4"/></svg></a>
 			{%- if about.cv_visible %}
-			<a href="{{ about.cv_url }}" target="_blank" class="cv-link" aria-label="Curriculum Vitae" title="CV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 17h6"/><path d="M9 13h6"/></svg></a>
+			<a href="{{ about.cv_url }}" target="_blank" class="cv-link" aria-label="Curriculum Vitae" title="CV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.6 7.6A6 6 0 1 0 11.6 16.4"/><path d="m13.5 6 4.5 12 4.5-12"/></svg></a>
 			{%- endif %}
 		</div>
-	</div>
-	<div id="about-container" class="hero-bio">
-		{{ bio_processed | markdownify }}
-		{{ intro_processed | markdownify }}
-		<p class="hero-contact-text">Feel free to reach out at <a href="mailto:d12942018@ntu.edu.tw">d12942018&nbsp;[at]&nbsp;ntu.edu.tw</a>, or find him on <a href="https://www.linkedin.com/in/jun-ntu/" target="_blank">LinkedIn</a>, <a href="https://github.com/xjchenGit" target="_blank">GitHub</a>, and&nbsp;<a href="https://x.com/xjchen_ntu" target="_blank">𝕏</a>.</p>
 	</div>
 </div>
 
