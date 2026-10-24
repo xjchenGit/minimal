@@ -3,14 +3,14 @@
 # Audio understanding & generation lead (job-search target), then retrieval &
 # agentic-LLM papers, then audio deepfakes close the list.
 papers:
-  - chen2026lalm          # Audio-language models & benchmarks (tech report)
   - chen2026llmagents     # Audio generation (tech report)
+  - chen2026lalm          # Audio-language models & benchmarks (tech report)
+  - chen2026metabench     # Benchmark harness optimization (tech report)
   - lu2026desta25         # Audio-language models & benchmarks (journal)
   - huang2025dynamic      # Audio-language models & benchmarks (ML/NLP venue)
   - wu-etal-2024-codec    # Audio-language models & benchmarks (ML/NLP venue)
   - wu2024towards         # Audio-language models & benchmarks (tech report)
   # Retrieval & agentic LLMs
-  - chen2026metabench
   - cyli2026codarag
   - chou2026efficient
   # Audio deepfakes
