@@ -499,6 +499,8 @@
       url: "https://arxiv.org/abs/2506.07294"
     - name: "Code"
       url: "https://github.com/ResponsibleGenAI/CodecFake-Source-Tracing"
+    - name: "Award"
+      url: "docs/ASRU2025_BestStudentNom.pdf"
   bibtex: |
     @inproceedings{chen2025towards,
         title={Towards Generalized Source Tracing for Codec-Based Deepfake Speech},
@@ -654,7 +656,7 @@
     - name: "Code"
       url: "https://github.com/xjchenGit/MTDVocaLiST"
     - name: "Poster"
-      url: "docs/MTDVocaLiST_poster.pdf"
+      url: "docs/ICASSP2024_MTDVocaLiST_poster.pdf"
   bibtex: |
     @inproceedings{chen2024multimodal,
         title={Multimodal Transformer Distillation for Audio-Visual Synchronization},
@@ -679,7 +681,7 @@
     - name: "Demos"
       url: "https://xjchengit.github.io/Push-Pull/index.html"
     - name: "Poster"
-      url: "docs/2022SLT_Poster_Push_Pull.pdf"
+      url: "docs/SLT2022_Poster_Push_Pull.pdf"
     - name: "Video"
       url: "https://www.youtube.com/watch?v=-Yy4TbcPovU"
   bibtex: |
