@@ -199,6 +199,13 @@
     text-decoration-color: currentColor;
 }
 
+/* Award links in the bio (SPS Scholarship, ASRU nomination): always-on grey underline,
+   same as `.pubs-note a` in styles.css; stays grey on hover while the text turns blue */
+#about-container a.bio-ul {
+    text-decoration-color: #c7c7cc;
+    text-underline-offset: 0.2em;
+}
+
 /* Theme-blue emphasis in the bio (advisor names, internship call-out): colour only,
    normal weight (bold dropped 2026-10-19 at the user's request) */
 #about-container .bio-highlight {
