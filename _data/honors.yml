@@ -115,8 +115,9 @@
   selected: true
 
 - year: "Fall ’18, Fall ’19, Spr. ’20"
-  title: "Certificate of Achievement"
-  details: "Top 5% in CSIE, Taiwan Tech, across three semesters"
+  title: "Dean’s List"
+  venue: "3 terms"
+  details: "Certificate of Achievement for the top 5% of CSIE students, Taiwan Tech"
   featured: 9
   selected: true
 
