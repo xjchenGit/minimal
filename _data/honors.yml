@@ -68,7 +68,7 @@
 #   details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
 #   selected: true
 
-- year: "2025 – 2026"
+- year: "2025 – 26"
   title: "NSTC Travel Grants"
   category: academic
   details: "Sponsored to present at INTERSPEECH 2025 and ISCSLP 2026"
@@ -104,7 +104,7 @@
   mobile_hide_suffix: true
   selected: false
 
-- year: "2024 – 2025"
+- year: "2024 – 25"
   title: "Subsidy for Domestic Graduate Students to Attend International Academic Conferences"
   details: "Awarded by NSTC Taiwan twice"
   selected: false
@@ -141,13 +141,13 @@
   featured: 8
   selected: true
 
-- year: "2020 – 2026"
+- year: "2020 – 26"
   title: "Taipei City Guangdong Association Scholarship"
   category: academic
   details: "Awarded across six academic years"
   selected: true
 
-- year: "Fall ’18, Fall ’19, Spr. ’20"
+- year: "2018 – 20"
   title: "Dean’s List"
   category: academic
   venue: "3 terms"
