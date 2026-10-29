@@ -84,7 +84,7 @@
   title: "CTCI Foundation Science and Technology Scholarship"
   category: research
   details: "Research Scholarship for Overseas Students"
-  featured: 7
+  featured: 6
   selected: true
 
 - year: "2025"
@@ -104,17 +104,17 @@
   selected: false
 
 - year: "2024"
+  title: "CTCI Foundation Science and Technology Scholarship"
+  category: academic
+  details: "Bursary Award for Overseas Students"
+  selected: true
+
+- year: "2024"
   title: "Google Student Travel Grant"
   category: academic
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
-  featured: 6
-  selected: true
-
-- year: "2024"
-  title: "CTCI Foundation Science and Technology Scholarship"
-  category: academic
-  details: "Bursary Award for Overseas Students"
+  featured: 7
   selected: true
 
 - year: "2024 – 26"
