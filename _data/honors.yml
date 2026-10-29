@@ -4,8 +4,8 @@
 # that rank. Items with `selected: false` are kept for reference only.
 # `pub` (a publications.yml id) makes the title link to that paper on
 # publications.html.
-# `category` picks the group on honors.html: `research` (Research Honors &
-# Fellowships) or `academic` (Academic Honors & Travel Grants).
+# `category` picks the group on honors.html: `research` (Research Honors and
+# Fellowships) or `academic` (Academic Honors and Travel Grants).
 
 # Temporarily hidden until the official announcement (2026-11-01):
 # - year: "2026"
@@ -17,16 +17,16 @@
 
 - year: "2026"
   title: "IEEE Signal Processing Society Scholarship"
-  category: research
+  category: academic
   details: "One of dozens of international recipients"
-  featured: 1
+  featured: 2
   selected: true
 
 - year: "2026"
   title: "NVIDIA Academic Grant"
   category: research
   details: "Awarded dedicated GPU compute via competitive selection"
-  featured: 2
+  featured: 1
   selected: true
 
 - year: "2026"
@@ -34,7 +34,7 @@
   category: research
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
-  details: "The 15th International Symposium on Chinese Spoken Language Processing"
+  details: "Selected 8 out of 110 papers (Top 7%)"
   featured: 3
   selected: true
 
@@ -58,7 +58,7 @@
   category: research
   venue: "ROCLING 2025"
   pub: "lin2025preliminary"
-  details: "The 37th Conference on Computational Linguistics and Speech Processing"
+  details: "Selected 1 out of 36 papers (Top 2.8%)"
   featured: 5
   selected: true
 
@@ -67,12 +67,6 @@
 #   category: research
 #   details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
 #   selected: true
-
-- year: "2025 – 26"
-  title: "NSTC Travel Grants"
-  category: academic
-  details: "Sponsored to present at INTERSPEECH 2025 and ISCSLP 2026"
-  selected: true
 
 - year: "2025"
   title: "ACLCLP Travel Grant"
@@ -123,6 +117,12 @@
   featured: 6
   selected: true
 
+- year: "2024 – 26"
+  title: "NSTC Travel Grants"
+  category: academic
+  details: "Sponsored to present at INTERSPEECH 2024 &amp; 2025 and ISCSLP 2026"
+  selected: true
+
 - year: "2024"
   title: "Google Student Travel Grant"
   details: "Granted by Google LLC"
@@ -147,7 +147,7 @@
   details: "Awarded across six academic years"
   selected: true
 
-- year: "2018 – 20"
+- year: "Fall ’18, Fall ’19, Spr. ’20"
   title: "Dean’s List"
   category: academic
   venue: "3 terms"

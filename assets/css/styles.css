@@ -178,10 +178,11 @@ section h2 + h3.category-header {
   margin-top: 32px;
 }
 
-/* Homepage "Selected Honors": the "See the full list" note sits between the
-   h2 and the first sub-header, so tighten the sub-header's top margin. */
+/* Homepage "Selected Honors": the "See all" note sits between the h2 and the
+   first sub-header; 28px matches Research Highlights' note-to-first-card gap
+   (note's 8px margin + #pub-container's 20px padding). */
 section .pubs-note + h3.category-header {
-  margin-top: 12px;
+  margin-top: 28px;
 }
 
 .pub-list-dynamic > .pub-item-row:last-child {

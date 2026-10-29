@@ -7,12 +7,12 @@ og_type: profile
 ---
 
 <h2 id="honors">Selected Honors</h2>
-<h3 class="category-header">Research Honors &amp; Fellowships</h3>
+<h3 class="category-header">Research Honors and Fellowships</h3>
 <div id="honors-container">
 	{%- assign honor_items = site.data.honors | where: "selected", true | where: "category", "research" %}
 	{% include honors-list.html items=honor_items %}
 </div>
-<h3 class="category-header">Academic Honors &amp; Travel Grants</h3>
+<h3 class="category-header">Academic Honors and Travel Grants</h3>
 <div id="academic-honors-container">
 	{%- assign academic_items = site.data.honors | where: "selected", true | where: "category", "academic" %}
 	{% include honors-list.html items=academic_items %}
