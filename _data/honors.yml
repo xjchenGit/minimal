@@ -4,41 +4,49 @@
 # that rank. Items with `selected: false` are kept for reference only.
 # `pub` (a publications.yml id) makes the title link to that paper on
 # publications.html.
+# `category` picks the group on honors.html: `research` (Research Honors &
+# Fellowships) or `academic` (Academic Honors & Travel Grants).
 
 # Temporarily hidden until the official announcement (2026-11-01):
 # - year: "2026"
 #   title: "Google PhD Fellowship"
+#   category: research
 #   details: "One of 13 recipients worldwide in Machine Perception"
 #   featured: 0
 #   selected: true
 
 - year: "2026"
   title: "IEEE Signal Processing Society Scholarship"
+  category: research
   details: "One of dozens of international recipients"
   featured: 1
   selected: true
 
 - year: "2026"
   title: "NVIDIA Academic Grant"
+  category: research
   details: "Awarded dedicated GPU compute via competitive selection"
   featured: 2
   selected: true
 
 - year: "2026"
   title: "Selected Outstanding Paper"
+  category: research
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
   details: "The 15th International Symposium on Chinese Spoken Language Processing"
   featured: 3
   selected: true
 
-- year: "2026"
+- year: "2025"
   title: "NTU Mr. Wen Tzu-Hsiang Memorial Scholarship"
+  category: academic
   details: "One of nine recipients at NTU"
   selected: true
 
 - year: "2025"
   title: "Best Student Paper Nomination"
+  category: research
   venue: "ASRU 2025"
   pub: "chen2025towards"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
@@ -47,6 +55,7 @@
 
 - year: "2025"
   title: "Best Paper Award"
+  category: research
   venue: "ROCLING 2025"
   pub: "lin2025preliminary"
   details: "The 37th Conference on Computational Linguistics and Speech Processing"
@@ -55,12 +64,33 @@
 
 # - year: "2025"
 #   title: "Future Tech Award, NSTC Taiwan"
+#   category: research
 #   details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
 #   selected: true
 
+- year: "2025 – 2026"
+  title: "NSTC Travel Grants"
+  category: academic
+  details: "Sponsored to present at INTERSPEECH 2025 and ISCSLP 2026"
+  selected: true
+
 - year: "2025"
-  title: "NSTC & ACLCLP Travel Grants"
-  details: "Sponsored to present at INTERSPEECH 2025 (NSTC) and IEEE ASRU 2025 (ACLCLP)"
+  title: "ACLCLP Travel Grant"
+  category: academic
+  details: "Sponsored to present at IEEE ASRU 2025"
+  selected: true
+
+- year: "2025"
+  title: "Excellence 100 Program Grant"
+  category: academic
+  details: "Graduate Institute of Communication Engineering, NTU"
+  selected: true
+
+- year: "2025"
+  title: "CTCI Foundation Science and Technology Scholarship"
+  category: research
+  details: "Research Scholarship for Overseas Students"
+  featured: 7
   selected: true
 
 - year: "2025"
@@ -75,18 +105,19 @@
   selected: false
 
 - year: "2024 – 2025"
-  title: "CTCI Foundation Science and Technology Scholarship"
-  details: "Bursary Award 2024 & Research Scholarship 2025"
-  featured: 7
-  selected: true
-
-- year: "2024 – 2025"
   title: "Subsidy for Domestic Graduate Students to Attend International Academic Conferences"
   details: "Awarded by NSTC Taiwan twice"
   selected: false
 
 - year: "2024"
+  title: "CTCI Foundation Science and Technology Scholarship"
+  category: academic
+  details: "Bursary Award for Overseas Students"
+  selected: true
+
+- year: "2024"
   title: "Google Student Travel Grant"
+  category: academic
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
   featured: 6
@@ -105,17 +136,20 @@
 
 - year: "2021"
   title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
+  category: research
   details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
   featured: 8
   selected: true
 
 - year: "2020 – 2026"
   title: "Taipei City Guangdong Association Scholarship"
+  category: academic
   details: "Awarded across six academic years"
   selected: true
 
 - year: "Fall ’18, Fall ’19, Spr. ’20"
   title: "Dean’s List"
+  category: academic
   venue: "3 terms"
   details: "Certificate of Achievement for the top 5% of CSIE students, Taiwan Tech"
   featured: 9
@@ -123,6 +157,7 @@
 
 - year: "2017"
   title: "3rd Prize, SZIIT Academic Award"
+  category: academic
   details: "Top 20% of students"
   mobile_hide_suffix: false
   selected: true
@@ -134,6 +169,7 @@
 
 - year: "2016"
   title: "National Encouragement Scholarship"
+  category: academic
   details: "Ministry of Education"
   featured: 10
   selected: true
