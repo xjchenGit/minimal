@@ -112,5 +112,31 @@ head_extra: |
 	{% include services-list.html items=service_items %}
 </div>
 
+<script>
+/* 2026-10-31: the internship call-out (#bio-internship, inline-block) stays whole. When it does not fit on
+   the last text line it drops to the next line; a <br> is then put in front of it so the line above ends
+   with a forced break and is not stretched by text-align: justify. Re-checked on resize and after fonts load. */
+(function () {
+	var s = document.getElementById('bio-internship');
+	if (!s) return;
+	var br = document.createElement('br');
+	function lastCharRect(node) {
+		while (node && !(node.nodeType === 3 && node.textContent.trim()) && !(node.nodeType === 1 && node.textContent.trim())) node = node.previousSibling;
+		if (!node) return null;
+		var r = document.createRange();
+		if (node.nodeType === 1) { r.selectNodeContents(node); var rs = r.getClientRects(); return rs[rs.length - 1] || null; }
+		var t = node.textContent.replace(/\s+$/, ''); r.setStart(node, t.length - 1); r.setEnd(node, t.length);
+		return r.getBoundingClientRect();
+	}
+	function fit() {
+		if (br.parentNode) br.parentNode.removeChild(br);
+		var prev = lastCharRect(s.previousSibling);
+		if (prev && s.getBoundingClientRect().top > prev.bottom - 2) s.parentNode.insertBefore(br, s);
+	}
+	fit();
+	window.addEventListener('resize', fit);
+	if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
 <script src="assets/js/2mode-pub-renderer.js?v=21" defer></script>
 <script src="assets/js/pubs-toc.js?v=4" defer></script>
