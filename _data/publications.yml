@@ -313,7 +313,7 @@
     - name: "arXiv"
       url: "https://arxiv.org/abs/2402.13071"
     - name: "Leaderboard"
-      url: "https://codecsuperb.com/"
+      url: "https://eric-lam.com/Codec-SUPERB/"
     - name: "Code"
       url: "https://github.com/voidful/Codec-SUPERB"
     - name: "HF"
