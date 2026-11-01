@@ -183,7 +183,14 @@
     margin: 0 0 14px 0;
     text-align: justify;
     text-wrap: pretty;
+    /* Auto hyphenation (2026-11-01) so justified lines on phones don't open wide gaps.
+     * Needs lang="en" on <html>; Safari needs the -webkit- prefix. Only words of 6+ letters,
+     * at least 3 letters on each side of the break. */
+    -webkit-hyphens: auto;
     hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
 }
 
 #about-container a {
