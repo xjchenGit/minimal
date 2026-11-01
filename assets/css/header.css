@@ -193,6 +193,15 @@
     -webkit-hyphenate-limit-after: 3;
 }
 
+/* Never auto-hyphenate names: people, NTU, awards (links), the bold field names, and
+ * venue/award text wrapped in .no-hyphen (e.g. INTERSPEECH, Best Paper Award). */
+#about-container.hero-bio a,
+#about-container.hero-bio strong,
+#about-container.hero-bio .no-hyphen {
+    -webkit-hyphens: manual;
+    hyphens: manual;
+}
+
 #about-container a {
     text-decoration: underline;
     text-decoration-color: transparent;
