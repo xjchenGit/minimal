@@ -199,7 +199,7 @@
     text-decoration-color: currentColor;
 }
 
-/* Award links in the bio (SPS Scholarship, ASRU nomination): always-on grey underline,
+/* Award link in the bio (only the Google PhD Fellowship since 2026-11-01; NVIDIA/SPS are plain links): always-on grey underline,
    same as `.pubs-note a` in styles.css; stays grey on hover while the text turns blue */
 #about-container a.bio-ul {
     text-decoration-color: #c7c7cc;
