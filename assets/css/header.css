@@ -445,4 +445,10 @@
     #about-container.hero-bio li {
         font-size: 14px;
     }
+
+    /* 2026-11-01: on phones the internship call-out flows with the bio text instead of starting its own
+       line (the about.yml inline style is inline-block, hence !important; index.html skips the <br> fix) */
+    #about-container #bio-internship {
+        display: inline !important;
+    }
 }

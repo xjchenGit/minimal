@@ -115,7 +115,8 @@ head_extra: |
 <script>
 /* 2026-10-31: the internship call-out (#bio-internship, inline-block) stays whole. When it does not fit on
    the last text line it drops to the next line; a <br> is then put in front of it so the line above ends
-   with a forced break and is not stretched by text-align: justify. Re-checked on resize and after fonts load. */
+   with a forced break and is not stretched by text-align: justify. Re-checked on resize and after fonts load.
+   2026-11-01: on phones (<= 480px) the call-out is display: inline and simply continues the paragraph. */
 (function () {
 	var s = document.getElementById('bio-internship');
 	if (!s) return;
@@ -130,6 +131,7 @@ head_extra: |
 	}
 	function fit() {
 		if (br.parentNode) br.parentNode.removeChild(br);
+		if (getComputedStyle(s).display === 'inline') return;  /* phones: plain inline text (header.css), no forced break */
 		var prev = lastCharRect(s.previousSibling);
 		if (prev && s.getBoundingClientRect().top > prev.bottom - 2) s.parentNode.insertBefore(br, s);
 	}
