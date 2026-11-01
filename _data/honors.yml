@@ -7,13 +7,12 @@
 # `category` picks the group on honors.html: `research` (Research Honors and
 # Fellowships) or `academic` (Academic Honors and Travel Grants).
 
-# Temporarily hidden until Google's public announcement on 2026-11-12 (was 2026-11-01; Google told the user on 2026-10-31):
-# - year: "2026"
-#   title: "Google PhD Fellowship"
-#   category: research
-#   details: "One of 13 recipients worldwide in Machine Perception"
-#   featured: 0
-#   selected: true
+- year: "2026"
+  title: "Industry PhD Fellowship"
+  category: research
+  details: "Awarded via competitive global selection by an Industry sponsor"
+  featured: 0
+  selected: true
 
 - year: "2026"
   title: "IEEE SPS Scholarship"
