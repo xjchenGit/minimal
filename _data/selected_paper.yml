@@ -11,8 +11,8 @@ papers:
   - wu-etal-2024-codec    # Audio-language models & benchmarks (ML/NLP venue)
   - wu2024towards         # Audio-language models & benchmarks (tech report)
   # Retrieval & agentic LLMs
-  - cyli2026codarag
   - chou2026efficient
+  - cyli2026codarag
   # Audio deepfakes
   - chen2026codecfake     # journal
   - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
