@@ -9,7 +9,6 @@ papers:
   - lu2026desta25         # Audio-language models & benchmarks (journal)
   - huang2025dynamic      # Audio-language models & benchmarks (ML/NLP venue)
   - wu-etal-2024-codec    # Audio-language models & benchmarks (ML/NLP venue)
-  - wu2024towards         # Audio-language models & benchmarks (tech report)
   # Retrieval & agentic LLMs
   - chou2026efficient
   - cyli2026codarag
@@ -17,3 +16,5 @@ papers:
   - chen2026codecfake     # journal
   - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
   # - chen2024singing     # hidden for now; uncomment to restore (speech venue, SLT lightning talk)
+  # Overview (moved to the end)
+  - wu2024towards         # Audio-language models & benchmarks (tech report)
