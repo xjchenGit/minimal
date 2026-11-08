@@ -1,0 +1,91 @@
+# Open-source datasets, benchmarks, and models, shown on honors.html (the "Misc"
+# page) in this order. `category` picks the group: `lead` (Lead & Mentored
+# Projects) or `community` (Community & Collaborative Contributions).
+# `year` is the paper's year. `pub` (a publications.yml id) makes `venue` link to
+# that paper on publications.html. Download and star counts in `details` are typed
+# by hand, so refresh them together with the CV. `role` (First Author, Mentor, ...)
+# appears after the venue; `type` (Dataset, Benchmark, Model) appears in brackets
+# before the title. Optional `venue2` / `pub2` add a second paper. Optional `bullet`
+# states the contribution on its own line under the row.
+
+- year: "2026"
+  title: "CodecFake+"
+  category: lead
+  type: "Dataset"
+  venue: "IEEE TASLP&nbsp;’26"
+  pub: "chen2026codecfake"
+  role: "First Author"
+  link: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
+  link_label: "HF"
+  details: "Codec-based deepfake speech dataset (31 codecs); 4.3K+ HF downloads"
+
+- year: "2024"
+  title: "DFADD"
+  category: lead
+  type: "Dataset"
+  venue: "IEEE SLT&nbsp;’24"
+  pub: "du2024dfadd"
+  role: "Mentor of 3 students"
+  link: "https://huggingface.co/datasets/isjwdu/DFADD"
+  link_label: "HF"
+  details: "Deepfake dataset from diffusion and flow-matching TTS; 9.1K+ HF downloads"
+
+- year: "2024"
+  title: "MTDVocaLiST"
+  category: lead
+  type: "Model"
+  venue: "ICASSP&nbsp;’24"
+  pub: "chen2024multimodal"
+  role: "First Author"
+  link: "https://github.com/xjchenGit/MTDVocaLiST"
+  link_label: "GitHub"
+  details: "Compact audio-visual sync model distilled from VocaLiST; 29 GitHub stars"
+
+- year: "2024"
+  title: "SingGraph"
+  category: lead
+  type: "Model"
+  venue: "INTERSPEECH&nbsp;’24"
+  pub: "chen2024singing"
+  role: "First Author"
+  link: "https://github.com/xjchenGit/SingGraph"
+  link_label: "GitHub"
+  details: "Graph-based singing voice deepfake detector; 24 GitHub stars"
+
+- year: "2026"
+  title: "DeSTA2.5-Audio"
+  category: community
+  type: "Model"
+  venue: "IEEE TASLP&nbsp;’26"
+  pub: "lu2026desta25"
+  role: "Core Contributor"
+  link: "https://github.com/kehanlu/DeSTA2.5-Audio"
+  link_label: "GitHub"
+  details: "142 GitHub stars, HF model (28.7K+) and data (11.0K+ downloads)"
+  bullet: "Prepared training data for audio deepfake understanding as part of an audio LLM project in collaboration with NVIDIA"
+
+- year: "2025"
+  title: "Dynamic-SUPERB Phase-2"
+  category: community
+  type: "Benchmark"
+  venue: "ICLR&nbsp;’25"
+  pub: "huang2025dynamic"
+  role: "Task Editor"
+  link: "https://github.com/dynamic-superb/dynamic-superb"
+  link_label: "GitHub"
+  details: "201 GitHub stars, 325 HF datasets (289K+ downloads)"
+  bullet: "One of several task editors, reviewing community-submitted audio understanding tasks in this 180-task speech benchmark"
+
+- year: "2024"
+  title: "Codec-SUPERB"
+  category: community
+  type: "Benchmark"
+  venue: "ACL Findings&nbsp;’24"
+  pub: "wu-etal-2024-codec"
+  venue2: "IEEE SLT&nbsp;’24"
+  pub2: "wu2024codecsuperbslt"
+  role: "Core Contributor"
+  link: "https://eric-lam.com/Codec-SUPERB/"
+  link_label: "Website"
+  details: "310 GitHub stars and a public leaderboard"
+  bullet: "Prepared audio event classification evaluation and signal-level metrics for the benchmark and challenges"

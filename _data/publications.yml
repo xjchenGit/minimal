@@ -303,7 +303,7 @@
   venue_short: "ACL Findings 2024"
   venue_notes:
     - { text: "Accept Rate 22.1%", type: "accept-rate" }
-    - { text: "311 GitHub Stars", type: "github-stars" }
+    - { text: "310 GitHub Stars", type: "github-stars" }
   category: "audio-generation"
   id: "wu-etal-2024-codec"
   selected: true

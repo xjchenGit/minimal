@@ -191,12 +191,14 @@ section .pubs-note + h3.category-header {
 
 #honors-container > ul:last-child,
 #academic-honors-container > ul:last-child,
+.open-source-list > ul:last-child,
 #services-container > ul:last-child {
   margin-bottom: 0;
 }
 
 #honors-container ul,
 #academic-honors-container ul,
+.open-source-list ul,
 #services-container ul {
   line-height: 1.5;
   padding-top: 0;
@@ -204,12 +206,14 @@ section .pubs-note + h3.category-header {
 
 #honors-container ul li,
 #academic-honors-container ul li,
+.open-source-list ul li,
 #services-container ul li {
   margin-bottom: 8px;
 }
 
 #honors-container ul li:first-child,
 #academic-honors-container ul li:first-child,
+.open-source-list ul li:first-child,
 #services-container ul li:first-child {
   margin-top: 0;
 }
@@ -561,6 +565,7 @@ screen and (max-width: 480px) {
 #experience-container ul,
 #honors-container ul,
 #academic-honors-container ul,
+.open-source-list ul,
 #services-container ul {
   list-style: none;
   padding-left: 0;
@@ -570,6 +575,7 @@ screen and (max-width: 480px) {
   #experience-container ul,
   #honors-container ul,
   #academic-honors-container ul,
+  .open-source-list ul,
   #services-container ul {
     padding-left: 0;
   }
@@ -579,6 +585,7 @@ screen and (max-width: 480px) {
 #experience-container .entry-row,
 #honors-container .entry-row,
 #academic-honors-container .entry-row,
+.open-source-list .entry-row,
 #services-container .entry-row {
   display: flex;
   justify-content: space-between;
@@ -590,6 +597,7 @@ screen and (max-width: 480px) {
 #experience-container .entry-body,
 #honors-container .entry-body,
 #academic-honors-container .entry-body,
+.open-source-list .entry-body,
 #services-container .entry-body {
   order: 1;
   flex: 1;
@@ -600,6 +608,7 @@ screen and (max-width: 480px) {
 #experience-container .entry-date,
 #honors-container .entry-date,
 #academic-honors-container .entry-date,
+.open-source-list .entry-date,
 #services-container .entry-date {
   order: 2;
   flex-shrink: 0;
@@ -611,6 +620,7 @@ screen and (max-width: 480px) {
 #experience-container .entry-sep,
 #honors-container .entry-sep,
 #academic-honors-container .entry-sep,
+.open-source-list .entry-sep,
 #services-container .entry-sep {
   display: none;
 }
@@ -633,9 +643,23 @@ screen and (max-width: 480px) {
 
 #honors-container .honor-detail,
 #academic-honors-container .honor-detail,
+.open-source-list .honor-detail,
 #services-container .honor-detail {
   font-size: 0.9em;
   color: var(--text-muted);
+}
+
+/* Contribution bullet on its own line under an open-source row */
+.open-source-list ul.entry-bullets {
+  list-style: disc;
+  margin: 2px 0 0;
+  padding-left: 2.4em;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.open-source-list ul.entry-bullets li {
+  margin-bottom: 0;
 }
 
 /* Gap between the bold title (.entry-main) and its grey detail / GPA lives on
@@ -644,6 +668,7 @@ screen and (max-width: 480px) {
 #experience-container .entry-main,
 #honors-container .entry-main,
 #academic-honors-container .entry-main,
+.open-source-list .entry-main,
 #services-container .entry-main {
   margin-right: 0.3em;
 }
@@ -652,6 +677,7 @@ screen and (max-width: 480px) {
   #experience-container .entry-row,
   #honors-container .entry-row,
   #academic-honors-container .entry-row,
+  .open-source-list .entry-row,
   #services-container .entry-row {
     display: inline;
   }
@@ -659,6 +685,7 @@ screen and (max-width: 480px) {
   #experience-container .entry-date,
   #honors-container .entry-date,
   #academic-honors-container .entry-date,
+  .open-source-list .entry-date,
   #services-container .entry-date {
     color: inherit;
   }
@@ -666,6 +693,7 @@ screen and (max-width: 480px) {
   #experience-container .entry-sep,
   #honors-container .entry-sep,
   #academic-honors-container .entry-sep,
+  .open-source-list .entry-sep,
   #services-container .entry-sep {
     display: inline;
   }
@@ -678,6 +706,26 @@ screen and (max-width: 480px) {
 }
 
 /* Underline the links instead of coloring them */
+/* End-of-row repo links match the blue "Name ›" links of the paper cards (.hl-links in pubs.css).
+   Venue links stay plain text, like the paper links on honors rows. */
+.open-source-list a.repo-link {
+  color: var(--link);
+  white-space: nowrap;
+}
+
+.open-source-list .entry-type {
+  font-size: 0.78em;
+  color: var(--text-muted);
+}
+
+.open-source-list a.repo-link:hover {
+  text-decoration: underline;
+}
+
+.open-source-list a.repo-link::after {
+  content: "\00a0\203A";
+}
+
 .pubs-note a {
   text-decoration: underline;
   text-decoration-color: #c7c7cc;

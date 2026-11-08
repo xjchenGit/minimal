@@ -1,12 +1,23 @@
 ---
 page_id: honors
-title_full: "Xuanjun Chen - Honors and Service"
-description: "Honors, awards, scholarships, and professional service of Xuanjun Chen, Ph.D. candidate at National Taiwan University."
+title_full: "Xuanjun Chen - Miscellaneous"
+description: "Honors, awards, scholarships, open-source projects, and professional service of Xuanjun Chen, Ph.D. candidate at National Taiwan University."
 og_url: "https://xjchen.tech/honors.html"
 og_type: profile
 ---
 
-<h2 id="honors">Honors and Service</h2>
+<h2>Impact &amp; Open Source</h2>
+<h3 class="category-header">Lead &amp; Mentored Projects</h3>
+<div class="open-source-list">
+	{%- assign lead_items = site.data.open_source | where: "category", "lead" %}
+	{% include open-source-list.html items=lead_items %}
+</div>
+<h3 class="category-header">Community &amp; Collaborative Contributions</h3>
+<div class="open-source-list">
+	{%- assign community_items = site.data.open_source | where: "category", "community" %}
+	{% include open-source-list.html items=community_items %}
+</div>
+<h2 id="honors">Honors and Awards</h2>
 <h3 class="category-header">Research Honors and Fellowships</h3>
 <div id="honors-container">
 	{%- assign honor_items = site.data.honors | where: "selected", true | where: "category", "research" %}
@@ -17,7 +28,7 @@ og_type: profile
 	{%- assign academic_items = site.data.honors | where: "selected", true | where: "category", "academic" %}
 	{% include honors-list.html items=academic_items %}
 </div>
-<h3 class="category-header">Service and Outreach</h3>
+<h2>Service and Outreach</h2>
 <div id="services-container">
 	{%- assign service_items = site.data.services | where: "selected", true %}
 	{% include services-list.html items=service_items full=true %}

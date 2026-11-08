@@ -1,0 +1,10 @@
+{%- comment -%}
+Renders open-source projects (from _data/open_source.yml) as date / linked title / detail rows.
+The venue links to the paper's card on publications.html; `link` / `link_label` go at the end of the row.
+Usage: {% include open-source-list.html items=lead_items %}
+{%- endcomment -%}
+<ul>
+	{%- for item in include.items %}
+	<li><span class="entry-row"><span class="entry-date">{{ item.year }}</span><span class="entry-sep">: </span><span class="entry-body"><span class="entry-main"><span class="entry-type">[{{ item.type }}]</span> <b>{{ item.title }}</b> (<a href="publications.html#{{ item.pub }}">{{ item.venue }}</a>{% if item.pub2 %} &amp; <a href="publications.html#{{ item.pub2 }}">{{ item.venue2 }}</a>{% endif %}{% if item.role %}, {{ item.role }}{% endif %})</span> <span class="honor-detail">{{ item.details }} &middot;&nbsp;&nbsp;<a class="repo-link" href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.link_label }}</a></span></span></span>{% if item.bullet %}<ul class="entry-bullets"><li>{{ item.bullet }}</li></ul>{% endif %}</li>
+	{%- endfor %}
+</ul>

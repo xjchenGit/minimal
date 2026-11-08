@@ -33,6 +33,7 @@ head_extra: |
 		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span><span class="label-short">Biography</span></a></li>
 		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span><span class="label-short">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span><span class="label-short">Experience</span></a></li>
+		<li><a href="#sec-open-source" data-target="sec-open-source"><span class="label-full">Open Source</span><span class="label-short">Open Source</span></a></li>
 		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span><span class="label-short">Honors</span></a></li>
 	</ul>
 </nav>
@@ -77,7 +78,9 @@ head_extra: |
 <p class="pubs-note">See all on <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="publications.html">browse by topic</a>.</p>
 <div id="pub-container">
 {%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
-{%- for pub_id in site.data.selected_paper.papers -%}
+{%- for group in site.data.selected_paper.groups %}
+<h3 class="category-header">{{ group.title | escape }}</h3>
+{%- for pub_id in group.papers -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}
 {%- assign pub = matching | first -%}
@@ -85,6 +88,7 @@ head_extra: |
 {% include highlight-item.html pub=pub %}
 {%- endif -%}
 {%- endif -%}
+{%- endfor -%}
 {%- endfor %}
 </div>
 
@@ -98,8 +102,20 @@ head_extra: |
 	</ul>
 </div>
 
-<h2 id="honors">Selected Honors</h2>
-<p class="pubs-note">See all on the <a href="honors.html">Honors</a> page.</p>
+<h2 id="sec-open-source">Impact &amp; Open Source</h2>
+<h3 class="category-header">Lead &amp; Mentored Projects</h3>
+<div class="open-source-list">
+	{%- assign lead_items = site.data.open_source | where: "category", "lead" %}
+	{% include open-source-list.html items=lead_items %}
+</div>
+<h3 class="category-header">Community &amp; Collaborative Contributions</h3>
+<div class="open-source-list">
+	{%- assign community_items = site.data.open_source | where: "category", "community" %}
+	{% include open-source-list.html items=community_items %}
+</div>
+
+<h2 id="honors">Selected Honors and Service</h2>
+<p class="pubs-note">See all on the <a href="honors.html">Misc</a> page.</p>
 <h3 class="category-header">Research and Academic Honors</h3>
 <div id="honors-container">
 	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
