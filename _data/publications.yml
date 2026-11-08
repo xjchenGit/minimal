@@ -101,6 +101,25 @@
         primaryClass={cs.CL}
     }
 
+- title: "Building a Taiwanese Mandarin Spoken Language Model: A First Attempt"
+  authors_full: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, Yi-Cheng Lin, Yu-Xiang Lin, Wei-Chih Chen, Ho Lam Chung, Chun-Yi Kuan, Wei-Ping Huang, Ke-Han Lu, Tzu-Quan Lin, Hsiu-Hsuan Wang, En-Pei Hu, Chan-Jan Hsu, Liang-Hsuan Tseng, I-Hsiang Chiu, Ulin Sanga, <u>Xuanjun Chen</u>, Po-chun Hsu, Shu-wen Yang, Hung-yi Lee"
+  authors_short: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, ..., <u>Xuanjun Chen</u>, ..., Shu-wen Yang, Hung-yi Lee"
+  venue: "Technical Report, Nov. 2024"
+  category: "audio-llm"
+  id: "yang2024building"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2411.07111"
+  bibtex: |
+    @misc{yang2024building,
+        title={Building a Taiwanese Mandarin Spoken Language Model: A First Attempt},
+        author={Yang, Chih-Kai and Fu, Yu-Kuan and Li, Chen-An and Lin, Yi-Cheng and Lin, Yu-Xiang and Chen, Wei-Chih and Chung, Ho Lam and Kuan, Chun-Yi and Huang, Wei-Ping and Lu, Ke-Han and Lin, Tzu-Quan and Wang, Hsiu-Hsuan and Hu, En-Pei and Hsu, Chan-Jan and Tseng, Liang-Hsuan and Chiu, I-Hsiang and Sanga, Ulin and Chen, Xuanjun and Hsu, Po-chun and Yang, Shu-wen and Lee, Hung-yi},
+        year={2024},
+        eprint={2411.07111},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
+
 # --- RAG & Agentic LLMs ---
 - title: "MetaBench-Harness: Unlocking End-to-End Optimization of Benchmark Harnesses"
   authors_short: "<u>Xuanjun Chen</u>, Hua-Hsuan Chen, Wei-Chung Lu, Yinghao Ma, Jyh-Shing Roger Jang, Hung-yi Lee"
@@ -350,25 +369,6 @@
         year={2024}
     }
 
-- title: "Building a Taiwanese Mandarin Spoken Language Model: A First Attempt"
-  authors_full: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, Yi-Cheng Lin, Yu-Xiang Lin, Wei-Chih Chen, Ho Lam Chung, Chun-Yi Kuan, Wei-Ping Huang, Ke-Han Lu, Tzu-Quan Lin, Hsiu-Hsuan Wang, En-Pei Hu, Chan-Jan Hsu, Liang-Hsuan Tseng, I-Hsiang Chiu, Ulin Sanga, <u>Xuanjun Chen</u>, Po-chun Hsu, Shu-wen Yang, Hung-yi Lee"
-  authors_short: "Chih-Kai Yang, Yu-Kuan Fu, Chen-An Li, ..., <u>Xuanjun Chen</u>, ..., Shu-wen Yang, Hung-yi Lee"
-  venue: "Technical Report, Nov. 2024"
-  category: "audio-generation"
-  id: "yang2024building"
-  links:
-    - name: "arXiv"
-      url: "https://arxiv.org/abs/2411.07111"
-  bibtex: |
-    @misc{yang2024building,
-        title={Building a Taiwanese Mandarin Spoken Language Model: A First Attempt},
-        author={Yang, Chih-Kai and Fu, Yu-Kuan and Li, Chen-An and Lin, Yi-Cheng and Lin, Yu-Xiang and Chen, Wei-Chih and Chung, Ho Lam and Kuan, Chun-Yi and Huang, Wei-Ping and Lu, Ke-Han and Lin, Tzu-Quan and Wang, Hsiu-Hsuan and Hu, En-Pei and Hsu, Chan-Jan and Tseng, Liang-Hsuan and Chiu, I-Hsiang and Sanga, Ulin and Chen, Xuanjun and Hsu, Po-chun and Yang, Shu-wen and Lee, Hung-yi},
-        year={2024},
-        eprint={2411.07111},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL}
-    }
-
 - title: "Towards audio language modeling-an overview"
   authors_short: "Haibin Wu, <u>Xuanjun Chen</u>, Yi-Cheng Lin, Kai-wei Chang, Ho-Lam Chung, Alexander Liu, Hung-yi Lee"
   venue: "Technical Report, Feb. 2024"
@@ -403,14 +403,19 @@
   id: "chen2026joint"
   selected: true
   links:
+    - name: "ISCA"
+      url: "https://www.isca-archive.org/interspeech_2026/hu26e_interspeech.html"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2604.04841"
   bibtex: |
-    @inproceedings{chen2026joint,
-        title={Joint Fullband-Subband Modeling for High-Resolution SingFake Detection},
-        author={Chen, Xuanjun and Hu, Chia-Yu and Huang, Sung-Feng and Wu, Haibin and Lee, Hung-yi and Jang, Jyh-Shing Roger},
-        booktitle={Interspeech 2026},
-        year={2026}
+    @inproceedings{hu26e_interspeech,
+      title     = {{Joint Fullband-Subband Modeling for High-Resolution SingFake Detection}},
+      author    = {Chia-Yu Hu and Xuanjun Chen and Sung-Feng Huang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+      year      = {2026},
+      booktitle = {{Interspeech 2026 [Long Track]}},
+      pages     = {3042--3051},
+      doi       = {10.21437/Interspeech.2026-1614},
+      issn      = {2958-1796},
     }
 
 - title: "CodecFake+: Codec-Based Resynthesized Data as a Proxy for Detecting CodecFake Speech"
