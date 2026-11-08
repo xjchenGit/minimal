@@ -22,6 +22,7 @@
   event: "Singing Voice Graph Modeling for SingFake Detection"
   link: "https://svddchallenge.org/challenges/special_session_ieee_slt.html"
   context: "Special Session at IEEE SLT 2024"
+  featured: true
   selected: true
 
 - year: "2023 – 26"
