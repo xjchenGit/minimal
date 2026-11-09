@@ -79,7 +79,7 @@ head_extra: |
 <div id="pub-container">
 {%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
 {%- for group in site.data.selected_paper.groups %}
-<h3 class="category-header">{{ group.title | escape }}</h3>
+<h3 class="category-header">{% if group.title_short %}<span class="desk-text">{{ group.title | escape }}</span><span class="mob-text">{{ group.title_short | escape }}</span>{% else %}{{ group.title | escape }}{% endif %}</h3>
 {%- for pub_id in group.papers -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}

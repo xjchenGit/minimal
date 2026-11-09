@@ -4,6 +4,7 @@
 # agentic-LLM papers, then audio deepfakes close the list.
 groups:
   - title: "Speech & Audio Language Models and Generation"
+    title_short: "Speech & Audio LMs and Generation"  # shown instead of title on phones (<= 768px)
     papers:
       - chen2026llmagents     # Audio generation (tech report)
       - chen2026lalm          # Audio-language models & benchmarks (tech report)
@@ -15,6 +16,7 @@ groups:
       - wu2024towards         # Overview, audio-language models & benchmarks (tech report)
 
   - title: "Retrieval and Agentic Large Language Models"
+    title_short: "Retrieval & Agentic LLMs"
     papers:
       - chen2026metabench     # Benchmark harness optimization (tech report)
       - chou2026efficient
