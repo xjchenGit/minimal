@@ -1,6 +1,6 @@
 # Open-source datasets, benchmarks, and models, shown on the homepage (index.html)
 # in this order. `category` picks the group: `lead` (Lead & Mentored
-# Projects) or `community` (Community & Collaborative Work).
+# Projects) or `community` (Collaborative & Community Work).
 # `year` is the paper's year, shown once in the left column (venues carry no year). `pub` (a publications.yml id) makes `venue` link to
 # that paper on publications.html. Download and star counts in `details` are typed
 # by hand, so refresh them together with the CV. Optional `role` (Core Contributor, ...)
