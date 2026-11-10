@@ -16,7 +16,7 @@
   pub: "chen2026codecfake"
   link: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
   link_label: "HF"
-  details: "Codec-based deepfake speech dataset (31 codecs); 4.3K+ HF downloads"
+  details: "Largest deepfake dataset from neural audio codec-based TTS (31 codecs); 4.3K+ HF downloads"
 
 - year: "2024"
   title: "DFADD"
@@ -26,17 +26,7 @@
   pub: "du2024dfadd"
   link: "https://huggingface.co/datasets/isjwdu/DFADD"
   link_label: "HF"
-  details: "Mentored students on a deepfake dataset from diffusion/flow-matching TTS; 9.1K+ HF downloads"
-
-- year: "2024"
-  title: "MTDVocaLiST"
-  category: lead
-  type: "Model"
-  venue: "ICASSP"
-  pub: "chen2024multimodal"
-  link: "https://github.com/xjchenGit/MTDVocaLiST"
-  link_label: "GitHub"
-  details: "Compact audio-visual sync model distilled from VocaLiST; 29 GitHub stars"
+  details: "Mentored students on the first deepfake dataset from diffusion/flow-matching TTS; 9.1K+ HF downloads"
 
 - year: "2024"
   title: "SingGraph"
@@ -46,7 +36,17 @@
   pub: "chen2024singing"
   link: "https://github.com/xjchenGit/SingGraph"
   link_label: "GitHub"
-  details: "Graph-based singing voice deepfake detector; 24 GitHub stars"
+  details: "Achieved SOTA results on SingFake detection, fusing MERT and wav2vec 2.0; 24 GitHub stars"
+
+- year: "2024"
+  title: "MTDVocaLiST"
+  category: lead
+  type: "Model"
+  venue: "ICASSP"
+  pub: "chen2024multimodal"
+  link: "https://github.com/xjchenGit/MTDVocaLiST"
+  link_label: "GitHub"
+  details: "Compact audio-visual lip-sync model distilled from VocaLiST; 29 GitHub stars"
 
 - year: "2026"
   title: "DeSTA2.5-Audio"
