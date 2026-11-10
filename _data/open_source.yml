@@ -16,7 +16,7 @@
   pub: "chen2026codecfake"
   link: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
   link_label: "HF"
-  details: "Largest deepfake dataset from neural audio codec-based TTS (31 codecs); 4.3K+ HF downloads"
+  details: "Largest deepfake dataset from neural audio codec-based TTS (31 codecs); 4.3K+ downloads"
 
 - year: "2024"
   title: "DFADD"
@@ -26,7 +26,7 @@
   pub: "du2024dfadd"
   link: "https://huggingface.co/datasets/isjwdu/DFADD"
   link_label: "HF"
-  details: "Mentored students on the first deepfake dataset from diffusion/flow-matching TTS; 9.1K+ HF downloads"
+  details: "Mentored students on the first deepfake dataset from diffusion/flow-matching TTS; 9.1K+ downloads"
 
 - year: "2024"
   title: "SingGraph"
@@ -70,7 +70,7 @@
   link: "https://github.com/dynamic-superb/dynamic-superb"
   link_label: "GitHub"
   details: "201 GitHub stars, 325 HF datasets (289K+ downloads)"
-  bullet: "Reviewed and standardized community tasks for the 180-task audio understanding benchmark"
+  bullet: "Reviewed and standardized community-submitted tasks for the 180-task audio understanding benchmark"
 
 - year: "2024"
   title: "Codec-SUPERB"
