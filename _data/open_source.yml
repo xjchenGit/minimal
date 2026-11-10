@@ -70,7 +70,7 @@
   link: "https://github.com/dynamic-superb/dynamic-superb"
   link_label: "GitHub"
   details: "201 GitHub stars, 325 HF datasets (289K+ downloads)"
-  bullet: "Reviewed and standardized community-submitted tasks to maintain quality in the 180-task audio understanding benchmark"
+  bullet: "Reviewed and standardized community-submitted tasks for the 180-task audio understanding benchmark"
 
 - year: "2024"
   title: "Codec-SUPERB"
