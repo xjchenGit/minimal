@@ -16,7 +16,7 @@
   pub: "chen2026codecfake"
   link: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
   link_label: "HF"
-  details: "Largest deepfake dataset from neural audio codec-based TTS (31 codecs); 4.3K+ downloads"
+  details: "Largest deepfake proxy dataset from neural codec-resynthesized speech for defense against CodecFake (31 codecs); 4.3K+ downloads"
 
 - year: "2024"
   title: "DFADD"
