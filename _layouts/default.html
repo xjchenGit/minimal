@@ -65,18 +65,15 @@
 
 		<section>
 			{{ content }}
-			<!-- ClustrMaps widget disabled 2026-06-13: cdn.clustrmaps.com has been
-			     DNS SERVFAIL (no NS/SOA via 8.8.8.8 or 1.1.1.1) since 2026-06-03, so
-			     the service is dead. Commented out rather than deleted — re-enable or
-			     swap if it ever comes back.
+			<!-- Visitor map: MapMyVisitors (2026-11-12). Replaced ClustrMaps, which
+			     died in June 2026 (cdn.clustrmaps.com NXDOMAIN). -->
 			<div class="site-map-block">
-				<script type='text/javascript' id='clustrmaps' async
-					src='https://cdn.clustrmaps.com/map_v2.js?cl=cee3f2&w=200&t=tt&d=nEmSewDPXqNGs14be_z5YYcQJ2bmdcQr14eiveUCbnA&co=fbfbfd&cmn=005fa3&ct=2d78ad&cmo=980000'></script>
+				<script type='text/javascript' id='mapmyvisitors'
+					src='https://mapmyvisitors.com/map.js?cl=dcdce1&w=300&t=tt&d=I3-sTDwGkGnW02XDmXmqkLt52swcF7TEvjTntKJpaec&co=fbfbfd&cmn=980000&cmo=005fa3&ct=2d78ad'></script>
 			</div>
-			-->
 			<footer class="site-footer">
 				<!-- <p class="footer-updated">Last updated {{ site.time | date: "%B %Y" }}</p> -->
-				<p class="footer-updated">Last updated October 2026</p>
+				<!-- <p class="footer-updated">Last updated October 2026</p> -->
 			</footer>
 		</section>
 	</div>
