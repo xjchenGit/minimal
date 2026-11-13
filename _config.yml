@@ -2,6 +2,10 @@ title: Xuanjun Chen
 description: Personal homepage of Xuanjun Chen, Ph.D. candidate at National Taiwan University EECS.
 url: https://xjchen.tech
 
+# GoatCounter analytics: the code you chose at goatcounter.com signup
+# (the part before .goatcounter.com). Leave empty to disable.
+goatcounter: "xjvictor"
+
 markdown: kramdown
 kramdown:
   input: GFM
