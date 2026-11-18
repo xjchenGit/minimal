@@ -57,6 +57,18 @@
 	</noscript>
 
 	{{ page.head_extra }}
+	{% if site.baidu_tongji and site.baidu_tongji != "" and jekyll.environment == "production" %}
+	<!-- Baidu Tongji: loads reliably in mainland China and geolocates CN IPs. -->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?{{ site.baidu_tongji }}";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	{% endif %}
 </head>
 
 <body class="page-{{ page.page_id | default: 'unknown' }}">

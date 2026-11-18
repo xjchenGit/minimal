@@ -6,6 +6,11 @@ url: https://xjchen.tech
 # (the part before .goatcounter.com). Leave empty to disable.
 goatcounter: "xjvictor"
 
+# Baidu Tongji (tongji.baidu.com): the hex ID in its hm.js?<id> snippet.
+# Added for mainland-China visitors, whom the other tools fail to geolocate.
+# Leave empty to disable.
+baidu_tongji: "274ffb87f44017f72dd730b4438e9bb0"
+
 markdown: kramdown
 kramdown:
   input: GFM
