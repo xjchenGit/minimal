@@ -393,6 +393,13 @@ section ul li {
   text-align: center;
 }
 
+/* Map stays visible and keeps counting, but clicks no longer open the
+   public MapMyVisitors stats page (full of "Unknown Location" bot hits). */
+.site-map-block a#mapmyvisitors-widget {
+  pointer-events: none;
+  cursor: default;
+}
+
 @media (max-width: 600px) {
   .site-map-block {
     margin-top: 48px;
