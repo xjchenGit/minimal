@@ -1,24 +1,19 @@
 ---
-page_id: honors
-title_full: "Xuanjun Chen - Miscellaneous"
-description: "Honors, awards, scholarships, and professional service of Xuanjun Chen, Ph.D. candidate at National Taiwan University."
-og_url: "https://xjchen.tech/honors.html"
-og_type: profile
+layout: null
+permalink: /honors.html
+sitemap: false
 ---
-
-<h2 id="honors">Honors and Awards</h2>
-<h3 class="category-header">Research Honors and Fellowships</h3>
-<div id="honors-container">
-	{%- assign honor_items = site.data.honors | where: "selected", true | where: "category", "research" %}
-	{% include honors-list.html items=honor_items %}
-</div>
-<h3 class="category-header">Academic Honors and Travel Grants</h3>
-<div id="academic-honors-container">
-	{%- assign academic_items = site.data.honors | where: "selected", true | where: "category", "academic" %}
-	{% include honors-list.html items=academic_items %}
-</div>
-<h2>Service and Outreach</h2>
-<div id="services-container">
-	{%- assign service_items = site.data.services | where: "selected", true %}
-	{% include services-list.html items=service_items full=true %}
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Moved to misc.html</title>
+	<meta name="robots" content="noindex">
+	<link rel="canonical" href="https://xjchen.tech/misc.html">
+	<meta http-equiv="refresh" content="0; url=misc.html">
+	<script>location.replace('misc.html' + location.search + location.hash);</script>
+</head>
+<body>
+	<p>This page has moved to <a href="misc.html">misc.html</a>.</p>
+</body>
+</html>

@@ -16,4 +16,6 @@ fi
 
 # conda run sets GEM_HOME/PATH for the env; --no-capture-output streams the
 # serve logs live instead of buffering them until the process exits.
-conda run --no-capture-output -n jekyll jekyll serve --livereload
+# --force_polling: this machine often hits the inotify watch limit, which makes
+# a normal watch crash (ENOSPC); polling still picks up edits.
+conda run --no-capture-output -n jekyll jekyll serve --livereload --force_polling

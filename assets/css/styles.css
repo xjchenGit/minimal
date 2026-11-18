@@ -190,6 +190,7 @@ section .pubs-note + h3.category-header {
 }
 
 #honors-container > ul:last-child,
+#travel-grants-container > ul:last-child,
 #academic-honors-container > ul:last-child,
 .open-source-list > ul:last-child,
 #services-container > ul:last-child {
@@ -197,6 +198,7 @@ section .pubs-note + h3.category-header {
 }
 
 #honors-container ul,
+#travel-grants-container ul,
 #academic-honors-container ul,
 .open-source-list ul,
 #services-container ul {
@@ -205,6 +207,7 @@ section .pubs-note + h3.category-header {
 }
 
 #honors-container ul li,
+#travel-grants-container ul li,
 #academic-honors-container ul li,
 .open-source-list ul li,
 #services-container ul li {
@@ -212,6 +215,7 @@ section .pubs-note + h3.category-header {
 }
 
 #honors-container ul li:first-child,
+#travel-grants-container ul li:first-child,
 #academic-honors-container ul li:first-child,
 .open-source-list ul li:first-child,
 #services-container ul li:first-child {
@@ -571,6 +575,7 @@ screen and (max-width: 480px) {
 /* Remove default bullets — rely on the two-column row layout for structure */
 #experience-container ul,
 #honors-container ul,
+#travel-grants-container ul,
 #academic-honors-container ul,
 .open-source-list ul,
 #services-container ul {
@@ -581,6 +586,7 @@ screen and (max-width: 480px) {
 @media (max-width: 768px) {
   #experience-container ul,
   #honors-container ul,
+  #travel-grants-container ul,
   #academic-honors-container ul,
   .open-source-list ul,
   #services-container ul {
@@ -591,6 +597,7 @@ screen and (max-width: 480px) {
 /* Right-aligned dates for Experience / Honors / Services (desktop only) */
 #experience-container .entry-row,
 #honors-container .entry-row,
+#travel-grants-container .entry-row,
 #academic-honors-container .entry-row,
 .open-source-list .entry-row,
 #services-container .entry-row {
@@ -603,6 +610,7 @@ screen and (max-width: 480px) {
 
 #experience-container .entry-body,
 #honors-container .entry-body,
+#travel-grants-container .entry-body,
 #academic-honors-container .entry-body,
 .open-source-list .entry-body,
 #services-container .entry-body {
@@ -614,6 +622,7 @@ screen and (max-width: 480px) {
 
 #experience-container .entry-date,
 #honors-container .entry-date,
+#travel-grants-container .entry-date,
 #academic-honors-container .entry-date,
 .open-source-list .entry-date,
 #services-container .entry-date {
@@ -626,6 +635,7 @@ screen and (max-width: 480px) {
 
 #experience-container .entry-sep,
 #honors-container .entry-sep,
+#travel-grants-container .entry-sep,
 #academic-honors-container .entry-sep,
 .open-source-list .entry-sep,
 #services-container .entry-sep {
@@ -641,14 +651,17 @@ screen and (max-width: 480px) {
 
 /* Honors linked to a paper look exactly like unlinked ones */
 #honors-container .honor-pub-link,
+#travel-grants-container .honor-pub-link,
 #academic-honors-container .honor-pub-link,
 #honors-container .honor-pub-link:hover,
+#travel-grants-container .honor-pub-link:hover,
 #academic-honors-container .honor-pub-link:hover {
   color: inherit;
   text-decoration: none;
 }
 
 #honors-container .honor-detail,
+#travel-grants-container .honor-detail,
 #academic-honors-container .honor-detail,
 .open-source-list .honor-detail,
 #services-container .honor-detail {
@@ -674,6 +687,7 @@ screen and (max-width: 480px) {
    wraps onto the next line it starts flush left under the title. */
 #experience-container .entry-main,
 #honors-container .entry-main,
+#travel-grants-container .entry-main,
 #academic-honors-container .entry-main,
 .open-source-list .entry-main,
 #services-container .entry-main {
@@ -683,6 +697,7 @@ screen and (max-width: 480px) {
 @media (max-width: 768px) {
   #experience-container .entry-row,
   #honors-container .entry-row,
+  #travel-grants-container .entry-row,
   #academic-honors-container .entry-row,
   .open-source-list .entry-row,
   #services-container .entry-row {
@@ -691,6 +706,7 @@ screen and (max-width: 480px) {
 
   #experience-container .entry-date,
   #honors-container .entry-date,
+  #travel-grants-container .entry-date,
   #academic-honors-container .entry-date,
   .open-source-list .entry-date,
   #services-container .entry-date {
@@ -699,6 +715,7 @@ screen and (max-width: 480px) {
 
   #experience-container .entry-sep,
   #honors-container .entry-sep,
+  #travel-grants-container .entry-sep,
   #academic-honors-container .entry-sep,
   .open-source-list .entry-sep,
   #services-container .entry-sep {

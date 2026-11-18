@@ -1,24 +1,18 @@
 # Listed in chronological order (newest first). This is the order shown on
-# honors.html. Items with `selected: true` appear on honors.html; items with a
+# misc.html. Items with `selected: true` appear on misc.html; items with a
 # numeric `featured` rank also appear on the homepage (index.html), sorted by
 # that rank. Items with `selected: false` are kept for reference only.
 # `pub` (a publications.yml id) makes the title link to that paper on
 # publications.html.
-# `category` picks the group on honors.html: `research` (Research Honors and
-# Fellowships) or `academic` (Academic Honors and Travel Grants).
+# `category` picks the group on misc.html: `research` (Research Honors and
+# Fellowships), `academic` (Academic Honors and Scholarships) or `travel`
+# (Conference Travel Grants).
 
 - year: "2026"
   title: "Google PhD Fellowship"
   category: research
-  details: "One of a dozen recipients worldwide in Machine Perception"
+  details: "Recognized as one of 13 Google PhD Fellows in Machine Perception worldwide"
   featured: 0
-  selected: true
-
-- year: "2026"
-  title: "IEEE SPS Scholarship"
-  category: academic
-  details: "One of dozens of recipients worldwide from the IEEE Signal Processing Society"
-  featured: 2
   selected: true
 
 - year: "2026"
@@ -33,7 +27,14 @@
   category: research
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
-  details: "Selected 8 out of 110 accepted papers (Top 7%)"
+  details: "Selected 8 out of 171 submitted papers (Top 5%)"
+  featured: 2
+  selected: true
+
+- year: "2026"
+  title: "IEEE SPS Scholarship"
+  category: academic
+  details: "One of dozens of recipients worldwide from the IEEE Signal Processing Society"
   featured: 3
   selected: true
 
@@ -44,20 +45,20 @@
   selected: true
 
 - year: "2025"
-  title: "Best Paper Award"
-  category: research
-  venue: "ROCLING 2025"
-  pub: "lin2025preliminary"
-  details: "Selected 1 out of 36 accepted papers (Top 2.8%)"
-  featured: 4
-  selected: true
-
-- year: "2025"
   title: "Best Student Paper Nomination"
   category: research
   venue: "ASRU 2025"
   pub: "chen2025towards"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
+  featured: 4
+  selected: true
+
+- year: "2025"
+  title: "Best Paper Award"
+  category: research
+  venue: "ROCLING 2025"
+  pub: "lin2025preliminary"
+  details: "Selected 1 out of 36 accepted papers (Top 2.8%)"
   featured: 5
   selected: true
 
@@ -67,16 +68,16 @@
 #   details: "Team award: Taiwan Humanities Conversational AI, 83 of 500+ submissions"
 #   selected: true
 
-- year: "2025"
-  title: "ACLCLP Travel Grant"
-  category: academic
-  details: "Sponsored to present at IEEE ASRU 2025"
-  selected: true
-
 - year: "2025 – 26"
   title: "Excellence 100 Program Grant"
-  category: academic
-  details: "Graduate Institute of Communication Engineering, NTU"
+  category: travel
+  details: "Sponsored by Taiwan MOE to present at INTERSPEECH 2025 and ISCSLP 2026"
+  selected: true
+
+- year: "2025"
+  title: "ACLCLP Travel Grant"
+  category: travel
+  details: "Sponsored to present at IEEE ASRU 2025"
   selected: true
 
 - year: "2025"
@@ -108,18 +109,18 @@
   details: "Bursary Award for Overseas Students"
   selected: true
 
+- year: "2024 – 26"
+  title: "NSTC Travel Grants"
+  category: travel
+  details: "Sponsored to present at INTERSPEECH 2024 &amp; 2025 and ISCSLP 2026"
+  selected: true
+
 - year: "2024"
   title: "Google Student Travel Grant"
-  category: academic
+  category: travel
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
   featured: 7
-  selected: true
-
-- year: "2024 – 26"
-  title: "NSTC Travel Grants"
-  category: academic
-  details: "Sponsored to present at INTERSPEECH 2024 &amp; 2025 and ISCSLP 2026"
   selected: true
 
 - year: "2024"
