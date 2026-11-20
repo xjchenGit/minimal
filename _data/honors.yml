@@ -36,7 +36,8 @@
   category: research
   venue: "TAAI 2026"
   pub: "khchen2026bridging"
-  details: "Selected 3 out of 205 submitted papers (157 accepted; Top 1.5%)"
+  # 3 = the Best Student Paper winners listed on the official program page (linked); 205 / 157 from taai2026.github.io/about.html
+  details: 'Selected <a href="https://taai2026.github.io/program.html#awards">3 out of 205 submitted papers</a> (157 accepted; Top 1.5%)'
   featured: 4
   selected: true
 

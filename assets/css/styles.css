@@ -755,3 +755,10 @@ screen and (max-width: 480px) {
   text-decoration-color: #c7c7cc;
   text-underline-offset: 0.2em;
 }
+
+/* Source link inside an honor's grey detail (e.g. the official award list): same grey underline as .pubs-note a */
+.honor-detail a {
+  text-decoration: underline;
+  text-decoration-color: #c7c7cc;
+  text-underline-offset: 0.2em;
+}
