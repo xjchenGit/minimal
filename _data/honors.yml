@@ -27,7 +27,8 @@
   category: research
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
-  details: "Selected 8 out of 171 submitted papers (Top 5%)"
+  # 8 = the "Selected Outstanding Papers" session (Oral 1, 8 papers incl. #18) on the official program page (linked)
+  details: 'Selected <a href="https://iscslp.org/2026/program">8 out of 171 submitted papers</a> (Top 5%)'
   featured: 3
   selected: true
 
