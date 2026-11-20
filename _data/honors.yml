@@ -28,7 +28,7 @@
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
   details: "Selected 8 out of 171 submitted papers (Top 5%)"
-  featured: 2
+  featured: 3
   selected: true
 
 - year: "2026"
@@ -37,14 +37,14 @@
   venue: "TAAI 2026"
   pub: "khchen2026bridging"
   details: "Selected 3 out of 205 submitted papers (157 accepted; Top 1.5%)"
-  featured: 3
+  featured: 4
   selected: true
 
 - year: "2026"
   title: "IEEE SPS Scholarship"
   category: academic
   details: "One of dozens of recipients worldwide from the IEEE Signal Processing Society"
-  featured: 4
+  featured: 2
   selected: true
 
 - year: "2025"
