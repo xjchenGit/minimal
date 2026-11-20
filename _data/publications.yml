@@ -185,8 +185,27 @@
         year={2026}
     }
 
-
-
+# Authors follow the TAAI 2026 program page (2026-11-20), which lists Su-Ling Yeh.
+- title: "Bridging Static and Agentic RAG for Taiwanese Historical Question Answering"
+  authors_short: "Kai-Hsin Chen*, Wei-Yu Chen*, <u>Xuanjun Chen</u>, Su-Ling Yeh, Jyh-Shing Roger Jang"
+  venue: "Int. Conf. Technol. Appl. Artif. Intell. (TAAI) 2026"
+  venue_short: "TAAI 2026"
+  award: "Best Student Paper Award"
+  category: "rag"
+  id: "khchen2026bridging"
+  selected: true
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2609.23056"
+    - name: "Award"
+      url: "https://taai2026.github.io/program.html#awards"
+  bibtex: |
+    @inproceedings{khchen2026bridging,
+        title={Bridging Static and Agentic {RAG} for {T}aiwanese Historical Question Answering},
+        author={Chen, Kai-Hsin and Chen, Wei-Yu and Chen, Xuanjun and Yeh, Su-Ling and Jang, Jyh-Shing Roger},
+        booktitle={2026 International Conference on Technologies and Applications of Artificial Intelligence (TAAI)},
+        year={2026}
+    }
 
 - title: "A Preliminary Study of RAG for Taiwanese Historical Archives"
   authors_short: "Claire Lin*, Bo-Han Feng*, <u>Xuanjun Chen</u>*, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang"

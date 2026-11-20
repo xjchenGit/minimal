@@ -32,10 +32,19 @@
   selected: true
 
 - year: "2026"
+  title: "Best Student Paper Award"
+  category: research
+  venue: "TAAI 2026"
+  pub: "khchen2026bridging"
+  details: "Selected 3 out of 205 submitted papers (157 accepted; Top 1.5%)"
+  featured: 3
+  selected: true
+
+- year: "2026"
   title: "IEEE SPS Scholarship"
   category: academic
   details: "One of dozens of recipients worldwide from the IEEE Signal Processing Society"
-  featured: 3
+  featured: 4
   selected: true
 
 - year: "2025"
@@ -50,7 +59,7 @@
   venue: "ASRU 2025"
   pub: "chen2025towards"
   details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
-  featured: 4
+  featured: 5
   selected: true
 
 - year: "2025"
@@ -59,7 +68,7 @@
   venue: "ROCLING 2025"
   pub: "lin2025preliminary"
   details: "Selected 1 out of 36 accepted papers (Top 2.8%)"
-  featured: 5
+  featured: 6
   selected: true
 
 # - year: "2025"
@@ -84,7 +93,7 @@
   title: "CTCI Foundation Science and Technology Scholarship"
   category: research
   details: "Research Scholarship for Overseas Students"
-  featured: 6
+  featured: 7
   selected: true
 
 - year: "2025"
@@ -120,7 +129,7 @@
   category: travel
   details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
   # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
-  featured: 7
+  featured: 8
   selected: true
 
 - year: "2024"
@@ -138,7 +147,7 @@
   title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
   category: research
   details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
-  featured: 8
+  featured: 9
   selected: true
 
 - year: "2020 – 26"
@@ -152,7 +161,7 @@
   category: academic
   venue: "3 terms"
   details: "Certificate of Achievement for the top 5% of CSIE students, Taiwan Tech"
-  featured: 9
+  featured: 10
   selected: true
 
 - year: "2017"
