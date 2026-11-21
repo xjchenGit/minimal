@@ -123,14 +123,13 @@
 - year: "2024 – 26"
   title: "NSTC Travel Grants"
   category: travel
-  details: "Sponsored to present at INTERSPEECH 2024 &amp; 2025 and ISCSLP 2026"
+  details: "Sponsored by Taiwan NSTC to present at INTERSPEECH 2024 &amp; 2025 and ISCSLP 2026"
   selected: true
 
 - year: "2024"
   title: "Google Student Travel Grant"
   category: travel
-  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024"
-  # TODO: once the first big-company internship is secured, append " and INTERSPEECH 2024" to details above
+  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024 and INTERSPEECH 2024"
   featured: 8
   selected: true
 
