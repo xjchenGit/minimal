@@ -18,7 +18,7 @@
 - year: "2026"
   title: "NVIDIA Academic Grant"
   category: research
-  details: "Awarded dedicated GPU compute via competitive selection by NVIDIA"
+  details: "35K H100 GPU-hours (8×H100) via competitive selection by NVIDIA"
   featured: 1
   selected: true
 
@@ -37,15 +37,17 @@
   category: research
   venue: "TAAI 2026"
   pub: "khchen2026bridging"
-  # 3 = the Best Student Paper winners listed on the official program page (linked); 205 / 157 from taai2026.github.io/about.html
-  details: 'Selected <a href="https://taai2026.github.io/program.html#awards">3 out of 205 submitted papers</a> (157 accepted; Top 1.5%)'
+  # 3 = the Best Student Paper winners listed on the official program page (linked); 205 submitted from taai2026.github.io/about.html
+  details: 'Selected <a href="https://taai2026.github.io/program.html#awards">3 out of 205 submitted papers</a> (Top 1.5%)'
   featured: 4
   selected: true
 
 - year: "2026"
   title: "IEEE SPS Scholarship"
   category: academic
-  details: "One of dozens of recipients worldwide from the IEEE Signal Processing Society"
+  # 44 / nearly 300 from the official 2026 recipients announcement (linked): "44 outstanding students were
+  # selected from a large field of nearly 300 qualified applicants worldwide"
+  details: 'Selected <a href="https://signalprocessingsociety.org/our-story/news-updates/2026/11/congratulations-2026-sps-scholarship-recipients">44 out of nearly 300 qualified applicants</a> worldwide'
   featured: 2
   selected: true
 
@@ -157,11 +159,11 @@
   details: "Awarded across six academic years"
   selected: true
 
-- year: "Fall ’18, Fall ’19, Spr. ’20"
+- year: "2018 – 20"
   title: "Dean’s List"
   category: academic
-  venue: "3 terms"
-  details: "Certificate of Achievement for the top 5% of CSIE students, Taiwan Tech"
+  # same wording as the public CV (semesters in the detail, year range in the date column)
+  details: "Certificate of Achievement, top 5% of CSIE students at Taiwan Tech (Fall ’18, Fall ’19, Spr. ’20)"
   featured: 10
   selected: true
 
