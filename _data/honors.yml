@@ -11,7 +11,9 @@
 - year: "2026"
   title: "Google PhD Fellowship"
   category: research
-  details: "Recognized as one of 13 Google PhD Fellows in Machine Perception worldwide"
+  # link = Google's official 2026 announcement (blog, Nov 12, 2026: 148 new fellows across 38 countries); it does not
+  # break fellows down by area. 13 = the 2026 "Machine Perception" list on research.google/programs-and-events/phd-fellowship/recipients/
+  details: 'Recognized as one of 13 <a href="https://blog.google/company-news/outreach-and-initiatives/google-org/phd-fellows-2026/">Google PhD Fellows</a> in Machine Perception worldwide'
   featured: 0
   selected: true
 
@@ -62,7 +64,8 @@
   category: research
   venue: "ASRU 2025"
   pub: "chen2025towards"
-  details: "Selected 11 out of 447 submitted papers (Top 2.5%)"
+  # 11 / 447 from the award evidence PDF (linked): one nominee per topic area, 11 candidates out of 447 submissions
+  details: 'Selected <a href="docs/ASRU2025_BestStudentNom.pdf">11 out of 447 submitted papers</a> (Top 2.5%)'
   featured: 5
   selected: true
 
@@ -71,7 +74,9 @@
   category: research
   venue: "ROCLING 2025"
   pub: "lin2025preliminary"
-  details: "Selected 1 out of 36 accepted papers (Top 2.8%)"
+  # 1 / 36 from the award evidence PDF (linked): only archival papers were eligible; 36 = the main-conference
+  # archival papers in the proceedings (aclanthology.org/2025.rocling-main, special sessions and shared task excluded)
+  details: 'Selected <a href="docs/ROCLING2025_BestPaper.pdf">1 out of 36 accepted papers</a> (Top 2.8%)'
   featured: 6
   selected: true
 

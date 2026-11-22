@@ -220,6 +220,8 @@
       url: "https://aclanthology.org/2025.rocling-main.6/"
     - name: "arXiv"
       url: "https://arxiv.org/abs/2511.07445"
+    - name: "Award"
+      url: "docs/ROCLING2025_BestPaper.pdf"
   bibtex: |
     @inproceedings{lin2025preliminary,
         title={A Preliminary Study of {RAG} for {T}aiwanese Historical Archives},
