@@ -14,7 +14,7 @@
 - time_desk: "Oct 2026 – Present"
   time_mob: "10/2026 – Present"
   institution: "NVIDIA Academic Grant Program"
-  role: "Research Collaborator"
+  role: "Grant Recipient &amp; Research Collaborator"
   location: "Taipei, Taiwan"
   selected: true
 
@@ -31,17 +31,17 @@
   time_mob: "01/2023"
   institution: "National Taiwan University"
   role: "M.S."
-  major_desk: "Computer Science"
-  major_mob: "Computer Science"
+  major_desk: "Computer Science and Information Engineering (CSIE)"
+  major_mob: "CSIE"
   gpa: "4.19/4.3"
   selected: true
 
 - time_desk: "Jun 2020"
   time_mob: "06/2020"
-  institution: "Taiwan Tech"
+  institution: "National Taiwan University of Science and Technology"
   role: "B.S."
-  major_desk: "Computer Science"
-  major_mob: "Computer Science"
+  major_desk: "CSIE"
+  major_mob: "CSIE"
   gpa: "4.11/4.3"
   selected: true
 
