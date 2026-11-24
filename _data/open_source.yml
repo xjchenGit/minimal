@@ -58,7 +58,7 @@
   link: "https://github.com/kehanlu/DeSTA2.5-Audio"
   link_label: "GitHub"
   details: "144 GitHub stars, HF model (28.9K+) and data (11.5K+ downloads)"
-  bullet: "Curated training data for audio deepfake understanding as part of an audio LLM project in collaboration with NVIDIA"
+  # bullet: "Curated training data for audio deepfake understanding as part of an audio LLM project in collaboration with NVIDIA"  # 2026-11-24: hidden, same as the CV (user request); uncomment to show
 
 - year: "2025"
   title: "Dynamic-SUPERB Phase-2"
@@ -70,7 +70,7 @@
   link: "https://github.com/dynamic-superb/dynamic-superb"
   link_label: "GitHub"
   details: "203 GitHub stars, 325 HF datasets (303K+ downloads)"
-  bullet: "Reviewed and standardized community-submitted tasks for the 180-task audio understanding benchmark"
+  # bullet: "Reviewed and standardized community-submitted tasks for the 180-task audio understanding benchmark"  # 2026-11-24: hidden, same as the CV (user request); uncomment to show
 
 - year: "2024"
   title: "Codec-SUPERB"
@@ -84,4 +84,4 @@
   link: "https://eric-lam.com/Codec-SUPERB/"
   link_label: "Website"
   details: "311 GitHub stars and a public leaderboard"
-  bullet: "Built task- and signal-level metrics to benchmark several codecs on the neural audio codec leaderboard"
+  # bullet: "Built task- and signal-level metrics to benchmark several codecs on the neural audio codec leaderboard"  # 2026-11-24: hidden, same as the CV (user request); uncomment to show
