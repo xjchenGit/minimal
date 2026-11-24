@@ -648,6 +648,11 @@ screen and (max-width: 480px) {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+/* A note before the GPA (e.g. 3-time Dean's List) gets the same gap as .entry-main's 0.3em right margin
+   (0.35em here = 0.3em of the larger parent font, since .entry-gpa is 0.85em) */
+#experience-container .entry-gpa:not(:last-child) {
+  margin-right: 0.35em;
+}
 
 /* Honors linked to a paper look exactly like unlinked ones */
 #honors-container .honor-pub-link,

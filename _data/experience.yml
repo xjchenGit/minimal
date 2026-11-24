@@ -8,6 +8,7 @@
 # - major_desk: (Optional) Academic major for desktop view
 # - major_mob: (Optional) Academic major for mobile view
 # - location: (Optional) City, Country
+# - note: (Optional) short honor shown before the GPA in the same de-emphasized style (e.g. 3-time Dean’s List)
 # - gpa: (Optional) GPA string, rendered de-emphasized at end
 # - selected: true/false
 
@@ -42,6 +43,7 @@
   role: "B.S."
   major_desk: "CSIE"
   major_mob: "CSIE"
+  note: "3-time Dean’s List"  # 2026-11-24: same as the CV B.S. line (user request); the Dean’s List honor row is now misc only
   gpa: "4.11/4.3"
   selected: true
 

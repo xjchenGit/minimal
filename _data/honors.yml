@@ -7,6 +7,8 @@
 # `category` picks the group on misc.html: `research` (Research Honors and
 # Fellowships), `academic` (Academic Honors and Scholarships) or `travel`
 # (Conference Travel Grants).
+# `category: homepage` = homepage-only summary row (featured, never on misc.html,
+# whose groups only pick research / academic / travel).
 
 - year: "2026"
   title: "Google PhD Fellowship"
@@ -31,7 +33,6 @@
   pub: "chen2026mitigating"
   # 8 = the "Selected Outstanding Papers" session (Oral 1, 8 papers incl. #18) on the official program page (linked)
   details: 'Selected <a href="https://iscslp.org/2026/program">8 out of 171 submitted papers</a> (Top 5%)'
-  featured: 3
   selected: true
 
 - year: "2026"
@@ -39,9 +40,9 @@
   category: research
   venue: "TAAI 2026"
   pub: "khchen2026bridging"
-  # 3 = the Best Student Paper winners listed on the official program page (linked); 205 submitted from taai2026.github.io/about.html
-  details: 'Selected <a href="https://taai2026.github.io/program.html#awards">3 out of 205 submitted papers</a> (Top 1.5%)'
-  featured: 4
+  # 3 = the Best Student Paper winners listed on the official program page (taai2026.github.io/program.html#awards); 205 submitted from taai2026.github.io/about.html
+  # link = the official award certificate page for paper #69 (2026-11-24, user request; was the program page)
+  details: 'Selected <a href="https://taai2026.github.io/certificates/best-student-paper-award-69.html">3 out of 205 submitted papers</a> (Top 1.5%)'
   selected: true
 
 - year: "2026"
@@ -66,7 +67,7 @@
   pub: "chen2025towards"
   # 11 / 447 from the award evidence PDF (linked): one nominee per topic area, 11 candidates out of 447 submissions
   details: 'Selected <a href="docs/ASRU2025_BestStudentNom.pdf">11 out of 447 submitted papers</a> (Top 2.5%)'
-  featured: 5
+  featured: 3
   selected: true
 
 - year: "2025"
@@ -77,7 +78,16 @@
   # 1 / 36 from the award evidence PDF (linked): only archival papers were eligible; 36 = the main-conference
   # archival papers in the proceedings (aclanthology.org/2025.rocling-main, special sessions and shared task excluded)
   details: 'Selected <a href="docs/ROCLING2025_BestPaper.pdf">1 out of 36 accepted papers</a> (Top 2.8%)'
-  featured: 6
+  selected: true
+
+# 2026-11-24: homepage-only summary of the three paper awards above (same layout as the CV Honors:
+# ASRU nomination as its own row, then this one). misc.html keeps the four awards as separate rows.
+# Links = the same official evidence as the separate rows.
+- year: "2025 – 26"
+  title: "Best/Outstanding Paper Awards"
+  category: homepage
+  details: '<a href="https://iscslp.org/2026/program">ISCSLP 2026</a> (Top 5%), <a href="https://taai2026.github.io/certificates/best-student-paper-award-69.html">TAAI 2026</a> (Top 1.5%), <a href="docs/ROCLING2025_BestPaper.pdf">ROCLING 2025</a> (Top 2.8%)'
+  featured: 4
   selected: true
 
 # - year: "2025"
@@ -101,8 +111,9 @@
 - year: "2025"
   title: "CTCI Foundation Science and Technology Scholarship"
   category: research
-  details: "Research Scholarship for Overseas Students"
-  featured: 7
+  # link = CTCI Foundation 2025 award recipients list (2026-11-24, user request)
+  details: '<a href="https://www.ctci.org.tw/8831/8838/talent_en/ctci-scholarship_en/46039/46134/">Research Scholarship for Overseas Students</a>'
+  # 2026-11-24: homepage rank (featured: 7) removed, misc only (user request)
   selected: true
 
 - year: "2025"
@@ -124,7 +135,8 @@
 - year: "2024"
   title: "CTCI Foundation Science and Technology Scholarship"
   category: academic
-  details: "Bursary Award for Overseas Students"
+  # link = CTCI Foundation 2024 award recipients list (2026-11-24, user request)
+  details: '<a href="https://www.ctci.org.tw/8831/8838/talent_en/ctci-scholarship_en/45416/45550/">Bursary Award for Overseas Students</a>'
   selected: true
 
 - year: "2024 – 26"
@@ -155,7 +167,7 @@
   title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
   category: research
   details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
-  featured: 9
+  # 2026-11-24: homepage rank (featured: 9) removed, misc only (user request)
   selected: true
 
 - year: "2020 – 26"
@@ -169,7 +181,7 @@
   category: academic
   # same wording as the public CV (semesters in the detail, year range in the date column)
   details: "Certificate of Achievement, top 5% of CSIE students at Taiwan Tech (Fall ’18, Fall ’19, Spr. ’20)"
-  featured: 10
+  # 2026-11-24: homepage rank (featured: 10) removed, misc only; the homepage Education B.S. row says 3-time Dean’s List instead (user request)
   selected: true
 
 - year: "2017"
