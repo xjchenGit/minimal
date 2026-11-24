@@ -403,6 +403,15 @@
 
 /* ========== Mobile (<= 480px) ========== */
 @media (max-width: 480px) {
+    /* Bio on phones (2026-11-24, user: 手機版的都可以斷行, desktop unchanged): the bold field names and .no-hyphen
+     * words (venue list etc.) may auto-hyphenate too, so the justified lines don't open wide gaps. Names and award
+     * links (a) stay manual, and the icon + first-word nowrap spans stay (otherwise the icon is left at a line end). */
+    #about-container.hero-bio strong,
+    #about-container.hero-bio .no-hyphen {
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
     #topnav-content {
         padding: 14px 18px;
     }
