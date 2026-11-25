@@ -193,7 +193,8 @@ section .pubs-note + h3.category-header {
 #travel-grants-container > ul:last-child,
 #academic-honors-container > ul:last-child,
 .open-source-list > ul:last-child,
-#services-container > ul:last-child {
+#services-container > ul:last-child,
+#talks-container > ul:last-child {
   margin-bottom: 0;
 }
 
@@ -201,7 +202,8 @@ section .pubs-note + h3.category-header {
 #travel-grants-container ul,
 #academic-honors-container ul,
 .open-source-list ul,
-#services-container ul {
+#services-container ul,
+#talks-container ul {
   line-height: 1.5;
   padding-top: 0;
 }
@@ -210,7 +212,8 @@ section .pubs-note + h3.category-header {
 #travel-grants-container ul li,
 #academic-honors-container ul li,
 .open-source-list ul li,
-#services-container ul li {
+#services-container ul li,
+#talks-container ul li {
   margin-bottom: 8px;
 }
 
@@ -218,7 +221,8 @@ section .pubs-note + h3.category-header {
 #travel-grants-container ul li:first-child,
 #academic-honors-container ul li:first-child,
 .open-source-list ul li:first-child,
-#services-container ul li:first-child {
+#services-container ul li:first-child,
+#talks-container ul li:first-child {
   margin-top: 0;
 }
 
@@ -578,7 +582,8 @@ screen and (max-width: 480px) {
 #travel-grants-container ul,
 #academic-honors-container ul,
 .open-source-list ul,
-#services-container ul {
+#services-container ul,
+#talks-container ul {
   list-style: none;
   padding-left: 0;
 }
@@ -589,7 +594,8 @@ screen and (max-width: 480px) {
   #travel-grants-container ul,
   #academic-honors-container ul,
   .open-source-list ul,
-  #services-container ul {
+  #services-container ul,
+  #talks-container ul {
     padding-left: 0;
   }
 }
@@ -600,7 +606,8 @@ screen and (max-width: 480px) {
 #travel-grants-container .entry-row,
 #academic-honors-container .entry-row,
 .open-source-list .entry-row,
-#services-container .entry-row {
+#services-container .entry-row,
+#talks-container .entry-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -613,7 +620,8 @@ screen and (max-width: 480px) {
 #travel-grants-container .entry-body,
 #academic-honors-container .entry-body,
 .open-source-list .entry-body,
-#services-container .entry-body {
+#services-container .entry-body,
+#talks-container .entry-body {
   order: 1;
   flex: 1;
   min-width: 0;
@@ -625,7 +633,8 @@ screen and (max-width: 480px) {
 #travel-grants-container .entry-date,
 #academic-honors-container .entry-date,
 .open-source-list .entry-date,
-#services-container .entry-date {
+#services-container .entry-date,
+#talks-container .entry-date {
   order: 2;
   flex-shrink: 0;
   white-space: nowrap;
@@ -638,7 +647,8 @@ screen and (max-width: 480px) {
 #travel-grants-container .entry-sep,
 #academic-honors-container .entry-sep,
 .open-source-list .entry-sep,
-#services-container .entry-sep {
+#services-container .entry-sep,
+#talks-container .entry-sep {
   display: none;
 }
 
@@ -669,9 +679,35 @@ screen and (max-width: 480px) {
 #travel-grants-container .honor-detail,
 #academic-honors-container .honor-detail,
 .open-source-list .honor-detail,
-#services-container .honor-detail {
+#services-container .honor-detail,
+#talks-container .honor-detail {
   font-size: 0.9em;
   color: var(--text-muted);
+}
+
+/* Media and presentations: venues on an indented grey bullet under the role + title
+   (same look as .open-source-list ul.entry-bullets; the ID selectors beat #talks-container ul) */
+#talks-container ul li {
+  margin-bottom: 12px;
+}
+#talks-container ul.entry-bullets {
+  list-style: disc;
+  margin: 2px 0 0;
+  padding-left: 2.4em;
+  color: var(--text-muted);
+}
+#talks-container ul.entry-bullets li {
+  margin-bottom: 0;
+}
+/* Role at the start of each occasion line ("Invited Talk · ..."): body colour, so it stands out from the grey venue */
+#talks-container .talk-role {
+  color: var(--text-body);
+}
+/* Slides / video not posted yet: lighter and italic so it does not read as part of the venue */
+#talks-container .link-soon {
+  font-style: italic;
+  color: #aeaeb2;
+  white-space: nowrap;
 }
 
 /* Contribution bullet on its own line under an open-source row */
@@ -695,7 +731,8 @@ screen and (max-width: 480px) {
 #travel-grants-container .entry-main,
 #academic-honors-container .entry-main,
 .open-source-list .entry-main,
-#services-container .entry-main {
+#services-container .entry-main,
+#talks-container .entry-main {
   margin-right: 0.3em;
 }
 
@@ -705,7 +742,8 @@ screen and (max-width: 480px) {
   #travel-grants-container .entry-row,
   #academic-honors-container .entry-row,
   .open-source-list .entry-row,
-  #services-container .entry-row {
+  #services-container .entry-row,
+  #talks-container .entry-row {
     display: inline;
   }
 
@@ -714,7 +752,8 @@ screen and (max-width: 480px) {
   #travel-grants-container .entry-date,
   #academic-honors-container .entry-date,
   .open-source-list .entry-date,
-  #services-container .entry-date {
+  #services-container .entry-date,
+  #talks-container .entry-date {
     color: inherit;
   }
 
@@ -723,7 +762,8 @@ screen and (max-width: 480px) {
   #travel-grants-container .entry-sep,
   #academic-honors-container .entry-sep,
   .open-source-list .entry-sep,
-  #services-container .entry-sep {
+  #services-container .entry-sep,
+  #talks-container .entry-sep {
     display: inline;
   }
 
@@ -737,7 +777,8 @@ screen and (max-width: 480px) {
 /* Underline the links instead of coloring them */
 /* End-of-row repo links match the blue "Name ›" links of the paper cards (.hl-links in pubs.css).
    Venue links stay plain text, like the paper links on honors rows. */
-.open-source-list a.repo-link {
+.open-source-list a.repo-link,
+#talks-container a.repo-link {
   color: var(--link);
   white-space: nowrap;
 }
@@ -747,11 +788,13 @@ screen and (max-width: 480px) {
   color: var(--text-muted);
 }
 
-.open-source-list a.repo-link:hover {
+.open-source-list a.repo-link:hover,
+#talks-container a.repo-link:hover {
   text-decoration: underline;
 }
 
-.open-source-list a.repo-link::after {
+.open-source-list a.repo-link::after,
+#talks-container a.repo-link::after {
   content: "\00a0\203A";
 }
 

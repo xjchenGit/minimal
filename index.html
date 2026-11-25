@@ -33,7 +33,7 @@ head_extra: |
 		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span></a></li>
 		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span></a></li>
-		<li><a href="#sec-open-source" data-target="sec-open-source"><span class="label-full">Open Source</span></a></li>
+		<li><a href="#sec-talks" data-target="sec-talks"><span class="label-full">Media</span></a></li>
 		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span></a></li>
 	</ul>
 </nav>
@@ -102,20 +102,20 @@ head_extra: |
 	</ul>
 </div>
 
-<h2 id="sec-open-source">Open Source Contributions</h2>
-<h3 class="category-header">Lead &amp; Mentored Projects</h3>
-<div class="open-source-list">
-	{%- assign lead_items = site.data.open_source | where: "category", "lead" %}
-	{% include open-source-list.html items=lead_items %}
-</div>
-<h3 class="category-header">Collaborative &amp; Community Work</h3>
-<div class="open-source-list">
-	{%- assign community_items = site.data.open_source | where: "category", "community" %}
-	{% include open-source-list.html items=community_items %}
+<h2 id="sec-talks">Media &amp; Talks</h2>
+<div id="talks-container">
+	{%- assign talk_items = site.data.talks | where: "selected", true %}
+	{% include talks-list.html items=talk_items %}
 </div>
 
-<h2 id="honors">Selected Honors and Service</h2>
+<h2 id="honors">Selected Open Source, Honors &amp; Service</h2>
 <p class="pubs-note">See all on the <a href="misc.html">Misc</a> page.</p>
+<h3 class="category-header">Led, Mentored &amp; Collaborative Projects</h3>
+<div class="open-source-list">
+	{%- comment -%} Lead projects first, then community work (open_source.yml order); misc.html keeps the two groups apart {%- endcomment -%}
+	{%- assign os_items = site.data.open_source | where: "featured", true %}
+	{% include open-source-list.html items=os_items %}
+</div>
 <h3 class="category-header">Research and Academic Honors</h3>
 <div id="honors-container">
 	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}

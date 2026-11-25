@@ -17,13 +17,14 @@
   featured: true
   selected: true
 
-- year: "2024"
-  role: "Invited Lightning Talk"
-  event: "Singing Voice Graph Modeling for SingFake Detection"
-  link: "https://svddchallenge.org/challenges/special_session_ieee_slt.html"
-  context: "Special Session at IEEE SLT 2024"
-  featured: true
-  selected: true
+# 2026-11-26: moved to the homepage section "Media & Talks" (_data/talks.yml); uncomment to list it here again
+# - year: "2024"
+#   role: "Invited Lightning Talk"
+#   event: "Singing Voice Graph Modeling for SingFake Detection"
+#   link: "https://svddchallenge.org/challenges/special_session_ieee_slt.html"
+#   context: "Special Session at IEEE SLT 2024"
+#   featured: true
+#   selected: true
 
 - year: "2023 – 26"
   role: "Admin Assistant"

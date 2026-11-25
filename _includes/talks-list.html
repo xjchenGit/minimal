@@ -1,0 +1,38 @@
+{%- comment -%}
+Renders "Media & Talks" (from _data/talks.yml), one item per topic:
+  **<title>**
+     • <role> · <prefix><venue> and <venue>, <tail> · Video ›      <year>    one grey bullet per occasion (`lines`)
+     • <role> · <venue> · Slides coming soon                        <year>
+A venue's `links` follow after " · ": blue "Name ›", then one light italic
+"Slides & Video coming soon" for the links whose url is "soon".
+Usage: {% include talks-list.html items=talk_items %}
+{%- endcomment -%}
+<ul>
+	{%- for item in include.items %}
+	{%- if item.quoted -%}{%- assign t = "&ldquo;" | append: item.title | append: "&rdquo;" -%}{%- else -%}{%- assign t = item.title -%}{%- endif %}
+	{%- if item.pub -%}{%- assign href = "publications.html#" | append: item.pub -%}{%- else -%}{%- assign href = item.link -%}{%- endif %}
+	<li><span class="entry-row"><span class="entry-body"><span class="entry-main"><b>{% if href %}<a href="{{ href }}">{{ t }}</a>{% else %}{{ t }}{% endif %}</b></span></span></span><ul class="entry-bullets">
+		{%- for line in item.lines -%}
+		<li><span class="entry-row"><span class="entry-date">{{ line.year }}</span><span class="entry-sep">: </span><span class="entry-body"><span class="honor-detail"><span class="talk-role">{{ line.role }}</span> &middot;&nbsp;
+			{%- for v in line.venues -%}{%- unless forloop.first %} and {% endunless -%}
+			{{- v.prefix -}}
+			{%- if v.link %}<a href="{{ v.link }}"{% if v.hover %} title="{{ v.hover | escape }}"{% endif %} target="_blank" rel="noopener noreferrer">{{ v.event }}</a>{% else %}{{ v.event }}{% endif %}
+			{%- if v.aside %} ({{ v.aside }}){% endif -%}
+			{{- v.tail -}}
+			{%- assign soon = "" -%}{%- assign lk = "" -%}
+			{%- for l in v.links -%}
+				{%- if l.url == "soon" -%}
+					{%- if soon == "" -%}{%- assign soon = l.name -%}{%- else -%}{%- assign soon = soon | append: " &amp; " | append: l.name -%}{%- endif -%}
+				{%- elsif l.url != blank -%}
+					{%- capture a -%}<a class="repo-link" href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{%- endcapture -%}
+					{%- if lk != "" -%}{%- assign lk = lk | append: ", " -%}{%- endif -%}{%- assign lk = lk | append: a -%}
+				{%- endif -%}
+			{%- endfor -%}
+			{%- if lk != "" %} &middot;&nbsp;{{ lk }}{% endif -%}
+			{%- if soon != "" %} &middot;&nbsp;<span class="link-soon">{{ soon }} coming soon</span>{% endif -%}
+			{%- endfor -%}
+		</span></span></span></li>
+		{%- endfor -%}
+	</ul></li>
+	{%- endfor %}
+</ul>

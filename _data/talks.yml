@@ -1,0 +1,62 @@
+# Homepage section "Media & Talks" (index.html, after Experience). Rendered by _includes/talks-list.html.
+# One item per topic; each `lines` entry is one occasion, on its own indented grey bullet:
+#   **<title>**
+#      • <role> · <venue> and <venue>, <tail> · <links>                    <year>
+# Each line has its own `year`, shown in the right column of that bullet.
+# Venues within one line are joined with "and" (e.g. two outlets that ran the same story).
+# Optional venue `hover` is the link's tooltip (title attribute); `aside` goes in parentheses after it;
+# `tail` (", a short description") is added after that as written; `prefix` goes before the link, unlinked.
+# Optional venue `links` (Slides, Video, ...) follow after " · " as blue "Name ›";
+# links with `url: soon` show as one light italic "Slides & Video coming soon"; an empty `url` hides the slot.
+# `pub` (a publications.yml id) links the title to its card on publications.html.
+# `quoted: true` puts the title in quotation marks (not used).
+# Items need `selected: true` to show. Media first (owner's choice, 2026-11-26), then talks newest first.
+
+- title: "Meet the 2026 Google PhD Fellows"   # headline of the Google.org Blog post
+  lines:
+    - role: "Media Feature"
+      year: "2026"
+      venues:
+        - { event: "Google.org Blog", link: "https://blog.google/company-news/outreach-and-initiatives/google-org/phd-fellows-2026/" }
+        - { event: "Synced", aside: "機器之心", tail: ", a leading Chinese AI media outlet; 41K+ reads", link: "https://mp.weixin.qq.com/s/FQj7uirwIrVstf7XNhZyhA" }   # WeChat count seen 2026-11-26 (41.2K reads); refresh by hand
+  selected: true
+
+- title: "From Detecting In-the-Wild Deepfake Speech to Knowing Why"
+  lines:
+    - role: "Invited Talk"
+      year: "2026"   # confirmed by the owner 2026-11-26; add a link to the event page if there is one
+      venues:
+        # AboutUs: started 2019 by Acad. Zhang Bo, Prof. Tang Jie, Prof. Li Juanzi et al.; it does not say "founded by Tsinghua University"
+        - { event: "AI TIME", tail: ", an academic community founded by young CS scholars at Tsinghua Univ.", link: "https://www.aitime.cn/AboutUs#about",
+            hover: "AI TIME is an academic community founded by young scholars from Tsinghua University's Department of Computer Science to promote scientific discourse on artificial intelligence",
+            links: [ { name: "Slides", url: "soon" }, { name: "Video", url: "soon" } ] }   # TODO: slide and recording URLs
+  selected: true
+
+- title: "Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech"
+  pub: "chen2026mitigating"
+  lines:
+    - role: "Oral Presentation"   # 12-min talk; MOE and NSTC travel grants to present at ISCSLP 2026 (honors.yml)
+      year: "2026"
+      venues:
+        - { prefix: "Selected Outstanding Paper @ ", event: "ISCSLP 2026", tail: ", Penang, Malaysia", link: "https://iscslp.org/2026/",
+            links: [ { name: "Slides", url: "docs/ISCSLP2026_ProxyToWild_slides.pdf" } ] }   # owner's PowerPoint export, gs /ebook (1.2 MB -> 0.8 MB)
+  selected: true
+
+# Only talks the owner gave in person. Left out (2026-11-26): INTERSPEECH 2026 Long Oral of
+# "Joint Fullband-Subband Modeling for High-Resolution SingFake Detection" (presented by a co-author).
+
+- title: "Singing Voice Graph Modeling for SingFake Detection"
+  pub: "chen2024singing"
+  lines:
+    - role: "Invited Lightning Talk"
+      year: "2024"
+      venues:
+        # Official page title: "Special Session: SVDD @ IEEE SLT" (not a workshop); the CV also says Special Session
+        - { prefix: "SVDD Special Session @ ", event: "IEEE SLT 2024", tail: ", Macao", link: "https://svddchallenge.org/challenges/special_session_ieee_slt.html",
+            links: [ { name: "Video", url: "https://drive.google.com/file/d/1ZKEXmIb9AjDS-VFkKLWlnoHA_rRuJsrm/view" } ] }
+    - role: "Oral Presentation"
+      year: "2024"
+      venues:
+        - { event: "INTERSPEECH 2024", tail: ", Kos, Greece", link: "https://www.isca-archive.org/interspeech_2024/chen24o_interspeech.pdf",
+            links: [ { name: "Slides", url: "docs/INTERSPEECH2024_SingGraph_slides.pdf" } ] }   # exported from PowerPoint by the owner, compressed with Ghostscript /ebook (4.7 MB -> 2.7 MB)
+  selected: true

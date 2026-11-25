@@ -26,4 +26,4 @@ groups:
     papers:
       - chen2026codecfake     # journal
       - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
-      - chen2024singing       # speech venue, SLT lightning talk
+      # - chen2024singing     # speech venue, SLT lightning talk; hidden 2026-11-26: shown under "Media & Talks" instead

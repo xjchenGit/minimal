@@ -1,5 +1,5 @@
-# Open-source datasets, benchmarks, and models, shown on the homepage (index.html)
-# in this order. `category` picks the group: `lead` (Lead & Mentored
+# Open-source datasets, benchmarks, and models. All items appear on misc.html; items
+# with `featured: true` also appear on the homepage (index.html). Both keep this order. `category` picks the group: `lead` (Lead & Mentored
 # Projects) or `community` (Collaborative & Community Work).
 # `year` is the paper's year, shown once in the left column (venues carry no year). `pub` (a publications.yml id) makes `venue` link to
 # that paper on publications.html. Download and star counts in `details` are typed
@@ -10,6 +10,7 @@
 
 - year: "2026"
   title: "CodecFake+"
+  featured: true
   category: lead
   type: "Dataset"
   venue: "TASLP"
@@ -20,6 +21,7 @@
 
 - year: "2024"
   title: "DFADD"
+  featured: true
   category: lead
   type: "Dataset"
   venue: "SLT"
@@ -50,6 +52,7 @@
 
 - year: "2026"
   title: "DeSTA2.5-Audio"
+  featured: true
   category: community
   type: "Model"
   venue: "TASLP"
@@ -62,6 +65,7 @@
 
 - year: "2025"
   title: "Dynamic-SUPERB Phase-2"
+  featured: true
   category: community
   type: "Benchmark"
   venue: "ICLR"
@@ -74,6 +78,7 @@
 
 - year: "2024"
   title: "Codec-SUPERB"
+  featured: true
   category: community
   type: "Benchmark"
   venue: "ACL Findings"
