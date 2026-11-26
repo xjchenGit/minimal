@@ -104,7 +104,7 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
 #sec-experience,
 #sec-open-source,
 #honors,
-#sec-talks,
+#media-and-talks,
 #sec-service {
     scroll-margin-top: 110px;
 }
@@ -115,7 +115,7 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
     #sec-experience,
     #sec-open-source,
     #honors,
-    #sec-talks,
+    #media-and-talks,
     #sec-service {
         scroll-margin-top: 90px;
     }
@@ -127,7 +127,7 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
     #sec-experience,
     #sec-open-source,
     #honors,
-    #sec-talks,
+    #media-and-talks,
     #sec-service {
         scroll-margin-top: 80px;
     }
