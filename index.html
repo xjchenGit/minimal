@@ -33,8 +33,8 @@ head_extra: |
 		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span></a></li>
 		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span></a></li>
-		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span></a></li>
 		<li><a href="#media-and-talks" data-target="media-and-talks"><span class="label-full">Media</span></a></li>
+		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span></a></li>
 		<li><a href="#sec-service" data-target="sec-service"><span class="label-full">Service</span></a></li>
 	</ul>
 </nav>
@@ -103,18 +103,18 @@ head_extra: |
 	</ul>
 </div>
 
+<h2 id="media-and-talks">Media &amp; Talks</h2>
+<div id="talks-container">
+	{%- assign talk_items = site.data.talks | where: "selected", true %}
+	{% include talks-list.html items=talk_items %}
+</div>
+
 <h2 id="honors">Selected Honors</h2>
 <p class="pubs-note">See all research and academic honors on the <a href="honors.html">Honors</a> page.</p>
 <div id="honors-container">
 	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
 	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
 	{% include honors-list.html items=honor_items %}
-</div>
-
-<h2 id="media-and-talks">Media &amp; Talks</h2>
-<div id="talks-container">
-	{%- assign talk_items = site.data.talks | where: "selected", true %}
-	{% include talks-list.html items=talk_items %}
 </div>
 
 <h2 id="sec-service">Selected Service</h2>
