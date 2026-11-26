@@ -103,7 +103,9 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
 #sec-publications,
 #sec-experience,
 #sec-open-source,
-#honors {
+#honors,
+#sec-talks,
+#sec-service {
     scroll-margin-top: 110px;
 }
 
@@ -112,7 +114,9 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
     #sec-publications,
     #sec-experience,
     #sec-open-source,
-    #honors {
+    #honors,
+    #sec-talks,
+    #sec-service {
         scroll-margin-top: 90px;
     }
 }
@@ -122,7 +126,9 @@ body.page-publications .pub-item-row[id] { scroll-margin-top: 85px; }
     #sec-publications,
     #sec-experience,
     #sec-open-source,
-    #honors {
+    #honors,
+    #sec-talks,
+    #sec-service {
         scroll-margin-top: 80px;
     }
 }
@@ -722,8 +728,15 @@ h4.hl-title {
 /* Research Highlights heading (index.html) uses the global h2 size.
    Headings followed by a "See all / full list" note sit close to it. */
 h2#sec-publications,
-body.page-about h2#honors {
+body.page-about h2#honors,
+body.page-about h2#sec-service {
     margin-bottom: 10px;
+}
+
+/* Homepage "Selected Honors" has no sub-header: 20px from the note to the first row
+   (note's 8px margin + 12px). */
+body.page-about h2#honors + .pubs-note + #honors-container {
+    margin-top: 12px;
 }
 
 h2#sec-publications .h2-note,
@@ -738,7 +751,8 @@ body.page-publications h2 .h2-note {
 }
 
 #sec-publications + .pubs-note,
-body.page-about h2#honors + .pubs-note {
+body.page-about h2#honors + .pubs-note,
+body.page-about h2#sec-service + .pubs-note {
     margin: 0 0 8px;
     font-size: 14px; /* same as .pub-authors */
     color: var(--text-muted);
@@ -754,7 +768,8 @@ body.page-about h2#honors + .pubs-note {
     }
 
     #sec-publications + .pubs-note,
-    body.page-about h2#honors + .pubs-note {
+    body.page-about h2#honors + .pubs-note,
+    body.page-about h2#sec-service + .pubs-note {
         font-size: 13px; /* same as .pub-authors on mobile */
     }
 }

@@ -1,4 +1,4 @@
-# Items with `selected: true` appear on misc.html; items that are also
+# Items with `selected: true` appear on service.html; items that are also
 # `featured: true` appear on the homepage (index.html).
 
 - year: "2025"

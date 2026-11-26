@@ -1,41 +1,21 @@
 ---
-page_id: misc
-title_full: "Xuanjun Chen - Miscellaneous"
-description: "Open-source projects, honors, awards, scholarships, and professional service of Xuanjun Chen, Ph.D. candidate at National Taiwan University."
-og_url: "https://xjchen.tech/misc.html"
-og_type: profile
+layout: null
+permalink: /misc.html
+sitemap: false
 ---
-
-<h2 id="sec-open-source">Open Source Contributions</h2>
-<h3 class="category-header">Lead &amp; Mentored Projects</h3>
-<div class="open-source-list">
-	{%- assign lead_items = site.data.open_source | where: "category", "lead" %}
-	{% include open-source-list.html items=lead_items %}
-</div>
-<h3 class="category-header">Collaborative &amp; Community Work</h3>
-<div class="open-source-list">
-	{%- assign community_items = site.data.open_source | where: "category", "community" %}
-	{% include open-source-list.html items=community_items %}
-</div>
-
-<h2 id="honors">Honors and Awards</h2>
-<h3 class="category-header">Research Honors and Fellowships</h3>
-<div id="honors-container">
-	{%- assign honor_items = site.data.honors | where: "selected", true | where: "category", "research" %}
-	{% include honors-list.html items=honor_items %}
-</div>
-<h3 class="category-header">Academic Honors and Scholarships</h3>
-<div id="academic-honors-container">
-	{%- assign academic_items = site.data.honors | where: "selected", true | where: "category", "academic" %}
-	{% include honors-list.html items=academic_items %}
-</div>
-<h3 class="category-header">Conference Travel Grants</h3>
-<div id="travel-grants-container">
-	{%- assign travel_items = site.data.honors | where: "selected", true | where: "category", "travel" %}
-	{% include honors-list.html items=travel_items %}
-</div>
-<h2>Service and Outreach</h2>
-<div id="services-container">
-	{%- assign service_items = site.data.services | where: "selected", true %}
-	{% include services-list.html items=service_items full=true %}
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Moved to honors.html and service.html</title>
+	<meta name="robots" content="noindex">
+	<link rel="canonical" href="https://xjchen.tech/honors.html">
+	<!-- 2026-11-26: Misc was split into Honors and Service. CVs link to xjchen.tech/misc (honors list), so the default is honors.html;
+	     the old #sec-open-source anchor goes to service.html. -->
+	<script>location.replace((location.hash === '#sec-open-source' ? 'service.html' : 'honors.html') + location.search + location.hash);</script>
+	<meta http-equiv="refresh" content="0; url=honors.html">
+</head>
+<body>
+	<p>This page has moved to <a href="honors.html">Honors</a> and <a href="service.html">Service</a>.</p>
+</body>
+</html>

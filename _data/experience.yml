@@ -43,7 +43,7 @@
   role: "B.S."
   major_desk: "CSIE"
   major_mob: "CSIE"
-  note: "3-time Dean’s List"  # 2026-11-24: same as the CV B.S. line (user request); the Dean’s List honor row is now misc only
+  note: "3-time Dean’s List"  # 2026-11-24: same as the CV B.S. line (user request); the Dean’s List honor row is now on the honors page only
   gpa: "4.11/4.3"
   selected: true
 

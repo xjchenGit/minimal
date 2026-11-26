@@ -1,4 +1,4 @@
-# Open-source datasets, benchmarks, and models. All items appear on misc.html; items
+# Open-source datasets, benchmarks, and models. All items appear on service.html; items
 # with `featured: true` also appear on the homepage (index.html). Both keep this order. `category` picks the group: `lead` (Lead & Mentored
 # Projects) or `community` (Collaborative & Community Work).
 # `year` is the paper's year, shown once in the left column (venues carry no year). `pub` (a publications.yml id) makes `venue` link to
@@ -15,9 +15,10 @@
   type: "Dataset"
   venue: "TASLP"
   pub: "chen2026codecfake"
+  role: "Lead"
   link: "https://huggingface.co/datasets/CodecFake/CodecFake_Plus_Dataset"
   link_label: "HF"
-  details: "Largest proxy dataset of codec-resynthesized speech against CodecFake; 5.9K+ downloads (1.7K+ last mo.)"
+  details: "Largest proxy dataset of codec-resynthesized speech against CodecFake; 5.9K+ downloads"   # 2026-11-26: "(1.7K+ last mo.)" dropped so the row clears the year column after ", Lead" was added
 
 - year: "2024"
   title: "DFADD"
@@ -26,9 +27,10 @@
   type: "Dataset"
   venue: "SLT"
   pub: "du2024dfadd"
+  role: "Mentor"
   link: "https://huggingface.co/datasets/isjwdu/DFADD"
   link_label: "HF"
-  details: "Mentored students on the first deepfake dataset from diffusion/flow-matching TTS; 9.8K+ downloads"
+  details: "First deepfake dataset from diffusion/flow-matching TTS; 9.8K+ downloads"
 
 - year: "2024"
   title: "SingGraph"
@@ -36,6 +38,7 @@
   type: "Model"
   venue: "INTERSPEECH"
   pub: "chen2024singing"
+  role: "Lead"
   link: "https://github.com/xjchenGit/SingGraph"
   link_label: "GitHub"
   details: "Achieved SOTA results on SingFake detection, fusing MERT and wav2vec 2.0; 24 GitHub stars"
@@ -46,6 +49,7 @@
   type: "Model"
   venue: "ICASSP"
   pub: "chen2024multimodal"
+  role: "Lead"
   link: "https://github.com/xjchenGit/MTDVocaLiST"
   link_label: "GitHub"
   details: "Compact audio-visual lip-sync model distilled from VocaLiST; 29 GitHub stars"

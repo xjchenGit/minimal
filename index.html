@@ -33,8 +33,9 @@ head_extra: |
 		<li><a href="#sec-about" data-target="sec-about"><span class="label-full">Biography</span></a></li>
 		<li><a href="#sec-publications" data-target="sec-publications"><span class="label-full">Highlights</span></a></li>
 		<li><a href="#sec-experience" data-target="sec-experience"><span class="label-full">Experience</span></a></li>
-		<li><a href="#sec-talks" data-target="sec-talks"><span class="label-full">Media</span></a></li>
 		<li><a href="#honors" data-target="honors"><span class="label-full">Honors</span></a></li>
+		<li><a href="#sec-talks" data-target="sec-talks"><span class="label-full">Media</span></a></li>
+		<li><a href="#sec-service" data-target="sec-service"><span class="label-full">Service</span></a></li>
 	</ul>
 </nav>
 
@@ -102,27 +103,29 @@ head_extra: |
 	</ul>
 </div>
 
+<h2 id="honors">Selected Honors</h2>
+<p class="pubs-note">See all research and academic honors on the <a href="honors.html">Honors</a> page.</p>
+<div id="honors-container">
+	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
+	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
+	{% include honors-list.html items=honor_items %}
+</div>
+
 <h2 id="sec-talks">Media &amp; Talks</h2>
 <div id="talks-container">
 	{%- assign talk_items = site.data.talks | where: "selected", true %}
 	{% include talks-list.html items=talk_items %}
 </div>
 
-<h2 id="honors">Selected Open Source, Honors &amp; Service</h2>
-<p class="pubs-note">See all on the <a href="misc.html">Misc</a> page.</p>
-<h3 class="category-header">Led, Mentored &amp; Collaborative Projects</h3>
+<h2 id="sec-service">Selected Service</h2>
+<p class="pubs-note">See all service activities on the <a href="service.html">Service</a> page.</p>
+<h3 class="category-header">Open Source Community</h3>
 <div class="open-source-list">
-	{%- comment -%} Lead projects first, then community work (open_source.yml order); misc.html keeps the two groups apart {%- endcomment -%}
+	{%- comment -%} Lead projects first, then community work (open_source.yml order); service.html keeps the two groups apart {%- endcomment -%}
 	{%- assign os_items = site.data.open_source | where: "featured", true %}
 	{% include open-source-list.html items=os_items %}
 </div>
-<h3 class="category-header">Research and Academic Honors</h3>
-<div id="honors-container">
-	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
-	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
-	{% include honors-list.html items=honor_items %}
-</div>
-<h3 class="category-header">Service and Outreach</h3>
+<h3 class="category-header">Professional Community</h3>
 <div id="services-container">
 	{%- assign service_items = site.data.services | where: "selected", true | where: "featured", true %}
 	{% include services-list.html items=service_items %}

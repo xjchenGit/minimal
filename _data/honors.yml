@@ -1,13 +1,13 @@
 # Listed in chronological order (newest first). This is the order shown on
-# misc.html. Items with `selected: true` appear on misc.html; items with a
+# honors.html. Items with `selected: true` appear on honors.html; items with a
 # numeric `featured` rank also appear on the homepage (index.html), sorted by
 # that rank. Items with `selected: false` are kept for reference only.
 # `pub` (a publications.yml id) makes the title link to that paper on
 # publications.html.
-# `category` picks the group on misc.html: `research` (Research Honors and
+# `category` picks the group on honors.html: `research` (Research Honors and
 # Fellowships), `academic` (Academic Honors and Scholarships) or `travel`
 # (Conference Travel Grants).
-# `category: homepage` = homepage-only summary row (featured, never on misc.html,
+# `category: homepage` = homepage-only summary row (featured, never on honors.html,
 # whose groups only pick research / academic / travel).
 
 - year: "2026"
@@ -81,7 +81,7 @@
   selected: true
 
 # 2026-11-24: homepage-only summary of the three paper awards above (same layout as the CV Honors:
-# ASRU nomination as its own row, then this one). misc.html keeps the four awards as separate rows.
+# ASRU nomination as its own row, then this one). honors.html keeps the four awards as separate rows.
 # Links = the same official evidence as the separate rows.
 - year: "2025 – 26"
   title: "Best/Outstanding Paper Awards"
@@ -113,7 +113,7 @@
   category: research
   # link = CTCI Foundation 2025 award recipients list (2026-11-24, user request)
   details: '<a href="https://www.ctci.org.tw/8831/8838/talent_en/ctci-scholarship_en/46039/46134/">Research Scholarship for Overseas Students</a>'
-  # 2026-11-24: homepage rank (featured: 7) removed, misc only (user request)
+  # 2026-11-24: homepage rank (featured: 7) removed, honors page only (user request)
   selected: true
 
 - year: "2025"
@@ -167,7 +167,7 @@
   title: "3rd Place Worldwide, ASVspoof 2021 Challenge"
   category: research
   details: "On the LA track of ASVspoof 2021 challenge (out of 42 teams)"
-  # 2026-11-24: homepage rank (featured: 9) removed, misc only (user request)
+  # 2026-11-24: homepage rank (featured: 9) removed, honors page only (user request)
   selected: true
 
 - year: "2020 – 26"
@@ -181,7 +181,7 @@
   category: academic
   # same wording as the public CV (semesters in the detail, year range in the date column)
   details: "Certificate of Achievement, top 5% of CSIE students at Taiwan Tech (Fall ’18, Fall ’19, Spr. ’20)"
-  # 2026-11-24: homepage rank (featured: 10) removed, misc only; the homepage Education B.S. row says 3-time Dean’s List instead (user request)
+  # 2026-11-24: homepage rank (featured: 10) removed, honors page only; the homepage Education B.S. row says 3-time Dean’s List instead (user request)
   selected: true
 
 - year: "2017"

@@ -1,19 +1,25 @@
 ---
-layout: null
-permalink: /honors.html
-sitemap: false
+page_id: honors
+title_full: "Xuanjun Chen - Honors"
+description: "Honors, fellowships, awards, scholarships, and travel grants of Xuanjun Chen, Ph.D. candidate at National Taiwan University."
+og_url: "https://xjchen.tech/honors.html"
+og_type: profile
 ---
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Moved to misc.html</title>
-	<meta name="robots" content="noindex">
-	<link rel="canonical" href="https://xjchen.tech/misc.html">
-	<meta http-equiv="refresh" content="0; url=misc.html">
-	<script>location.replace('misc.html' + location.search + location.hash);</script>
-</head>
-<body>
-	<p>This page has moved to <a href="misc.html">misc.html</a>.</p>
-</body>
-</html>
+{%- comment -%} 2026-11-26: split out of misc.html (nav: About · Publications · Honors · Service); misc.html now redirects here {%- endcomment %}
+
+<h2 id="honors">Honors and Awards</h2>
+<h3 class="category-header">Research Honors and Fellowships</h3>
+<div id="honors-container">
+	{%- assign honor_items = site.data.honors | where: "selected", true | where: "category", "research" %}
+	{% include honors-list.html items=honor_items %}
+</div>
+<h3 class="category-header">Academic Honors and Scholarships</h3>
+<div id="academic-honors-container">
+	{%- assign academic_items = site.data.honors | where: "selected", true | where: "category", "academic" %}
+	{% include honors-list.html items=academic_items %}
+</div>
+<h3 class="category-header">Conference Travel Grants</h3>
+<div id="travel-grants-container">
+	{%- assign travel_items = site.data.honors | where: "selected", true | where: "category", "travel" %}
+	{% include honors-list.html items=travel_items %}
+</div>
