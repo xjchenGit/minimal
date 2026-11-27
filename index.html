@@ -76,11 +76,13 @@ head_extra: |
 </div>
 
 <h2 id="sec-publications">Research Highlights</h2>
-<p class="pubs-note">See all on <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="publications.html">browse by topic</a>.</p>
+<p class="pubs-note">See all on <a href="https://scholar.google.com/citations?user=ZDVOXd4AAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="publications.html">browse&nbsp;by&nbsp;topic</a>.</p>
 <div id="pub-container">
-{%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml {%- endcomment -%}
-{%- for group in site.data.selected_paper.groups %}
+{%- comment -%} Order comes from selected_paper.yml; membership requires `selected: true` in publications.yml.
+2026-11-27: one flat list with no topic sub-headers (the topics stay on publications.html). To bring them back:
 <h3 class="category-header">{% if group.title_short %}<span class="desk-text">{{ group.title | escape }}</span><span class="mob-text">{{ group.title_short | escape }}</span>{% else %}{{ group.title | escape }}{% endif %}</h3>
+right after the `for group` line, and set #pub-container padding-top in pubs.css back to 20px. {%- endcomment -%}
+{%- for group in site.data.selected_paper.groups %}
 {%- for pub_id in group.papers -%}
 {%- assign matching = site.data.publications | where: "id", pub_id -%}
 {%- if matching.size > 0 -%}
@@ -110,7 +112,7 @@ head_extra: |
 </div>
 
 <h2 id="honors">Selected Honors</h2>
-<p class="pubs-note">See all research and academic honors on the <a href="honors.html">Honors</a> page.</p>
+<p class="pubs-note">See all research and academic honors on the&nbsp;<a href="honors.html">Honors</a>&nbsp;page.</p>
 <div id="honors-container">
 	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
 	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}
@@ -118,7 +120,7 @@ head_extra: |
 </div>
 
 <h2 id="sec-service">Selected Service</h2>
-<p class="pubs-note">See all service activities on the <a href="service.html">Service</a> page.</p>
+<p class="pubs-note">See all service activities on the&nbsp;<a href="service.html">Service</a>&nbsp;page.</p>
 <h3 class="category-header">Open Source Community</h3>
 <div class="open-source-list">
 	{%- comment -%} Lead projects first, then community work (open_source.yml order); service.html keeps the two groups apart {%- endcomment -%}

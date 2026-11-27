@@ -68,11 +68,11 @@
     line-height: 1.3;
 }
 
-/* Highlights are grouped by topic. The first sub-header sits 28px under the
-   "See all" note (20px padding + 8px margin), like Selected Honors; later ones
-   get more room than the 30px between cards so the groups read as separate. */
+/* Highlights are one flat list (topic sub-headers dropped 2026-11-27): the first
+   card sits 20px under the "See all" note (12px padding + 8px margin), like
+   Selected Honors. The header rules below only apply if the sub-headers return. */
 #pub-container {
-    padding-top: 20px;
+    padding-top: 12px;
 }
 
 #pub-container > h3.category-header {

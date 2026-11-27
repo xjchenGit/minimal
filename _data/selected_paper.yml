@@ -1,5 +1,7 @@
-# Research Highlights on index.html, grouped by topic, in the order given here.
+# Research Highlights on index.html, in the order given here.
 # Membership also requires `selected: true` in publications.yml.
+# Since 2026-11-27 the homepage shows one flat list: group titles are not rendered
+# (topics stay on publications.html); the groups only set the order.
 # Audio understanding & generation lead (job-search target), then retrieval &
 # agentic-LLM papers, then audio deepfakes close the list.
 groups:
