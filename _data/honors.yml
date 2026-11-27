@@ -27,12 +27,15 @@
   selected: true
 
 - year: "2026"
-  title: "Outstanding Paper"
+  title: "Selected Outstanding Paper"
   category: research
   venue: "ISCSLP 2026"
   pub: "chen2026mitigating"
   # 8 = the "Selected Outstanding Papers" session (Oral 1, 8 papers incl. #18) on the official program page (linked)
   details: 'Selected <a href="https://iscslp.org/2026/program">8 out of 171 submitted papers</a> (Top 5%)'
+  # 2026-11-28: on the homepage as its own row (replaces the summary row below); homepage in date order,
+  # newest first, so it comes before ASRU 2025 (user request)
+  featured: 3
   selected: true
 
 - year: "2026"
@@ -67,7 +70,7 @@
   pub: "chen2025towards"
   # 11 / 447 from the award evidence PDF (linked): one nominee per topic area, 11 candidates out of 447 submissions
   details: 'Selected <a href="docs/ASRU2025_BestStudentNom.pdf">11 out of 447 submitted papers</a> (Top 2.5%)'
-  featured: 3
+  featured: 4
   selected: true
 
 - year: "2025"
@@ -83,12 +86,13 @@
 # 2026-11-24: homepage-only summary of the three paper awards above (same layout as the CV Honors:
 # ASRU nomination as its own row, then this one). honors.html keeps the four awards as separate rows.
 # Links = the same official evidence as the separate rows.
+# 2026-11-28: hidden (was featured: 4): the homepage paper awards are now only ISCSLP 2026 and ASRU 2025,
+# each its own row (user request). Set featured: 4 and selected: true here (ISCSLP's featured removed, ASRU back to 3) to restore.
 - year: "2025 – 26"
   title: "Best/Outstanding Paper Awards"
   category: homepage
   details: '<a href="https://iscslp.org/2026/program">ISCSLP 2026</a> (Top 5%), <a href="https://taai2026.github.io/certificates/best-student-paper-award-69.html">TAAI 2026</a> (Top 1.5%), <a href="docs/ROCLING2025_BestPaper.pdf">ROCLING 2025</a> (Top 2.8%)'
-  featured: 4
-  selected: true
+  selected: false
 
 # - year: "2025"
 #   title: "Future Tech Award, NSTC Taiwan"
@@ -148,7 +152,7 @@
 - year: "2024"
   title: "Google Student Travel Grant"
   category: travel
-  details: "Sponsored by Google Asia Pacific to present at ICASSP 2024 and INTERSPEECH 2024"
+  details: "Sponsored by Google Asia Pacific to present at ICASSP and INTERSPEECH 2024"
   featured: 8
   selected: true
 

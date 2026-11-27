@@ -3,24 +3,23 @@
 # Since 2026-11-27 the homepage shows one flat list: group titles are not rendered
 # (topics stay on publications.html); the groups only set the order.
 # Audio understanding & generation lead (job-search target), then retrieval &
-# agentic-LLM papers, then audio deepfakes close the list.
+# agentic-LLM papers, then audio deepfakes; the overview survey closes the list.
 groups:
   - title: "Speech & Audio Language Models and Generation"
     title_short: "Speech & Audio LMs and Generation"  # shown instead of title on phones (<= 768px)
     papers:
       - chen2026llmagents     # Audio generation (tech report)
       - chen2026lalm          # Audio-language models & benchmarks (tech report)
-      - lu2026desta25         # Audio-language models & benchmarks (journal)
+      - chen2026metabench     # Benchmark harness optimization (tech report)  # swapped with DeSTA2.5 2026-11-28 (user request)
       # Benchmarks are hidden here for the job search (model training comes first); both stay
       # in Open Source Contributions. Uncomment to restore.
       # - huang2025dynamic    # Audio-language models & benchmarks (ML/NLP venue)
       # - wu-etal-2024-codec  # Audio-language models & benchmarks (ML/NLP venue)
-      - wu2024towards         # Overview, audio-language models & benchmarks (tech report)
 
   - title: "Retrieval and Agentic Large Language Models"
     title_short: "Retrieval & Agentic LLMs"
     papers:
-      - chen2026metabench     # Benchmark harness optimization (tech report)
+      - lu2026desta25         # Audio-language models & benchmarks (journal)  # swapped with MetaBench 2026-11-28 (user request)
       - chou2026efficient
       - cyli2026codarag
 
@@ -29,3 +28,8 @@ groups:
       - chen2026codecfake     # journal
       - chen2025towards       # speech venue, ASRU Best Student Paper Nomination
       # - chen2024singing     # speech venue, SLT lightning talk; hidden 2026-11-26: shown under "Media & Talks" instead
+
+  # Overview survey last (2026-11-28): shown after the source-tracing paper.
+  - title: "Overview"
+    papers:
+      - wu2024towards         # Overview, audio-language models & benchmarks (tech report)

@@ -112,7 +112,7 @@ right after the `for group` line, and set #pub-container padding-top in pubs.css
 </div>
 
 <h2 id="honors">Selected Honors</h2>
-<p class="pubs-note">See all research and academic honors on the&nbsp;<a href="honors.html">Honors</a>&nbsp;page.</p>
+<p class="pubs-note">See full list on the&nbsp;<a href="honors.html">Honors</a>&nbsp;page.</p>
 <div id="honors-container">
 	{%- comment -%} Homepage shows only honors with a numeric `featured` rank, sorted by that rank {%- endcomment -%}
 	{%- assign honor_items = site.data.honors | where: "selected", true | where_exp: "h", "h.featured" | sort: "featured" %}

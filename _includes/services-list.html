@@ -11,13 +11,14 @@ instead of the short hand-picked one (event).
 	{%- assign body = '<span class="entry-main"><b>' | append: item.role | append: "</b></span>" -%}
 	{%- assign body = body | append: ' <span class="honor-detail">' | append: venues | append: '</span>' -%}
 	{%- else -%}
-	{%- assign body = '<span class="entry-main"><b>' | append: item.role | append: ", " -%}
+	{%- comment -%} 2026-11-28: only the role is bold; the topic (event) is regular weight so the two read apart {%- endcomment -%}
+	{%- assign body = '<span class="entry-main"><b>' | append: item.role | append: "</b>, " -%}
 	{%- if item.link -%}
 	{%- assign body = body | append: '<a href="' | append: item.link | append: '">' | append: item.event | append: '</a>' -%}
 	{%- else -%}
 	{%- assign body = body | append: item.event -%}
 	{%- endif -%}
-	{%- assign body = body | append: "</b></span>" -%}
+	{%- assign body = body | append: "</span>" -%}
 	{%- if item.context != blank -%}
 	{%- assign body = body | append: ' <span class="honor-detail">' | append: item.context | append: '</span>' -%}
 	{%- endif -%}
